@@ -36,6 +36,11 @@
 			this.gotoAndStop("IO3ABlock");
 			IO3AScreen.InitializeIO3AScreen(this);
 		}
+		public function InitializeIO4Screen()
+		{
+			this.gotoAndStop("IO4Block");
+			IO4Screen.InitializeIO4Screen(this);
+		}
 	}
 	
 }
