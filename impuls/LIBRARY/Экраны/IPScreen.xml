@@ -1,0 +1,21 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Экраны/IPScreen" itemID="514d46ff-00000281" linkageExportForAS="true" linkageClassName="screens.IPScreen" sourceLibraryItemHRef="Символ 1" lastModified="1364634012" lastUniqueIdentifier="8">
+  <timeline>
+    <DOMTimeline name="IPScreen">
+      <layers>
+        <DOMLayer name="Слой 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Блоки/IPBlock" name="t_IPUnit" selected="true" centerPoint3DX="511.95" centerPoint3DY="169.25">
+                  <transformationPoint>
+                    <Point x="511.95" y="169.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

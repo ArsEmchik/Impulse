@@ -1,0 +1,67 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Блоки - внешние классы/IL34Image" itemID="5131cee7-00000460" linkageExportForAS="true" linkageBaseClass="buttons.ButtonClass" linkageClassName="IL34Image" sourceLibraryItemHRef="Символ 1" lastModified="1362221876" lastUniqueIdentifier="2">
+  <timeline>
+    <DOMTimeline name="IL34Image" currentFrame="2">
+      <layers>
+        <DOMLayer name="Слой 2" color="#9933CC">
+          <frames>
+            <DOMFrame index="0" name="MouseOut" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" name="MouseOver" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" name="MouseDown" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Слой 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Вспомогательные штуки/im6" name="" selected="true" cacheAsBitmap="true" centerPoint3DX="186.95" centerPoint3DY="394">
+                  <matrix>
+                    <Matrix tx="-813.05" ty="84"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1000" y="310"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Вспомогательные штуки/im6" name="" cacheAsBitmap="true" centerPoint3DX="186.95" centerPoint3DY="394">
+                  <matrix>
+                    <Matrix tx="-813.05" ty="84"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1000" y="310"/>
+                  </transformationPoint>
+                  <filters>
+                    <GlowFilter blurX="7" blurY="7" strength="5"/>
+                  </filters>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Вспомогательные штуки/im6" name="" selected="true" cacheAsBitmap="true" centerPoint3DX="186.95" centerPoint3DY="394">
+                  <matrix>
+                    <Matrix tx="-813.05" ty="84"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1000" y="310"/>
+                  </transformationPoint>
+                  <filters>
+                    <AdjustColorFilter brightness="-30"/>
+                  </filters>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

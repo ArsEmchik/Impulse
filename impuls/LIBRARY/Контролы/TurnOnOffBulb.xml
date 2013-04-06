@@ -1,0 +1,40 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Контролы/TurnOnOffBulb" itemID="514d5f6c-00000380" linkageExportForAS="true" linkageBaseClass="controls.Bulb" linkageClassName="TurnOnOffBulb" sourceLibraryItemHRef="Контролы/копия RedBulb" lastModified="1364030208">
+  <timeline>
+    <DOMTimeline name="TurnOnOffBulb" currentFrame="1">
+      <layers>
+        <DOMLayer name="Слой 2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" name="Default" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" name="Chosen" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Слой 1" color="#4FFF4F">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance name="" referenceID="" libraryItemName="Изображения контролов/ip.powerIndicatorOff.bmp">
+                  <matrix>
+                    <Matrix tx="0.15" ty="0.05"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance name="" referenceID="" libraryItemName="Изображения контролов/ip.powerIndicatorOn.bmp">
+                  <matrix>
+                    <Matrix tx="0.1" ty="0.05"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

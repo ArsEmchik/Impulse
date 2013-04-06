@@ -1,0 +1,100 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Экраны/MainScreen" itemID="5130d170-000001d3" linkageExportForAS="true" linkageClassName="screens.MainScreen" sourceLibraryItemHRef="Символ 1" lastModified="1364642756" lastUniqueIdentifier="73">
+  <timeline>
+    <DOMTimeline name="MainScreen" currentFrame="4">
+      <layers>
+        <DOMLayer name="Слой 3" color="#FF800A">
+          <frames>
+            <DOMFrame index="0" name="StartScreen" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="1" name="ModeScreen" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="2" name="GlobalScreen" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="3" name="IPBLock" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="4" name="IO3ABlock" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+            <DOMFrame index="5" name="IO4Block" labelType="name" keyMode="9728">
+              <elements/>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Слой 2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <Actionscript>
+                <script><![CDATA[stop();]]></script>
+              </Actionscript>
+              <elements>
+                <DOMSymbolInstance libraryItemName="Экраны/StartMainScreen" name="start_screen" centerPoint3DX="512.1" centerPoint3DY="384">
+                  <transformationPoint>
+                    <Point x="512.1" y="384"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="1" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Экраны/ModeScreen" name="mode_screen" centerPoint3DX="482" centerPoint3DY="205.85">
+                  <transformationPoint>
+                    <Point x="482" y="205.85"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="2" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Экраны/GlobalScreen" name="global_screen" centerPoint3DX="511.95" centerPoint3DY="384">
+                  <transformationPoint>
+                    <Point x="511.95" y="384"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="3" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Экраны/IPScreen" name="IPScreen" centerPoint3DX="511.95" centerPoint3DY="370.9">
+                  <matrix>
+                    <Matrix ty="201.65"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="511.95" y="169.25"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="4" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Экраны/IO3AScreen" name="IO3AScreen" selected="true" centerPoint3DX="30" centerPoint3DY="218">
+                  <matrix>
+                    <Matrix ty="200"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="30" y="18"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+            <DOMFrame index="5" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Экраны/IO4Screen" name="IO4Screen" centerPoint3DX="137.5" centerPoint3DY="245">
+                  <matrix>
+                    <Matrix ty="200"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="137.5" y="45"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

@@ -1,0 +1,1225 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Блоки/IO3ABlock" itemID="5156ae5a-000000ee" linkageExportForAS="true" linkageClassName="blocks.IO3ABlock" sourceLibraryItemHRef="Символ 1" lastModified="1364640971" lastUniqueIdentifier="112">
+  <timeline>
+    <DOMTimeline name="IO3ABlock">
+      <layers>
+        <DOMLayer name="Слой 2" color="#9933CC" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="361.65" centerPoint3DY="203.4">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="352.75" ty="198.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="361.15" centerPoint3DY="119.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="352.25" ty="115"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="361.15" centerPoint3DY="130.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="352.25" ty="126"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="361.65" centerPoint3DY="142.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="352.75" ty="137.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="389.55" centerPoint3DY="203.4">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="380.65" ty="198.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="390.05" centerPoint3DY="142.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="381.15" ty="138.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="390.05" centerPoint3DY="120.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="381.15" ty="115.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="390.05" centerPoint3DY="131.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="381.15" ty="127"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="418.8" centerPoint3DY="119.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="409.9" ty="115"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="418.8" centerPoint3DY="130.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="409.9" ty="126"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="418.8" centerPoint3DY="142.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="409.9" ty="138.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="448.55" centerPoint3DY="120.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="439.65" ty="115.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="448.55" centerPoint3DY="131.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="439.65" ty="127"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="448.6" centerPoint3DY="142.8">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="439.7" ty="138.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="478.1" centerPoint3DY="120.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="469.2" ty="115.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="478.1" centerPoint3DY="131.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="469.2" ty="126.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="478.1" centerPoint3DY="143.7">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="469.2" ty="139.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="507.1" centerPoint3DY="120.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="498.2" ty="115.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="507.1" centerPoint3DY="131.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="498.2" ty="126.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="507.1" centerPoint3DY="143.7">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="498.2" ty="139.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="535.85" centerPoint3DY="120.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="526.95" ty="116.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.6"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="535.85" centerPoint3DY="131.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="526.95" ty="127.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="535.85" centerPoint3DY="144.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="526.95" ty="140"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="564.6" centerPoint3DY="120.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="555.7" ty="115.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="564.6" centerPoint3DY="131.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="555.7" ty="126.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="564.6" centerPoint3DY="143.7">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="555.7" ty="139.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="593.85" centerPoint3DY="120.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="584.95" ty="116.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.6"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="593.85" centerPoint3DY="131.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="584.95" ty="127.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="593.85" centerPoint3DY="144.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="584.95" ty="140"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="594.35" centerPoint3DY="204.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="585.45" ty="200.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="564.6" centerPoint3DY="204.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="555.7" ty="200.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="535.85" centerPoint3DY="204.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="526.95" ty="200.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="507.1" centerPoint3DY="204.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="498.2" ty="200.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="478.1" centerPoint3DY="204.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="469.2" ty="200.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="448.6" centerPoint3DY="204.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="439.7" ty="199.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="419.8" centerPoint3DY="203.4">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="410.9" ty="198.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="302.3" centerPoint3DY="226.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="293.4" ty="221.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="302.55" centerPoint3DY="238.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="293.65" ty="234.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="244.4" centerPoint3DY="226.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="235.5" ty="221.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="244.65" centerPoint3DY="238.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="235.75" ty="234.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="273.4" centerPoint3DY="238.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="264.5" ty="234"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="185.85" centerPoint3DY="200.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="176.95" ty="196.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="214.9" centerPoint3DY="202.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="206" ty="198"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="215.15" centerPoint3DY="215.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="206.25" ty="210.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="127.6" centerPoint3DY="200.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="118.7" ty="196.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.05" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="214.9" centerPoint3DY="165.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="206" ty="161.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="215.15" centerPoint3DY="178.7">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="206.25" ty="174.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="156.1" centerPoint3DY="224.7">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="147.2" ty="220.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.05" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="156.35" centerPoint3DY="237.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="147.45" ty="233"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="127.35" centerPoint3DY="226.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="118.45" ty="221.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="127.6" centerPoint3DY="238.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="118.7" ty="234.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="98.05" centerPoint3DY="225.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="89.15" ty="220.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="98.3" centerPoint3DY="237.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="89.4" ty="233.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="98.85" centerPoint3DY="201.7">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="89.95" ty="197.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="69.05" centerPoint3DY="236.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="60.15" ty="232"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="214.9" centerPoint3DY="153.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="206" ty="149.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="214.9" centerPoint3DY="141.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="206" ty="137.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="215.65" centerPoint3DY="129.7">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="206.75" ty="125.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="215.65" centerPoint3DY="117.7">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="206.75" ty="113.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="185.85" centerPoint3DY="164.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="176.95" ty="160.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="185.85" centerPoint3DY="152.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="176.95" ty="148.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="185.85" centerPoint3DY="140.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="176.95" ty="136.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="186.6" centerPoint3DY="128.7">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="177.7" ty="124.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="186.6" centerPoint3DY="116.7">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="177.7" ty="112.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="157.05" centerPoint3DY="140.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="148.15" ty="136.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="157.8" centerPoint3DY="128.7">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="148.9" ty="124.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="157.8" centerPoint3DY="116.7">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="148.9" ty="112.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="157.05" centerPoint3DY="189.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="148.15" ty="184.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="157.8" centerPoint3DY="176.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="148.9" ty="172.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="157.8" centerPoint3DY="164.95">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="148.9" ty="160.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="128.75" centerPoint3DY="129.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="119.85" ty="124.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="128.75" centerPoint3DY="117.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="119.85" ty="112.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="99.75" centerPoint3DY="129.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="90.85" ty="124.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.05" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="99.75" centerPoint3DY="117.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="90.85" ty="112.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.05" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.19"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="42.45" centerPoint3DY="142.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="33.55" ty="137.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="-0.01"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="42.45" centerPoint3DY="130.2">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="33.55" ty="125.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="-0.01"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="42.45" centerPoint3DY="165.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="33.55" ty="161"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="-0.01"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="42.45" centerPoint3DY="153.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="33.55" ty="149"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="-0.01"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="42.45" centerPoint3DY="187.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="33.55" ty="183"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="-0.01"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="42.45" centerPoint3DY="175.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="33.55" ty="171"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="-0.01"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="42.45" centerPoint3DY="209.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="33.55" ty="205"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="-0.01"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/Jumper" name="" centerPoint3DX="42.45" centerPoint3DY="197.45">
+                  <matrix>
+                    <Matrix a="0.593109130859375" d="0.593109130859375" tx="33.55" ty="193"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="15.1" y="7.5"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="-0.01"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/GreenBulb" name="" centerPoint3DX="300.35" centerPoint3DY="84.05">
+                  <matrix>
+                    <Matrix a="0.595840454101563" d="0.595840454101563" tx="293.15" ty="77.05"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="12.1" y="11.75"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/GreenBulb" name="" centerPoint3DX="359.4" centerPoint3DY="84.45">
+                  <matrix>
+                    <Matrix a="0.595840454101563" d="0.595840454101563" tx="352.2" ty="77.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="12.1" y="11.75"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/GreenBulb" name="" centerPoint3DX="387.8" centerPoint3DY="85.35">
+                  <matrix>
+                    <Matrix a="0.595840454101563" d="0.595840454101563" tx="380.6" ty="78.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="12.1" y="11.75"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/GreenBulb" name="" centerPoint3DX="416.8" centerPoint3DY="84.75">
+                  <matrix>
+                    <Matrix a="0.595840454101563" d="0.595840454101563" tx="409.6" ty="77.75"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="12.05" y="11.75"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/GreenBulb" name="" centerPoint3DX="446.2" centerPoint3DY="86.4">
+                  <matrix>
+                    <Matrix a="0.595840454101563" d="0.595840454101563" tx="439" ty="79.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="12.1" y="11.75"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/GreenBulb" name="" centerPoint3DX="475.7" centerPoint3DY="86.4">
+                  <matrix>
+                    <Matrix a="0.595840454101563" d="0.595840454101563" tx="468.5" ty="79.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="12.05" y="11.75"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/GreenBulb" name="" centerPoint3DX="504.7" centerPoint3DY="86.4">
+                  <matrix>
+                    <Matrix a="0.595840454101563" d="0.595840454101563" tx="497.5" ty="79.4"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="12.1" y="11.75"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/GreenBulb" name="" centerPoint3DX="533.7" centerPoint3DY="87.3">
+                  <matrix>
+                    <Matrix a="0.595840454101563" d="0.595840454101563" tx="526.5" ty="80.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="12.1" y="11.75"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/GreenBulb" name="" centerPoint3DX="561.6" centerPoint3DY="86.7">
+                  <matrix>
+                    <Matrix a="0.595840454101563" d="0.595840454101563" tx="554.4" ty="79.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="12.1" y="11.75"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/GreenBulb" name="" centerPoint3DX="591.45" centerPoint3DY="87.8">
+                  <matrix>
+                    <Matrix a="0.595840454101563" d="0.595840454101563" tx="584.25" ty="80.8"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="12.1" y="11.75"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/GreenBulb" name="" centerPoint3DX="184.15" centerPoint3DY="83.55">
+                  <matrix>
+                    <Matrix a="0.595840454101563" d="0.595840454101563" tx="176.95" ty="76.55"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="12.1" y="11.75"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/GreenBulb" name="" centerPoint3DX="706.6" centerPoint3DY="89.55">
+                  <matrix>
+                    <Matrix a="0.65045166015625" d="0.65045166015625" tx="698.75" ty="81.9"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="12.1" y="11.75"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/RedBulb" name="" centerPoint3DX="300.35" centerPoint3DY="66.2">
+                  <matrix>
+                    <Matrix a="0.680679321289063" d="0.680679321289063" tx="290.9" ty="57.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.9" y="13.35"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/RedBulb" name="" centerPoint3DX="358.85" centerPoint3DY="66.2">
+                  <matrix>
+                    <Matrix a="0.680679321289063" d="0.680679321289063" tx="349.4" ty="57.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.9" y="13.35"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/RedBulb" name="" centerPoint3DX="386.95" centerPoint3DY="66.7">
+                  <matrix>
+                    <Matrix a="0.680679321289063" d="0.680679321289063" tx="377.5" ty="57.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.85" y="13.4"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/RedBulb" name="" centerPoint3DX="416.55" centerPoint3DY="66.7">
+                  <matrix>
+                    <Matrix a="0.680679321289063" d="0.680679321289063" tx="407.1" ty="57.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.85" y="13.4"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/RedBulb" name="" centerPoint3DX="445.8" centerPoint3DY="67.55">
+                  <matrix>
+                    <Matrix a="0.680679321289063" d="0.680679321289063" tx="436.35" ty="58.45"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.9" y="13.4"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/RedBulb" name="" centerPoint3DX="475.3" centerPoint3DY="67.35">
+                  <matrix>
+                    <Matrix a="0.680679321289063" d="0.680679321289063" tx="465.85" ty="58.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.85" y="13.35"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/RedBulb" name="" centerPoint3DX="503.8" centerPoint3DY="67.35">
+                  <matrix>
+                    <Matrix a="0.680679321289063" d="0.680679321289063" tx="494.35" ty="58.25"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.9" y="13.35"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/RedBulb" name="" centerPoint3DX="532.9" centerPoint3DY="68.05">
+                  <matrix>
+                    <Matrix a="0.680679321289063" d="0.680679321289063" tx="523.45" ty="58.95"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.9" y="13.35"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/RedBulb" name="" centerPoint3DX="561.3" centerPoint3DY="68.1">
+                  <matrix>
+                    <Matrix a="0.680679321289063" d="0.680679321289063" tx="551.85" ty="59"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.85" y="13.35"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/RedBulb" name="" centerPoint3DX="589.55" centerPoint3DY="68.8">
+                  <matrix>
+                    <Matrix a="0.680679321289063" d="0.680679321289063" tx="580.1" ty="59.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.85" y="13.4"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/RedBulb" name="" centerPoint3DX="706.25" centerPoint3DY="70.7">
+                  <matrix>
+                    <Matrix a="0.680679321289063" d="0.680679321289063" tx="696.8" ty="61.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.85" y="13.35"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/RedBulb" name="" centerPoint3DX="126.7" centerPoint3DY="65.3">
+                  <matrix>
+                    <Matrix a="0.680679321289063" d="0.680679321289063" tx="117.25" ty="56.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.9" y="13.4"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/RedBulb" name="" centerPoint3DX="97.4" centerPoint3DY="65.3">
+                  <matrix>
+                    <Matrix a="0.680679321289063" d="0.680679321289063" tx="87.95" ty="56.2"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.9" y="13.4"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/RedBulb" name="" centerPoint3DX="69.05" centerPoint3DY="65.7">
+                  <matrix>
+                    <Matrix a="0.680679321289063" d="0.680679321289063" tx="59.6" ty="56.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="13.9" y="13.35"/>
+                  </transformationPoint>
+                  <color>
+                    <Color brightness="0.05"/>
+                  </color>
+                </DOMSymbolInstance>
+                <DOMSymbolInstance libraryItemName="Контролы/TurnOnOffMetal" name="" centerPoint3DX="889.8" centerPoint3DY="123.75">
+                  <matrix>
+                    <Matrix a="0.835372924804688" d="0.835372924804688" tx="876.45" ty="111.6"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="16" y="14.5"/>
+                  </transformationPoint>
+                </DOMSymbolInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+        <DOMLayer name="Слой 1" color="#4FFF4F" locked="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance name="" referenceID="" selected="true" libraryItemName="Блоки - изображения/ИО3А">
+                  <matrix>
+                    <Matrix a="0.61724853515625" d="0.617233276367188"/>
+                  </matrix>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

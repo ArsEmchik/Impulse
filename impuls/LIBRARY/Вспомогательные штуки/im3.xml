@@ -1,0 +1,24 @@
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Вспомогательные штуки/im3" itemID="5131da11-0000052f" sourceLibraryItemHRef="Символ 1" lastModified="1362221585">
+  <timeline>
+    <DOMTimeline name="im3">
+      <layers>
+        <DOMLayer name="Слой 1" color="#4FFF4F" current="true" isSelected="true">
+          <frames>
+            <DOMFrame index="0" keyMode="9728">
+              <elements>
+                <DOMBitmapInstance name="" referenceID="" selected="true" libraryItemName="Блоки - изображения/ИТ-А">
+                  <matrix>
+                    <Matrix a="0.152130126953125" d="0.152130126953125"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="1128.95" y="325.05"/>
+                  </transformationPoint>
+                </DOMBitmapInstance>
+              </elements>
+            </DOMFrame>
+          </frames>
+        </DOMLayer>
+      </layers>
+    </DOMTimeline>
+  </timeline>
+</DOMSymbolItem>

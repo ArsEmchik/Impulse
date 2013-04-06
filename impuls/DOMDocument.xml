@@ -1,0 +1,706 @@
+<DOMDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" width="1024" height="768" currentTimeline="1" xflVersion="2.0" creatorInfo="Adobe Flash Professional CS5" platform="Windows" versionInfo="Saved by Adobe Flash Windows 11.0 build 485" majorVersion="11" buildNumber="485" viewAngle3D="88.2079048186946" nextSceneIdentifier="2" playOptionsPlayLoop="false" playOptionsPlayPages="false" playOptionsPlayFrameActions="false">
+     <folders>
+          <DOMFolderItem name="Component Assets" itemID="44e488a0-000016d6"/>
+          <DOMFolderItem name="Component Assets/_private" itemID="4573a4bc-000003c6"/>
+          <DOMFolderItem name="Component Assets/ButtonSkins" itemID="44c91bad-00000231"/>
+          <DOMFolderItem name="Component Assets/CellRendererSkins" itemID="44d7baa5-000000e7"/>
+          <DOMFolderItem name="Component Assets/CheckBoxSkins" itemID="44c9141c-00000113"/>
+          <DOMFolderItem name="Component Assets/ComboBoxSkins" itemID="44f73b7c-0000018e"/>
+          <DOMFolderItem name="Component Assets/ListSkins" itemID="44e5f6f9-00000039"/>
+          <DOMFolderItem name="Component Assets/NumericStepperSkins" itemID="44d6e16b-00000161"/>
+          <DOMFolderItem name="Component Assets/RadioButtonSkins" itemID="44c91485-00000122"/>
+          <DOMFolderItem name="Component Assets/ScrollBarSkins" itemID="44ea2edf-000000a6"/>
+          <DOMFolderItem name="Component Assets/Shared" itemID="44f892ff-0000001e"/>
+          <DOMFolderItem name="Component Assets/SliderSkins" itemID="44c91c94-00000267"/>
+          <DOMFolderItem name="Component Assets/TextInputSkins" itemID="44c91d04-00000282"/>
+          <DOMFolderItem name="Блоки" itemID="514d4fb8-0000029f"/>
+          <DOMFolderItem name="Блоки - внешние классы" itemID="5131cf98-00000475"/>
+          <DOMFolderItem name="Блоки - изображения" itemID="5131cf8c-00000471"/>
+          <DOMFolderItem name="Вспомогательные штуки" itemID="5131df79-0000054f"/>
+          <DOMFolderItem name="Изображения контролов" itemID="514d4d9e-00000292"/>
+          <DOMFolderItem name="Компонент" itemID="513b0a7e-0000026d"/>
+          <DOMFolderItem name="Контролы" itemID="514d4dac-00000296"/>
+          <DOMFolderItem name="Экраны" itemID="5131d529-000004e6"/>
+     </folders>
+     <fonts>
+          <DOMFontItem name="Вспомогательные штуки/Шрифт 1" itemID="5131e29e-0000058d" font="TimesNewRomanPSMT" size="0" id="1" sourceLastImported="1362223774" embedRanges="5|22"/>
+     </fonts>
+     <media>
+          <DOMCompiledClipItem name="Component Assets/_private/ComponentShim" itemID="4b858ac3-000002a3" linkageExportForAS="true" linkageClassName="fl.core.ComponentShim" sourceExternalFilepath=".\LIBRARY\Component Assets\_private\ComponentShim" sourceLastImported="1267043011" displayAsComponent="false" customIconID="0" actionscriptClass="fl.core.ComponentShim" swfScmHRef="a4evqyd4nn.swf" swfScmSourceFilename="C:\Documents and Settings\jkamerer\Local Settings\Application Data\Adobe\Flash CS5\en_US\Configuration\TMPa3zn4yd4n3..swf" persistLivePreview11="true" livePreview11ScmHRef="a4evqyd4nn1.swf" livePreview11ScmSourceFilename="C:\Documents and Settings\jkamerer\Local Settings\Application Data\Adobe\Flash CS5\en_US\Configuration\TMPa3zn4yd4n3..swf" editFrameIndex="1" requiredMinimumPlayerVersion="0" requiredMinimumASVersion="0" parametersAreLocked="true" swcPath="Component Assets/_private/ComponentShim.xml" rootSymbolLinkageID="fl.core.ComponentShim" playerVersion="9" actionscriptVersion="3" hashKey="kfuaIecnz3BPM/B8Awo4b.">
+               <classProperties><![CDATA[<component id="fl/core/ComponentShim" class="fl.core.ComponentShim" modified="1267043003888">
+<movieBounds xmin="0" xmax="0" ymin="0" ymax="0" />
+<classDefs>
+	<classDef id="fl.core.AccessibilityShim"/>
+	<classDef id="fl.controls.CheckBox"/>
+	<classDef id="fl.controls.LabelButton"/>
+	<classDef id="fl.controls.List"/>
+	<classDef id="fl.controls.ComboBox"/>
+	<classDef id="fl.controls.ProgressBarDirection"/>
+	<classDef id="fl.data.SimpleCollectionItem"/>
+	<classDef id="fl.controls.TextArea"/>
+	<classDef id="fl.controls.Slider"/>
+	<classDef id="fl.events.DataChangeEvent"/>
+	<classDef id="fl.accessibility.ComboBoxAccImpl"/>
+	<classDef id="fl.events.DataChangeType"/>
+	<classDef id="fl.accessibility.TileListAccImpl"/>
+	<classDef id="fl.accessibility.ButtonAccImpl"/>
+	<classDef id="fl.controls.BaseButton"/>
+	<classDef id="fl.core.UIComponent"/>
+	<classDef id="fl.controls.DataGrid"/>
+	<classDef id="fl.containers.BaseScrollPane"/>
+	<classDef id="fl.livepreview.LivePreviewParent"/>
+	<classDef id="fl.controls.Label"/>
+	<classDef id="fl.managers.IFocusManagerComponent"/>
+	<classDef id="fl.controls.UIScrollBar"/>
+	<classDef id="fl.controls.listClasses.ICellRenderer"/>
+	<classDef id="fl.controls.dataGridClasses.DataGridCellEditor"/>
+	<classDef id="fl.controls.ColorPicker"/>
+	<classDef id="fl.managers.FocusManager"/>
+	<classDef id="fl.events.DataGridEventReason"/>
+	<classDef id="fl.events.SliderEvent"/>
+	<classDef id="fl.events.SliderEventClickTarget"/>
+	<classDef id="fl.controls.progressBarClasses.IndeterminateBar"/>
+	<classDef id="fl.controls.listClasses.ListData"/>
+	<classDef id="fl.core.InvalidationType"/>
+	<classDef id="fl.controls.RadioButtonGroup"/>
+	<classDef id="fl.controls.NumericStepper"/>
+	<classDef id="fl.accessibility.LabelButtonAccImpl"/>
+	<classDef id="fl.containers.UILoader"/>
+	<classDef id="fl.events.ColorPickerEvent"/>
+	<classDef id="fl.controls.ButtonLabelPlacement"/>
+	<classDef id="fl.accessibility.CheckBoxAccImpl"/>
+	<classDef id="fl.managers.StyleManager"/>
+	<classDef id="fl.controls.TileList"/>
+	<classDef id="fl.controls.RadioButton"/>
+	<classDef id="fl.containers.ScrollPane"/>
+	<classDef id="fl.controls.listClasses.TileListData"/>
+	<classDef id="fl.events.InteractionInputType"/>
+	<classDef id="fl.controls.Button"/>
+	<classDef id="fl.core.ComponentShim"/>
+	<classDef id="fl.accessibility.UIComponentAccImpl"/>
+	<classDef id="fl.controls.SelectableList"/>
+	<classDef id="fl.events.ComponentEvent"/>
+	<classDef id="fl.accessibility.RadioButtonAccImpl"/>
+	<classDef id="fl.controls.listClasses.CellRenderer"/>
+	<classDef id="fl.managers.IFocusManagerGroup"/>
+	<classDef id="fl.controls.ScrollPolicy"/>
+	<classDef id="fl.controls.ScrollBar"/>
+	<classDef id="fl.controls.ProgressBar"/>
+	<classDef id="fl.controls.listClasses.ImageCell"/>
+	<classDef id="fl.managers.IFocusManager"/>
+	<classDef id="fl.controls.ProgressBarMode"/>
+	<classDef id="fl.accessibility.SelectableListAccImpl"/>
+	<classDef id="fl.controls.TextInput"/>
+	<classDef id="fl.events.ListEvent"/>
+	<classDef id="fl.accessibility.AccImpl"/>
+	<classDef id="fl.accessibility.DataGridAccImpl"/>
+	<classDef id="fl.controls.dataGridClasses.DataGridColumn"/>
+	<classDef id="fl.events.ScrollEvent"/>
+	<classDef id="fl.events.DataGridEvent"/>
+	<classDef id="fl.data.TileListCollectionItem"/>
+	<classDef id="fl.data.DataProvider"/>
+	<classDef id="fl.accessibility.ListAccImpl"/>
+	<classDef id="fl.controls.dataGridClasses.HeaderRenderer"/>
+	<classDef id="fl.controls.ScrollBarDirection"/>
+	<classDef id="fl.controls.SliderDirection"/>
+</classDefs>
+<class id="fl.core.ComponentShim" >
+	<method id="ComponentShim" isConstructor="true" isProperty="false">
+	</method>
+</class></component>
+]]></classProperties>
+               <customIcon>
+                    <CustomIcon rowByteCount="72" colorDepth="32" width="18" height="18" frameRight="360" frameBottom="360" isTransparent="true" href="a4ew6yd4nn.dat"/>
+               </customIcon>
+               <SwcItem name="fl.core.ComponentShim" version="1267043003" isTopLevel="true"/>
+          </DOMCompiledClipItem>
+          <DOMBitmapItem name="Изображения контролов/io3a.tumblerOff.bmp" itemID="5156c39d-00000384" sourceExternalFilepath=".\LIBRARY\Изображения контролов\io3a.tumblerOff.bmp" sourceLastImported="1362165306" externalFileCRC32="3299087912" externalFileSize="2840" originalCompressionType="lossless" quality="50" href="Изображения контролов\io3a.tumblerOff.bmp" bitmapDataHRef="M 25 1364640669.dat" frameRight="640" frameBottom="580"/>
+          <DOMBitmapItem name="Изображения контролов/io3a.tumblerOn.bmp" itemID="5156c393-0000037f" sourceExternalFilepath=".\LIBRARY\Изображения контролов\io3a.tumblerOn.bmp" sourceLastImported="1362165306" externalFileCRC32="1415194637" externalFileSize="2838" originalCompressionType="lossless" quality="50" href="Изображения контролов\io3a.tumblerOn.bmp" bitmapDataHRef="M 24 1364640659.dat" frameRight="640" frameBottom="580"/>
+          <DOMBitmapItem name="Изображения контролов/ip.powerIndicatorOff.bmp" itemID="514d5c6f-00000349" sourceExternalFilepath=".\LIBRARY\Изображения контролов\ip.powerIndicatorOff.bmp" sourceLastImported="1362165185" externalFileCRC32="3193578938" externalFileSize="4374" originalCompressionType="lossless" quality="50" href="Изображения контролов\ip.powerIndicatorOff.bmp" bitmapDataHRef="M 20 1364024431.dat" frameRight="700" frameBottom="800"/>
+          <DOMBitmapItem name="Изображения контролов/ip.powerIndicatorOn.bmp" itemID="514d5c6f-0000034d" sourceExternalFilepath=".\LIBRARY\Изображения контролов\ip.powerIndicatorOn.bmp" sourceLastImported="1362165185" externalFileCRC32="1082114580" externalFileSize="4374" originalCompressionType="lossless" quality="50" href="Изображения контролов\ip.powerIndicatorOn.bmp" bitmapDataHRef="M 21 1364024431.dat" frameRight="700" frameBottom="800"/>
+          <DOMBitmapItem name="Изображения контролов/ip.powerTumblerOff.bmp" itemID="514d5c6f-00000351" sourceExternalFilepath=".\LIBRARY\Изображения контролов\ip.powerTumblerOff.bmp" sourceLastImported="1362165185" externalFileCRC32="2078158600" externalFileSize="7534" originalCompressionType="lossless" quality="50" href="Изображения контролов\ip.powerTumblerOff.bmp" bitmapDataHRef="M 22 1364024431.dat" frameRight="900" frameBottom="1100"/>
+          <DOMBitmapItem name="Изображения контролов/ip.powerTumblerOn.bmp" itemID="514d5c6f-00000355" sourceExternalFilepath=".\LIBRARY\Изображения контролов\ip.powerTumblerOn.bmp" sourceLastImported="1362165185" externalFileCRC32="4144262707" externalFileSize="7534" originalCompressionType="lossless" quality="50" href="Изображения контролов\ip.powerTumblerOn.bmp" bitmapDataHRef="M 23 1364024431.dat" frameRight="900" frameBottom="1100"/>
+          <DOMBitmapItem name="Изображения контролов/is.greenIndicatorOff.bmp" itemID="514d570e-000002cc" sourceExternalFilepath=".\LIBRARY\Изображения контролов\is.greenIndicatorOff.bmp" sourceLastImported="1362165246" externalFileCRC32="2279423625" externalFileSize="1782" originalCompressionType="lossless" quality="50" href="Изображения контролов\is.greenIndicatorOff.bmp" bitmapDataHRef="M 16 1364023054.dat" frameRight="480" frameBottom="480"/>
+          <DOMBitmapItem name="Изображения контролов/is.greenIndicatorOn.bmp" itemID="514d570f-000002d1" sourceExternalFilepath=".\LIBRARY\Изображения контролов\is.greenIndicatorOn.bmp" sourceLastImported="1362165246" externalFileCRC32="4056045970" externalFileSize="1782" originalCompressionType="lossless" quality="50" href="Изображения контролов\is.greenIndicatorOn.bmp" bitmapDataHRef="M 17 1364023055.dat" frameRight="480" frameBottom="480"/>
+          <DOMBitmapItem name="Изображения контролов/is.redIndicatorOff.bmp" itemID="514d570f-000002d6" sourceExternalFilepath=".\LIBRARY\Изображения контролов\is.redIndicatorOff.bmp" sourceLastImported="1362165246" externalFileCRC32="4166652465" externalFileSize="2238" originalCompressionType="lossless" quality="50" href="Изображения контролов\is.redIndicatorOff.bmp" bitmapDataHRef="M 18 1364023055.dat" frameRight="560" frameBottom="520"/>
+          <DOMBitmapItem name="Изображения контролов/is.redIndicatorOn.bmp" itemID="514d570f-000002db" sourceExternalFilepath=".\LIBRARY\Изображения контролов\is.redIndicatorOn.bmp" sourceLastImported="1362165246" externalFileCRC32="2228847166" externalFileSize="2238" originalCompressionType="lossless" quality="50" href="Изображения контролов\is.redIndicatorOn.bmp" bitmapDataHRef="M 19 1364023055.dat" frameRight="560" frameBottom="520"/>
+          <DOMBitmapItem name="Изображения контролов/is.simpleJumperNotSetted.bmp" itemID="514d4d84-0000028a" sourceExternalFilepath=".\LIBRARY\Изображения контролов\is.simpleJumperNotSetted.bmp" sourceLastImported="1362165246" externalFileCRC32="562083702" externalFileSize="1434" originalCompressionType="lossless" quality="50" href="Изображения контролов\is.simpleJumperNotSetted.bmp" bitmapDataHRef="M 14 1364020612.dat" frameRight="600" frameBottom="300"/>
+          <DOMBitmapItem name="Изображения контролов/is.simpleJumperSetted.bmp" itemID="514d4d84-0000028e" sourceExternalFilepath=".\LIBRARY\Изображения контролов\is.simpleJumperSetted.bmp" sourceLastImported="1362165246" externalFileCRC32="731971582" externalFileSize="1434" originalCompressionType="lossless" quality="50" href="Изображения контролов\is.simpleJumperSetted.bmp" bitmapDataHRef="M 15 1364020612.dat" frameRight="600" frameBottom="300"/>
+          <DOMBitmapItem name="Блоки - изображения/new.png" itemID="5131e0ef-00000577" sourceExternalFilepath=".\LIBRARY\Блоки - изображения\new.png" sourceLastImported="1362223327" externalFileCRC32="1832798991" externalFileSize="683830" originalCompressionType="lossless" quality="50" href="Блоки - изображения\new.png" bitmapDataHRef="M 11 1362223343.dat" frameRight="18860" frameBottom="7580"/>
+          <DOMBitmapItem name="Блоки - изображения/resized.jpg" itemID="513b1f5b-000006e2" sourceExternalFilepath=".\LIBRARY\Блоки - изображения\resized.jpg" sourceLastImported="1362824842" externalFileCRC32="1814713550" externalFileSize="72930" quality="50" href="Блоки - изображения\resized.jpg" bitmapDataHRef="M 16 1362829147.dat" frameRight="20480" frameBottom="15360" isJPEG="true"/>
+          <DOMBitmapItem name="Блоки - изображения/входнойБлок.jpg" itemID="5131e6f3-0000059b" sourceExternalFilepath=".\LIBRARY\Блоки - изображения\входнойБлок.jpg" sourceLastImported="1362224689" quality="50" href="Блоки - изображения\входнойБлок.jpg" bitmapDataHRef="M 14 1362224883.dat" frameRight="63240" frameBottom="52080" isJPEG="true"/>
+          <DOMBitmapItem name="Блоки - изображения/Д-00-31" itemID="5131ce20-0000045a" sourceExternalFilepath=".\LIBRARY\Блоки - изображения\Д-00-31.jpg" sourceLastImported="1362218528" quality="50" href="Блоки - изображения\Д-00-31.jpg" bitmapDataHRef="M 10 1362218226.dat" frameRight="40980" frameBottom="13240" isJPEG="true"/>
+          <DOMBitmapItem name="Блоки - изображения/Д-39" itemID="5131cdd0-00000452" sourceExternalFilepath=".\LIBRARY\Блоки - изображения\Д-39.jpg" sourceLastImported="1362218448" originalCompressionType="lossless" quality="50" href="Блоки - изображения\Д-39.jpg" bitmapDataHRef="M 9 1362218210.dat" frameLeft="-115200" frameTop="-115200" frameRight="-115200" frameBottom="-115200"/>
+          <DOMBitmapItem name="Блоки - изображения/ИЛ-34" itemID="5131cdce-00000451" sourceExternalFilepath=".\LIBRARY\Блоки - изображения\ИЛ-34.jpg" sourceLastImported="1362218446" quality="50" href="Блоки - изображения\ИЛ-34.jpg" bitmapDataHRef="M 1 1362218007.dat" frameRight="40000" frameBottom="12400" isJPEG="true"/>
+          <DOMBitmapItem name="Блоки - изображения/ИО3А" itemID="5131cdee-00000457" sourceExternalFilepath=".\LIBRARY\Блоки - изображения\ИО3А.jpg" sourceLastImported="1362218478" quality="50" href="Блоки - изображения\ИО3А.jpg" bitmapDataHRef="M 2 1362218092.dat" frameRight="33180" frameBottom="9620" isJPEG="true"/>
+          <DOMBitmapItem name="Блоки - изображения/ИО3Б" itemID="5131cdea-00000456" sourceExternalFilepath=".\LIBRARY\Блоки - изображения\ИО3Б.jpg" sourceLastImported="1362218474" quality="50" href="Блоки - изображения\ИО3Б.jpg" bitmapDataHRef="M 3 1362218104.dat" frameRight="33640" frameBottom="9580" isJPEG="true"/>
+          <DOMBitmapItem name="Блоки - изображения/ИО4" itemID="5131cde3-00000455" sourceExternalFilepath=".\LIBRARY\Блоки - изображения\ИО4.jpg" sourceLastImported="1362218467" quality="50" href="Блоки - изображения\ИО4.jpg" bitmapDataHRef="M 4 1362218112.dat" frameRight="32000" frameBottom="9660" isJPEG="true"/>
+          <DOMBitmapItem name="Блоки - изображения/ИП" itemID="5131cddf-00000454" sourceExternalFilepath=".\LIBRARY\Блоки - изображения\ИП.jpg" sourceLastImported="1362218463" quality="50" href="Блоки - изображения\ИП.jpg" bitmapDataHRef="M 5 1362218122.dat" frameRight="32000" frameBottom="10580" isJPEG="true"/>
+          <DOMBitmapItem name="Блоки - изображения/ИС" itemID="5131cddb-00000453" sourceExternalFilepath=".\LIBRARY\Блоки - изображения\ИС.jpg" sourceLastImported="1362218459" quality="50" href="Блоки - изображения\ИС.jpg" bitmapDataHRef="M 6 1362218132.dat" frameRight="32000" frameBottom="8780" isJPEG="true"/>
+          <DOMBitmapItem name="Блоки - изображения/ИТ-А" itemID="5131cdc0-0000044f" sourceExternalFilepath=".\LIBRARY\Блоки - изображения\ИТ-А.jpg" sourceLastImported="1362218432" quality="50" href="Блоки - изображения\ИТ-А.jpg" bitmapDataHRef="M 7 1362218141.dat" frameRight="45160" frameBottom="13000" isJPEG="true"/>
+     </media>
+     <symbols>
+          <Include href="Component Assets/_private/Component_avatar.xml" loadImmediate="false"/>
+          <Include href="Component Assets/ButtonSkins/Button_disabledSkin.xml"/>
+          <Include href="Component Assets/ButtonSkins/Button_downSkin.xml"/>
+          <Include href="Component Assets/ButtonSkins/Button_emphasizedSkin.xml"/>
+          <Include href="Component Assets/ButtonSkins/Button_overSkin.xml"/>
+          <Include href="Component Assets/ButtonSkins/Button_selectedDisabledSkin.xml"/>
+          <Include href="Component Assets/ButtonSkins/Button_selectedDownSkin.xml"/>
+          <Include href="Component Assets/ButtonSkins/Button_selectedOverSkin.xml"/>
+          <Include href="Component Assets/ButtonSkins/Button_selectedUpSkin.xml"/>
+          <Include href="Component Assets/ButtonSkins/Button_upSkin.xml"/>
+          <Include href="Component Assets/CellRenderer.xml"/>
+          <Include href="Component Assets/CellRendererSkins/CellRenderer_disabledSkin.xml"/>
+          <Include href="Component Assets/CellRendererSkins/CellRenderer_downSkin.xml"/>
+          <Include href="Component Assets/CellRendererSkins/CellRenderer_overSkin.xml"/>
+          <Include href="Component Assets/CellRendererSkins/CellRenderer_selectedDisabledSkin.xml"/>
+          <Include href="Component Assets/CellRendererSkins/CellRenderer_selectedDownSkin.xml"/>
+          <Include href="Component Assets/CellRendererSkins/CellRenderer_selectedOverSkin.xml"/>
+          <Include href="Component Assets/CellRendererSkins/CellRenderer_selectedUpSkin.xml"/>
+          <Include href="Component Assets/CellRendererSkins/CellRenderer_upSkin.xml"/>
+          <Include href="Component Assets/CheckBoxSkins/CheckBox_disabledIcon.xml"/>
+          <Include href="Component Assets/CheckBoxSkins/CheckBox_downIcon.xml"/>
+          <Include href="Component Assets/CheckBoxSkins/CheckBox_overIcon.xml"/>
+          <Include href="Component Assets/CheckBoxSkins/CheckBox_selectedDisabledIcon.xml"/>
+          <Include href="Component Assets/CheckBoxSkins/CheckBox_selectedDownIcon.xml"/>
+          <Include href="Component Assets/CheckBoxSkins/CheckBox_selectedIcon.xml" loadImmediate="false"/>
+          <Include href="Component Assets/CheckBoxSkins/CheckBox_selectedOverIcon.xml"/>
+          <Include href="Component Assets/CheckBoxSkins/CheckBox_selectedUpIcon.xml"/>
+          <Include href="Component Assets/CheckBoxSkins/CheckBox_upIcon.xml"/>
+          <Include href="Component Assets/ComboBoxSkins/ComboBox_disabledSkin.xml"/>
+          <Include href="Component Assets/ComboBoxSkins/ComboBox_downSkin.xml"/>
+          <Include href="Component Assets/ComboBoxSkins/ComboBox_overSkin.xml"/>
+          <Include href="Component Assets/ComboBoxSkins/ComboBox_upSkin.xml"/>
+          <Include href="Component Assets/ListSkins/List_skin.xml"/>
+          <Include href="Component Assets/NumericStepperSkins/NumericStepperDownArrow_disabledSkin.xml"/>
+          <Include href="Component Assets/NumericStepperSkins/NumericStepperDownArrow_downSkin.xml"/>
+          <Include href="Component Assets/NumericStepperSkins/NumericStepperDownArrow_icon.xml" itemIcon="1" loadImmediate="false"/>
+          <Include href="Component Assets/NumericStepperSkins/NumericStepperDownArrow_overSkin.xml"/>
+          <Include href="Component Assets/NumericStepperSkins/NumericStepperDownArrow_upSkin.xml"/>
+          <Include href="Component Assets/NumericStepperSkins/NumericStepperUpArrow_disabledSkin.xml"/>
+          <Include href="Component Assets/NumericStepperSkins/NumericStepperUpArrow_downSkin.xml"/>
+          <Include href="Component Assets/NumericStepperSkins/NumericStepperUpArrow_icon.xml" itemIcon="1" loadImmediate="false"/>
+          <Include href="Component Assets/NumericStepperSkins/NumericStepperUpArrow_overSkin.xml"/>
+          <Include href="Component Assets/NumericStepperSkins/NumericStepperUpArrow_upSkin.xml"/>
+          <Include href="Component Assets/RadioButtonSkins/RadioButton_disabledIcon.xml"/>
+          <Include href="Component Assets/RadioButtonSkins/RadioButton_downIcon.xml"/>
+          <Include href="Component Assets/RadioButtonSkins/RadioButton_overIcon.xml"/>
+          <Include href="Component Assets/RadioButtonSkins/RadioButton_selectedDisabledIcon.xml"/>
+          <Include href="Component Assets/RadioButtonSkins/RadioButton_selectedDownIcon.xml"/>
+          <Include href="Component Assets/RadioButtonSkins/RadioButton_selectedIcon.xml" loadImmediate="false"/>
+          <Include href="Component Assets/RadioButtonSkins/RadioButton_selectedOverIcon.xml"/>
+          <Include href="Component Assets/RadioButtonSkins/RadioButton_selectedUpIcon.xml"/>
+          <Include href="Component Assets/RadioButtonSkins/RadioButton_upIcon.xml"/>
+          <Include href="Component Assets/ScrollBar.xml"/>
+          <Include href="Component Assets/ScrollBarSkins/ScrollArrowDown_disabledSkin.xml"/>
+          <Include href="Component Assets/ScrollBarSkins/ScrollArrowDown_downSkin.xml"/>
+          <Include href="Component Assets/ScrollBarSkins/ScrollArrowDown_icon.xml" itemIcon="1" loadImmediate="false"/>
+          <Include href="Component Assets/ScrollBarSkins/ScrollArrowDown_overSkin.xml"/>
+          <Include href="Component Assets/ScrollBarSkins/ScrollArrowDown_upSkin.xml"/>
+          <Include href="Component Assets/ScrollBarSkins/ScrollArrowUp_disabledSkin.xml"/>
+          <Include href="Component Assets/ScrollBarSkins/ScrollArrowUp_downSkin.xml"/>
+          <Include href="Component Assets/ScrollBarSkins/ScrollArrowUp_icon.xml" itemIcon="1" loadImmediate="false"/>
+          <Include href="Component Assets/ScrollBarSkins/ScrollArrowUp_overSkin.xml"/>
+          <Include href="Component Assets/ScrollBarSkins/ScrollArrowUp_upSkin.xml"/>
+          <Include href="Component Assets/ScrollBarSkins/ScrollBar_thumbIcon.xml"/>
+          <Include href="Component Assets/ScrollBarSkins/ScrollThumb_downSkin.xml"/>
+          <Include href="Component Assets/ScrollBarSkins/ScrollThumb_overSkin.xml"/>
+          <Include href="Component Assets/ScrollBarSkins/ScrollThumb_upSkin.xml"/>
+          <Include href="Component Assets/ScrollBarSkins/ScrollTrack_skin.xml"/>
+          <Include href="Component Assets/Shared/arrowIcon.xml" itemIcon="1" loadImmediate="false"/>
+          <Include href="Component Assets/Shared/focusRectSkin.xml"/>
+          <Include href="Component Assets/SliderSkins/SliderThumb_disabledSkin.xml"/>
+          <Include href="Component Assets/SliderSkins/SliderThumb_downSkin.xml"/>
+          <Include href="Component Assets/SliderSkins/SliderThumb_overSkin.xml"/>
+          <Include href="Component Assets/SliderSkins/SliderThumb_upSkin.xml"/>
+          <Include href="Component Assets/SliderSkins/SliderTick_skin.xml"/>
+          <Include href="Component Assets/SliderSkins/SliderTrack_disabledSkin.xml"/>
+          <Include href="Component Assets/SliderSkins/SliderTrack_skin.xml"/>
+          <Include href="Component Assets/TextInputSkins/TextInput_disabledSkin.xml"/>
+          <Include href="Component Assets/TextInputSkins/TextInput_upSkin.xml"/>
+          <Include href="Блоки - внешние классы/D0034Image.xml"/>
+          <Include href="Блоки - внешние классы/D39Image.xml"/>
+          <Include href="Блоки - внешние классы/IL34Image.xml"/>
+          <Include href="Блоки - внешние классы/InputShield.xml"/>
+          <Include href="Блоки - внешние классы/IO3AImage.xml"/>
+          <Include href="Блоки - внешние классы/IO3BImage.xml"/>
+          <Include href="Блоки - внешние классы/IO4Image.xml"/>
+          <Include href="Блоки - внешние классы/IPImage.xml"/>
+          <Include href="Блоки - внешние классы/ISImage.xml"/>
+          <Include href="Блоки - внешние классы/ITAImage.xml"/>
+          <Include href="Блоки/IO3ABlock.xml"/>
+          <Include href="Блоки/IO4Block.xml"/>
+          <Include href="Блоки/IPBlock.xml"/>
+          <Include href="Вспомогательные штуки/im1.xml" loadImmediate="false"/>
+          <Include href="Вспомогательные штуки/im2.xml" loadImmediate="false"/>
+          <Include href="Вспомогательные штуки/im3.xml" loadImmediate="false"/>
+          <Include href="Вспомогательные штуки/im4.xml" loadImmediate="false"/>
+          <Include href="Вспомогательные штуки/im5.xml" loadImmediate="false"/>
+          <Include href="Вспомогательные штуки/im6.xml" loadImmediate="false"/>
+          <Include href="Вспомогательные штуки/im7.xml" loadImmediate="false"/>
+          <Include href="Вспомогательные штуки/im8.xml" loadImmediate="false"/>
+          <Include href="Вспомогательные штуки/im9.xml" loadImmediate="false"/>
+          <Include href="Вспомогательные штуки/im10.xml" loadImmediate="false"/>
+          <Include href="Компонент/Button.xml"/>
+          <Include href="Компонент/CheckBox.xml"/>
+          <Include href="Компонент/ComboBox.xml"/>
+          <Include href="Компонент/Label.xml"/>
+          <Include href="Компонент/List.xml"/>
+          <Include href="Компонент/NumericStepper.xml"/>
+          <Include href="Компонент/RadioButton.xml"/>
+          <Include href="Компонент/Slider.xml"/>
+          <Include href="Компонент/TextInput.xml"/>
+          <Include href="Контролы/GreenBulb.xml"/>
+          <Include href="Контролы/Jumper.xml"/>
+          <Include href="Контролы/RedBulb.xml"/>
+          <Include href="Контролы/TurnOnOff.xml"/>
+          <Include href="Контролы/TurnOnOffBulb.xml"/>
+          <Include href="Контролы/TurnOnOffMetal.xml"/>
+          <Include href="Экраны/GlobalScreen.xml"/>
+          <Include href="Экраны/IO3AScreen.xml"/>
+          <Include href="Экраны/IO4Screen.xml"/>
+          <Include href="Экраны/IPScreen.xml"/>
+          <Include href="Экраны/MainScreen.xml"/>
+          <Include href="Экраны/ModeScreen.xml"/>
+          <Include href="Экраны/StartMainScreen.xml"/>
+     </symbols>
+     <timelines>
+          <DOMTimeline name="Монтажный кадр 1">
+               <layers>
+                    <DOMLayer name="Слой 1" color="#4FFF4F" current="true" isSelected="true">
+                         <frames>
+                              <DOMFrame index="0" keyMode="9728">
+                                   <Actionscript>
+                                        <script><![CDATA[//stage.displayState=StageDisplayState.FULL_SCREEN;
+main_screen.InitializeIO4Screen();]]></script>
+                                   </Actionscript>
+                                   <elements>
+                                        <DOMSymbolInstance libraryItemName="Экраны/MainScreen" name="main_screen" selected="true" centerPoint3DX="512" centerPoint3DY="384">
+                                             <transformationPoint>
+                                                  <Point x="512" y="384"/>
+                                             </transformationPoint>
+                                        </DOMSymbolInstance>
+                                   </elements>
+                              </DOMFrame>
+                         </frames>
+                    </DOMLayer>
+               </layers>
+          </DOMTimeline>
+     </timelines>
+     <swatchLists>
+          <swatchList>
+               <swatches>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#003300" hue="80" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#006600" hue="80" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#009900" hue="80" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#00CC00" hue="80" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FF00" hue="80" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#330000" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#333300" hue="40" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#336600" hue="60" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#339900" hue="67" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#33CC00" hue="70" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#33FF00" hue="72" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#660000" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#663300" hue="20" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#666600" hue="40" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#669900" hue="53" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#66CC00" hue="60" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#66FF00" hue="64" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#333333" brightness="48"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#000033" hue="160" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#003333" hue="120" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#006633" hue="100" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#009933" hue="93" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#00CC33" hue="90" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FF33" hue="88" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#330033" hue="200" saturation="239" brightness="24"/>
+                    <SolidSwatchItem color="#333333" brightness="48"/>
+                    <SolidSwatchItem color="#336633" hue="80" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#339933" hue="80" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#33CC33" hue="80" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33FF33" hue="80" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#660033" hue="220" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#663333" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#666633" hue="40" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#669933" hue="60" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#66CC33" hue="67" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#66FF33" hue="70" saturation="239" brightness="144"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#666666" brightness="96"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#000066" hue="160" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#003366" hue="140" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#006666" hue="120" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#009966" hue="107" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#00CC66" hue="100" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FF66" hue="96" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#330066" hue="180" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#333366" hue="160" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#336666" hue="120" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#339966" hue="100" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#33CC66" hue="93" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33FF66" hue="90" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#660066" hue="200" saturation="239" brightness="48"/>
+                    <SolidSwatchItem color="#663366" hue="200" saturation="80" brightness="72"/>
+                    <SolidSwatchItem color="#666666" brightness="96"/>
+                    <SolidSwatchItem color="#669966" hue="80" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#66CC66" hue="80" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#66FF66" hue="80" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#999999" brightness="144"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#000099" hue="160" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#003399" hue="147" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#006699" hue="133" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#009999" hue="120" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#00CC99" hue="110" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FF99" hue="104" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#330099" hue="173" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#333399" hue="160" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#336699" hue="140" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#339999" hue="120" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#33CC99" hue="107" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33FF99" hue="100" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#660099" hue="187" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#663399" hue="180" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#666699" hue="160" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#669999" hue="120" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#66CC99" hue="100" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#66FF99" hue="93" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#CCCCCC" brightness="192"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#0000CC" hue="160" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#0033CC" hue="150" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#0066CC" hue="140" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#0099CC" hue="130" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00CCCC" hue="120" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#00FFCC" hue="112" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#3300CC" hue="170" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#3333CC" hue="160" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#3366CC" hue="147" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#3399CC" hue="133" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33CCCC" hue="120" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#33FFCC" hue="110" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#6600CC" hue="180" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#6633CC" hue="173" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#6666CC" hue="160" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#6699CC" hue="140" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#66CCCC" hue="120" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#66FFCC" hue="107" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#FFFFFF" brightness="240"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#0000FF" hue="160" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#0033FF" hue="152" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#0066FF" hue="144" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#0099FF" hue="136" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#00CCFF" hue="128" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#00FFFF" hue="120" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#3300FF" hue="168" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#3333FF" hue="160" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#3366FF" hue="150" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#3399FF" hue="140" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#33CCFF" hue="130" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#33FFFF" hue="120" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#6600FF" hue="176" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#6633FF" hue="170" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#6666FF" hue="160" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#6699FF" hue="147" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#66CCFF" hue="133" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#66FFFF" hue="120" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#FF0000" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#990000" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#993300" hue="13" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#996600" hue="27" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#999900" hue="40" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#99CC00" hue="50" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#99FF00" hue="56" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#CC0000" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC3300" hue="10" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC6600" hue="20" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC9900" hue="30" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CCCC00" hue="40" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CCFF00" hue="48" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF0000" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF3300" hue="8" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF6600" hue="16" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF9900" hue="24" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FFCC00" hue="32" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FFFF00" hue="40" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#00FF00" hue="80" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#990033" hue="227" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#993333" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#996633" hue="20" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#999933" hue="40" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#99CC33" hue="53" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#99FF33" hue="60" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#CC0033" hue="230" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC3333" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC6633" hue="13" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC9933" hue="27" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CCCC33" hue="40" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CCFF33" hue="50" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF0033" hue="232" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF3333" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF6633" hue="10" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF9933" hue="20" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FFCC33" hue="30" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FFFF33" hue="40" saturation="239" brightness="144"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#0000FF" hue="160" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#990066" hue="213" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#993366" hue="220" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#996666" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#999966" hue="40" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#99CC66" hue="60" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#99FF66" hue="67" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#CC0066" hue="220" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC3366" hue="227" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC6666" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CC9966" hue="20" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CCCC66" hue="40" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CCFF66" hue="53" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF0066" hue="224" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF3366" hue="230" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF6666" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF9966" hue="13" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FFCC66" hue="27" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FFFF66" hue="40" saturation="239" brightness="168"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#FFFF00" hue="40" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#990099" hue="200" saturation="239" brightness="72"/>
+                    <SolidSwatchItem color="#993399" hue="200" saturation="120" brightness="96"/>
+                    <SolidSwatchItem color="#996699" hue="200" saturation="48" brightness="120"/>
+                    <SolidSwatchItem color="#999999" brightness="144"/>
+                    <SolidSwatchItem color="#99CC99" hue="80" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#99FF99" hue="80" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#CC0099" hue="210" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC3399" hue="213" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC6699" hue="220" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CC9999" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#CCCC99" hue="40" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#CCFF99" hue="60" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FF0099" hue="216" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF3399" hue="220" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF6699" hue="227" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF9999" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FFCC99" hue="20" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FFFF99" hue="40" saturation="239" brightness="192"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#00FFFF" hue="120" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#9900CC" hue="190" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#9933CC" hue="187" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#9966CC" hue="180" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#9999CC" hue="160" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#99CCCC" hue="120" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#99FFCC" hue="100" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#CC00CC" hue="200" saturation="239" brightness="96"/>
+                    <SolidSwatchItem color="#CC33CC" hue="200" saturation="144" brightness="120"/>
+                    <SolidSwatchItem color="#CC66CC" hue="200" saturation="120" brightness="144"/>
+                    <SolidSwatchItem color="#CC99CC" hue="200" saturation="80" brightness="168"/>
+                    <SolidSwatchItem color="#CCCCCC" brightness="192"/>
+                    <SolidSwatchItem color="#CCFFCC" hue="80" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#FF00CC" hue="208" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF33CC" hue="210" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF66CC" hue="213" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF99CC" hue="220" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FFCCCC" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#FFFFCC" hue="40" saturation="239" brightness="216"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#FF00FF" hue="200" saturation="239" brightness="120"/>
+                    <SolidSwatchItem/>
+                    <SolidSwatchItem color="#9900FF" hue="184" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#9933FF" hue="180" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#9966FF" hue="173" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#9999FF" hue="160" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#99CCFF" hue="140" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#99FFFF" hue="120" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#CC00FF" hue="192" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#CC33FF" hue="190" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#CC66FF" hue="187" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#CC99FF" hue="180" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#CCCCFF" hue="160" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#CCFFFF" hue="120" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#FF00FF" hue="200" saturation="239" brightness="120"/>
+                    <SolidSwatchItem color="#FF33FF" hue="200" saturation="239" brightness="144"/>
+                    <SolidSwatchItem color="#FF66FF" hue="200" saturation="239" brightness="168"/>
+                    <SolidSwatchItem color="#FF99FF" hue="200" saturation="239" brightness="192"/>
+                    <SolidSwatchItem color="#FFCCFF" hue="200" saturation="239" brightness="216"/>
+                    <SolidSwatchItem color="#FFFFFF" brightness="240"/>
+                    <SolidSwatchItem color="#8AFF70" hue="73" saturation="239" brightness="173"/>
+                    <SolidSwatchItem color="#CBCBCB" brightness="191"/>
+                    <SolidSwatchItem color="#61B44F" hue="73" saturation="96" brightness="122"/>
+               </swatches>
+          </swatchList>
+     </swatchLists>
+     <extendedSwatchLists>
+          <swatchList>
+               <swatches>
+                    <LinearGradientSwatchItem>
+                         <GradientEntry color="#FFFFFF" ratio="0"/>
+                         <GradientEntry ratio="1"/>
+                    </LinearGradientSwatchItem>
+                    <RadialGradientSwatchItem>
+                         <GradientEntry color="#FFFFFF" ratio="0"/>
+                         <GradientEntry ratio="1"/>
+                    </RadialGradientSwatchItem>
+                    <RadialGradientSwatchItem>
+                         <GradientEntry color="#FF0000" ratio="0"/>
+                         <GradientEntry ratio="1"/>
+                    </RadialGradientSwatchItem>
+                    <RadialGradientSwatchItem>
+                         <GradientEntry color="#00FF00" ratio="0"/>
+                         <GradientEntry ratio="1"/>
+                    </RadialGradientSwatchItem>
+                    <RadialGradientSwatchItem>
+                         <GradientEntry color="#0000FF" ratio="0"/>
+                         <GradientEntry ratio="1"/>
+                    </RadialGradientSwatchItem>
+                    <LinearGradientSwatchItem>
+                         <GradientEntry color="#0066FD" ratio="0"/>
+                         <GradientEntry color="#FFFFFF" ratio="0.376470588235294"/>
+                         <GradientEntry color="#FFFFFF" ratio="0.47843137254902"/>
+                         <GradientEntry color="#996600" ratio="0.501960784313725"/>
+                         <GradientEntry color="#FFCC00" ratio="0.666666666666667"/>
+                         <GradientEntry color="#FFFFFF" ratio="1"/>
+                    </LinearGradientSwatchItem>
+                    <LinearGradientSwatchItem>
+                         <GradientEntry color="#FF0000" ratio="0"/>
+                         <GradientEntry color="#FFFF00" ratio="0.164705882352941"/>
+                         <GradientEntry color="#00FF00" ratio="0.364705882352941"/>
+                         <GradientEntry color="#00FFFF" ratio="0.498039215686275"/>
+                         <GradientEntry color="#0000FF" ratio="0.666666666666667"/>
+                         <GradientEntry color="#FF00FF" ratio="0.831372549019608"/>
+                         <GradientEntry color="#FF0000" ratio="1"/>
+                    </LinearGradientSwatchItem>
+               </swatches>
+          </swatchList>
+     </extendedSwatchLists>
+     <persistentData>
+          <PD n="com.air.artemis.airdest" v="impuls.air"/>
+          <PD n="DebugMovieChecked" v="ADLDesktop"/>
+          <PD n="com.air.artemis.pubair" v="true"/>
+          <PD n="com.air.artemis.pubipa" v="false"/>
+          <PD n="flash.swf.basename" v="impuls"/>
+          <PD n="swf.folder.path" v="F:/Импульс/"/>
+          <PD n="com.air.artemis.pubexe" v="false"/>
+     </persistentData>
+     <PrinterSettings/>
+     <publishHistory>
+          <PublishItem publishSize="5511282" publishTime="1364643482" publishDebug="true"/>
+          <PublishItem publishSize="5511285" publishTime="1364642811" publishDebug="true"/>
+          <PublishItem publishSize="5508595" publishTime="1364637852" publishDebug="true"/>
+          <PublishItem publishSize="5508616" publishTime="1364637612" publishDebug="true"/>
+          <PublishItem publishSize="5508600" publishTime="1364637338" publishDebug="true"/>
+          <PublishItem publishSize="5508307" publishTime="1364627286" publishDebug="true"/>
+          <PublishItem publishSize="5508283" publishTime="1364627229" publishDebug="true"/>
+          <PublishItem publishSize="5508267" publishTime="1364625916" publishDebug="true"/>
+          <PublishItem publishSize="5508270" publishTime="1364625362" publishDebug="true"/>
+          <PublishItem publishSize="5508278" publishTime="1364625253" publishDebug="true"/>
+          <PublishItem publishSize="5508270" publishTime="1364454917" publishDebug="true"/>
+          <PublishItem publishSize="5508279" publishTime="1364454694" publishDebug="true"/>
+          <PublishItem publishSize="5508263" publishTime="1364454560" publishDebug="true"/>
+          <PublishItem publishSize="5508209" publishTime="1364037975" publishDebug="true"/>
+          <PublishItem publishSize="5508208" publishTime="1364037804" publishDebug="true"/>
+          <PublishItem publishSize="5508204" publishTime="1364037603" publishDebug="true"/>
+          <PublishItem publishSize="5509302" publishTime="1364033876" publishDebug="true"/>
+          <PublishItem publishSize="5509300" publishTime="1364033679" publishDebug="true"/>
+          <PublishItem publishSize="5509159" publishTime="1364032131" publishDebug="true"/>
+          <PublishItem publishSize="5509123" publishTime="1364031954" publishDebug="true"/>
+     </publishHistory>
+     <swcCache>
+          <Swc hashKey="kfuaIecnz3BPM/B8Awo4b." href="7ghvhje1i6.swc">
+               <classDefinitions>
+                    <ClassDefinition value="fl.core.AccessibilityShim"/>
+                    <ClassDefinition value="fl.controls.CheckBox"/>
+                    <ClassDefinition value="fl.controls.LabelButton"/>
+                    <ClassDefinition value="fl.controls.List"/>
+                    <ClassDefinition value="fl.controls.ComboBox"/>
+                    <ClassDefinition value="fl.controls.ProgressBarDirection"/>
+                    <ClassDefinition value="fl.data.SimpleCollectionItem"/>
+                    <ClassDefinition value="fl.controls.TextArea"/>
+                    <ClassDefinition value="fl.controls.Slider"/>
+                    <ClassDefinition value="fl.events.DataChangeEvent"/>
+                    <ClassDefinition value="fl.accessibility.ComboBoxAccImpl"/>
+                    <ClassDefinition value="fl.events.DataChangeType"/>
+                    <ClassDefinition value="fl.accessibility.TileListAccImpl"/>
+                    <ClassDefinition value="fl.accessibility.ButtonAccImpl"/>
+                    <ClassDefinition value="fl.controls.BaseButton"/>
+                    <ClassDefinition value="fl.core.UIComponent"/>
+                    <ClassDefinition value="fl.controls.DataGrid"/>
+                    <ClassDefinition value="fl.containers.BaseScrollPane"/>
+                    <ClassDefinition value="fl.livepreview.LivePreviewParent"/>
+                    <ClassDefinition value="fl.controls.Label"/>
+                    <ClassDefinition value="fl.managers.IFocusManagerComponent"/>
+                    <ClassDefinition value="fl.controls.UIScrollBar"/>
+                    <ClassDefinition value="fl.controls.listClasses.ICellRenderer"/>
+                    <ClassDefinition value="fl.controls.dataGridClasses.DataGridCellEditor"/>
+                    <ClassDefinition value="fl.controls.ColorPicker"/>
+                    <ClassDefinition value="fl.managers.FocusManager"/>
+                    <ClassDefinition value="fl.events.DataGridEventReason"/>
+                    <ClassDefinition value="fl.events.SliderEvent"/>
+                    <ClassDefinition value="fl.events.SliderEventClickTarget"/>
+                    <ClassDefinition value="fl.controls.progressBarClasses.IndeterminateBar"/>
+                    <ClassDefinition value="fl.controls.listClasses.ListData"/>
+                    <ClassDefinition value="fl.core.InvalidationType"/>
+                    <ClassDefinition value="fl.controls.RadioButtonGroup"/>
+                    <ClassDefinition value="fl.controls.NumericStepper"/>
+                    <ClassDefinition value="fl.accessibility.LabelButtonAccImpl"/>
+                    <ClassDefinition value="fl.containers.UILoader"/>
+                    <ClassDefinition value="fl.events.ColorPickerEvent"/>
+                    <ClassDefinition value="fl.controls.ButtonLabelPlacement"/>
+                    <ClassDefinition value="fl.accessibility.CheckBoxAccImpl"/>
+                    <ClassDefinition value="fl.managers.StyleManager"/>
+                    <ClassDefinition value="fl.controls.TileList"/>
+                    <ClassDefinition value="fl.controls.RadioButton"/>
+                    <ClassDefinition value="fl.containers.ScrollPane"/>
+                    <ClassDefinition value="fl.controls.listClasses.TileListData"/>
+                    <ClassDefinition value="fl.events.InteractionInputType"/>
+                    <ClassDefinition value="fl.controls.Button"/>
+                    <ClassDefinition value="fl.core.ComponentShim"/>
+                    <ClassDefinition value="fl.accessibility.UIComponentAccImpl"/>
+                    <ClassDefinition value="fl.controls.SelectableList"/>
+                    <ClassDefinition value="fl.events.ComponentEvent"/>
+                    <ClassDefinition value="fl.accessibility.RadioButtonAccImpl"/>
+                    <ClassDefinition value="fl.controls.listClasses.CellRenderer"/>
+                    <ClassDefinition value="fl.managers.IFocusManagerGroup"/>
+                    <ClassDefinition value="fl.controls.ScrollPolicy"/>
+                    <ClassDefinition value="fl.controls.ScrollBar"/>
+                    <ClassDefinition value="fl.controls.ProgressBar"/>
+                    <ClassDefinition value="fl.controls.listClasses.ImageCell"/>
+                    <ClassDefinition value="fl.managers.IFocusManager"/>
+                    <ClassDefinition value="fl.controls.ProgressBarMode"/>
+                    <ClassDefinition value="fl.accessibility.SelectableListAccImpl"/>
+                    <ClassDefinition value="fl.controls.TextInput"/>
+                    <ClassDefinition value="fl.events.ListEvent"/>
+                    <ClassDefinition value="fl.accessibility.AccImpl"/>
+                    <ClassDefinition value="fl.accessibility.DataGridAccImpl"/>
+                    <ClassDefinition value="fl.controls.dataGridClasses.DataGridColumn"/>
+                    <ClassDefinition value="fl.events.ScrollEvent"/>
+                    <ClassDefinition value="fl.events.DataGridEvent"/>
+                    <ClassDefinition value="fl.data.TileListCollectionItem"/>
+                    <ClassDefinition value="fl.data.DataProvider"/>
+                    <ClassDefinition value="fl.accessibility.ListAccImpl"/>
+                    <ClassDefinition value="fl.controls.dataGridClasses.HeaderRenderer"/>
+                    <ClassDefinition value="fl.controls.ScrollBarDirection"/>
+                    <ClassDefinition value="fl.controls.SliderDirection"/>
+               </classDefinitions>
+          </Swc>
+     </swcCache>
+</DOMDocument>
