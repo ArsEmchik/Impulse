@@ -20,7 +20,6 @@
 		{
 			if (!removed)
 				SetVisible(false);
-			ClearInfo();
 		}
 		public function SetVisible(t_visible: Boolean)
 		{
@@ -29,17 +28,13 @@
 			{
 				if (t_visible)
 					screen.addChild(objects[i]);
-				else screen.removeChild(objects[i]);
+				else
+				{
+					if (screen.contains(objects[i]))
+						screen.removeChild(objects[i]);
+				}
 			}
 			removed=!t_visible;
-		}
-		private function ClearInfo()
-		{
-			var i: int;
-			var first_radio: Boolean=true;			
-			for (i=0; i<objects.length; i++)
-			{
-			}
 		}
 	}
 }

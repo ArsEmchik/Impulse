@@ -21,6 +21,8 @@
 		var main_mode: int;
 		var impuls_mode: int;
 		var local_mode: int;
+		var speed_mode: int;
+		var need_chanels: int;
 		
 		var main_screen: MainScreen;
 		var main_mode_mas: Vector.<RadioButton> = new Vector.<RadioButton>(); //обуч трен контроль
@@ -39,6 +41,7 @@
 		var cable_label: Vector.<Label> = new Vector.<Label>();
 		var tb_fio: TextInput;
 		var tb_num: TextInput;
+		var speed_combo_box_prepare: ComboBox;
 		
 		var main_mode_group: ComponentGroup;
 		var mode_mas_group: ComponentGroup;
@@ -48,7 +51,7 @@
 		var cable_group: ComponentGroup;
 		var fio_group: ComponentGroup;
 		var start_group: ComponentGroup;
-		
+		var speed_preapare_group: ComponentGroup;
 		var mode_info: ModeInfo = new ModeInfo();
 		
 		public function ModeScreen() 
@@ -56,6 +59,7 @@
 			main_mode_mas.push(main_mode_1);
 			main_mode_mas.push(main_mode_2);
 			main_mode_mas.push(main_mode_3);
+			main_mode_mas.push(main_mode_4);
 			mode_mas.push(mode_1);
 			mode_mas.push(mode_2);
 			mode_mas.push(mode_3);
@@ -66,11 +70,12 @@
 			local_mode_mas.push(local_mode_5);
 			local_mode_mas.push(local_mode_6);
 			speed_combo_box=t_speed_combo_box;
+			speed_combo_box_prepare=t_speed_combo_box_prepare;
 			channel_slider=t_channel_slider;
 			start_button=t_start_button;
-			cable1_zk.push(cable11_zk);
+			cable1_zk.push(cable11_zkb);
 			cable1_zk.push(cable12_zk);
-			cable1_zk.push(cable13_zk);
+			cable1_zk.push(cable13_zkb);
 			cable2_zk.push(cable21_zk);
 			cable2_zk.push(cable22_zk);
 			cable2_zk.push(cable23_zk);
@@ -114,6 +119,7 @@
 			SetGroups();
 			SetEvents();
 			SetStyleToRadioButtonsAndLabels();
+			InitializeStartStepperValues();
 		}
 		public function StartButtonMouseUp(e: MouseEvent)
 		{
@@ -133,7 +139,8 @@
 			fio_group_mas.push(tb_fio,tb_num,fio_label1,fio_label2);
 			var start_group_mas: Vector.<DisplayObject> = new Vector.<DisplayObject>();
 			start_group_mas.push(start_button);
-			
+			var prepare_group_mas: Vector.<DisplayObject> = new Vector.<DisplayObject>();
+			prepare_group_mas.push(this.speed_combo_box_prepare,speed_label_prepare);
 			main_mode_group = new ComponentGroup(this,(new Vector.<DisplayObject>()).concat(main_mode_mas));
 			mode_mas_group = new ComponentGroup(this,(new Vector.<DisplayObject>()).concat(mode_mas));
 			local_mode_group = new ComponentGroup(this,(new Vector.<DisplayObject>()).concat(local_mode_mas));
@@ -142,6 +149,7 @@
 			cable_group = new ComponentGroup(this,GetCableGroupAsDislayObjects());
 			fio_group = new ComponentGroup(this,fio_group_mas);
 			start_group = new ComponentGroup(this,start_group_mas);
+			speed_preapare_group= new ComponentGroup(this,prepare_group_mas);
 			main_mode_group.SetVisible(true);
 		}
 		private function GetCableGroupAsDislayObjects()
@@ -178,6 +186,7 @@
 			for (i=0; i<this.radiobuttons2.length; i++)
 				this.radiobuttons2[i].addEventListener(MouseEvent.CLICK,P296Click2);				
 			speed_combo_box.addEventListener(Event.CHANGE,ComboBoxChange);
+			speed_combo_box_prepare.addEventListener(Event.CHANGE,PrepareComboBoxChange);
 			channel_count.addEventListener(Event.CHANGE,ChannelCountChange);
 			channel_slider.addEventListener(Event.CHANGE,ChannelSliderChange);
 		}
@@ -199,12 +208,13 @@
 					break;
 			main_mode = i;
 			var clear_groups: Vector.<ComponentGroup> = new Vector.<ComponentGroup>();
-			clear_groups.push(mode_mas_group,local_mode_group,speed_group,channel_group,cable_group,fio_group,start_group);
+			clear_groups.push(mode_mas_group,local_mode_group,speed_group,channel_group,cable_group,fio_group,start_group,speed_preapare_group);
 			ClearGroups(clear_groups);
 			switch (main_mode)
 			{
 				case ModeInfo.MM_INSTRUCTION:
-				case ModeInfo.MM_TRAINIG:
+				case ModeInfo.MM_TRAINIGWITHHINT:
+				case ModeInfo.MM_TRAINIGWITHOUTHINT:
 					mode_0.selected=true;
 					mode_mas_group.SetVisible(true);
 					break;
@@ -236,10 +246,18 @@
 					break;
 			impuls_mode = i;
 			var clear_groups: Vector.<ComponentGroup> = new Vector.<ComponentGroup>();
-			clear_groups.push(local_mode_group,speed_group,channel_group,cable_group,start_group);
+			clear_groups.push(local_mode_group,speed_group,channel_group,cable_group,start_group,speed_preapare_group);
 			ClearGroups(clear_groups);
-			local_mode_group.SetVisible(true);
-			local_mode_0.selected=true;
+			if (ModeInfo.M_COMMUTATION==impuls_mode)
+			{
+				local_mode_group.SetVisible(true);
+				local_mode_0.selected=true;
+			}
+			else
+			{
+				FillPrepareComboBox();
+				speed_preapare_group.SetVisible(true);
+			}
 		}
 		private function LocalModeRadioButton(e: MouseEvent)
 		{
@@ -251,7 +269,7 @@
 					break;
 			local_mode = i;
 			var clear_groups: Vector.<ComponentGroup> = new Vector.<ComponentGroup>();
-			clear_groups.push(speed_group,channel_group,cable_group,start_group);
+			clear_groups.push(speed_group,channel_group,cable_group,start_group,speed_preapare_group);
 			ClearGroups(clear_groups);
 			speed_group.SetVisible(true);
 			FillComboBox(local_mode);
@@ -267,10 +285,27 @@
 			if (t_local_mode!=ModeInfo.L_UZL1)
 				speed_combo_box.addItem(new ValueData("2048 кбит",ModeInfo.S_2048));
 		}
+		private function FillPrepareComboBox()
+		{
+			speed_combo_box_prepare.removeAll();
+			speed_combo_box_prepare.addItem(new ValueData("",-1));
+			speed_combo_box_prepare.addItem(new ValueData("48 кбит",ModeInfo.S_48));
+			speed_combo_box_prepare.addItem(new ValueData("480 кбит",ModeInfo.S_480));
+			speed_combo_box_prepare.addItem(new ValueData("2048 кбит",ModeInfo.S_2048));
+		}
+		private function PrepareComboBoxChange(e: Event)
+		{
+			start_group.SetVisible(false);
+			if ((speed_combo_box_prepare.selectedItem as ValueData).data!=-1)
+			{
+				start_group.SetVisible(true);
+				this.speed_mode=(speed_combo_box_prepare.selectedItem as ValueData).data;
+			}
+		}
 		private function ComboBoxChange(e: Event)
 		{
 			var clear_groups: Vector.<ComponentGroup> = new Vector.<ComponentGroup>();
-			clear_groups.push(channel_group,cable_group,start_group);
+			clear_groups.push(channel_group,cable_group,start_group,speed_preapare_group);
 			ClearGroups(clear_groups);						
 			if ((speed_combo_box.selectedItem as ValueData).data!=-1)
 			{
@@ -279,18 +314,22 @@
 				{
 					case ModeInfo.S_48:
 						max_channel_count=1;
+						this.speed_mode=ModeInfo.S_48;
 						EnableP296Radiobuttons(false);
 						break;
 					case ModeInfo.S_480:
 						max_channel_count=9;
+						this.speed_mode=ModeInfo.S_480;
 						EnableP296Radiobuttons(true);
 						break;
 					case ModeInfo.S_480x2:
 						max_channel_count=18;
+						this.speed_mode=ModeInfo.S_480x2;
 						EnableP296Radiobuttons(true);
 						break;
 					case ModeInfo.S_2048:
 						max_channel_count=36;
+						this.speed_mode=ModeInfo.S_2048;
 						EnableP296Radiobuttons(true,true);
 						break;
 				}
@@ -316,11 +355,13 @@
 			channel_label4.text = "КТЧ ("+e.target.value+")";
 			if (e.target.value!=0)
 			{
+				SetStepperValues(0,e.target.value);
 				cable_group.SetVisible(true);
 			}
 		}
 		private function ChannelSliderChange(e: Event)
 		{
+			SetStepperValues(e.target.value,channel_slider.maximum-e.target.value);
 			channel_label3.text = "ЦК-48 ("+e.target.value.toString()+")";
 			channel_label4.text = "КТЧ ("+(channel_slider.maximum-e.target.value).toString()+")";
 		}
@@ -339,10 +380,12 @@
 				cable_label[i].setStyle("textFormat",tf);				
 			start_button.setStyle("textFormat",tf);
 			speed_combo_box.setStyle("textFormat",tf);
+			speed_combo_box_prepare.setStyle("textFormat",tf);
 			channel_slider.setStyle("textFormat",tf);
 			tb_fio.setStyle("textFormat",tf);
 			tb_num.setStyle("textFormat",tf);
 			speed_label.setStyle("textFormat",tf);
+			speed_label_prepare.setStyle("textFormat",tf);
 			channel_label1.setStyle("textFormat",tf);
 			channel_label2.setStyle("textFormat",tf);
 			channel_label3.setStyle("textFormat",tf);
@@ -364,6 +407,79 @@
 				this.radiobuttons1[2].enabled=false;
 				this.radiobuttons2[2].enabled=false;
 			}
+		}
+		private function InitializeSteppersToZero()
+		{
+			var i: int;
+			for (i=0; i<cable1_zk.length; i++)
+				cable1_zk[i].value=0;
+			for (i=0; i<cable2_zk.length; i++)
+				cable2_zk[i].value=0;
+			for (i=0; i<cable1_ktch.length; i++)
+				cable1_ktch[i].value=0;
+			for (i=0; i<cable2_ktch.length; i++)
+				cable2_ktch[i].value=0;
+		}
+		private function InitializeStartStepperValues()
+		{
+			var i: int;
+			for (i=0; i<cable1_zk.length; i++)
+			{
+				cable1_zk[i].maximum=4;
+				cable1_zk[i].minimum=0;
+			}
+			for (i=0; i<cable2_zk.length; i++)
+			{
+				cable2_zk[i].maximum=4;
+				cable2_zk[i].minimum=0;
+			}
+			for (i=0; i<cable1_ktch.length; i++)
+			{
+				cable1_ktch[i].maximum=4;
+				cable1_ktch[i].minimum=0;
+			}
+			for (i=0; i<cable2_ktch.length; i++)
+			{
+				cable2_ktch[i].maximum=4;
+				cable2_ktch[i].minimum=0;
+			}
+		}
+		private function SetStepperValues(zk: int, ktch: int)
+		{
+			InitializeSteppersToZero();
+			trace(this.speed_mode,ModeInfo.S_2048);
+			if (this.speed_mode==ModeInfo.S_2048)
+				return;
+			var i: int;
+			var sub: int=0;
+			var min: int;
+			var cable_mas_zk: Vector.<NumericStepper> = new Vector.<NumericStepper>();
+			var cable_mas_ktch: Vector.<NumericStepper> = new Vector.<NumericStepper>();
+			cable_mas_zk.push(this.cable1_zk[0],this.cable1_zk[1],this.cable1_zk[2],
+						   this.cable2_zk[0],this.cable2_zk[1],this.cable2_zk[2]);
+			cable_mas_ktch.push(this.cable1_ktch[0],this.cable1_ktch[1],this.cable1_ktch[2],
+								  this.cable2_ktch[0],this.cable2_ktch[1],this.cable2_ktch[2]);
+			for (i=0; i<cable_mas_zk.length; i++)
+			{
+				if (zk>=4)
+					sub=4;
+				else sub=zk;
+				cable_mas_zk[i].value=sub;
+				zk-=sub;
+				if (zk==0)
+					break;
+			}
+			for (i=0; i<cable_mas_ktch.length; i++)
+			{
+				min = 4-cable_mas_zk[i].value;
+				if (ktch>=min)
+					sub=min;
+				else sub=ktch;
+				ktch-=sub;
+				cable_mas_ktch[i].value=sub;
+				if (ktch==0)
+					break;
+			}			
 		}
 	}
 }

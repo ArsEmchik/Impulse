@@ -219,6 +219,7 @@
           <Include href="Component Assets/SliderSkins/SliderTrack_skin.xml"/>
           <Include href="Component Assets/TextInputSkins/TextInput_disabledSkin.xml"/>
           <Include href="Component Assets/TextInputSkins/TextInput_upSkin.xml"/>
+          <Include href="Label.xml"/>
           <Include href="Блоки - внешние классы/D0034Image.xml"/>
           <Include href="Блоки - внешние классы/D39Image.xml"/>
           <Include href="Блоки - внешние классы/IL34Image.xml"/>
@@ -245,7 +246,6 @@
           <Include href="Компонент/Button.xml"/>
           <Include href="Компонент/CheckBox.xml"/>
           <Include href="Компонент/ComboBox.xml"/>
-          <Include href="Компонент/Label.xml"/>
           <Include href="Компонент/List.xml"/>
           <Include href="Компонент/NumericStepper.xml"/>
           <Include href="Компонент/RadioButton.xml"/>
@@ -273,10 +273,10 @@
                               <DOMFrame index="0" keyMode="9728">
                                    <Actionscript>
                                         <script><![CDATA[//stage.displayState=StageDisplayState.FULL_SCREEN;
-main_screen.InitializeIO4Screen();]]></script>
+//main_screen.InitializeIO4Screen();]]></script>
                                    </Actionscript>
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="Экраны/MainScreen" name="main_screen" selected="true" centerPoint3DX="512" centerPoint3DY="384">
+                                        <DOMSymbolInstance libraryItemName="Экраны/MainScreen" name="main_screen" centerPoint3DX="512" centerPoint3DY="384">
                                              <transformationPoint>
                                                   <Point x="512" y="384"/>
                                              </transformationPoint>
@@ -603,6 +603,7 @@ main_screen.InitializeIO4Screen();]]></script>
      </persistentData>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="5512540" publishTime="1365228564" publishDebug="true"/>
           <PublishItem publishSize="5511282" publishTime="1364643482" publishDebug="true"/>
           <PublishItem publishSize="5511285" publishTime="1364642811" publishDebug="true"/>
           <PublishItem publishSize="5508595" publishTime="1364637852" publishDebug="true"/>
@@ -622,7 +623,6 @@ main_screen.InitializeIO4Screen();]]></script>
           <PublishItem publishSize="5509302" publishTime="1364033876" publishDebug="true"/>
           <PublishItem publishSize="5509300" publishTime="1364033679" publishDebug="true"/>
           <PublishItem publishSize="5509159" publishTime="1364032131" publishDebug="true"/>
-          <PublishItem publishSize="5509123" publishTime="1364031954" publishDebug="true"/>
      </publishHistory>
      <swcCache>
           <Swc hashKey="kfuaIecnz3BPM/B8Awo4b." href="7ghvhje1i6.swc">

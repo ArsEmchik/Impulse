@@ -237,7 +237,7 @@
                   <matrix>
                     <Matrix tx="86.05" ty="30"/>
                   </matrix>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.68.35.17.14'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.176.35.19.14'>
 </component>
 ]]></dataBindingXML>
                 </DOMCompiledClipInstance>

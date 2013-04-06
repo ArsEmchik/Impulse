@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Экраны/ModeScreen" itemID="5131ac6b-00000385" linkageExportForAS="true" linkageClassName="screens.ModeScreen" sourceLibraryItemHRef="Символ 1" lastModified="1364037751" lastUniqueIdentifier="175">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Экраны/ModeScreen" itemID="5131ac6b-00000385" linkageExportForAS="true" linkageClassName="screens.ModeScreen" sourceLibraryItemHRef="Символ 1" lastModified="1364834449" lastUniqueIdentifier="184">
   <timeline>
     <DOMTimeline name="ModeScreen">
       <layers>
@@ -6,14 +6,14 @@
           <frames>
             <DOMFrame index="0" keyMode="9728">
               <elements>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="channel_label3" cacheAsBitmap="true" centerPoint3DX="806.25" centerPoint3DY="230.45" uniqueID="86">
+                <DOMComponentInstance libraryItemName="Label" name="channel_label3" cacheAsBitmap="true" centerPoint3DX="806.25" centerPoint3DY="230.45" uniqueID="86">
                   <matrix>
                     <Matrix tx="756.15" ty="219.45"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.86'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.86'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -44,12 +44,12 @@
                 </DOMComponentInstance>
                 <DOMComponentInstance libraryItemName="Компонент/RadioButton" name="main_mode_1" cacheAsBitmap="true" centerPoint3DX="101.2" centerPoint3DY="223.95" uniqueID="62">
                   <matrix>
-                    <Matrix a="1.28958129882813" d="1.54620361328125" tx="36.35" ty="206.9"/>
+                    <Matrix a="1.61843872070313" d="1.54620361328125" tx="19.9" ty="206.9"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="49.95" y="11.05"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.62'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.62'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -82,7 +82,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.64'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.64'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="emphasized">
@@ -115,7 +115,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.68'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.68'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="dataProvider">
@@ -143,12 +143,12 @@
                 </DOMComponentInstance>
                 <DOMComponentInstance libraryItemName="Компонент/RadioButton" name="main_mode_2" cacheAsBitmap="true" centerPoint3DX="101.2" centerPoint3DY="254.65" uniqueID="69">
                   <matrix>
-                    <Matrix a="1.28958129882813" d="1.13388061523438" tx="36.35" ty="242.2"/>
+                    <Matrix a="1.60906982421875" d="1.13388061523438" tx="20.35" ty="242.2"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="49.95" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.69'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.69'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -158,7 +158,7 @@
       <Inspectable name="groupName" variable="groupName" category="" verbose="0" defaultValue="RadioButtonGroup_1" type="String"/>
    </property>
    <property id="label">
-      <Inspectable name="label" variable="label" category="" verbose="0" defaultValue="Тренировка" type="String"/>
+      <Inspectable name="label" variable="label" category="" verbose="0" defaultValue="Тренировка(сп)" type="String"/>
    </property>
    <property id="labelPlacement">
       <Inspectable name="labelPlacement" variable="labelPlacement" category="" verbose="0" defaultValue="right" enumeration="left,right,top,bottom" type="List"/>
@@ -174,14 +174,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/RadioButton" name="main_mode_3" cacheAsBitmap="true" centerPoint3DX="101.2" centerPoint3DY="284.1" uniqueID="70">
+                <DOMComponentInstance libraryItemName="Компонент/RadioButton" name="main_mode_4" cacheAsBitmap="true" centerPoint3DX="101.2" centerPoint3DY="304.1" uniqueID="70">
                   <matrix>
-                    <Matrix a="1.28958129882813" d="1.13388061523438" tx="36.35" ty="271.65"/>
+                    <Matrix a="1.60650634765625" d="1.13388061523438" tx="20.5" ty="291.65"/>
                   </matrix>
                   <transformationPoint>
-                    <Point x="49.95" y="10.85"/>
+                    <Point x="49.95" y="10.9"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.70'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.70'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -214,7 +214,7 @@
                   <transformationPoint>
                     <Point x="49.95" y="10.9"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.71'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.71'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -247,7 +247,7 @@
                   <transformationPoint>
                     <Point x="49.95" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.72'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.72'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -278,9 +278,9 @@
                     <Matrix a="1.4434814453125" d="1.13388061523438" tx="170.75" ty="271.65"/>
                   </matrix>
                   <transformationPoint>
-                    <Point x="49.95" y="10.85"/>
+                    <Point x="49.95" y="10.8"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.73'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.73'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -313,7 +313,7 @@
                   <transformationPoint>
                     <Point x="49.9" y="10.9"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.74'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.74'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -346,7 +346,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="10.9"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.75'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.75'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -379,7 +379,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.76'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.76'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -412,7 +412,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.77'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.77'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -445,7 +445,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.78'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.78'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -478,7 +478,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="10.9"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.79'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.79'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -511,7 +511,7 @@
                   <transformationPoint>
                     <Point x="40" y="1.5"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.81'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.81'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="direction">
@@ -543,14 +543,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="channel_label4" cacheAsBitmap="true" centerPoint3DX="1014" centerPoint3DY="230.45" uniqueID="88">
+                <DOMComponentInstance libraryItemName="Label" name="channel_label4" cacheAsBitmap="true" centerPoint3DX="1014" centerPoint3DY="230.45" uniqueID="88">
                   <matrix>
                     <Matrix tx="963.9" ty="219.45"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.88'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.88'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -579,44 +579,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/NumericStepper" name="cable11_zk" cacheAsBitmap="true" centerPoint3DX="164.4" centerPoint3DY="448.5" uniqueID="90">
-                  <matrix>
-                    <Matrix a="0.574600219726563" tx="141.4" ty="437.5"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point x="40" y="11"/>
-                  </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.90'>
-</component>
-]]></dataBindingXML>
-                  <parametersAsXML><![CDATA[   <property id="enabled">
-      <Inspectable name="enabled" variable="enabled" category="" verbose="0" defaultValue="true" type="Boolean"/>
-   </property>
-   <property id="maximum">
-      <Inspectable name="maximum" variable="maximum" category="" verbose="0" defaultValue="10" type="Number"/>
-   </property>
-   <property id="minimum">
-      <Inspectable name="minimum" variable="minimum" category="" verbose="0" defaultValue="0" type="Number"/>
-   </property>
-   <property id="stepSize">
-      <Inspectable name="stepSize" variable="stepSize" category="" verbose="0" defaultValue="1" type="Number"/>
-   </property>
-   <property id="value">
-      <Inspectable name="value" variable="value" category="" verbose="0" defaultValue="1,00" type="Number"/>
-   </property>
-   <property id="visible">
-      <Inspectable name="visible" variable="visible" category="" verbose="1" defaultValue="true" type="Boolean"/>
-   </property>
-]]></parametersAsXML>
-                </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l2" cacheAsBitmap="true" centerPoint3DX="69.4" centerPoint3DY="448.5" uniqueID="101">
+                <DOMComponentInstance libraryItemName="Label" name="l2" cacheAsBitmap="true" centerPoint3DX="69.4" centerPoint3DY="448.5" uniqueID="101">
                   <matrix>
                     <Matrix a="1.15997314453125" tx="11.3" ty="437.5"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.101'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.101'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -645,14 +615,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l3" cacheAsBitmap="true" centerPoint3DX="69.4" centerPoint3DY="481.5" uniqueID="102">
+                <DOMComponentInstance libraryItemName="Label" name="l3" cacheAsBitmap="true" centerPoint3DX="69.4" centerPoint3DY="481.5" uniqueID="102">
                   <matrix>
                     <Matrix a="1.15997314453125" tx="11.3" ty="470.5"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.102'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.102'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -681,14 +651,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l4" cacheAsBitmap="true" centerPoint3DX="69.4" centerPoint3DY="515.5" uniqueID="103">
+                <DOMComponentInstance libraryItemName="Label" name="l4" cacheAsBitmap="true" centerPoint3DX="69.4" centerPoint3DY="515.5" uniqueID="103">
                   <matrix>
                     <Matrix a="1.15997314453125" tx="11.3" ty="504.5"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.103'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.103'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -717,14 +687,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l5" cacheAsBitmap="true" centerPoint3DX="69.4" centerPoint3DY="550.55" uniqueID="105">
+                <DOMComponentInstance libraryItemName="Label" name="l5" cacheAsBitmap="true" centerPoint3DX="69.4" centerPoint3DY="550.55" uniqueID="105">
                   <matrix>
                     <Matrix a="1.13446044921875" tx="12.55" ty="539.55"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.105'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.105'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -753,14 +723,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l14" cacheAsBitmap="true" centerPoint3DX="472.75" centerPoint3DY="448.5" uniqueID="106">
+                <DOMComponentInstance libraryItemName="Label" name="l14" cacheAsBitmap="true" centerPoint3DX="472.75" centerPoint3DY="448.5" uniqueID="106">
                   <matrix>
                     <Matrix a="1.20999145507813" tx="412.05" ty="437.5"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.106'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.106'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -789,14 +759,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l15" cacheAsBitmap="true" centerPoint3DX="472.75" centerPoint3DY="481.5" uniqueID="107">
+                <DOMComponentInstance libraryItemName="Label" name="l15" cacheAsBitmap="true" centerPoint3DX="472.75" centerPoint3DY="481.5" uniqueID="107">
                   <matrix>
                     <Matrix a="1.20999145507813" tx="412.05" ty="470.5"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.107'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.107'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -825,14 +795,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l16" cacheAsBitmap="true" centerPoint3DX="472.75" centerPoint3DY="515.5" uniqueID="108">
+                <DOMComponentInstance libraryItemName="Label" name="l16" cacheAsBitmap="true" centerPoint3DX="472.75" centerPoint3DY="515.5" uniqueID="108">
                   <matrix>
                     <Matrix a="1.20999145507813" tx="412.05" ty="504.5"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.108'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.108'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -861,14 +831,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l17" cacheAsBitmap="true" centerPoint3DX="472.75" centerPoint3DY="550.55" uniqueID="109">
+                <DOMComponentInstance libraryItemName="Label" name="l17" cacheAsBitmap="true" centerPoint3DX="472.75" centerPoint3DY="550.55" uniqueID="109">
                   <matrix>
                     <Matrix a="1.183349609375" tx="413.35" ty="539.55"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.109'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.109'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -897,44 +867,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/NumericStepper" name="cable12_zk" cacheAsBitmap="true" centerPoint3DX="164.4" centerPoint3DY="479.5" uniqueID="110">
+                <DOMComponentInstance libraryItemName="Компонент/NumericStepper" name="cable12_zk" cacheAsBitmap="true" centerPoint3DX="149.4" centerPoint3DY="479.5" uniqueID="110">
                   <matrix>
-                    <Matrix a="0.574600219726563" tx="141.4" ty="468.5"/>
+                    <Matrix a="0.574600219726563" tx="126.4" ty="468.5"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="40" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.110'>
-</component>
-]]></dataBindingXML>
-                  <parametersAsXML><![CDATA[   <property id="enabled">
-      <Inspectable name="enabled" variable="enabled" category="" verbose="0" defaultValue="true" type="Boolean"/>
-   </property>
-   <property id="maximum">
-      <Inspectable name="maximum" variable="maximum" category="" verbose="0" defaultValue="10" type="Number"/>
-   </property>
-   <property id="minimum">
-      <Inspectable name="minimum" variable="minimum" category="" verbose="0" defaultValue="0" type="Number"/>
-   </property>
-   <property id="stepSize">
-      <Inspectable name="stepSize" variable="stepSize" category="" verbose="0" defaultValue="1" type="Number"/>
-   </property>
-   <property id="value">
-      <Inspectable name="value" variable="value" category="" verbose="0" defaultValue="1" type="Number"/>
-   </property>
-   <property id="visible">
-      <Inspectable name="visible" variable="visible" category="" verbose="1" defaultValue="true" type="Boolean"/>
-   </property>
-]]></parametersAsXML>
-                </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/NumericStepper" name="cable13_zk" cacheAsBitmap="true" centerPoint3DX="164.4" centerPoint3DY="515.5" uniqueID="111">
-                  <matrix>
-                    <Matrix a="0.574600219726563" tx="141.4" ty="504.5"/>
-                  </matrix>
-                  <transformationPoint>
-                    <Point x="40" y="11"/>
-                  </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.111'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.110'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -964,7 +904,7 @@
                   <transformationPoint>
                     <Point x="40" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.113'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.113'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -994,7 +934,7 @@
                   <transformationPoint>
                     <Point x="40" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.114'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.114'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -1024,7 +964,7 @@
                   <transformationPoint>
                     <Point x="40" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.115'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.115'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -1054,7 +994,7 @@
                   <transformationPoint>
                     <Point x="40.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.117'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.117'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -1084,7 +1024,7 @@
                   <transformationPoint>
                     <Point x="40.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.118'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.118'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -1114,7 +1054,7 @@
                   <transformationPoint>
                     <Point x="40.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.119'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.119'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -1144,7 +1084,7 @@
                   <transformationPoint>
                     <Point x="40" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.121'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.121'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -1174,7 +1114,7 @@
                   <transformationPoint>
                     <Point x="40" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.122'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.122'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -1204,7 +1144,7 @@
                   <transformationPoint>
                     <Point x="40" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.123'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.123'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -1227,14 +1167,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l6" cacheAsBitmap="true" centerPoint3DX="221.75" centerPoint3DY="451.55" uniqueID="125">
+                <DOMComponentInstance libraryItemName="Label" name="l6" cacheAsBitmap="true" centerPoint3DX="221.75" centerPoint3DY="451.55" uniqueID="125">
                   <matrix>
                     <Matrix a="0.612503051757813" tx="191" ty="440.55"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.125'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.125'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1263,14 +1203,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l7" cacheAsBitmap="true" centerPoint3DX="223.45" centerPoint3DY="482.65" uniqueID="126">
+                <DOMComponentInstance libraryItemName="Label" name="l7" cacheAsBitmap="true" centerPoint3DX="223.45" centerPoint3DY="482.65" uniqueID="126">
                   <matrix>
                     <Matrix a="0.612503051757813" tx="192.8" ty="471.65"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.126'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.126'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1299,14 +1239,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l8" cacheAsBitmap="true" centerPoint3DX="221.75" centerPoint3DY="517.9" uniqueID="127">
+                <DOMComponentInstance libraryItemName="Label" name="l8" cacheAsBitmap="true" centerPoint3DX="221.75" centerPoint3DY="517.9" uniqueID="127">
                   <matrix>
                     <Matrix a="0.612503051757813" tx="191" ty="506.9"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.127'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.127'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1335,14 +1275,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l10" cacheAsBitmap="true" centerPoint3DX="352" centerPoint3DY="451.55" uniqueID="129">
+                <DOMComponentInstance libraryItemName="Label" name="l10" cacheAsBitmap="true" centerPoint3DX="352" centerPoint3DY="451.55" uniqueID="129">
                   <matrix>
                     <Matrix a="0.57391357421875" tx="323.3" ty="440.55"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.129'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.129'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1371,14 +1311,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l11" cacheAsBitmap="true" centerPoint3DX="352" centerPoint3DY="482.65" uniqueID="130">
+                <DOMComponentInstance libraryItemName="Label" name="l11" cacheAsBitmap="true" centerPoint3DX="352" centerPoint3DY="482.65" uniqueID="130">
                   <matrix>
                     <Matrix a="0.57391357421875" tx="323.3" ty="471.65"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.130'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.130'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1407,14 +1347,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l12" cacheAsBitmap="true" centerPoint3DX="350.95" centerPoint3DY="519.65" uniqueID="131">
+                <DOMComponentInstance libraryItemName="Label" name="l12" cacheAsBitmap="true" centerPoint3DX="350.95" centerPoint3DY="519.65" uniqueID="131">
                   <matrix>
                     <Matrix a="0.57391357421875" tx="322.15" ty="508.65"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.131'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.131'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1443,14 +1383,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l23" cacheAsBitmap="true" centerPoint3DX="780.45" centerPoint3DY="449.55" uniqueID="133">
+                <DOMComponentInstance libraryItemName="Label" name="l23" cacheAsBitmap="true" centerPoint3DX="780.45" centerPoint3DY="449.55" uniqueID="133">
                   <matrix>
                     <Matrix a="0.836761474609375" tx="738.25" ty="438.55"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.133'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.133'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1479,14 +1419,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l24" cacheAsBitmap="true" centerPoint3DX="780.45" centerPoint3DY="480.65" uniqueID="134">
+                <DOMComponentInstance libraryItemName="Label" name="l24" cacheAsBitmap="true" centerPoint3DX="780.45" centerPoint3DY="480.65" uniqueID="134">
                   <matrix>
                     <Matrix a="0.836761474609375" tx="738.25" ty="469.65"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.134'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.134'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1515,14 +1455,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l25" cacheAsBitmap="true" centerPoint3DX="778.6" centerPoint3DY="517.65" uniqueID="135">
+                <DOMComponentInstance libraryItemName="Label" name="l25" cacheAsBitmap="true" centerPoint3DX="778.6" centerPoint3DY="517.65" uniqueID="135">
                   <matrix>
                     <Matrix a="0.836761474609375" tx="736.6" ty="506.65"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.135'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.135'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1551,14 +1491,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l18" cacheAsBitmap="true" centerPoint3DX="628.5" centerPoint3DY="450.1" uniqueID="137">
+                <DOMComponentInstance libraryItemName="Label" name="l18" cacheAsBitmap="true" centerPoint3DX="628.5" centerPoint3DY="450.1" uniqueID="137">
                   <matrix>
                     <Matrix a="0.777786254882813" tx="589.7" ty="439.1"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.137'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.137'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1587,14 +1527,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l19" cacheAsBitmap="true" centerPoint3DX="630.55" centerPoint3DY="481.2" uniqueID="138">
+                <DOMComponentInstance libraryItemName="Label" name="l19" cacheAsBitmap="true" centerPoint3DX="630.55" centerPoint3DY="481.2" uniqueID="138">
                   <matrix>
                     <Matrix a="0.777786254882813" tx="591.95" ty="470.2"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.138'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.138'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1623,14 +1563,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l20" cacheAsBitmap="true" centerPoint3DX="628.5" centerPoint3DY="516.45" uniqueID="139">
+                <DOMComponentInstance libraryItemName="Label" name="l20" cacheAsBitmap="true" centerPoint3DX="628.5" centerPoint3DY="516.45" uniqueID="139">
                   <matrix>
                     <Matrix a="0.777786254882813" tx="589.7" ty="505.45"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.139'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.139'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1679,7 +1619,7 @@
                   <transformationPoint>
                     <Point x="49.95" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.148'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.148'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="displayAsPassword">
@@ -1712,7 +1652,7 @@
                   <transformationPoint>
                     <Point x="49.95" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.149'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.149'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="displayAsPassword">
@@ -1738,14 +1678,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="fio_label1" cacheAsBitmap="true" centerPoint3DX="332.05" centerPoint3DY="368.35" uniqueID="150">
+                <DOMComponentInstance libraryItemName="Label" name="fio_label1" cacheAsBitmap="true" centerPoint3DX="332.05" centerPoint3DY="368.35" uniqueID="150">
                   <matrix>
                     <Matrix tx="281.95" ty="357.35"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.150'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.150'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1774,14 +1714,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="fio_label2" cacheAsBitmap="true" centerPoint3DX="735.75" centerPoint3DY="368.75" uniqueID="153">
+                <DOMComponentInstance libraryItemName="Label" name="fio_label2" cacheAsBitmap="true" centerPoint3DX="735.75" centerPoint3DY="368.75" uniqueID="153">
                   <matrix>
                     <Matrix tx="685.65" ty="357.75"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.153'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.153'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1817,7 +1757,7 @@
                   <transformationPoint>
                     <Point x="40.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.154'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.154'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -1840,14 +1780,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="channel_label1" centerPoint3DX="705.25" centerPoint3DY="223.6" uniqueID="156">
+                <DOMComponentInstance libraryItemName="Label" name="channel_label1" centerPoint3DX="705.25" centerPoint3DY="223.6" uniqueID="156">
                   <matrix>
                     <Matrix a="1.81919860839844" tx="614.15" ty="212.6"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.156'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.156'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1876,14 +1816,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="speed_label" centerPoint3DX="561.85" centerPoint3DY="223.6" uniqueID="157">
+                <DOMComponentInstance libraryItemName="Label" name="speed_label" centerPoint3DX="561.85" centerPoint3DY="223.6" uniqueID="157">
                   <matrix>
                     <Matrix a="1.19999694824219" tx="501.75" ty="212.6"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.157'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.157'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1912,14 +1852,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="channel_label2" centerPoint3DX="882.05" centerPoint3DY="206.6" uniqueID="158">
+                <DOMComponentInstance libraryItemName="Label" name="channel_label2" centerPoint3DX="882.05" centerPoint3DY="206.6" uniqueID="158">
                   <matrix>
                     <Matrix a="1.33917236328125" tx="815" ty="195.6"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.158'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.158'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1948,14 +1888,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l1" centerPoint3DX="171.35" centerPoint3DY="412.35" uniqueID="160">
+                <DOMComponentInstance libraryItemName="Label" name="l1" centerPoint3DX="171.35" centerPoint3DY="412.35" uniqueID="160">
                   <matrix>
                     <Matrix tx="121.25" ty="401.35"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.160'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.160'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1984,14 +1924,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/Label" name="l22" centerPoint3DX="555.95" centerPoint3DY="412.35" uniqueID="163">
+                <DOMComponentInstance libraryItemName="Label" name="l22" centerPoint3DX="555.95" centerPoint3DY="412.35" uniqueID="163">
                   <matrix>
                     <Matrix tx="505.85" ty="401.35"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.163'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.163'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -2027,7 +1967,7 @@
                   <transformationPoint>
                     <Point x="49.95" y="10.85"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.166'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.166'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2060,7 +2000,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.167'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.167'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2093,7 +2033,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.169'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.169'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2126,7 +2066,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.171'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.171'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2152,14 +2092,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/RadioButton" name="comp0" centerPoint3DX="115.3" centerPoint3DY="549.55" uniqueID="172">
+                <DOMComponentInstance libraryItemName="Компонент/RadioButton" name="comp0" centerPoint3DX="126.1" centerPoint3DY="550.55" uniqueID="172">
                   <matrix>
-                    <Matrix tx="65.3" ty="538.55"/>
+                    <Matrix tx="76.1" ty="539.55"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.172'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.172'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2169,7 +2109,7 @@
       <Inspectable name="groupName" variable="groupName" category="" verbose="0" defaultValue="RadioButtonGroup_4" type="String"/>
    </property>
    <property id="label">
-      <Inspectable name="label" variable="label" category="" verbose="0" defaultValue="Label" type="String"/>
+      <Inspectable name="label" variable="label" category="" verbose="0" defaultValue="Ничего" type="String"/>
    </property>
    <property id="labelPlacement">
       <Inspectable name="labelPlacement" variable="labelPlacement" category="" verbose="0" defaultValue="right" enumeration="left,right,top,bottom" type="List"/>
@@ -2181,7 +2121,7 @@
       <Inspectable name="value" variable="value" category="" verbose="0" defaultValue="" type="String"/>
    </property>
    <property id="visible">
-      <Inspectable name="visible" variable="visible" category="" verbose="1" defaultValue="false" type="Boolean"/>
+      <Inspectable name="visible" variable="visible" category="" verbose="1" defaultValue="true" type="Boolean"/>
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
@@ -2192,7 +2132,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.173'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.173'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2225,7 +2165,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.174'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.174'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2251,14 +2191,14 @@
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>
-                <DOMComponentInstance libraryItemName="Компонент/RadioButton" name="comp5" selected="true" centerPoint3DX="522.45" centerPoint3DY="548.55" uniqueID="175">
+                <DOMComponentInstance libraryItemName="Компонент/RadioButton" name="comp5" centerPoint3DX="522.45" centerPoint3DY="548.55" uniqueID="175">
                   <matrix>
                     <Matrix tx="472.45" ty="537.55"/>
                   </matrix>
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.175'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.175'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2268,7 +2208,7 @@
       <Inspectable name="groupName" variable="groupName" category="" verbose="0" defaultValue="RadioButtonGroup_5" type="String"/>
    </property>
    <property id="label">
-      <Inspectable name="label" variable="label" category="" verbose="0" defaultValue="Label" type="String"/>
+      <Inspectable name="label" variable="label" category="" verbose="0" defaultValue="Ничего" type="String"/>
    </property>
    <property id="labelPlacement">
       <Inspectable name="labelPlacement" variable="labelPlacement" category="" verbose="0" defaultValue="right" enumeration="left,right,top,bottom" type="List"/>
@@ -2280,7 +2220,169 @@
       <Inspectable name="value" variable="value" category="" verbose="0" defaultValue="" type="String"/>
    </property>
    <property id="visible">
-      <Inspectable name="visible" variable="visible" category="" verbose="1" defaultValue="false" type="Boolean"/>
+      <Inspectable name="visible" variable="visible" category="" verbose="1" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="Компонент/ComboBox" name="t_speed_combo_box_prepare" cacheAsBitmap="true" centerPoint3DX="373.85" centerPoint3DY="250.5" uniqueID="176">
+                  <matrix>
+                    <Matrix a="1.47000122070313" d="1.18182373046875" tx="300.35" ty="237.5"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="50" y="11"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.176'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="dataProvider">
+      <Inspectable name="dataProvider" variable="dataProvider" category="" verbose="0" defaultValue="fl.data.DataProvider, fl.data.SimpleCollectionItem, item, 0, 0" type="Collection"/>
+   </property>
+   <property id="editable">
+      <Inspectable name="editable" variable="editable" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="enabled">
+      <Inspectable name="enabled" variable="enabled" category="" verbose="1" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="prompt">
+      <Inspectable name="prompt" variable="prompt" category="" verbose="0" defaultValue="" type="String"/>
+   </property>
+   <property id="restrict">
+      <Inspectable name="restrict" variable="restrict" category="" verbose="1" defaultValue="" type="String"/>
+   </property>
+   <property id="rowCount">
+      <Inspectable name="rowCount" variable="rowCount" category="" verbose="0" defaultValue="5" type="Number"/>
+   </property>
+   <property id="visible">
+      <Inspectable name="visible" variable="visible" category="" verbose="1" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="Label" name="speed_label_prepare" centerPoint3DX="389.4" centerPoint3DY="225.3" uniqueID="177">
+                  <matrix>
+                    <Matrix a="1.19999694824219" tx="329.3" ty="214.3"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="50.1" y="11"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.177'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="autoSize">
+      <Inspectable name="autoSize" variable="autoSize" category="" verbose="0" defaultValue="none" enumeration="left,center,right,none" type="List"/>
+   </property>
+   <property id="condenseWhite">
+      <Inspectable name="condenseWhite" variable="condenseWhite" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="enabled">
+      <Inspectable name="enabled" variable="enabled" category="" verbose="1" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="htmlText">
+      <Inspectable name="htmlText" variable="htmlText" category="" verbose="0" defaultValue="" type="String"/>
+   </property>
+   <property id="selectable">
+      <Inspectable name="selectable" variable="selectable" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="text">
+      <Inspectable name="text" variable="text" category="" verbose="0" defaultValue="Скорость" type="String"/>
+   </property>
+   <property id="visible">
+      <Inspectable name="visible" variable="visible" category="" verbose="1" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="wordWrap">
+      <Inspectable name="wordWrap" variable="wordWrap" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="Компонент/RadioButton" name="main_mode_3" cacheAsBitmap="true" centerPoint3DX="101.2" centerPoint3DY="279.15" uniqueID="179">
+                  <matrix>
+                    <Matrix a="1.6077880859375" d="1.13388061523438" tx="20.4" ty="266.7"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="49.95" y="11"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.179'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="enabled">
+      <Inspectable name="enabled" variable="enabled" category="" verbose="1" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="groupName">
+      <Inspectable name="groupName" variable="groupName" category="" verbose="0" defaultValue="RadioButtonGroup_1" type="String"/>
+   </property>
+   <property id="label">
+      <Inspectable name="label" variable="label" category="" verbose="0" defaultValue="Тренировка(бп)" type="String"/>
+   </property>
+   <property id="labelPlacement">
+      <Inspectable name="labelPlacement" variable="labelPlacement" category="" verbose="0" defaultValue="right" enumeration="left,right,top,bottom" type="List"/>
+   </property>
+   <property id="selected">
+      <Inspectable name="selected" variable="selected" category="" verbose="0" defaultValue="false" type="Boolean"/>
+   </property>
+   <property id="value">
+      <Inspectable name="value" variable="value" category="" verbose="0" defaultValue="" type="String"/>
+   </property>
+   <property id="visible">
+      <Inspectable name="visible" variable="visible" category="" verbose="1" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="Компонент/NumericStepper" name="cable13_zkb" centerPoint3DX="148.6" centerPoint3DY="516.35" uniqueID="181">
+                  <matrix>
+                    <Matrix a="0.574371337890625" tx="125.65" ty="505.35"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="39.95" y="11"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.181'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="enabled">
+      <Inspectable name="enabled" variable="enabled" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="maximum">
+      <Inspectable name="maximum" variable="maximum" category="" verbose="0" defaultValue="10" type="Number"/>
+   </property>
+   <property id="minimum">
+      <Inspectable name="minimum" variable="minimum" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="stepSize">
+      <Inspectable name="stepSize" variable="stepSize" category="" verbose="0" defaultValue="1" type="Number"/>
+   </property>
+   <property id="value">
+      <Inspectable name="value" variable="value" category="" verbose="0" defaultValue="1" type="Number"/>
+   </property>
+   <property id="visible">
+      <Inspectable name="visible" variable="visible" category="" verbose="1" defaultValue="true" type="Boolean"/>
+   </property>
+]]></parametersAsXML>
+                </DOMComponentInstance>
+                <DOMComponentInstance libraryItemName="Компонент/NumericStepper" name="cable11_zkb" centerPoint3DX="149.45" centerPoint3DY="449.1" uniqueID="183">
+                  <matrix>
+                    <Matrix a="0.574371337890625" tx="126.4" ty="438.1"/>
+                  </matrix>
+                  <transformationPoint>
+                    <Point x="40.15" y="11"/>
+                  </transformationPoint>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.183'>
+</component>
+]]></dataBindingXML>
+                  <parametersAsXML><![CDATA[   <property id="enabled">
+      <Inspectable name="enabled" variable="enabled" category="" verbose="0" defaultValue="true" type="Boolean"/>
+   </property>
+   <property id="maximum">
+      <Inspectable name="maximum" variable="maximum" category="" verbose="0" defaultValue="10" type="Number"/>
+   </property>
+   <property id="minimum">
+      <Inspectable name="minimum" variable="minimum" category="" verbose="0" defaultValue="0" type="Number"/>
+   </property>
+   <property id="stepSize">
+      <Inspectable name="stepSize" variable="stepSize" category="" verbose="0" defaultValue="1" type="Number"/>
+   </property>
+   <property id="value">
+      <Inspectable name="value" variable="value" category="" verbose="0" defaultValue="1" type="Number"/>
+   </property>
+   <property id="visible">
+      <Inspectable name="visible" variable="visible" category="" verbose="1" defaultValue="true" type="Boolean"/>
    </property>
 ]]></parametersAsXML>
                 </DOMComponentInstance>

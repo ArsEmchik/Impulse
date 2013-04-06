@@ -1,4 +1,4 @@
-<DOMComponentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Компонент/Label" itemID="44b18473-00000011" linkageExportForAS="true" linkageClassName="fl.controls.Label" sourceLibraryItemHRef="Label" sourceLastModified="1164926528" lastModified="1267043531" lastUniqueIdentifier="7" tooltip="Label" customIconID="0" actionscriptClass="fl.controls.Label" livePreviewScmHRef="haer7x0luj.swf" livePreviewScmSourceFilename="Label.swf" persistLivePreview11="true" livePreview11ScmHRef="haes2x0luj.swf" livePreview11ScmSourceFilename="C:\Documents and Settings\jkamerer\Local Settings\Application Data\Adobe\Flash CS5\en_US\Configuration\TMPaf7wyyd51n..swf" editFrameIndex="2" requiredMinimumPlayerVersion="9" requiredMinimumASVersion="3" parametersAreLocked="true">
+<DOMComponentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Label" itemID="44b18473-00000011" linkageExportForAS="true" linkageClassName="fl.controls.Label" sourceLibraryItemHRef="Label" sourceLastModified="1164926528" lastModified="1267043531" lastUniqueIdentifier="7" tooltip="Label" customIconID="0" actionscriptClass="fl.controls.Label" livePreviewScmHRef="haer7x0luj.swf" livePreviewScmSourceFilename="Label.swf" persistLivePreview11="true" livePreview11ScmHRef="haes2x0luj.swf" livePreview11ScmSourceFilename="C:\Documents and Settings\jkamerer\Local Settings\Application Data\Adobe\Flash CS5\en_US\Configuration\TMPaf7wyyd51n..swf" editFrameIndex="2" requiredMinimumPlayerVersion="9" requiredMinimumASVersion="3" parametersAreLocked="true">
   <timeline>
     <DOMTimeline name="Label" currentFrame="1">
       <layers>
@@ -84,7 +84,7 @@
                   <matrix>
                     <Matrix d="1.00311279296875" tx="10" ty="10"/>
                   </matrix>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.73.163.7'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.177.7'>
 </component>
 ]]></dataBindingXML>
                 </DOMCompiledClipInstance>

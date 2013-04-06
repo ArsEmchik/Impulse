@@ -14,7 +14,7 @@
                           <Matrix a="0" b="-0.00396728515625" c="0.0183258056640625" d="0" tx="80.5" ty="4.75"/>
                         </matrix>
                         <GradientEntry color="#CCCCCC" alpha="0" ratio="0"/>
-                        <GradientEntry color="#FFFFFF" alpha="0.137254901960784" ratio="1"/>
+                        <GradientEntry color="#FFFFFF" alpha="0.129411764705882" ratio="1"/>
                       </LinearGradient>
                     </FillStyle>
                   </fills>

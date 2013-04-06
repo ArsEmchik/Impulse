@@ -3,8 +3,9 @@
 	public class ModeInfo
 	{
 		public static const MM_INSTRUCTION: int=0;
-		public static const MM_TRAINIG: int=1;
-		public static const MM_CONTROL: int=2;
+		public static const MM_TRAINIGWITHHINT: int=1;
+		public static const MM_TRAINIGWITHOUTHINT: int=2;
+		public static const MM_CONTROL: int=3;
 		
 		public static const M_PREPARING: int=0;
 		public static const M_WORKING: int=1;
