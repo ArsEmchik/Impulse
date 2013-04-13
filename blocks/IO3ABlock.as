@@ -238,6 +238,7 @@
 			this.ControlDictionary["Б П2 перемычка 27"]=jumper175;
 			this.ControlDictionary["Б П2 перемычка 24"]=jumper176;
 			this.ControlDictionary["Б П2 перемычка СРТ"]=jumper177;
+			
 			InitializeControls();
 			CreateCommunication();
 			// constructor code
