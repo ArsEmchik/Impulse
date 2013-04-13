@@ -13,7 +13,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.86'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.86'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -49,7 +49,7 @@
                   <transformationPoint>
                     <Point x="49.95" y="11.05"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.62'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.62'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -82,7 +82,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.64'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.64'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="emphasized">
@@ -115,7 +115,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.68'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.68'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="dataProvider">
@@ -148,7 +148,7 @@
                   <transformationPoint>
                     <Point x="49.95" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.69'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.69'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -181,7 +181,7 @@
                   <transformationPoint>
                     <Point x="49.95" y="10.9"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.70'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.70'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -214,7 +214,7 @@
                   <transformationPoint>
                     <Point x="49.95" y="10.9"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.71'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.71'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -247,7 +247,7 @@
                   <transformationPoint>
                     <Point x="49.95" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.72'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.72'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -280,7 +280,7 @@
                   <transformationPoint>
                     <Point x="49.95" y="10.8"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.73'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.73'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -313,7 +313,7 @@
                   <transformationPoint>
                     <Point x="49.9" y="10.9"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.74'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.74'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -346,7 +346,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="10.9"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.75'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.75'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -379,7 +379,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.76'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.76'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -412,7 +412,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.77'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.77'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -445,7 +445,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.78'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.78'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -478,7 +478,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="10.9"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.79'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.79'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -511,7 +511,7 @@
                   <transformationPoint>
                     <Point x="40" y="1.5"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.81'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.81'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="direction">
@@ -550,7 +550,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.88'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.88'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -586,7 +586,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.101'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.101'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -622,7 +622,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.102'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.102'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -658,7 +658,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.103'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.103'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -694,7 +694,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.105'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.105'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -730,7 +730,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.106'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.106'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -766,7 +766,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.107'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.107'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -802,7 +802,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.108'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.108'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -838,7 +838,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.109'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.109'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -874,7 +874,7 @@
                   <transformationPoint>
                     <Point x="40" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.110'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.110'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -904,7 +904,7 @@
                   <transformationPoint>
                     <Point x="40" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.113'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.113'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -934,7 +934,7 @@
                   <transformationPoint>
                     <Point x="40" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.114'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.114'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -964,7 +964,7 @@
                   <transformationPoint>
                     <Point x="40" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.115'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.115'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -994,7 +994,7 @@
                   <transformationPoint>
                     <Point x="40.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.117'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.117'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -1024,7 +1024,7 @@
                   <transformationPoint>
                     <Point x="40.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.118'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.118'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -1054,7 +1054,7 @@
                   <transformationPoint>
                     <Point x="40.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.119'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.119'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -1084,7 +1084,7 @@
                   <transformationPoint>
                     <Point x="40" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.121'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.121'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -1114,7 +1114,7 @@
                   <transformationPoint>
                     <Point x="40" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.122'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.122'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -1144,7 +1144,7 @@
                   <transformationPoint>
                     <Point x="40" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.123'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.123'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -1174,7 +1174,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.125'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.125'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1210,7 +1210,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.126'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.126'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1246,7 +1246,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.127'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.127'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1282,7 +1282,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.129'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.129'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1318,7 +1318,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.130'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.130'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1354,7 +1354,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.131'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.131'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1390,7 +1390,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.133'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.133'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1426,7 +1426,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.134'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.134'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1462,7 +1462,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.135'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.135'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1498,7 +1498,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.137'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.137'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1534,7 +1534,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.138'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.138'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1570,7 +1570,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.139'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.139'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1619,7 +1619,7 @@
                   <transformationPoint>
                     <Point x="49.95" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.148'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.148'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="displayAsPassword">
@@ -1652,7 +1652,7 @@
                   <transformationPoint>
                     <Point x="49.95" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.149'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.149'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="displayAsPassword">
@@ -1685,7 +1685,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.150'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.150'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1721,7 +1721,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.153'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.153'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1757,7 +1757,7 @@
                   <transformationPoint>
                     <Point x="40.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.154'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.154'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -1787,7 +1787,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.156'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.156'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1823,7 +1823,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.157'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.157'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1859,7 +1859,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.158'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.158'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1895,7 +1895,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.160'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.160'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1931,7 +1931,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.163'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.163'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -1967,7 +1967,7 @@
                   <transformationPoint>
                     <Point x="49.95" y="10.85"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.166'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.166'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2000,7 +2000,7 @@
                   <transformationPoint>
                     <Point x="50.05" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.167'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.167'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2033,7 +2033,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.169'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.169'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2066,7 +2066,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.171'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.171'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2099,7 +2099,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.172'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.172'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2132,7 +2132,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.173'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.173'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2165,7 +2165,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.174'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.174'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2198,7 +2198,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.175'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.175'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2231,7 +2231,7 @@
                   <transformationPoint>
                     <Point x="50" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.176'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.176'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="dataProvider">
@@ -2264,7 +2264,7 @@
                   <transformationPoint>
                     <Point x="50.1" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.177'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.177'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="autoSize">
@@ -2300,7 +2300,7 @@
                   <transformationPoint>
                     <Point x="49.95" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.179'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.179'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2333,7 +2333,7 @@
                   <transformationPoint>
                     <Point x="39.95" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.181'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.181'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">
@@ -2363,7 +2363,7 @@
                   <transformationPoint>
                     <Point x="40.15" y="11"/>
                   </transformationPoint>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.75.183'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='1.76.183'>
 </component>
 ]]></dataBindingXML>
                   <parametersAsXML><![CDATA[   <property id="enabled">

@@ -51,13 +51,13 @@
                           <Matrix a="0" b="-0.0138702392578125" c="0.0138702392578125" d="0" tx="63.5" ty="11.25"/>
                         </matrix>
                         <GradientEntry color="#EEEEEE" alpha="0.650980392156863" ratio="0"/>
-                        <GradientEntry color="#FFFFFF" alpha="0.725490196078431" ratio="1"/>
+                        <GradientEntry color="#FFFFFF" alpha="0.72156862745098" ratio="1"/>
                       </LinearGradient>
                     </FillStyle>
                   </fills>
                   <edges>
-                    <Edge fillStyle0="1" fillStyle1="2" edges="!3020 420|20 420!20 420|20 20!20 20|3020 20!3020 20|3020 420"/>
                     <Edge fillStyle0="1" edges="!3040 0|0 0!0 0|0 440!0 440|3040 440!3040 440|3040 0"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!3020 420|20 420!20 420|20 20!20 20|3020 20!3020 20|3020 420"/>
                   </edges>
                 </DOMShape>
               </elements>

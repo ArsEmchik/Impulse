@@ -1256,7 +1256,7 @@
                     <Matrix a="0.583328247070313" d="0.583328247070313" tx="326.95" ty="362.15"/>
                   </matrix>
                   <transformationPoint>
-                    <Point x="12.05" y="11.7"/>
+                    <Point x="12.05" y="11.65"/>
                   </transformationPoint>
                   <color>
                     <Color brightness="-0.09"/>
