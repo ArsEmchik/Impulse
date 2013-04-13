@@ -17,10 +17,13 @@
 		private function SwitchMouseDown(e: MouseEvent)
 		{
 			var newState: int;
-			if (this.CurrentState==ControlElement.S_B_DEFAULT)
-				newState=ControlElement.S_B_CHOSEN;
-			else newState=ControlElement.S_B_DEFAULT;
-			this.GoToState(newState);
+			if (!IsBlocked())
+			{
+				if (this.CurrentState==ControlElement.S_B_DEFAULT)
+					newState=ControlElement.S_B_CHOSEN;
+				else newState=ControlElement.S_B_DEFAULT;
+				this.GoToState(newState);
+			}
 		}
 	}
 	

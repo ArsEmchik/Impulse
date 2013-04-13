@@ -2,6 +2,7 @@
 	
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
+	import flash.text.TextField;
 	
 	
 	public class IPBlock extends ImpulsUnit
@@ -25,6 +26,18 @@
 			CreateCommunication();
 			// constructor code
 		}
+		public override function InitializeImpulsUnit(pDecriptionField: TextField)
+		{
+			super.InitializeImpulsUnit(pDecriptionField);
+			InitializeTrainingSequence();
+			SetMode(ModeInfo.MM_INSTRUCTION);
+		}
+		private function InitializeTrainingSequence()
+		{
+			this.AddToTraining(ControlDictionary["ФП включатель"],"Включите шутку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["У перемычка"],"Включите перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ФП включатель"],"Выкл шутку",ControlElement.S_B_DEFAULT);
+		}
 		private function CreateCommunication()
 		{
 			(ControlDictionary["ФП включатель"] as ControlElement).addEventListener(MouseEvent.CLICK,SwitchMouseClick);
@@ -35,7 +48,7 @@
 			(ControlDictionary["ФП лампа"] as ControlElement).GoToState(newState);
 			(ControlDictionary["У зел. лампа"] as ControlElement).GoToState(newState);
 			(ControlDictionary["БУ зел. лампа"] as ControlElement).GoToState(newState);
-		}
+		}		
 	}
 	
 }

@@ -17,7 +17,7 @@
 		public function InitializeIPScreen(p_mainScreen: MainScreen)
 		{
 			mainScreen=p_mainScreen;
-			this.InitializeBlockScreen(IPUnit);
+			this.InitializeBlockScreen(IPUnit,textBox);
 		}
 	}
 	

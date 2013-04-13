@@ -16,7 +16,7 @@
 		public function InitializeIO4Screen(p_mainScreen: MainScreen)
 		{
 			mainScreen=p_mainScreen;
-			this.InitializeBlockScreen(IO4Unit);
+			this.InitializeBlockScreen(IO4Unit,null);
 		}
 		
 	}

@@ -12,7 +12,7 @@
 		public function InitializeIO3AScreen(p_mainScreen: MainScreen)
 		{
 			mainScreen=p_mainScreen;
-			this.InitializeBlockScreen(IO3AUnit);
+			this.InitializeBlockScreen(IO3AUnit,null);
 		}
 	
 		public function IO3AScreen() {

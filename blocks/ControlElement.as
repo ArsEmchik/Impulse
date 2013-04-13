@@ -14,6 +14,11 @@
 		public var StateCount: int;
 		public var CurrentState: int;
 		public var MouseEnabled: Boolean;
+		private var blocked: Boolean;
+		private var parentUnit: ImpulsUnit;
+		private var nesesaryState: int;
+		private var emiting: Boolean
+		private var MouseOver: Boolean;
 		
 		public function ControlElement()
 		{
@@ -38,6 +43,11 @@
 					break;
 				default: throw new Error("Нет такого класса");
 			}
+			if (emiting)
+			{
+				if (nesesaryState==CurrentState)
+					this.parentUnit.EmitNext();
+			}
 		}
 		private function InitializeMouseOverOut()
 		{
@@ -54,10 +64,51 @@
 		{
 			var newFilter: GlowFilter = new GlowFilter(0xFFFF00,1,6,6);
 			this.filters=[newFilter];
+			MouseOver=true;
 		}
 		private function ControlElementMouseOut(e: MouseEvent)
 		{
-			this.filters=[];
+			if (emiting)
+			{
+				var newFilter: GlowFilter = new GlowFilter(0x00FF00,1,16,16,5);
+				this.filters=[newFilter];
+			}
+			else this.filters=[];
+			MouseOver=false;
+		}
+		public function BlockElement()
+		{
+			blocked=true;
+		}
+		public function IsBlocked(): Boolean
+		{
+			return blocked;
+		}
+		public function UnblockElement()
+		{
+			blocked=false;
+		}
+		public function SetParent(ParentUnit: ImpulsUnit)
+		{
+			parentUnit=ParentUnit;
+		}
+		public function SetNessesaryState(pNesesaryState: int)
+		{
+			nesesaryState=pNesesaryState;
+		}
+		public function EmitControl()
+		{
+			this.emiting=true;
+			if (MouseOver)
+				ControlElementMouseOver(null);
+			else ControlElementMouseOut(null);
+		}
+		public function RemoveEmit()
+		{
+			this.emiting=false;
+			if (MouseOver)
+				ControlElementMouseOver(null);
+			else ControlElementMouseOut(null);			
 		}
 	}
 }
