@@ -10,7 +10,7 @@
 		
 		public function MainScreen() 
 		{
-			InitializeIO3AScreen();
+			InitializeStartScreen();
 			// constructor code
 		}
 		public function InitializeModeScreen()
