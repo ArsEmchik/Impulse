@@ -15,7 +15,7 @@
 		public var CurrentState: int;
 		public var MouseEnabled: Boolean;
 		private var blocked: Boolean;
-		private var parentUnit: ImpulsUnit;
+		protected var parentUnit: ImpulsUnit;
 		private var nesesaryState: int;
 		private var emiting: Boolean
 		private var MouseOver: Boolean;
@@ -33,21 +33,32 @@
 			if (MouseEnabled)
 				InitializeMouseOverOut();
 		}
-		public function GoToState(newState: int)
+		public function GoToState(newState: int, reallyPressed: Boolean=false)
 		{
-			CurrentState=newState; // S_B_DEFAULT -> S_B_CHOSEN
-			switch (StateCount)
+			if (!IsBlocked())
 			{
-				case S_BINARY:
-					GoToBinaryState();
-					break;
-				default: throw new Error("Нет такого класса");
+				CurrentState=newState; // S_B_DEFAULT -> S_B_CHOSEN
+				switch (StateCount)
+				{
+					case S_BINARY:
+						GoToBinaryState();
+						break;
+					default: throw new Error("Нет такого класса");
+				}
+				if (reallyPressed && ((emiting && parentUnit.ImpulseMode==ModeInfo.MM_INSTRUCTION) ||
+					 parentUnit.ImpulseMode==ModeInfo.MM_TRAINIGWITHHINT || 
+					 parentUnit.ImpulseMode==ModeInfo.MM_TRAINIGWITHOUTHINT))
+				{
+					if (nesesaryState==CurrentState)
+						this.parentUnit.EmitNext();
+				}
 			}
-			if (emiting)
+			else
 			{
-				if (nesesaryState==CurrentState)
-					this.parentUnit.EmitNext();
+				if (reallyPressed)
+					this.parentUnit.TestTraining(this);
 			}
+			
 		}
 		private function InitializeMouseOverOut()
 		{

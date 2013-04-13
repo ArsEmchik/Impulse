@@ -45,6 +45,10 @@
 				case ModeInfo.MM_INSTRUCTION:
 					BlockFullControl();
 					break;
+				case ModeInfo.MM_TRAINIGWITHHINT:
+				case ModeInfo.MM_TRAINIGWITHOUTHINT:
+					TrainingControl();
+					break;
 				default: throw new Error("Нет такого типа обучения");
 			}
 		}
@@ -74,9 +78,13 @@
 					TrainingSequence[blockState-1].RemoveEmit();
 				}
 				TrainingSequence[blockState].UnblockElement();
-				TrainingSequence[blockState].EmitControl();
+				if (ImpulseMode==ModeInfo.MM_INSTRUCTION)
+				{
+					TrainingSequence[blockState].EmitControl();
+					this.decriptionField.text = this.trainingDescriptions[blockState];
+				} else this.decriptionField.text="";
 				TrainingSequence[blockState].SetNessesaryState(trainingState[blockState]);
-				this.decriptionField.text = this.trainingDescriptions[blockState];
+				
 			}
 		}
 		private function EndMessage()
@@ -88,6 +96,22 @@
 		private function IncrementState()
 		{
 			blockState++;
+		}
+		private function TrainingControl()
+		{
+			BlockFullControlHelper();
+		}
+		public function TestTraining(element: ControlElement)
+		{
+			if ((ImpulseMode==ModeInfo.MM_TRAINIGWITHHINT || ImpulseMode==ModeInfo.MM_TRAINIGWITHOUTHINT) &&
+				blockState<TrainingSequence.length)
+			{
+				if (ImpulseMode==ModeInfo.MM_TRAINIGWITHHINT)
+				{
+						TrainingSequence[blockState].EmitControl();
+				}
+				this.decriptionField.text = "Ошибка!";
+			}
 		}
 		public function EmitNext()
 		{
