@@ -23,13 +23,13 @@
                           <Matrix a="0" b="-0.0067138671875" c="0.0067138671875" d="0" ty="6.5"/>
                         </matrix>
                         <GradientEntry color="#EEEEEE" alpha="0.650980392156863" ratio="0"/>
-                        <GradientEntry color="#FFFFFF" alpha="0.729411764705882" ratio="1"/>
+                        <GradientEntry color="#FFFFFF" alpha="0.725490196078431" ratio="1"/>
                       </LinearGradient>
                     </FillStyle>
                   </fills>
                   <edges>
-                    <Edge fillStyle0="1" fillStyle1="2" edges="!110 200|70 240!70 240|-70 240!-70 240|-110 200!-110 200|-21 20!-21 20|21 20!21 20|110 200"/>
                     <Edge fillStyle0="1" edges="!22 0|-22 0!-22 0|-130 200!-130 200|-90 260!-90 260|90 260!90 260|130 200!130 200|22 0"/>
+                    <Edge fillStyle0="1" fillStyle1="2" edges="!110 200|70 240!70 240|-70 240!-70 240|-110 200!-110 200|-21 20!-21 20|21 20!21 20|110 200"/>
                     <Edge cubics="!21 20(;21,20 110,200 110,200q21 20 110 200);"/>
                     <Edge cubics="!130 200(;130,200 22,0 22,0q130 200 22 0);"/>
                     <Edge cubics="!110 200(110,200;110,200 70,240 70,240q110 200 70 240)70,240;"/>

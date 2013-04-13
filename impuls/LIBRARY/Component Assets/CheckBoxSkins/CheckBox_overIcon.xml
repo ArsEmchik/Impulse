@@ -38,7 +38,7 @@
                           <Matrix a="0" b="-0.0083160400390625" c="0.0083160400390625" d="0" tx="6" ty="7.15"/>
                         </matrix>
                         <GradientEntry color="#EEEEEE" alpha="0.650980392156863" ratio="0"/>
-                        <GradientEntry color="#FFFFFF" alpha="0.737254901960784" ratio="1"/>
+                        <GradientEntry color="#FFFFFF" alpha="0.733333333333333" ratio="1"/>
                       </LinearGradient>
                     </FillStyle>
                   </fills>
@@ -67,7 +67,7 @@
                     </FillStyle>
                   </fills>
                   <edges>
-                    <Edge fillStyle0="1" edges="!0 0|0 280!0 280|280 280!280 280|280 0!280 0|0 0!20 260|20 20!20 20|260 20!260 20|260 260!260 260|20 260"/>
+                    <Edge fillStyle0="1" edges="!20 260|20 20!20 20|260 20!260 20|260 260!260 260|20 260!0 0|0 280!0 280|280 280!280 280|280 0!280 0|0 0"/>
                   </edges>
                 </DOMShape>
               </elements>

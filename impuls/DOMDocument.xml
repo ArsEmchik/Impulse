@@ -14,13 +14,13 @@
           <DOMFolderItem name="Component Assets/SliderSkins" itemID="44c91c94-00000267"/>
           <DOMFolderItem name="Component Assets/TextInputSkins" itemID="44c91d04-00000282"/>
           <DOMFolderItem name="Блоки" itemID="514d4fb8-0000029f"/>
-          <DOMFolderItem name="Блоки - внешние классы" itemID="5131cf98-00000475"/>
+          <DOMFolderItem name="Блоки - внешние классы" itemID="5131cf98-00000475" isExpanded="true"/>
           <DOMFolderItem name="Блоки - изображения" itemID="5131cf8c-00000471"/>
           <DOMFolderItem name="Вспомогательные штуки" itemID="5131df79-0000054f"/>
           <DOMFolderItem name="Изображения контролов" itemID="514d4d9e-00000292"/>
           <DOMFolderItem name="Компонент" itemID="513b0a7e-0000026d"/>
-          <DOMFolderItem name="Контролы" itemID="514d4dac-00000296"/>
-          <DOMFolderItem name="Экраны" itemID="5131d529-000004e6"/>
+          <DOMFolderItem name="Контролы" itemID="514d4dac-00000296" isExpanded="true"/>
+          <DOMFolderItem name="Экраны" itemID="5131d529-000004e6" isExpanded="true"/>
      </folders>
      <fonts>
           <DOMFontItem name="Вспомогательные штуки/Шрифт 1" itemID="5131e29e-0000058d" font="TimesNewRomanPSMT" size="0" id="1" sourceLastImported="1362223774" embedRanges="5|22"/>
@@ -276,7 +276,7 @@
 //main_screen.InitializeIO4Screen();]]></script>
                                    </Actionscript>
                                    <elements>
-                                        <DOMSymbolInstance libraryItemName="Экраны/MainScreen" name="main_screen" centerPoint3DX="512" centerPoint3DY="384">
+                                        <DOMSymbolInstance libraryItemName="Экраны/MainScreen" name="main_screen" selected="true" centerPoint3DX="512" centerPoint3DY="384">
                                              <transformationPoint>
                                                   <Point x="512" y="384"/>
                                              </transformationPoint>
@@ -595,6 +595,7 @@
      <persistentData>
           <PD n="com.air.artemis.airdest" v="impuls.air"/>
           <PD n="DebugMovieChecked" v="ADLDesktop"/>
+          <PD n="TestMovieChecked" v="ADLDesktop"/>
           <PD n="com.air.artemis.pubair" v="true"/>
           <PD n="com.air.artemis.pubipa" v="false"/>
           <PD n="flash.swf.basename" v="impuls"/>
@@ -603,6 +604,11 @@
      </persistentData>
      <PrinterSettings/>
      <publishHistory>
+          <PublishItem publishSize="5514983" publishTime="1365242403"/>
+          <PublishItem publishSize="5514974" publishTime="1365240609"/>
+          <PublishItem publishSize="5514970" publishTime="1365239448"/>
+          <PublishItem publishSize="5514973" publishTime="1365239260"/>
+          <PublishItem publishSize="5454728" publishTime="1365239218"/>
           <PublishItem publishSize="5512540" publishTime="1365228564" publishDebug="true"/>
           <PublishItem publishSize="5511282" publishTime="1364643482" publishDebug="true"/>
           <PublishItem publishSize="5511285" publishTime="1364642811" publishDebug="true"/>
@@ -618,11 +624,6 @@
           <PublishItem publishSize="5508279" publishTime="1364454694" publishDebug="true"/>
           <PublishItem publishSize="5508263" publishTime="1364454560" publishDebug="true"/>
           <PublishItem publishSize="5508209" publishTime="1364037975" publishDebug="true"/>
-          <PublishItem publishSize="5508208" publishTime="1364037804" publishDebug="true"/>
-          <PublishItem publishSize="5508204" publishTime="1364037603" publishDebug="true"/>
-          <PublishItem publishSize="5509302" publishTime="1364033876" publishDebug="true"/>
-          <PublishItem publishSize="5509300" publishTime="1364033679" publishDebug="true"/>
-          <PublishItem publishSize="5509159" publishTime="1364032131" publishDebug="true"/>
      </publishHistory>
      <swcCache>
           <Swc hashKey="kfuaIecnz3BPM/B8Awo4b." href="7ghvhje1i6.swc">

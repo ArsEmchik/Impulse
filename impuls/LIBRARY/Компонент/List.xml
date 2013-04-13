@@ -1,4 +1,4 @@
-<DOMComponentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Компонент/List" itemID="44e5f6db-00000035" linkageExportForAS="true" linkageClassName="fl.controls.List" sourceLibraryItemHRef="List" sourceLastModified="1164926528" lastModified="1267043538" lastUniqueIdentifier="20" tooltip="List" customIconID="0" actionscriptClass="fl.controls.List" livePreviewScmHRef="haettx0luj.swf" livePreviewScmSourceFilename="List.swf" persistLivePreview11="true" livePreview11ScmSourceFilename="C:\Documents and Settings\jkamerer\Local Settings\Application Data\Adobe\Flash CS5\en_US\Configuration\TMPaf8jiyd51o..swf" editFrameIndex="2" requiredMinimumPlayerVersion="9" requiredMinimumASVersion="3" parametersAreLocked="true">
+<DOMComponentItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Компонент/List" itemID="44e5f6db-00000035" linkageExportForAS="true" linkageClassName="fl.controls.List" sourceLibraryItemHRef="List" sourceLastModified="1164926528" lastModified="1267043538" lastUniqueIdentifier="22" tooltip="List" customIconID="0" actionscriptClass="fl.controls.List" livePreviewScmHRef="haettx0luj.swf" livePreviewScmSourceFilename="List.swf" persistLivePreview11="true" livePreview11ScmSourceFilename="C:\Documents and Settings\jkamerer\Local Settings\Application Data\Adobe\Flash CS5\en_US\Configuration\TMPaf8jiyd51o..swf" editFrameIndex="2" requiredMinimumPlayerVersion="9" requiredMinimumASVersion="3" parametersAreLocked="true">
   <timeline>
     <DOMTimeline name="List" currentFrame="1">
       <layers>
@@ -38,7 +38,7 @@
                     <Matrix d="0.999862670898438" tx="159" ty="133.3"/>
                   </matrix>
                   <transformationPoint>
-                    <Point x="7.5" y="50.55"/>
+                    <Point x="7.5" y="50.6"/>
                   </transformationPoint>
                 </DOMSymbolInstance>
               </elements>
@@ -153,7 +153,7 @@
                   <matrix>
                     <Matrix d="1.00311279296875" tx="10" ty="10"/>
                   </matrix>
-                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='Монтажный кадр 1' oldCopiedComponentPath='2.74.176.35.12'>
+                  <dataBindingXML><![CDATA[<component metaDataFetched='true' schemaUrl='' schemaOperation='' sceneRootLabel='IO3AScreen' oldCopiedComponentPath=''>
 </component>
 ]]></dataBindingXML>
                 </DOMCompiledClipInstance>

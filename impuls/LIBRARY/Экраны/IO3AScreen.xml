@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Экраны/IO3AScreen" itemID="5156ac4a-000000e4" linkageExportForAS="true" linkageClassName="screens.IO3AScreen" sourceLibraryItemHRef="Символ 1" lastModified="1364636033" lastUniqueIdentifier="1">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Экраны/IO3AScreen" itemID="5156ac4a-000000e4" linkageExportForAS="true" linkageClassName="screens.IO3AScreen" sourceLibraryItemHRef="Символ 1" lastModified="1364636033" lastUniqueIdentifier="2">
   <timeline>
     <DOMTimeline name="IO3AScreen">
       <layers>

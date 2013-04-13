@@ -1,4 +1,4 @@
-<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Экраны/MainScreen" itemID="5130d170-000001d3" linkageExportForAS="true" linkageClassName="screens.MainScreen" sourceLibraryItemHRef="Символ 1" lastModified="1365228221" lastUniqueIdentifier="74">
+<DOMSymbolItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://ns.adobe.com/xfl/2008/" name="Экраны/MainScreen" itemID="5130d170-000001d3" linkageExportForAS="true" linkageClassName="screens.MainScreen" sourceLibraryItemHRef="Символ 1" lastModified="1365228221" lastUniqueIdentifier="75">
   <timeline>
     <DOMTimeline name="MainScreen" currentFrame="4">
       <layers>
