@@ -8,7 +8,7 @@
 		
 		public function IO3ABlock() {
 			super();
-			this.ControlDictionary["Включатель"]=turnSwitch;
+			this.ControlDictionary["Включатель"]=turnSwitch1;
 			this.ControlDictionary["ЦСА зел. лампочка"]=greenBulb1;
 			this.ControlDictionary["ГА3 зел. лампочка"]=greenBulb2;
 			this.ControlDictionary["ЦА3-1 зел. лампочка"]=greenBulb3;
