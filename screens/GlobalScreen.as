@@ -2,11 +2,13 @@
 	
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
+	import blocks.ModeInfo;
 	
 	
 	public class GlobalScreen extends MovieClip {
 		
 		var main_screen: MainScreen;
+		var modeInfo: ModeInfo;
 		
 		public function GlobalScreen() 
 		{
@@ -26,9 +28,11 @@
 			input_block.AddOverFun(SetMessage,"Входной щит");
 			// constructor code
 		}
-		public function InitializeGlobalScreen(p_main_screen: MainScreen)
+		public function InitializeGlobalScreen(p_main_screen: MainScreen,pModeInfo: ModeInfo)
 		{
 			main_screen=p_main_screen;
+			this.modeInfo=pModeInfo;
+			modeInfo.TraceModeInfo();	
 		}
 		public function SetMessage(text_message: String)
 		{

@@ -1,14 +1,16 @@
 ﻿package screens {
 	
 	import flash.display.MovieClip;
+	import blocks.ModeInfo;
 	
 	
 	public dynamic class MainScreen extends MovieClip 
 	{
+		public var info: ModeInfo;
 		
 		public function MainScreen() 
 		{
-			InitializeStartScreen();
+			InitializeIO3AScreen();
 			// constructor code
 		}
 		public function InitializeModeScreen()
@@ -21,10 +23,10 @@
 			this.gotoAndStop("MainScreen");
 			this.start_screen.InitializeStartMainScreen(this);
 		}			
-		public function InitializeGlobalScreen()
+		public function InitializeGlobalScreen(modeInfo: ModeInfo)
 		{
 			this.gotoAndStop("GlobalScreen");
-			this.global_screen.InitializeGlobalScreen(this);
+			this.global_screen.InitializeGlobalScreen(this,modeInfo);
 		}
 		public function InitializeIPScreen()
 		{

@@ -23,7 +23,9 @@
 		public static const S_480x2: int=2;
 		public static const S_2048: int=3;
 		
-		
+		public static const P296_NOTHING: int=0;
+		public static const P296_480: int=1;
+		public static const P296_2048: int=2;		
 		
 		public var MainMode: int;
 		public var Mode: int;
@@ -32,10 +34,28 @@
 		public var ChannelCount: int;
 		public var KtchCount: int;
 		public var Czk48Count: int;
+		public var Czk86Channels: Vector.<int>;
+		public var KtchChannels: Vector.<int>;
+		public var P296n1: int;
+		public var P296n2: int;
 		
 		public function ModeInfo()
 		{
 			
+		}
+		public function TraceModeInfo()
+		{
+			trace("Main mode:",MainMode);
+			trace("Mode:",Mode);
+			trace("LocalMode:",LocalMode);
+			trace("Speed:",Speed);
+			trace("ChannelCount:",ChannelCount);
+			trace("KtchCount:",KtchCount);
+			trace("Czk48Count:",Czk48Count);
+			trace("Czk86Channels:",Czk86Channels);
+			trace("KtchChannels:",KtchChannels);
+			trace("P296 1",P296n1);
+			trace("P296 2",P296n2);
 		}
 	}
 }

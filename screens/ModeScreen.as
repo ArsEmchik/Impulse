@@ -15,6 +15,7 @@
 	import fl.events.DataChangeEvent;
 	import flash.events.Event;
 	import flash.text.TextFormat;
+	import buttons.MessageBoxClass;
 	
 	public dynamic class ModeScreen extends MovieClip {
 		
@@ -23,6 +24,8 @@
 		var local_mode: int;
 		var speed_mode: int;
 		var need_chanels: int;
+		var zk_count: int;
+		var ktch_count: int;
 		
 		var main_screen: MainScreen;
 		var main_mode_mas: Vector.<RadioButton> = new Vector.<RadioButton>(); //обуч трен контроль
@@ -56,6 +59,7 @@
 		
 		public function ModeScreen() 
 		{
+			this.removeChild(message_box);
 			main_mode_mas.push(main_mode_1);
 			main_mode_mas.push(main_mode_2);
 			main_mode_mas.push(main_mode_3);
@@ -121,10 +125,6 @@
 			SetStyleToRadioButtonsAndLabels();
 			InitializeStartStepperValues();
 		}
-		public function StartButtonMouseUp(e: MouseEvent)
-		{
-			main_screen.InitializeGlobalScreen();
-		}
 		public function InitializeStartModeScreen(p_main_screen: MainScreen)
 		{
 			main_screen=p_main_screen;
@@ -169,7 +169,8 @@
 			for (i=0; i<this.radiobuttons1.length; i++)
 				result_mas.push(this.radiobuttons1[i]);
 			for (i=0; i<this.radiobuttons2.length; i++)
-				result_mas.push(this.radiobuttons2[i]);				
+				result_mas.push(this.radiobuttons2[i]);
+			result_mas.push(this.start_button);
 			return(result_mas);
 		}
 		private function SetEvents()
@@ -189,6 +190,7 @@
 			speed_combo_box_prepare.addEventListener(Event.CHANGE,PrepareComboBoxChange);
 			channel_count.addEventListener(Event.CHANGE,ChannelCountChange);
 			channel_slider.addEventListener(Event.CHANGE,ChannelSliderChange);
+			this.start_button.addEventListener(MouseEvent.MOUSE_UP,StartButtonClick);
 		}
 		private function P296Click(e: MouseEvent)
 		{
@@ -353,6 +355,8 @@
 			channel_slider.value=0;			
 			channel_label3.text = "ЦК-48 (0)";
 			channel_label4.text = "КТЧ ("+e.target.value+")";
+			this.zk_count=0;
+			this.ktch_count=e.target.value;			
 			if (e.target.value!=0)
 			{
 				SetStepperValues(0,e.target.value);
@@ -364,6 +368,9 @@
 			SetStepperValues(e.target.value,channel_slider.maximum-e.target.value);
 			channel_label3.text = "ЦК-48 ("+e.target.value.toString()+")";
 			channel_label4.text = "КТЧ ("+(channel_slider.maximum-e.target.value).toString()+")";
+			trace("mi",e.target.value,channel_slider.maximum-e.target.value);
+			this.zk_count=e.target.value;
+			this.ktch_count=channel_slider.maximum-e.target.value;
 		}
 		private function SetStyleToRadioButtonsAndLabels()
 		{
@@ -447,7 +454,6 @@
 		private function SetStepperValues(zk: int, ktch: int)
 		{
 			InitializeSteppersToZero();
-			trace(this.speed_mode,ModeInfo.S_2048);
 			if (this.speed_mode==ModeInfo.S_2048)
 				return;
 			var i: int;
@@ -480,6 +486,63 @@
 				if (ktch==0)
 					break;
 			}			
+		}
+		private function StartButtonClick(e: MouseEvent)
+		{
+			if (ModeInfo.M_COMMUTATION==this.impuls_mode && !TestChannelCount())
+			{
+				(message_box as MessageBoxClass).InitializeMessageBox(null,"Некорректно определено количество каналов",this);
+				return;
+			}
+			FillModeInfo();
+			main_screen.info = this.mode_info;
+			this.main_screen.InitializeGlobalScreen(this.mode_info);
+		}
+		private function TestChannelCount()
+		{
+			var i: int;
+			var zk_sum: int=0;
+			var ktch_sum: int=0;
+			for (i=0; i<3; i++)
+			{
+				if (this.cable1_zk[i].value+this.cable1_ktch[i].value>4)
+					return false;
+				if (this.cable2_zk[i].value+this.cable2_ktch[i].value>4)
+					return false;
+				zk_sum+=this.cable1_zk[i].value+this.cable2_zk[i].value;
+				ktch_sum+=this.cable1_ktch[i].value+this.cable2_ktch[i].value;
+			}
+			trace(zk_sum,zk_count,ktch_sum,ktch_count);
+			if (zk_sum!=this.zk_count || ktch_sum!=this.ktch_count)
+				return(false);
+			return true;
+		}
+		private function FillModeInfo()
+		{
+			this.mode_info.MainMode = this.main_mode;
+			this.mode_info.Mode = this.impuls_mode;
+			this.mode_info.Speed = this.speed_mode;
+			this.mode_info.LocalMode = this.local_mode;
+			this.mode_info.ChannelCount = this.channel_count.value;
+			this.mode_info.KtchCount = this.ktch_count;
+			this.mode_info.Czk48Count = this.zk_count;
+			this.mode_info.Czk86Channels = new Vector.<int>();
+			this.mode_info.KtchChannels = new Vector.<int>();
+			var i: int;
+			for (i=0; i<this.cable1_ktch.length; i++)
+				this.mode_info.KtchChannels.push(this.cable1_ktch[i].value);
+			for (i=0; i<this.cable2_ktch.length; i++)
+				this.mode_info.KtchChannels.push(this.cable2_ktch[i].value);
+			for (i=0; i<this.cable1_zk.length; i++)
+				this.mode_info.Czk86Channels.push(this.cable1_zk[i].value);
+			for (i=0; i<this.cable2_zk.length; i++)
+				this.mode_info.Czk86Channels.push(this.cable2_zk[i].value);
+			for (i=0; i<this.radiobuttons1.length; i++)
+				if (this.radiobuttons1[i].selected)
+					this.mode_info.P296n1 = i;
+			for (i=0; i<this.radiobuttons2.length; i++)
+				if (this.radiobuttons2[i].selected)
+					this.mode_info.P296n2 = i;
 		}
 	}
 }
