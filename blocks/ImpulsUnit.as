@@ -49,6 +49,8 @@
 				case ModeInfo.MM_TRAINIGWITHOUTHINT:
 					TrainingControl();
 					break;
+				case ModeInfo.MM_CONTROL:
+					break;
 				default: throw new Error("Нет такого типа обучения");
 			}
 		}
@@ -89,8 +91,11 @@
 		}
 		private function EndMessage()
 		{
-			TrainingSequence[TrainingSequence.length-1].BlockElement();
-			TrainingSequence[TrainingSequence.length-1].RemoveEmit();
+			if (TrainingSequence.length!=0)
+			{
+				TrainingSequence[TrainingSequence.length-1].BlockElement();
+				TrainingSequence[TrainingSequence.length-1].RemoveEmit();
+			}
 			this.decriptionField.text = "Вы выполнили все действия.";
 		}
 		private function IncrementState()

@@ -45,7 +45,8 @@
 						break;
 					default: throw new Error("Нет такого класса");
 				}
-				if (reallyPressed && ((emiting && parentUnit.ImpulseMode==ModeInfo.MM_INSTRUCTION) ||
+				if (reallyPressed && parentUnit!=null
+					&& ((emiting && parentUnit.ImpulseMode==ModeInfo.MM_INSTRUCTION) ||
 					 parentUnit.ImpulseMode==ModeInfo.MM_TRAINIGWITHHINT || 
 					 parentUnit.ImpulseMode==ModeInfo.MM_TRAINIGWITHOUTHINT))
 				{
