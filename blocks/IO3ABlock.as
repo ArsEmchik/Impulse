@@ -3,6 +3,7 @@
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
 	import flash.text.TextField;
+	import fl.controls.Button;
 	
 	public class IO3ABlock extends ImpulsUnit {
 		
@@ -247,9 +248,9 @@
 			// constructor code
 		}
 		
-		public override function InitializeImpulsUnit(pDecriptionField: TextField)
+		public override function InitializeImpulsUnit(pDecriptionField: TextField, outButton: Button)
 		{
-			super.InitializeImpulsUnit(pDecriptionField);
+			super.InitializeImpulsUnit(pDecriptionField,outButton);
 			InitializeTrainingSequence();
 			SetMode(ModeInfo.MM_TRAINIGWITHHINT);
 		}

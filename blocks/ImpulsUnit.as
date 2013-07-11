@@ -3,6 +3,7 @@
 	import flash.display.MovieClip;
 	import flash.utils.Dictionary;
 	import flash.text.TextField;
+	import fl.controls.Button;
 
 	public class ImpulsUnit extends MovieClip
 	{
@@ -14,6 +15,7 @@
 		private var trainingState: Vector.<int>;
 		private var blockState: int;
 		private var decriptionField: TextField;
+		private var outButton: Button;
 		
 		public function ImpulsUnit()
 		{
@@ -33,13 +35,15 @@
 				ControlElements.push(item);
 			}
 		}
-		public function InitializeImpulsUnit(pDecriptionField: TextField)
+		public function InitializeImpulsUnit(pDecriptionField: TextField, pOutButton: Button)
 		{
 			decriptionField=pDecriptionField;
+			outButton=pOutButton;
 		}
 		public function SetMode(impulseMode: int)
 		{
 			ImpulseMode=impulseMode;
+			outButton.visible=false;
 			switch (ImpulseMode)
 			{
 				case ModeInfo.MM_INSTRUCTION:
@@ -50,6 +54,7 @@
 					TrainingControl();
 					break;
 				case ModeInfo.MM_CONTROL:
+					outButton.visible=true;
 					break;
 				default: throw new Error("Нет такого типа обучения");
 			}
@@ -97,6 +102,7 @@
 				TrainingSequence[TrainingSequence.length-1].RemoveEmit();
 			}
 			this.decriptionField.text = "Вы выполнили все действия.";
+			this.outButton.visible=true;
 		}
 		private function IncrementState()
 		{

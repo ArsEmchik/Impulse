@@ -63,7 +63,7 @@
 		public static function InitializeModeInfo()
 		{
 			modeInfo = new ModeInfo();
-			modeInfo.MainMode=MM_CONTROL;
+			modeInfo.MainMode=MM_TRAINIGWITHOUTHINT;
 			modeInfo.Mode=M_PREPARING;
 			modeInfo.Speed=S_480;
 		}
