@@ -3,6 +3,7 @@
 	import flash.display.MovieClip;
 	import blocks.ImpulsUnit;
 	import flash.text.TextField;
+	import fl.controls.Button;
 
 	public class BlockScreen extends MovieClip
 	{
@@ -12,10 +13,10 @@
 		{
 			
 		}
-		public function InitializeBlockScreen(p_BlockUnit: ImpulsUnit, textBox: TextField)
+		public function InitializeBlockScreen(p_BlockUnit: ImpulsUnit, textBox: TextField, outButton: Button)
 		{
 			BlockUnit=p_BlockUnit;
-			BlockUnit.InitializeImpulsUnit(textBox);
+			BlockUnit.InitializeImpulsUnit(textBox,outButton);
 		}
 	}
 }

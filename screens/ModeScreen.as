@@ -519,30 +519,30 @@
 		}
 		private function FillModeInfo()
 		{
-			this.mode_info.MainMode = this.main_mode;
-			this.mode_info.Mode = this.impuls_mode;
-			this.mode_info.Speed = this.speed_mode;
-			this.mode_info.LocalMode = this.local_mode;
-			this.mode_info.ChannelCount = this.channel_count.value;
-			this.mode_info.KtchCount = this.ktch_count;
-			this.mode_info.Czk48Count = this.zk_count;
-			this.mode_info.Czk86Channels = new Vector.<int>();
-			this.mode_info.KtchChannels = new Vector.<int>();
+			ModeInfo.modeInfo.MainMode = this.main_mode;
+			ModeInfo.modeInfo.Mode = this.impuls_mode;
+			ModeInfo.modeInfo.Speed = this.speed_mode;
+			ModeInfo.modeInfo.LocalMode = this.local_mode;
+			ModeInfo.modeInfo.ChannelCount = this.channel_count.value;
+			ModeInfo.modeInfo.KtchCount = this.ktch_count;
+			ModeInfo.modeInfo.Czk48Count = this.zk_count;
+			ModeInfo.modeInfo.Czk86Channels = new Vector.<int>();
+			ModeInfo.modeInfo.KtchChannels = new Vector.<int>();
 			var i: int;
 			for (i=0; i<this.cable1_ktch.length; i++)
-				this.mode_info.KtchChannels.push(this.cable1_ktch[i].value);
+				ModeInfo.modeInfo.KtchChannels.push(this.cable1_ktch[i].value);
 			for (i=0; i<this.cable2_ktch.length; i++)
-				this.mode_info.KtchChannels.push(this.cable2_ktch[i].value);
+				ModeInfo.modeInfo.KtchChannels.push(this.cable2_ktch[i].value);
 			for (i=0; i<this.cable1_zk.length; i++)
-				this.mode_info.Czk86Channels.push(this.cable1_zk[i].value);
+				ModeInfo.modeInfo.Czk86Channels.push(this.cable1_zk[i].value);
 			for (i=0; i<this.cable2_zk.length; i++)
-				this.mode_info.Czk86Channels.push(this.cable2_zk[i].value);
+				ModeInfo.modeInfo.Czk86Channels.push(this.cable2_zk[i].value);
 			for (i=0; i<this.radiobuttons1.length; i++)
 				if (this.radiobuttons1[i].selected)
-					this.mode_info.P296n1 = i;
+					ModeInfo.modeInfo.P296n1 = i;
 			for (i=0; i<this.radiobuttons2.length; i++)
 				if (this.radiobuttons2[i].selected)
-					this.mode_info.P296n2 = i;
+					ModeInfo.modeInfo.P296n2 = i;
 		}
 	}
 }

@@ -6,7 +6,6 @@
 	
 	public dynamic class MainScreen extends MovieClip 
 	{
-		public var info: ModeInfo;
 		
 		public function MainScreen() 
 		{

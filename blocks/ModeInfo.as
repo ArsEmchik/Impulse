@@ -2,6 +2,9 @@
 {
 	public class ModeInfo
 	{
+		public static var modeInfo: ModeInfo;
+		
+		
 		public static const MM_INSTRUCTION: int=0;
 		public static const MM_TRAINIGWITHHINT: int=1;
 		public static const MM_TRAINIGWITHOUTHINT: int=2;
@@ -57,5 +60,13 @@
 			trace("P296 1",P296n1);
 			trace("P296 2",P296n2);
 		}
+		public static function InitializeModeInfo()
+		{
+			modeInfo = new ModeInfo();
+			modeInfo.MainMode=MM_CONTROL;
+			modeInfo.Mode=M_PREPARING;
+			modeInfo.Speed=S_480;
+		}
+		
 	}
 }

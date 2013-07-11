@@ -6,7 +6,8 @@
 	public class IO4Block extends ImpulsUnit {
 		
 		
-		public function IO4Block() {
+		public function IO4Block() 
+		{
 			super();
 			this.ControlDictionary["ЦА4_1 кр. лампа"]=redBulb1;
 			this.ControlDictionary["ЦА4_1 зел. лампа"]=greenBulb1;	
@@ -103,8 +104,6 @@
 			this.ControlDictionary["П2 перемычка СР.Т"]=Jumper50;	
 			this.ControlDictionary["П2 включатель"]=turnOnOff;		
 			InitializeControls();
-			// constructor code
 		}
 	}
-	
 }
