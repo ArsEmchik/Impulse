@@ -1,6 +1,9 @@
 ﻿package blocks {
 	
 	import flash.display.MovieClip;
+	import flash.events.MouseEvent;
+	import flash.text.TextField;
+	import fl.controls.Button;
 	
 	
 	public class IO4Block extends ImpulsUnit {
@@ -104,6 +107,69 @@
 			this.ControlDictionary["П2 перемычка СР.Т"]=Jumper50;	
 			this.ControlDictionary["П2 включатель"]=turnOnOff;		
 			InitializeControls();
+			CreateCommunication();
+		}
+		
+		public override function InitializeImpulsUnit(pDecriptionField: TextField, outButton: Button)
+		{
+			super.InitializeImpulsUnit(pDecriptionField,outButton);
+			InitializeTrainingSequence();
+			SetMode(ModeInfo.MM_CONTROL);
+		}
+		
+		private function InitializeTrainingSequence()
+		{
+			// первоначальное положение
+			this.AddToTraining(ControlDictionary["ЦА4_1 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_2 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_3 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_1 перемычка Б"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_2 перемычка Б"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_3 перемычка Б"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка Б"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ФСЧ4 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ГА4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["П2 включатель"],"Включите Тумблер",ControlElement.S_B_CHOSEN);
+
+			// проверка на себя
+			this.AddToTraining(ControlDictionary["ГБ4 перемычка ШГ"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			
+			this.AddToTraining(ControlDictionary["ГБ4 перемычка ШГ"],"Извлеките Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["П2 включатель"],"Выключите Тумблер",ControlElement.S_B_CHOSEN);
+			
+		}
+		
+		private function CreateCommunication()
+		{
+			(ControlDictionary["П2 включатель"] as ControlElement).addEventListener(MouseEvent.CLICK,SwitchMouseClick1);
+			(ControlDictionary["ГБ4 перемычка ШГ"] as ControlElement).addEventListener(MouseEvent.CLICK,SwitchMouseClick2);
+			//(ControlDictionary["Б Включатель"] as ControlElement).addEventListener(MouseEvent.CLICK,SwitchMouseClick2)
+			//(ControlDictionary["ФП включатель"] as ControlElement).addEventListener(MouseEvent.CLICK,SwitchMouseClick);
+		}
+		
+		private function SwitchMouseClick1(e: MouseEvent)
+		{
+			var newState: int = (ControlDictionary["П2 включатель"] as ControlElement).CurrentState;
+			(ControlDictionary["П2 зел. лампа"] as ControlElement).GoToState(newState,false);
+			(ControlDictionary["ГБ4 зел. лампа СИНХРОНИЗАЦИЯ"] as ControlElement).GoToState(newState,false);
+		}
+		
+		private function SwitchMouseClick2(e: MouseEvent)
+		{
+			var newState: int = (ControlDictionary["ГБ4 перемычка ШГ"] as ControlElement).CurrentState;
+			(ControlDictionary["ГА4 зел. лампа"] as ControlElement).GoToState(newState);
+			(ControlDictionary["ГБ4 зел. лампа СИГНАЛ"] as ControlElement).GoToState(newState);
+			(ControlDictionary["ЦБ4_1 зел. лампа"] as ControlElement).GoToState(newState);
+			(ControlDictionary["ЦБ4_2 зел. лампа"] as ControlElement).GoToState(newState);
+			(ControlDictionary["ЦБ4_3 зел. лампа"] as ControlElement).GoToState(newState);
+			(ControlDictionary["ЦБ4_4 зел. лампа"] as ControlElement).GoToState(newState);
+			
+			
+			
 		}
 	}
 }

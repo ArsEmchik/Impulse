@@ -38,13 +38,7 @@
 			if (!IsBlocked())
 			{
 				CurrentState=newState; // S_B_DEFAULT -> S_B_CHOSEN
-				switch (StateCount)
-				{
-					case S_BINARY:
-						GoToBinaryState();
-						break;
-					default: throw new Error("Нет такого класса");
-				}
+				SwitchStateCount();
 				if (reallyPressed && parentUnit!=null
 					&& ((emiting && parentUnit.ImpulseMode==ModeInfo.MM_INSTRUCTION) ||
 					 parentUnit.ImpulseMode==ModeInfo.MM_TRAINIGWITHHINT || 
@@ -57,9 +51,25 @@
 			else
 			{
 				if (reallyPressed)
+				{
 					this.parentUnit.TestTraining(this);
+				}
+				else
+				{
+					SwitchStateCount();
+				}
 			}
 			
+		}
+		private function SwitchStateCount()
+		{
+				switch (StateCount)
+				{
+					case S_BINARY:
+						GoToBinaryState();
+						break;
+					default: throw new Error("Нет такого класса");
+				}			
 		}
 		private function InitializeMouseOverOut()
 		{
