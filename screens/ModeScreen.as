@@ -55,7 +55,7 @@
 		var fio_group: ComponentGroup;
 		var start_group: ComponentGroup;
 		var speed_preapare_group: ComponentGroup;
-		var mode_info: ModeInfo = new ModeInfo();
+		//var mode_info: ModeInfo = new ModeInfo();
 		
 		public function ModeScreen() 
 		{
@@ -243,7 +243,7 @@
 			var i: int;
 			var r_button: RadioButton = (e.target as RadioButton);		
 			RadioButtonCheck(r_button);
-			for (i=1; i<mode_mas.length; i++)
+			for (i=0; i<mode_mas.length; i++)
 				if (r_button==mode_mas[i])
 					break;
 			impuls_mode = i;
@@ -495,8 +495,9 @@
 				return;
 			}
 			FillModeInfo();
-			main_screen.info = this.mode_info;
-			this.main_screen.InitializeGlobalScreen(this.mode_info);
+			main_screen.info = ModeInfo.modeInfo;
+			trace(main_screen.info);
+			this.main_screen.InitializeGlobalScreen();
 		}
 		private function TestChannelCount()
 		{
@@ -543,6 +544,7 @@
 			for (i=0; i<this.radiobuttons2.length; i++)
 				if (this.radiobuttons2[i].selected)
 					ModeInfo.modeInfo.P296n2 = i;
+			ModeInfo.modeInfo.SetBlocks();
 		}
 	}
 }

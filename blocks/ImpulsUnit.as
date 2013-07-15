@@ -4,6 +4,8 @@
 	import flash.utils.Dictionary;
 	import flash.text.TextField;
 	import fl.controls.Button;
+	import flash.events.MouseEvent;
+	import flash.events.Event;
 
 	public class ImpulsUnit extends MovieClip
 	{
@@ -19,12 +21,17 @@
 		
 		public function ImpulsUnit()
 		{
-			TrainingSequence = new Vector.<ControlElement>();
 			ControlElements = new Vector.<ControlElement>();
+			ControlDictionary = new Dictionary();
+			StartInitialize();
+		}
+		
+		private function StartInitialize()
+		{
+			TrainingSequence = new Vector.<ControlElement>();
 			trainingState = new Vector.<int>();
 			trainingDescriptions = new Vector.<String>();
-			ControlDictionary = new Dictionary();
-			blockState=0;
+			blockState=0;			
 		}
 		
 		protected function InitializeControls()
@@ -134,6 +141,15 @@
 			TrainingSequence.push(element);
 			trainingDescriptions.push(decription);
 			trainingState.push(nessesaryState);
+		}
+		public function PrepareToWork()
+		{
+			var i: int;
+			var mouseEvent: MouseEvent = new MouseEvent(MouseEvent.CLICK);
+			for (i=0; i<TrainingSequence.length; i++)
+				TrainingSequence[i].dispatchEvent(mouseEvent);
+			StartInitialize();
+			trace("HI");
 		}
 	}
 }

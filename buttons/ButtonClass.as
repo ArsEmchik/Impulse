@@ -27,19 +27,19 @@
 			if (!blocked)
 			{
 				this.gotoAndStop("MouseOver");
-				if (fun!=null)
-					fun(string_message);
 			}
+			if (fun!=null)
+				fun(string_message);			
 			type=OVER;
 		}
 		private function RollOut(e: MouseEvent)
 		{
 			if (!blocked)
 			{
-				this.gotoAndStop("MouseOut");
-				if (fun!=null)
-					fun("");				
+				this.gotoAndStop("MouseOut");			
 			}
+			if (fun!=null)
+				fun("");				
 			type=STAND;
 		}				
 		private function MouseDown(e: MouseEvent)
@@ -73,7 +73,7 @@
 			this.removeEventListener(MouseEvent.ROLL_OVER,RollOver);
 			this.removeEventListener(MouseEvent.ROLL_OUT,RollOut);
 			this.removeEventListener(MouseEvent.MOUSE_DOWN,MouseDown);
-			this.removeEventListener(MouseEvent.MOUSE_UP,MouseUp);			
+			this.removeEventListener(MouseEvent.MOUSE_UP,MouseUp);
 		}
 		public function AddOverFun(p_fun: Function, p_string_message: String)
 		{

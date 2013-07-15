@@ -2,8 +2,20 @@
 {
 	public class ModeInfo
 	{
-		public static var modeInfo: ModeInfo;
+		public static var modeInfo: ModeInfo = new ModeInfo();
 		
+		public static const BLOCK_IP: int=0;
+		public static const BLOCK_IO4: int=1;
+		public static const BLOCK_IO3A: int=2;
+		public static const BLOCK_ITA: int=3;
+		public static const BLOCK_IS: int=4;
+		public static const BLOCK_IL34: int=5;
+		public static const BLOCK_IO3A_2: int=6;
+		public static const BLOCK_IO4_2: int=7;
+		public static const BLOCK_IL34_2: int=8;
+		public static const BLOCK_D_39: int=9;
+		public static const BLOCK_D_00_01: int=10;
+		public static const BLOCK_INPUT: int=11;
 		
 		public static const MM_INSTRUCTION: int=0;
 		public static const MM_TRAINIGWITHHINT: int=1;
@@ -41,6 +53,8 @@
 		public var KtchChannels: Vector.<int>;
 		public var P296n1: int;
 		public var P296n2: int;
+		public var currentBlock: int;
+		public var blockInfo: Vector.<BlockInfo> = new Vector.<BlockInfo>(12);
 		
 		public function ModeInfo()
 		{
@@ -59,14 +73,51 @@
 			trace("KtchChannels:",KtchChannels);
 			trace("P296 1",P296n1);
 			trace("P296 2",P296n2);
+			trace(this.blockInfo);
 		}
 		public static function InitializeModeInfo()
 		{
 			modeInfo = new ModeInfo();
-			modeInfo.MainMode=MM_TRAINIGWITHOUTHINT;
-			modeInfo.Mode=M_PREPARING;
+			modeInfo.MainMode=M_PREPARING;
+			modeInfo.Mode=M_WORKING;
 			modeInfo.Speed=S_480;
+			modeInfo.SetBlocks();
 		}
-		
+		public function SetBlocks()
+		{
+			var i: int;
+			switch (Mode)
+			{
+				case M_PREPARING:
+					for (i=0; i<9; i++)
+						blockInfo[i] = new BlockInfo();
+					switch (Speed)
+					{
+						case S_48:
+							blockInfo[BLOCK_IO3A]=null;
+							blockInfo[BLOCK_IO3A_2]=null;
+							blockInfo[BLOCK_IO4]=null;
+							blockInfo[BLOCK_IO4_2]=null;
+							blockInfo[BLOCK_IL34]=null;
+							blockInfo[BLOCK_IL34_2]=null;
+							break;
+						case S_480:
+							blockInfo[BLOCK_IO4]=null;
+							blockInfo[BLOCK_IO4_2]=null;						
+							break;
+						case S_2048:
+							break;
+						default: throw new Error("Нет такой скорости");
+					}
+					break;
+				case M_WORKING:
+					break;
+				case M_COMMUTATION:
+					for (i=9; i<12; i++)
+						blockInfo[i] = new BlockInfo();					
+					break;
+				default: throw new Error("Некорректный мод");
+			}
+		}
 	}
 }
