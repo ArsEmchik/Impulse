@@ -1,31 +1,32 @@
 ﻿package screens {
 	
 	import flash.display.MovieClip;
-	import blocks.ISBlock;
 	import fl.controls.Button;
 	import flash.events.MouseEvent;
+	import blocks.IL34Block;
 	
-	public class ISScreen extends BlockScreen {
+	public class IL34Screen extends BlockScreen {
 		
 		private var mainScreen: MainScreen;
-		private var ISUnit: ISBlock;
+		private var IL34Unit: IL34Block;
 		
-		public function InitializeISScreen(p_mainScreen: MainScreen)
+		public function InitializeIL34Screen(p_mainScreen: MainScreen)
 		{
 			mainScreen=p_mainScreen;
 			outButton.addEventListener(MouseEvent.CLICK,GoToNewScreen);
-			this.InitializeBlockScreen(ISUnit, textBox,outButton);
+			this.InitializeBlockScreen(IL34Unit, textBox,outButton);
 		}
 	
-		public function ISScreen() 
+		public function IL34Screen() 
 		{
-			ISUnit=tISUnit;
+			IL34Unit=tIL34Unit;
 			// constructor code
 		}
 		public function GoToNewScreen(e: MouseEvent)
 		{
 			mainScreen.InitializeGlobalScreen();
 		}
+	
 	}
 	
 }

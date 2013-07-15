@@ -47,6 +47,17 @@
 			this.gotoAndStop("ITABlock");
 			ITAScreen.InitializeITAScreen(this);
 		}		
+		public function InitializeISScreen()
+		{
+			this.gotoAndStop("ISBlock");
+			ISScreen.InitializeISScreen(this);
+		}	
+		public function InitializeIL34Screen()
+		{
+			this.gotoAndStop("IL34Block");
+			trace ("il34", IL34Screen);
+			IL34Screen.InitializeIL34Screen(this);
+		}	
 		public function InitializeFinalScreen()
 		{
 			this.gotoAndStop("Final");
