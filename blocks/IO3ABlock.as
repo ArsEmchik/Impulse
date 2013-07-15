@@ -319,15 +319,15 @@
 		private function SwitchMouseClick1(e: MouseEvent)
 		{
 			var newState: int = (ControlDictionary["А Включатель"] as ControlElement).CurrentState;
-			(ControlDictionary["А П2 вкл зел. лампочка"] as ControlElement).GoToState(newState);
-			(ControlDictionary["А ГА3 зел. лампочка"] as ControlElement).GoToState(newState);
+			(ControlDictionary["А П2 вкл зел. лампочка"] as ControlElement).GoToState(newState, false);
+			(ControlDictionary["А ГА3 зел. лампочка"] as ControlElement).GoToState(newState, false);
 		}
 		
 		private function SwitchMouseClick2(e: MouseEvent)
 		{
 			var newState: int = (ControlDictionary["Б Включатель"] as ControlElement).CurrentState;
-			(ControlDictionary["Б П2 вкл зел. лампочка"] as ControlElement).GoToState(newState);
-			(ControlDictionary["Б ГБ3 зел. лампочка"] as ControlElement).GoToState(newState);
+			(ControlDictionary["Б П2 вкл зел. лампочка"] as ControlElement).GoToState(newState, false);
+			(ControlDictionary["Б ГБ3 зел. лампочка"] as ControlElement).GoToState(newState, false);
 		}
 	}
 	

@@ -149,7 +149,6 @@
 			for (i=0; i<TrainingSequence.length; i++)
 				TrainingSequence[i].dispatchEvent(mouseEvent);
 			StartInitialize();
-			trace("HI");
 		}
 	}
 }

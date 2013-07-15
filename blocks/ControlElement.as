@@ -50,12 +50,14 @@
 			}
 			else
 			{
+				
 				if (reallyPressed)
 				{
 					this.parentUnit.TestTraining(this);
 				}
 				else
 				{
+					CurrentState=newState;
 					SwitchStateCount();
 				}
 			}

@@ -144,13 +144,13 @@
 		
 		private function CreateCommunication()
 		{
-			(ControlDictionary["Включатель"] as ControlElement).addEventListener(MouseEvent.CLICK,SwitchMouseClick1);
+			(ControlDictionary["Включатель"] as ControlElement).addEventListener(MouseEvent.CLICK,SwitchMouseClick);
 		}
 		
-		private function SwitchMouseClick1(e: MouseEvent)
+		private function SwitchMouseClick(e: MouseEvent)
 		{
 			var newState: int = (ControlDictionary["Включатель"] as ControlElement).CurrentState;
-			(ControlDictionary["П6 вкл зел. лампочка"] as ControlElement).GoToState(newState);
+			(ControlDictionary["П6 вкл зел. лампочка"] as ControlElement).GoToState(newState, false);
 		}
 		
 	}
