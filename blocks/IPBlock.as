@@ -27,17 +27,34 @@
 			CreateCommunication();
 			// constructor code
 		}
-		public override function InitializeImpulsUnit(pDecriptionField: TextField,pOutButton: Button)
+		
+		public override function InitializeImpulsUnit(pDecriptionField: TextField, outButton: Button)
 		{
-			super.InitializeImpulsUnit(pDecriptionField,pOutButton);
-			InitializeTrainingSequence();
+			super.InitializeImpulsUnit(pDecriptionField,outButton);
+			switch (ModeInfo.modeInfo.Mode)
+			{
+				case ModeInfo.M_PREPARING:
+					InitializeTrainingSequence();
+					break;
+				case ModeInfo.M_WORKING:
+					InitializeTrainingSequence();
+					PrepareToWork();
+					InitializeWorkingSequence();
+					break;
+				default: throw new Error("Нет такого мода");
+			}
+			
 			SetMode(ModeInfo.modeInfo.MainMode);
 		}
+		
+		private function InitializeWorkingSequence()
+		{
+			//this.AddToTraining(ControlDictionary["А ТА2-1 пермычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+		}		
+		
 		private function InitializeTrainingSequence()
 		{
-			this.AddToTraining(ControlDictionary["ФП включатель"],"Включите шутку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["У перемычка"],"Включите перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ФП включатель"],"Выкл шутку",ControlElement.S_B_DEFAULT);
+			this.AddToTraining(ControlDictionary["ФП включатель"],"Включите Тумблер",ControlElement.S_B_CHOSEN);
 		}
 		private function CreateCommunication()
 		{

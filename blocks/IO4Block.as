@@ -113,9 +113,26 @@
 		public override function InitializeImpulsUnit(pDecriptionField: TextField, outButton: Button)
 		{
 			super.InitializeImpulsUnit(pDecriptionField,outButton);
-			InitializeTrainingSequence();
-			SetMode(ModeInfo.MM_CONTROL);
+			switch (ModeInfo.modeInfo.Mode)
+			{
+				case ModeInfo.M_PREPARING:
+					InitializeTrainingSequence();
+					break;
+				case ModeInfo.M_WORKING:
+					InitializeTrainingSequence();
+					PrepareToWork();
+					InitializeWorkingSequence();
+					break;
+				default: throw new Error("Нет такого мода");
+			}
+			
+			SetMode(ModeInfo.modeInfo.MainMode);
 		}
+		
+		private function InitializeWorkingSequence()
+		{
+			//this.AddToTraining(ControlDictionary["А ТА2-1 пермычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+		}		
 		
 		private function InitializeTrainingSequence()
 		{
@@ -134,10 +151,6 @@
 
 			// проверка на себя
 			this.AddToTraining(ControlDictionary["ГБ4 перемычка ШГ"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			
 			this.AddToTraining(ControlDictionary["ГБ4 перемычка ШГ"],"Извлеките Перемычку",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["П2 включатель"],"Выключите Тумблер",ControlElement.S_B_CHOSEN);
 			
@@ -167,6 +180,11 @@
 			(ControlDictionary["ЦБ4_2 зел. лампа"] as ControlElement).GoToState(newState);
 			(ControlDictionary["ЦБ4_3 зел. лампа"] as ControlElement).GoToState(newState);
 			(ControlDictionary["ЦБ4_4 зел. лампа"] as ControlElement).GoToState(newState);
+			
+			(ControlDictionary["ЦА4_1 зел. лампа"] as ControlElement).GoToState(newState);
+			(ControlDictionary["ЦА4_2 зел. лампа"] as ControlElement).GoToState(newState);
+			(ControlDictionary["ЦА4_3 зел. лампа"] as ControlElement).GoToState(newState);
+			(ControlDictionary["ЦА4_4 зел. лампа"] as ControlElement).GoToState(newState);
 			
 			
 			
