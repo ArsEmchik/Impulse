@@ -55,13 +55,17 @@
 		public function InitializeIL34Screen()
 		{
 			this.gotoAndStop("IL34Block");
-			trace ("il34", IL34Screen);
 			IL34Screen.InitializeIL34Screen(this);
 		}	
 		public function InitializeFinalScreen()
 		{
 			this.gotoAndStop("Final");
-		}		
+		}
+		public function InitializeInputBlock()
+		{
+			this.gotoAndStop("BlockInput");
+			InputBlockScreen.InitializeInputBlockScreen(this);
+		}
 	}
 	
 }
