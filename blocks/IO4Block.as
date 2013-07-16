@@ -113,8 +113,19 @@
 		public override function InitializeImpulsUnit(pDecriptionField: TextField, outButton: Button)
 		{
 			super.InitializeImpulsUnit(pDecriptionField,outButton);
-			InitializeTrainingSequence();
-			SetMode(ModeInfo.MM_CONTROL);
+			switch (ModeInfo.modeInfo.Mode)
+			{
+				case ModeInfo.M_PREPARING:
+					InitializeTrainingSequence();
+					break;
+				case ModeInfo.M_WORKING:
+					InitializeTrainingSequence();
+					PrepareToWork();
+					InitializeWorkingSequence();
+					break;
+				default: throw new Error("Нет такого мода");
+			}
+			SetMode(ModeInfo.modeInfo.MainMode);
 		}
 		
 		private function InitializeTrainingSequence()
@@ -130,16 +141,16 @@
 			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка Б"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["ФСЧ4 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["ГА4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["П2 включатель"],"Включите Тумблер",ControlElement.S_B_CHOSEN);
-
+			this.AddToTraining(ControlDictionary["П2 включатель"],"Включите Тумблер",ControlElement.S_B_CHOSEN);			
 			// проверка на себя
 			this.AddToTraining(ControlDictionary["ГБ4 перемычка ШГ"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			
-			this.AddToTraining(ControlDictionary["ГБ4 перемычка ШГ"],"Извлеките Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["П2 включатель"],"Выключите Тумблер",ControlElement.S_B_CHOSEN);
+			//this.AddToTraining(ControlDictionary["ГБ4 перемычка ШГ"],"Извлеките Перемычку",ControlElement.S_B_CHOSEN);
+			//this.AddToTraining(ControlDictionary["П2 включатель"],"Выключите Тумблер",ControlElement.S_B_CHOSEN);
+
+		}
+		
+		private function InitializeWorkingSequence()
+		{
 			
 		}
 		

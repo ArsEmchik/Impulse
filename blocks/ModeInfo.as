@@ -78,7 +78,7 @@
 		public static function InitializeModeInfo()
 		{
 			modeInfo = new ModeInfo();
-			modeInfo.MainMode=M_PREPARING;
+			modeInfo.MainMode=MM_CONTROL;
 			modeInfo.Mode=M_WORKING;
 			modeInfo.Speed=S_480;
 			modeInfo.SetBlocks();

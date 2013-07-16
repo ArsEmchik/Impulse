@@ -11,6 +11,20 @@
 		public static const S_B_DEFAULT: int=1;
 		public static const S_B_CHOSEN: int=2;
 				
+		public static const S_11: int=11;
+				
+		public static const S_11_STATE1: int=1;
+		public static const S_11_STATE2: int=2;
+		public static const S_11_STATE3: int=3;
+		public static const S_11_STATE4: int=4;
+		public static const S_11_STATE5: int=5;
+		public static const S_11_STATE6: int=6;
+		public static const S_11_STATE7: int=7;
+		public static const S_11_STATE8: int=8;
+		public static const S_11_STATE9: int=9;
+		public static const S_11_STATE10: int=10;		
+		public static const S_11_STATE11: int=11;		
+				
 		public var StateCount: int;
 		public var CurrentState: int;
 		public var MouseEnabled: Boolean;
@@ -70,6 +84,9 @@
 					case S_BINARY:
 						GoToBinaryState();
 						break;
+					case S_11:
+						GoTo11State();
+						break;						
 					default: throw new Error("Нет такого класса");
 				}			
 		}
@@ -83,6 +100,10 @@
 			if (CurrentState==S_B_DEFAULT)
 				this.gotoAndStop("Default");
 			else this.gotoAndStop("Chosen");
+		}
+		private function GoTo11State()
+		{
+			this.gotoAndStop(CurrentState);
 		}
 		private function ControlElementMouseOver(e: MouseEvent)
 		{
