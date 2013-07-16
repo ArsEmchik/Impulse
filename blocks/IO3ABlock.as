@@ -263,7 +263,6 @@
 					break;
 				default: throw new Error("Нет такого мода");
 			}
-			
 			SetMode(ModeInfo.modeInfo.MainMode);
 		}
 		

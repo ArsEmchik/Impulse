@@ -147,12 +147,15 @@
 			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка Б"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["ФСЧ4 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["ГА4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["П2 включатель"],"Включите Тумблер",ControlElement.S_B_CHOSEN);
-
+			this.AddToTraining(ControlDictionary["П2 включатель"],"Включите Тумблер",ControlElement.S_B_CHOSEN);			
 			// проверка на себя
 			this.AddToTraining(ControlDictionary["ГБ4 перемычка ШГ"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ГБ4 перемычка ШГ"],"Извлеките Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["П2 включатель"],"Выключите Тумблер",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+		}
+			
+		private function InitializeWorkingSequence()
+		{
 			
 		}
 		

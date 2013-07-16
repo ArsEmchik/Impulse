@@ -1,6 +1,7 @@
 ﻿package screens {
 	
 	import flash.display.MovieClip;
+	import flash.events.MouseEvent;
 	
 	
 	public class IO4Screen extends BlockScreen {
@@ -16,8 +17,13 @@
 		public function InitializeIO4Screen(p_mainScreen: MainScreen)
 		{
 			mainScreen=p_mainScreen;
+			outButton.addEventListener(MouseEvent.CLICK,GoToNewScreen);
 			this.InitializeBlockScreen(IO4Unit,textBox,outButton);
 		}
+		public function GoToNewScreen(e: MouseEvent)
+		{
+			mainScreen.InitializeGlobalScreen();
+		}		
 		
 	}
 	
