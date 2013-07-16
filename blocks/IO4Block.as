@@ -128,7 +128,10 @@
 			
 			SetMode(ModeInfo.modeInfo.MainMode);
 		}	
-		
+		private function InitializeWorkingSequence()
+		{
+			
+		}
 		private function InitializeTrainingSequence()
 		{
 			// первоначальное положение
@@ -145,8 +148,6 @@
 			this.AddToTraining(ControlDictionary["П2 включатель"],"Включите Тумблер",ControlElement.S_B_CHOSEN);			
 			// проверка на себя
 			this.AddToTraining(ControlDictionary["ГБ4 перемычка ШГ"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
 		}
 			
 		
