@@ -128,7 +128,10 @@
 			
 			SetMode(ModeInfo.modeInfo.MainMode);
 		}	
-		
+		private function InitializeWorkingSequence()
+		{
+			
+		}
 		private function InitializeTrainingSequence()
 		{
 			// первоначальное положение
