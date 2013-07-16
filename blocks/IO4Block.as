@@ -149,11 +149,6 @@
 			// проверка на себя
 			this.AddToTraining(ControlDictionary["ГБ4 перемычка ШГ"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
 		}
-			
-		private function InitializeWorkingSequence()
-		{
-			
-		}
 		
 		private function CreateCommunication()
 		{
