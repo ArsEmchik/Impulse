@@ -149,10 +149,7 @@
 			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
 		}
 			
-		private function InitializeWorkingSequence()
-		{
-			
-		}
+		
 		
 		private function CreateCommunication()
 		{
