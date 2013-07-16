@@ -127,12 +127,7 @@
 			}
 			
 			SetMode(ModeInfo.modeInfo.MainMode);
-		}
-		
-		private function InitializeWorkingSequence()
-		{
-			//this.AddToTraining(ControlDictionary["А ТА2-1 пермычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-		}		
+		}	
 		
 		private function InitializeTrainingSequence()
 		{
