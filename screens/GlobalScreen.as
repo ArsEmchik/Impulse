@@ -85,8 +85,10 @@
 				case ModeInfo.BLOCK_D_39:
 					break;
 				case ModeInfo.BLOCK_IL34:
+					main_screen.InitializeIL34Screen();
 					break;
 				case ModeInfo.BLOCK_IL34_2:
+					main_screen.InitializeIL34Screen();
 					break;
 				case ModeInfo.BLOCK_INPUT:
 					break;
@@ -104,8 +106,10 @@
 					main_screen.InitializeIPScreen();
 					break;
 				case ModeInfo.BLOCK_IS:
+					main_screen.InitializeISScreen();
 					break;
 				case ModeInfo.BLOCK_ITA:
+					main_screen.InitializeITAScreen();
 					break;
 				default: throw new Error("Некоректный блок");
 			}

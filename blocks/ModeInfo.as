@@ -78,9 +78,9 @@
 		public static function InitializeModeInfo()
 		{
 			modeInfo = new ModeInfo();
-			modeInfo.MainMode=MM_CONTROL;
-			modeInfo.Mode=M_WORKING;
-			modeInfo.Speed=S_480;
+			modeInfo.MainMode=MM_INSTRUCTION;
+			modeInfo.Mode=M_COMMUTATION;
+			//modeInfo.Speed=S_480;
 			modeInfo.SetBlocks();
 		}
 		public function SetBlocks()
@@ -89,6 +89,7 @@
 			switch (Mode)
 			{
 				case M_PREPARING:
+				case M_WORKING:
 					for (i=0; i<9; i++)
 						blockInfo[i] = new BlockInfo();
 					switch (Speed)

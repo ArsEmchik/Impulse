@@ -150,7 +150,10 @@
 			this.AddToTraining(ControlDictionary["ГБ4 перемычка ШГ"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
 		}
 			
-		
+		private function InitializeWorkingSequence()
+		{
+			
+		}
 		
 		private function CreateCommunication()
 		{
@@ -180,10 +183,7 @@
 			(ControlDictionary["ЦА4_1 зел. лампа"] as ControlElement).GoToState(newState);
 			(ControlDictionary["ЦА4_2 зел. лампа"] as ControlElement).GoToState(newState);
 			(ControlDictionary["ЦА4_3 зел. лампа"] as ControlElement).GoToState(newState);
-			(ControlDictionary["ЦА4_4 зел. лампа"] as ControlElement).GoToState(newState);
-			
-			
-			
+			(ControlDictionary["ЦА4_4 зел. лампа"] as ControlElement).GoToState(newState);			
 		}
 	}
 }
