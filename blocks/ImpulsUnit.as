@@ -18,9 +18,11 @@
 		private var blockState: int;
 		private var decriptionField: TextField;
 		private var outButton: Button;
+		private var free: Boolean;
 		
-		public function ImpulsUnit()
+		public function ImpulsUnit(pFree: Boolean=false)
 		{
+			free = pFree;
 			ControlElements = new Vector.<ControlElement>();
 			ControlDictionary = new Dictionary();
 			StartInitialize();

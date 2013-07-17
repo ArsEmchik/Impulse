@@ -300,8 +300,6 @@
 			this.AddToTraining(ControlDictionary["Б ЦБ3-9 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["А Включатель"],"Включите Тумблер",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["Б Включатель"],"Включите Тумблер",ControlElement.S_B_CHOSEN);
-			//this.AddToTraining(ControlDictionary["Б Включатель"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			//this.AddToTraining(ControlDictionary["ФП включатель"],"Выкл шутку",ControlElement.S_B_DEFAULT);
 		}
 		private function InitializeWorkingSequence()
 		{
@@ -473,5 +471,4 @@
 			(ControlDictionary["Б ГБ3 зел. лампочка"] as ControlElement).GoToState(newState, false);
 		}
 	}
-	
 }
