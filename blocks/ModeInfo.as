@@ -79,7 +79,7 @@
 		{
 			modeInfo = new ModeInfo();
 			modeInfo.MainMode=MM_INSTRUCTION;
-			modeInfo.Mode=M_COMMUTATION;
+			modeInfo.Mode=M_WORKING;
 			//modeInfo.Speed=S_480;
 			modeInfo.SetBlocks();
 		}
