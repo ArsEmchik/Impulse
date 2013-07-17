@@ -81,6 +81,13 @@
 			modeInfo.MainMode=MM_INSTRUCTION;
 			modeInfo.Mode=M_COMMUTATION;
 			//modeInfo.Speed=S_480;
+			modeInfo.Czk86Channels = new Vector.<int>(6);
+			modeInfo.KtchChannels = new Vector.<int>(6);
+			modeInfo.Czk86Channels[0] = 2;
+			modeInfo.KtchChannels[0]=2;
+			modeInfo.Czk86Channels[1] = 3;
+			modeInfo.KtchChannels[4]=1;
+			modeInfo.P296n1 = 3;
 			modeInfo.SetBlocks();
 		}
 		public function SetBlocks()

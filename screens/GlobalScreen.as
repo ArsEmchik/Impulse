@@ -91,6 +91,7 @@
 					main_screen.InitializeIL34Screen();
 					break;
 				case ModeInfo.BLOCK_INPUT:
+					main_screen.InitializeInputBlock();
 					break;
 				case ModeInfo.BLOCK_IO3A:
 				case ModeInfo.BLOCK_IO3A_2:
