@@ -80,7 +80,7 @@
 			modeInfo = new ModeInfo();
 			modeInfo.MainMode=MM_CONTROL;
 			modeInfo.Mode=M_WORKING;
-			//modeInfo.Speed=S_480;
+			modeInfo.Speed=S_480;
 			modeInfo.Czk86Channels = new Vector.<int>(6);
 			modeInfo.KtchChannels = new Vector.<int>(6);
 			modeInfo.Czk86Channels[0] = 2;
@@ -96,7 +96,6 @@
 			switch (Mode)
 			{
 				case M_PREPARING:
-				case M_WORKING:
 					for (i=0; i<9; i++)
 						blockInfo[i] = new BlockInfo();
 					switch (Speed)
