@@ -4,6 +4,7 @@
 	import fl.controls.Button;
 	import flash.events.MouseEvent;
 	import blocks.IL34Block;
+	import blocks.ModeInfo;
 	
 	public class IL34Screen extends BlockScreen {
 		
@@ -15,6 +16,7 @@
 			mainScreen=p_mainScreen;
 			outButton.addEventListener(MouseEvent.CLICK,GoToNewScreen);
 			this.InitializeBlockScreen(IL34Unit, textBox,outButton);
+			speedTextbox.text = "Выбранная скорость: "+ModeInfo.SpeedString()+" кб."
 		}
 	
 		public function IL34Screen()

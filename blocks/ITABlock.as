@@ -12,6 +12,7 @@
 		public function ITABlock() {
 			super();
 			this.ControlDictionary["Включатель"]=turnSwitch;
+			this.ControlDictionary["Белая конпка"]=button;
 			
 			this.ControlDictionary["ОП-1 сигн зел. лампочка 1"]=greenBulb1;
 			this.ControlDictionary["ОП-1 сигн зел. лампочка 2"]=greenBulb2;
@@ -152,6 +153,8 @@
 		
 		private function InitializeTrainingSequence()
 		{
+			this.AddToTraining(ControlDictionary["Белая конпка"],"тут",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Белая конпка"],"тут",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["Включатель"],"Включите Тумблер",ControlElement.S_B_CHOSEN);
 		}
 		

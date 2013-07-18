@@ -12,6 +12,8 @@
 		
 		public function D39Screen() 
 		{
+			configButton.InitializeButton(this,tConfigTable);
+			this.removeChild(tConfigTable);
 			D39Unit=tD39Unit;
 		}
 		public function GoToNewScreen(e: MouseEvent)

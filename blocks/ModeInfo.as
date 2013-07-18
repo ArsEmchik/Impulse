@@ -127,5 +127,20 @@
 				default: throw new Error("Некорректный мод");
 			}
 		}
+		public static function SpeedString(): String
+		{
+			switch (modeInfo.Speed)
+			{
+				case S_48:
+					return("48");
+				case S_480:
+					return("480");
+				case S_480x2:
+					return("480x2");
+				case S_2048:
+					return("2048");
+			}
+			throw new Error("");
+		}
 	}
 }
