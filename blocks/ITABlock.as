@@ -151,6 +151,7 @@
 		private function InitializeTrainingSequence()
 		{
 			this.AddToTraining(ControlDictionary["Включатель"],"Включите Тумблер",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Включатель"],"Включите Тумблер",ControlElement.S_11_STATE1);
 		}
 		
 		private function InitializeWorkingSequence()
@@ -167,6 +168,19 @@
 		{
 			var newState: int = (ControlDictionary["Включатель"] as ControlElement).CurrentState;
 			(ControlDictionary["П6 вкл зел. лампочка"] as ControlElement).GoToState(newState, false);
+			(ControlDictionary["ОП-1 сигн зел. лампочка 1"] as ControlElement).GoToState(newState, false);
+			(ControlDictionary["ОП-1 сигн зел. лампочка 2"] as ControlElement).GoToState(newState, false);
+			(ControlDictionary["ОП-1 сигн зел. лампочка 3"] as ControlElement).GoToState(newState, false);
+			(ControlDictionary["ОП-1 сигн зел. лампочка 4"] as ControlElement).GoToState(newState, false);
+			(ControlDictionary["ОП-2 сигн зел. лампочка 1"] as ControlElement).GoToState(newState, false);
+			(ControlDictionary["ОП-2 сигн зел. лампочка 2"] as ControlElement).GoToState(newState, false);
+			(ControlDictionary["ОП-2 сигн зел. лампочка 3"] as ControlElement).GoToState(newState, false);
+			(ControlDictionary["ОП-2 сигн зел. лампочка 4"] as ControlElement).GoToState(newState, false);
+			(ControlDictionary["ОП-3 сигн зел. лампочка 1"] as ControlElement).GoToState(newState, false);
+			(ControlDictionary["ОП-3 сигн зел. лампочка 2"] as ControlElement).GoToState(newState, false);
+			(ControlDictionary["ОП-3 сигн зел. лампочка 3"] as ControlElement).GoToState(newState, false);
+			(ControlDictionary["ОП-3 сигн зел. лампочка 4"] as ControlElement).GoToState(newState, false);
+			(ControlDictionary["ОГК контроль зел. лампочка"] as ControlElement).GoToState(newState, false);
 		}
 		
 	}
