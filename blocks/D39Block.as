@@ -36,11 +36,14 @@
 		
 		private function SwitchMouseClick(e: MouseEvent)
 		{
-			var newState: int = (ControlDictionary["Панель"] as ControlElement).CurrentState;
-			if (newState==100)
-				newState=0;
-			else newState++;
-			(ControlDictionary["Панель"] as ControlElement).GoToState(newState);
+			if (!(ControlDictionary["Панель"] as ControlElement).IsBlocked())
+			{
+				var newState: int = (ControlDictionary["Панель"] as ControlElement).CurrentState;
+				if (newState==100)
+					newState=0;
+				else newState++;
+				(ControlDictionary["Панель"] as ControlElement).GoToState(newState);
+			}
 		}		
 	}
 	

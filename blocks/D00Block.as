@@ -22,31 +22,13 @@
 		public override function InitializeImpulsUnit(pDecriptionField: TextField, outButton: Button)
 		{
 			super.InitializeImpulsUnit(pDecriptionField,outButton);
-			switch (ModeInfo.modeInfo.Mode)
-			{
-				case ModeInfo.M_PREPARING:
-					InitializeTrainingSequence();
-					break;
-				case ModeInfo.M_WORKING:
-					InitializeTrainingSequence();
-					PrepareToWork();
-					InitializeWorkingSequence();
-					break;
-				default: throw new Error("Нет такого мода");
-			}
-			
+			InitializeSequence();
 			SetMode(ModeInfo.modeInfo.MainMode);
 		}
-		private function InitializeTrainingSequence()
+		private function InitializeSequence()
 		{
 			this.AddToTraining(ControlDictionary["Окон перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
 		}
-		
-		private function InitializeWorkingSequence()
-		{
-			this.AddToTraining(ControlDictionary["Окон перемычка 2"],"Включите тумблер",ControlElement.S_B_CHOSEN);
-		}		
-		
 		private function CreateCommunication()
 		{
 		}
