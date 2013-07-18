@@ -78,7 +78,7 @@
 		public static function InitializeModeInfo()
 		{
 			modeInfo = new ModeInfo();
-			modeInfo.MainMode=MM_INSTRUCTION;
+			modeInfo.MainMode=MM_CONTROL;
 			modeInfo.Mode=M_WORKING;
 			//modeInfo.Speed=S_480;
 			modeInfo.Czk86Channels = new Vector.<int>(6);

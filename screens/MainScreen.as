@@ -66,6 +66,11 @@
 			this.gotoAndStop("BlockInput");
 			InputBlockScreen.InitializeInputBlockScreen(this);
 		}
+		public function InitializeD39Block()
+		{
+			this.gotoAndStop("D39Block");
+			D39BlockScreen.InitializeD39Screen(this);
+		}		
 	}
 	
 }
