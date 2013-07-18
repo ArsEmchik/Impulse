@@ -16,7 +16,7 @@
 		private var trainingDescriptions: Vector.<String>;
 		private var trainingState: Vector.<int>;
 		private var blockState: int;
-		private var decriptionField: TextField;
+		protected var decriptionField: TextField;
 		private var outButton: Button;
 		private var free: Boolean;
 		
