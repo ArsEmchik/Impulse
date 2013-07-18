@@ -17,7 +17,7 @@
 			this.InitializeBlockScreen(IL34Unit, textBox,outButton);
 		}
 	
-		public function IL34Screen() 
+		public function IL34Screen()
 		{
 			IL34Unit=tIL34Unit;
 			// constructor code
