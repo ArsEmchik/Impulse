@@ -57,6 +57,11 @@
 			this.gotoAndStop("IL34Block");
 			IL34Screen.InitializeIL34Screen(this);
 		}	
+		public function InitializeD00Screen()
+		{
+			this.gotoAndStop("D00Block");
+			D00Screen.InitializeD00Screen(this);
+		}
 		public function InitializeFinalScreen()
 		{
 			this.gotoAndStop("Final");
@@ -66,6 +71,11 @@
 			this.gotoAndStop("BlockInput");
 			InputBlockScreen.InitializeInputBlockScreen(this);
 		}
+		public function InitializeD39Block()
+		{
+			this.gotoAndStop("D39Block");
+			D39BlockScreen.InitializeD39Screen(this);
+		}		
 	}
 	
 }

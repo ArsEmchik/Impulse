@@ -165,7 +165,7 @@
 			this.ControlDictionary["А ЦА3-9 перемычка 0"]=jumper81;			
 			this.ControlDictionary["А ЦА3-9 перемычка КТ"]=jumper82;
 			
-			this.ControlDictionary["B ВЧ3 перемычка Б"]=jumper101;
+			this.ControlDictionary["Б ВЧ3 перемычка Б"]=jumper101;
 			this.ControlDictionary["Б ВЧ3 перемычка У"]=jumper102;
 			this.ControlDictionary["Б ВЧ3 перемычка ШГ"]=jumper103;
 			this.ControlDictionary["Б ВЧ3 перемычка ВН"]=jumper104;
@@ -268,51 +268,120 @@
 		
 		private function InitializeTrainingSequence()
 		{
-			this.AddToTraining(ControlDictionary["А ТА2-1 пермычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["А СКА2 перемычка 1-С"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["А СКА2 перемычка 1-К"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["А ЦСА перемычка 7"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["А ГКА перемычка 10"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["А ГКА перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["А ЦА3-1 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["А ЦА3-2 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["А ЦА3-3 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["А ЦА3-4 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["А ЦА3-5 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["А ЦА3-6 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["А ЦА3-7 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["А ЦА3-8 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["А ЦА3-9 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["B ВЧ3 перемычка Б"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Б ГКБ перемычка 10"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Б ГКБ перемычка 7"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Б КЗ-1 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Б КЗ-2 перемычка 2"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Б КЗ-3 перемычка 2"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Б ЦБ3-1 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Б ЦБ3-2 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Б ЦБ3-3 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Б ЦБ3-4 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Б ЦБ3-5 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Б ЦБ3-6 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Б ЦБ3-7 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Б ЦБ3-8 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Б ЦБ3-9 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["А Включатель"],"Включите Тумблер",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Б Включатель"],"Включите Тумблер",ControlElement.S_B_CHOSEN);
-			//this.AddToTraining(ControlDictionary["Б Включатель"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			//this.AddToTraining(ControlDictionary["ФП включатель"],"Выкл шутку",ControlElement.S_B_DEFAULT);
+			this.AddToTraining(ControlDictionary["А ТА2-1 пермычка 1"],"Установите переключатель 1-0 в положение 1",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А СКА2 перемычка 1-К"],"Установите переключатель С в положение 1",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А СКА2 перемычка 1-С"],"Установите переключатель К в положение 1",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А ЦСА перемычка 7"],"Установите переключатель РЕЖИМ 10 КАН в положение 7",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А ГКА перемычка 10"],"Установите переключатель ГР СК в положение 10х48",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А ГКА перемычка А"],"Установите переключатель А-О в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А ЦА3-1 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А ЦА3-2 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А ЦА3-3 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А ЦА3-4 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А ЦА3-5 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А ЦА3-6 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А ЦА3-7 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А ЦА3-8 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А ЦА3-9 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б ВЧ3 перемычка Б"],"Установите переключатель Б-У в положение Б",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б ГКБ перемычка 10"],"Установите переключатель ГР СК в положение 10х48",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б ГКБ перемычка 7"],"Установите переключатель РЕЖИМ 10 КАН в положение 7",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б КЗ-1 перемычка 1"],"Установите переключатель I комплекта блока КЗ в положение 1",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б ЦБ3-1 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б КЗ-2 перемычка 2"],"Установите переключатель II комплекта блока КЗ в положение 2",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б ЦБ3-2 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б КЗ-3 перемычка 3"],"Установите переключатель III комплекта блока КЗ в положение 3",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б ЦБ3-3 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б ЦБ3-4 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б ЦБ3-5 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б ЦБ3-6 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б ЦБ3-7 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б ЦБ3-8 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б ЦБ3-9 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А Включатель"],"Установите Тумблер М-Д в положение М",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б Включатель"],"Установите Тумблер М-Д в положение М",ControlElement.S_B_CHOSEN);
 		}
 		private function InitializeWorkingSequence()
 		{
-			this.AddToTraining(ControlDictionary["А ТА2-1 пермычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["А ГКА перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+			{
+				if  (ModeInfo.modeInfo.Speed == ModeInfo.S_480)
+					this.AddToTraining(ControlDictionary["А ГКА перемычка 10"],"Установите переключатель ГР СК в положение 10х48",ControlElement.S_B_CHOSEN);
+				this.AddToTraining(ControlDictionary["А ГКА перемычка А"],"Установите переключатель А-О в положение А",ControlElement.S_B_CHOSEN);
+			}
+			if ((ControlDictionary["А СКА2 перемычка 1-К"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["А СКА2 перемычка 1-К"],"Установите переключатель К в положение 1",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["А СКА2 перемычка 1-С"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["А СКА2 перемычка 1-С"],"Установите переключатель С в положение 1",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А СКА2 перемычка Д-К"],"Установите переключатель К в положение Д",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А СКА2 перемычка Д-С"],"Установите переключатель С в положение Д",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["А ТА2-1 пермычка 1"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["А ТА2-1 пермычка 1"],"Установите переключатель 1-0 в положение 1",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["А ТА2-2 пермычка 1"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["А ТА2-2 пермычка 1"],"Установите переключатель 1-0 в положение 1",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["А ЦА3-1 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["А ЦА3-1 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["А ЦА3-2 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["А ЦА3-2 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["А ЦА3-3 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["А ЦА3-3 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["А ЦА3-4 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["А ЦА3-4 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["А ЦА3-5 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["А ЦА3-5 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["А ЦА3-6 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["А ЦА3-6 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["А ЦА3-7 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["А ЦА3-7 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["А ЦА3-8 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["А ЦА3-8 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["А ЦА3-9 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["А ЦА3-9 перемычка А"],"Установите переключатель А-С-О в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["А ЦСА перемычка дельта 3"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["А ЦСА перемычка дельта 3"],"Установите переключатель РЕЖИМ 10 КАН в положение Δ/3",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["Б ВЧ3 перемычка Б"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["Б ВЧ3 перемычка Б"],"Установите переключатель Б-У в положение Б",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["Б ГКБ перемычка 10"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["Б ГКБ перемычка 10"],"Установите переключатель ГР СК в положение 10х48",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["Б ЦБ3-1 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["Б ЦБ3-1 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["Б ЦБ3-2 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["Б ЦБ3-2 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["Б ЦБ3-3 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["Б ЦБ3-3 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["Б ЦБ3-4 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["Б ЦБ3-4 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["Б ЦБ3-5 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["Б ЦБ3-5 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["Б ЦБ3-6 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["Б ЦБ3-6 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["Б ЦБ3-7 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["Б ЦБ3-7 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["Б ЦБ3-8 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["Б ЦБ3-8 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["Б ЦБ3-9 перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["Б ЦБ3-9 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
+			if ((ControlDictionary["Б ГКБ перемычка дельта 3"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
+				this.AddToTraining(ControlDictionary["Б ГКБ перемычка дельта 3"],"Установите переключатель РЕЖИМ 10 КАН в положение Δ/3",ControlElement.S_B_CHOSEN);
 		}		
 		
 		private function CreateCommunication()
 		{
 			(ControlDictionary["А Включатель"] as ControlElement).addEventListener(MouseEvent.CLICK,SwitchMouseClick1);
 			(ControlDictionary["Б Включатель"] as ControlElement).addEventListener(MouseEvent.CLICK,SwitchMouseClick2)
-			//(ControlDictionary["ФП включатель"] as ControlElement).addEventListener(MouseEvent.CLICK,SwitchMouseClick);
+			trace((ControlDictionary["А ГКА перемычка А"] as ControlElement));
+			(ControlDictionary["А ГКА перемычка А"] as ControlElement).addEventListener(MouseEvent.CLICK,JumperClick10);
+			(ControlDictionary["А ЦА3-1 перемычка А"] as ControlElement).addEventListener(MouseEvent.CLICK,JumperClick1);
+			(ControlDictionary["А ЦА3-2 перемычка А"] as ControlElement).addEventListener(MouseEvent.CLICK,JumperClick2);
+			(ControlDictionary["А ЦА3-3 перемычка А"] as ControlElement).addEventListener(MouseEvent.CLICK,JumperClick3);
+			(ControlDictionary["А ЦА3-4 перемычка А"] as ControlElement).addEventListener(MouseEvent.CLICK,JumperClick4);
+			(ControlDictionary["А ЦА3-5 перемычка А"] as ControlElement).addEventListener(MouseEvent.CLICK,JumperClick5);
+			(ControlDictionary["А ЦА3-6 перемычка А"] as ControlElement).addEventListener(MouseEvent.CLICK,JumperClick6);
+			(ControlDictionary["А ЦА3-7 перемычка А"] as ControlElement).addEventListener(MouseEvent.CLICK,JumperClick7);
+			(ControlDictionary["А ЦА3-8 перемычка А"] as ControlElement).addEventListener(MouseEvent.CLICK,JumperClick8);
+			(ControlDictionary["А ЦА3-9 перемычка А"] as ControlElement).addEventListener(MouseEvent.CLICK,JumperClick9);
+			(ControlDictionary["А ЦСА перемычка дельта 3"] as ControlElement).addEventListener(MouseEvent.CLICK,JumperClick11);
+			(ControlDictionary["Б ГКБ перемычка 10"] as ControlElement).addEventListener(MouseEvent.CLICK,JumperClick12);
 		}
 		
 		private function SwitchMouseClick1(e: MouseEvent)
@@ -328,6 +397,78 @@
 			(ControlDictionary["Б П2 вкл зел. лампочка"] as ControlElement).GoToState(newState, false);
 			(ControlDictionary["Б ГБ3 зел. лампочка"] as ControlElement).GoToState(newState, false);
 		}
+		
+		private function JumperClick10(e: MouseEvent)
+		{
+			var newState: int = (ControlDictionary["А ГКА перемычка А"] as ControlElement).CurrentState;
+			(ControlDictionary["А ГА3 зел. лампочка"] as ControlElement).GoToState(newState, false);
+		}
+		
+		private function JumperClick1(e: MouseEvent)
+		{
+			var newState: int = (ControlDictionary["А ЦА3-1 перемычка А"] as ControlElement).CurrentState;
+			(ControlDictionary["А ЦА3-1 зел. лампочка"] as ControlElement).GoToState(newState, false);
+		}
+		
+		private function JumperClick2(e: MouseEvent)
+		{
+			var newState: int = (ControlDictionary["А ЦА3-2 перемычка А"] as ControlElement).CurrentState;
+			(ControlDictionary["А ЦА3-2 зел. лампочка"] as ControlElement).GoToState(newState, false);
+		}
+		
+		private function JumperClick3(e: MouseEvent)
+		{
+			var newState: int = (ControlDictionary["А ЦА3-3 перемычка А"] as ControlElement).CurrentState;
+			(ControlDictionary["А ЦА3-3 зел. лампочка"] as ControlElement).GoToState(newState, false);
+		}
+		
+		private function JumperClick4(e: MouseEvent)
+		{
+			var newState: int = (ControlDictionary["А ЦА3-4 перемычка А"] as ControlElement).CurrentState;
+			(ControlDictionary["А ЦА3-4 зел. лампочка"] as ControlElement).GoToState(newState, false);
+		}
+		
+		private function JumperClick5(e: MouseEvent)
+		{
+			var newState: int = (ControlDictionary["А ЦА3-5 перемычка А"] as ControlElement).CurrentState;
+			(ControlDictionary["А ЦА3-5 зел. лампочка"] as ControlElement).GoToState(newState, false);
+		}
+		
+		private function JumperClick6(e: MouseEvent)
+		{
+			var newState: int = (ControlDictionary["А ЦА3-6 перемычка А"] as ControlElement).CurrentState;
+			(ControlDictionary["А ЦА3-6 зел. лампочка"] as ControlElement).GoToState(newState, false);
+		}
+		
+		private function JumperClick7(e: MouseEvent)
+		{
+			var newState: int = (ControlDictionary["А ЦА3-7 перемычка А"] as ControlElement).CurrentState;
+			(ControlDictionary["А ЦА3-7 зел. лампочка"] as ControlElement).GoToState(newState, false);
+		}
+		
+		private function JumperClick8(e: MouseEvent)
+		{
+			var newState: int = (ControlDictionary["А ЦА3-8 перемычка А"] as ControlElement).CurrentState;
+			(ControlDictionary["А ЦА3-8 зел. лампочка"] as ControlElement).GoToState(newState, false);
+		}
+		
+		private function JumperClick9(e: MouseEvent)
+		{
+			var newState: int = (ControlDictionary["А ЦА3-9 перемычка А"] as ControlElement).CurrentState;
+			(ControlDictionary["А ЦА3-9 зел. лампочка"] as ControlElement).GoToState(newState, false);
+		}
+		
+		private function JumperClick11(e: MouseEvent)
+		{
+			var newState: int = (ControlDictionary["А ЦСА перемычка дельта 3"] as ControlElement).CurrentState;
+			(ControlDictionary["А ЦСА зел. лампочка"] as ControlElement).GoToState(newState, false);
+		}
+		
+		private function JumperClick12(e: MouseEvent)
+		{
+			var newState: int = (ControlDictionary["Б ГКБ перемычка 10"] as ControlElement).CurrentState;
+			(ControlDictionary["Б ВЧ3 зел. лампочка"] as ControlElement).GoToState(newState, false);
+			(ControlDictionary["Б ГБ3 зел. лампочка"] as ControlElement).GoToState(newState, false);
+		}
 	}
-	
 }

@@ -126,6 +126,8 @@
 			this.ControlDictionary["П6 перемычка 7.5"]=jumper69;
 			this.ControlDictionary["П6 перемычка 5"]=jumper70;
 			
+			this.ControlDictionary["ОГК переключатель"]=switcher1;
+			
 			InitializeControls();
 			CreateCommunication();
 		}

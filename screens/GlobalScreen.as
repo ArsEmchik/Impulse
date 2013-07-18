@@ -81,8 +81,10 @@
 			switch(i)
 			{
 				case ModeInfo.BLOCK_D_00_01:
+					main_screen.InitializeD00Screen();
 					break;
 				case ModeInfo.BLOCK_D_39:
+					main_screen.InitializeD39Block();
 					break;
 				case ModeInfo.BLOCK_IL34:
 					main_screen.InitializeIL34Screen();
@@ -91,6 +93,7 @@
 					main_screen.InitializeIL34Screen();
 					break;
 				case ModeInfo.BLOCK_INPUT:
+					main_screen.InitializeInputBlock();
 					break;
 				case ModeInfo.BLOCK_IO3A:
 				case ModeInfo.BLOCK_IO3A_2:

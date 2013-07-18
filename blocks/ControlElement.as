@@ -23,7 +23,9 @@
 		public static const S_11_STATE8: int=8;
 		public static const S_11_STATE9: int=9;
 		public static const S_11_STATE10: int=10;		
-		public static const S_11_STATE11: int=11;		
+		public static const S_11_STATE11: int=11;	
+				
+		public static const S_101: int=101;		
 				
 		public var StateCount: int;
 		public var CurrentState: int;
@@ -86,16 +88,22 @@
 						break;
 					case S_11:
 						GoTo11State();
+						break;
+					case S_101:
+						GoTo101State();
 						break;						
 					default: throw new Error("Нет такого класса");
 				}			
+		}
+		protected function GoTo101State()
+		{
 		}
 		private function InitializeMouseOverOut()
 		{
 		    this.addEventListener(MouseEvent.ROLL_OVER,ControlElementMouseOver);
 			this.addEventListener(MouseEvent.ROLL_OUT,ControlElementMouseOut);
 		}
-		private function GoToBinaryState()
+		protected function GoToBinaryState()
 		{
 			if (CurrentState==S_B_DEFAULT)
 				this.gotoAndStop("Default");
