@@ -135,20 +135,22 @@
 		private function InitializeTrainingSequence()
 		{
 			// первоначальное положение
-			this.AddToTraining(ControlDictionary["ЦА4_1 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ЦА4_2 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ЦА4_3 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ЦА4_1 перемычка Б"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ЦА4_2 перемычка Б"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ЦА4_3 перемычка Б"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка Б"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ФСЧ4 перемычка А"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["ГА4 перемычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["П2 включатель"],"Включите Тумблер",ControlElement.S_B_CHOSEN);			
+			this.AddToTraining(ControlDictionary["ЦА4_1 перемычка 1"],"Вставте перемычку в положение '1' для настройки передающей части",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_2 перемычка 1"],"Вставте перемычку в положение '1' для настройки передающей части",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_3 перемычка 1"],"Вставте перемычку в положение '1' для настройки передающей части",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка 1"],"Вставте перемычку в положение '1' для настройки передающей части",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_1 перемычка Б"],"Вставте перемычку в положение 'Б' для настройки передающей части",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_2 перемычка Б"],"Вставте перемычку в положение 'Б' для настройки передающей части",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_3 перемычка Б"],"Вставте перемычку в положение 'Б' для настройки передающей части",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка Б"],"Вставте перемычку в положение 'Б' для настройки передающей части",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ФСЧ4 перемычка А"],"Выберите асинхронный режим",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ГА4 перемычка 1"],"Установите режим работы канала ЦКС",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["П2 включатель"],"Включите электропитание",ControlElement.S_B_CHOSEN);			
 			// проверка на себя
-			this.AddToTraining(ControlDictionary["ГБ4 перемычка ШГ"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ГБ4 перемычка ШГ"],"Вставте перемычку ШГ для проверки работоспособности",ControlElement.S_B_CHOSEN);
 		}
+			
+		
 		
 		private function CreateCommunication()
 		{
@@ -178,7 +180,10 @@
 			(ControlDictionary["ЦА4_1 зел. лампа"] as ControlElement).GoToState(newState);
 			(ControlDictionary["ЦА4_2 зел. лампа"] as ControlElement).GoToState(newState);
 			(ControlDictionary["ЦА4_3 зел. лампа"] as ControlElement).GoToState(newState);
-			(ControlDictionary["ЦА4_4 зел. лампа"] as ControlElement).GoToState(newState);			
+			(ControlDictionary["ЦА4_4 зел. лампа"] as ControlElement).GoToState(newState);
+			
+			
+			
 		}
 	}
 }

@@ -11,6 +11,8 @@
 		public static const S_B_DEFAULT: int=1;
 		public static const S_B_CHOSEN: int=2;
 				
+		public static const S_3: int=3;						
+				
 		public static const S_11: int=11;
 				
 		public static const S_11_STATE1: int=1;
@@ -91,12 +93,19 @@
 						break;
 					case S_101:
 						GoTo101State();
-						break;						
+						break;	
+					case S_3:
+						GoTo3State();
+						break;
 					default: throw new Error("Нет такого класса");
 				}			
 		}
 		protected function GoTo101State()
 		{
+		}
+		protected function GoTo3State()
+		{
+			this.gotoAndStop(CurrentState);
 		}
 		private function InitializeMouseOverOut()
 		{
