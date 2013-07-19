@@ -124,7 +124,8 @@
 		private function Commutation (e: MouseEvent)
 		{
 			var button: D39Button  = e.currentTarget as D39Button;
-			
+			var item: String;
+			var digitPanel: int;
 			if (button.GetType() == 0)
 			{
 				trace ("0",comm_stage);
@@ -167,12 +168,12 @@
 					}
 					case "Откл":
 					{
-						var item: String;
+						
 						for (item in this.ControlDictionary)
 						{
 							if (ControlDictionary[item] is DigitPanel)
 							{
-								var digitPanel: int;
+								
 								digitPanel = (int)(item.split(" ")[1]);
 								if (digitPanel == comm_channels[0].GetType())
 									(ControlDictionary[item]as ControlElement).GoToState(100, false)
