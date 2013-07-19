@@ -298,11 +298,11 @@
 			this.AddToTraining(ControlDictionary["Б ЦБ3-7 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["Б ЦБ3-8 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["Б ЦБ3-9 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["А Включатель"],"Установите Тумблер М-Д в положение М",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Б Включатель"],"Установите Тумблер М-Д в положение М",ControlElement.S_B_CHOSEN);
-		}
+			
 		private function InitializeWorkingSequence()
 		{
+			this.AddToTraining(ControlDictionary["А Включатель"],"Установите Тумблер М-Д в положение М",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б Включатель"],"Установите Тумблер М-Д в положение М",ControlElement.S_B_CHOSEN);
 			if ((ControlDictionary["А ГКА перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
 			{
 				if  (ModeInfo.modeInfo.Speed == ModeInfo.S_480)
