@@ -268,6 +268,8 @@
 		
 		private function InitializeTrainingSequence()
 		{
+			this.AddToTraining(ControlDictionary["А Включатель"],"Установите Тумблер М-Д в положение М",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б Включатель"],"Установите Тумблер М-Д в положение М",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["А ТА2-1 пермычка 1"],"Установите переключатель 1-0 в положение 1",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["А СКА2 перемычка 1-К"],"Установите переключатель С в положение 1",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["А СКА2 перемычка 1-С"],"Установите переключатель К в положение 1",ControlElement.S_B_CHOSEN);
@@ -298,8 +300,9 @@
 			this.AddToTraining(ControlDictionary["Б ЦБ3-7 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["Б ЦБ3-8 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["Б ЦБ3-9 перемычка А"],"Установите переключатель А-С в положение А",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["А Включатель"],"Установите Тумблер М-Д в положение М",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Б Включатель"],"Установите Тумблер М-Д в положение М",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["А Включатель"],"Установите Тумблер М-Д в положение Д",ControlElement.S_B_DEFAULT);
+			this.AddToTraining(ControlDictionary["Б Включатель"],"Установите Тумблер М-Д в положение Д",ControlElement.S_B_DEFAULT);
+			
 		}
 		private function InitializeWorkingSequence()
 		{
