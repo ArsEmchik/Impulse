@@ -172,5 +172,9 @@
 				ControlElementMouseOver(null);
 			else ControlElementMouseOut(null);			
 		}
+		public override function toString(): String
+		{
+			return(this.CurrentState.toString())
+		}
 	}
 }

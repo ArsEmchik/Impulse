@@ -2,15 +2,17 @@
 	
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
+	import blocks.ModeInfo;
+	import blocks.IO4Block;
 	
 	
 	public class IO4Screen extends BlockScreen {
 		
-		private var mainScreen: MainScreen;
 		private var IO4Unit: IO4Block;
 		
 		public function IO4Screen() {
 			IO4Unit=tIO4Unit;
+			this.block = IO4Unit;
 			// constructor code
 		}
 		
@@ -20,11 +22,6 @@
 			outButton.addEventListener(MouseEvent.CLICK,GoToNewScreen);
 			this.InitializeBlockScreen(IO4Unit,textBox,outButton);
 		}
-		public function GoToNewScreen(e: MouseEvent)
-		{
-			mainScreen.InitializeGlobalScreen();
-		}		
-		
 	}
 	
 }

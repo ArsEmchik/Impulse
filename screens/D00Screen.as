@@ -7,7 +7,6 @@
 	
 	public class D00Screen extends BlockScreen {
 		
-		private var mainScreen: MainScreen;
 		private var D00Unit: D00Block;
 		
 		public function InitializeD00Screen(p_mainScreen: MainScreen)
@@ -19,10 +18,7 @@
 		
 		public function D00Screen() {
 			D00Unit=tD00Unit;
-		}
-		public function GoToNewScreen(e: MouseEvent)
-		{
-			mainScreen.InitializeGlobalScreen();
+			this.block = D00Unit;
 		}
 	}
 	

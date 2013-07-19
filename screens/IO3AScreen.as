@@ -7,7 +7,6 @@
 	
 	public class IO3AScreen extends BlockScreen {
 		
-		private var mainScreen: MainScreen;
 		private var IO3AUnit: IO3ABlock;
 		
 		public function InitializeIO3AScreen(p_mainScreen: MainScreen)
@@ -20,11 +19,8 @@
 		public function IO3AScreen() 
 		{
 			IO3AUnit=tIO3AUnit;
+			this.block = IO3AUnit;
 			// constructor code
-		}
-		public function GoToNewScreen(e: MouseEvent)
-		{
-			mainScreen.InitializeGlobalScreen();
 		}
 	}
 	

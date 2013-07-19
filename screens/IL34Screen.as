@@ -8,7 +8,6 @@
 	
 	public class IL34Screen extends BlockScreen {
 		
-		private var mainScreen: MainScreen;
 		private var IL34Unit: IL34Block;
 		
 		public function InitializeIL34Screen(p_mainScreen: MainScreen)
@@ -22,13 +21,9 @@
 		public function IL34Screen()
 		{
 			IL34Unit=tIL34Unit;
+			this.block = IL34Unit;
 			// constructor code
 		}
-		public function GoToNewScreen(e: MouseEvent)
-		{
-			mainScreen.InitializeGlobalScreen();
-		}
-	
 	}
 	
 }
