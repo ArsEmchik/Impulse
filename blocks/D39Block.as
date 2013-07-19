@@ -143,12 +143,10 @@
 					{
 						if (comm_stage == 2)
 						{
-							var item: String;
 							for (item in this.ControlDictionary)
 							{
 								if (ControlDictionary[item] is DigitPanel)
 								{
-									var digitPanel: int;
 									digitPanel = (int)(item.split(" ")[1]);
 									if (digitPanel == comm_channels[0].GetType())
 										(ControlDictionary[item]as ControlElement).GoToState(comm_channels[1].GetType(), false)

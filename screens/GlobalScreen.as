@@ -20,10 +20,10 @@
 			block_is.AddOverFun(SetMessage,"Блок ИС");
 			block_ita.AddOverFun(SetMessage,"Блок ИТ/А");
 			block_io3a.AddOverFun(SetMessage,"ИО-3А + ИО-3Б");
-			block_il34.AddOverFun(SetMessage,"Блок ИО34");
+			block_il34.AddOverFun(SetMessage,"Блок ИЛ-34");
 			block_io4.AddOverFun(SetMessage,"Блок ИО-4");
 			block_io3a2.AddOverFun(SetMessage,"ИО-3А + ИО-3Б(2)");
-			block_il342.AddOverFun(SetMessage,"Блок ИО34(2)");
+			block_il342.AddOverFun(SetMessage,"Блок ИЛ-34(2)");
 			block_io42.AddOverFun(SetMessage,"Блок ИО-4(2)");
 			block_d0031.AddOverFun(SetMessage,"Блок Д-00-31");
 			block_d39.AddOverFun(SetMessage,"Блок Д-39");

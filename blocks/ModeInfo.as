@@ -95,6 +95,7 @@
 			var i: int;
 			switch (Mode)
 			{
+				case M_WORKING:
 				case M_PREPARING:
 					for (i=0; i<9; i++)
 						blockInfo[i] = new BlockInfo();
@@ -116,8 +117,6 @@
 							break;
 						default: throw new Error("Нет такой скорости");
 					}
-					break;
-				case M_WORKING:
 					break;
 				case M_COMMUTATION:
 					for (i=9; i<12; i++)
