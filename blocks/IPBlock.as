@@ -49,12 +49,13 @@
 		
 		private function InitializeWorkingSequence()
 		{
-			//this.AddToTraining(ControlDictionary["А ТА2-1 пермычка 1"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ФП включатель"],"Включите питание",ControlElement.S_B_CHOSEN);
 		}		
 		
 		private function InitializeTrainingSequence()
 		{
-			this.AddToTraining(ControlDictionary["ФП включатель"],"Включите Тумблер",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ФП включатель"],"Включите питание для проверки работоспособности",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ФП включатель"],"Прибор к работе готов. Выключите питание",ControlElement.S_B_DEFAULT);
 		}
 		private function CreateCommunication()
 		{

@@ -153,15 +153,38 @@
 		
 		private function InitializeTrainingSequence()
 		{
-			this.AddToTraining(ControlDictionary["Белая конпка"],"тут",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Белая конпка"],"тут",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Включатель"],"Включите Тумблер",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Включатель"],"Включите Тумблер",ControlElement.S_11_STATE1);
+			this.AddToTraining(ControlDictionary["Включатель"],"Включите питание для проверки работоспособности",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ОГК перемычка канал 2"],"Установите вилку-перемычку в положение КАНАЛ-ШЛЕЙФ",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ОГК перемычка шлейф 2"],"Установите вилку-перемычку в положение КАНАЛ-ШЛЕЙФ",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ОГК перемычка шлейф 1"],"Установите вилку-перемычку в положение ШЛЕЙФ",ControlElement.S_B_CHOSEN);
+			
+			this.AddToTraining(ControlDictionary["ОГК переключатель"],"Установите переключатель в положение 1",ControlElement.S_11_STATE2);
+			this.AddToTraining(ControlDictionary["Белая конпка"],"Нажмите и отпустите кнопку КОНТРОЛЬ",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ОГК переключатель"],"Установите переключатель в положение 2",ControlElement.S_11_STATE3);
+			this.AddToTraining(ControlDictionary["Белая конпка"],"Нажмите и отпустите кнопку КОНТРОЛЬ",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ОГК переключатель"],"Установите переключатель в положение 3",ControlElement.S_11_STATE4);
+			this.AddToTraining(ControlDictionary["Белая конпка"],"Нажмите и отпустите кнопку КОНТРОЛЬ",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ОГК переключатель"],"Установите переключатель в положение 4",ControlElement.S_11_STATE5);
+			this.AddToTraining(ControlDictionary["Белая конпка"],"Нажмите и отпустите кнопку КОНТРОЛЬ",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ОГК переключатель"],"Установите переключатель в положение 5",ControlElement.S_11_STATE6);
+			this.AddToTraining(ControlDictionary["Белая конпка"],"Нажмите и отпустите кнопку КОНТРОЛЬ",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ОГК переключатель"],"Установите переключатель в положение 6",ControlElement.S_11_STATE7);
+			this.AddToTraining(ControlDictionary["Белая конпка"],"Нажмите и отпустите кнопку КОНТРОЛЬ",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ОГК переключатель"],"Установите переключатель в положение 7",ControlElement.S_11_STATE8);
+			this.AddToTraining(ControlDictionary["Белая конпка"],"Нажмите и отпустите кнопку КОНТРОЛЬ",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ОГК переключатель"],"Установите переключатель в положение 8",ControlElement.S_11_STATE9);
+			this.AddToTraining(ControlDictionary["Белая конпка"],"Нажмите и отпустите кнопку КОНТРОЛЬ",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ОГК переключатель"],"Установите переключатель в положение 9",ControlElement.S_11_STATE10);
+			this.AddToTraining(ControlDictionary["Белая конпка"],"Нажмите и отпустите кнопку КОНТРОЛЬ",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ОГК переключатель"],"Установите переключатель в положение 10",ControlElement.S_11_STATE11);
+			this.AddToTraining(ControlDictionary["Белая конпка"],"Нажмите и отпустите кнопку КОНТРОЛЬ",ControlElement.S_B_CHOSEN);
+			
+			this.AddToTraining(ControlDictionary["Включатель"],"Прибор к работе готов. Выключите питание",ControlElement.S_B_DEFAULT);
 		}
 		
 		private function InitializeWorkingSequence()
 		{
-			
+			this.AddToTraining(ControlDictionary["Включатель"],"Включите питание",ControlElement.S_B_CHOSEN);
 		}
 		
 		private function CreateCommunication()

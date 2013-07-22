@@ -130,7 +130,7 @@
 		}	
 		private function InitializeWorkingSequence()
 		{
-			
+			this.AddToTraining(ControlDictionary["П2 включатель"],"Включите питание",ControlElement.S_B_CHOSEN);				
 		}
 		private function InitializeTrainingSequence()
 		{
@@ -145,9 +145,10 @@
 			this.AddToTraining(ControlDictionary["ЦА4_4 перемычка Б"],"Вставте перемычку в положение 'Б' для настройки передающей части",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["ФСЧ4 перемычка А"],"Выберите асинхронный режим",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["ГА4 перемычка 1"],"Установите режим работы канала ЦКС",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["П2 включатель"],"Включите электропитание",ControlElement.S_B_CHOSEN);			
+			this.AddToTraining(ControlDictionary["П2 включатель"],"Включите питание для проверки работоспособности",ControlElement.S_B_CHOSEN);			
 			// проверка на себя
-			this.AddToTraining(ControlDictionary["ГБ4 перемычка ШГ"],"Вставте перемычку ШГ для проверки работоспособности",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["ГБ4 перемычка ШГ"],"Вставте перемычку ШГ для проверки на себя",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["П2 включатель"],"Прибор к работе готов. Выключите питание",ControlElement.S_B_DEFAULT);
 		}
 			
 		

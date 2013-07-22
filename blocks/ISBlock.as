@@ -96,12 +96,13 @@
 		{
 			this.AddToTraining(ControlDictionary["Звуковой вызов"],"Включите тумблер ЗВУКОВОЙ ВЫЗОВ",ControlElement.S_B_CHOSEN);	
 			this.AddToTraining(ControlDictionary["У ОК перемычка А"],"Установите режим оконечной станции",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Включатель"],"Включите электропитание",ControlElement.S_B_CHOSEN);	
+			this.AddToTraining(ControlDictionary["Включатель"],"Включите питание для проверки работоспособности",ControlElement.S_B_CHOSEN);	
+			this.AddToTraining(ControlDictionary["Включатель"],"Прибор к работе готов. Выключите питание",ControlElement.S_B_DEFAULT);
 		}
 		
 		private function InitializeWorkingSequence()
 		{
-			//this.AddToTraining(ControlDictionary["Включатель"],"Включите тумблер",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Включатель"],"Включите питание",ControlElement.S_B_CHOSEN);
 		}		
 		
 		private function CreateCommunication()

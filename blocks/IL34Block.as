@@ -84,16 +84,17 @@
 		
 		private function InitializeTrainingSequence()
 		{
+			// выбрать скорость 
 			this.AddToTraining(ControlDictionary["АДВ перемычка О"],"Выберите режим на блоке АДВ",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["ДК перемычка РУЧ"],"Установите перемычку в положение РУЧ",ControlElement.S_B_CHOSEN);
-			this.AddToTraining(ControlDictionary["Включатель"],"Включите тумблер",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Включатель"],"Включите питание для проверки работоспособности",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["ПСП пермычка ШЛ"],"Установите перемычку ШЛ для проверки на себя",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["УСК перемычка контр"],"Установите перемычку КОНТР",ControlElement.S_B_CHOSEN);
-			//this.AddToTraining(ControlDictionary["ПСП пермычка ШЛ"],"Вставте Перемычку",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Включатель"],"Прибор к работе готов. Выключите питание",ControlElement.S_B_DEFAULT);
 		}
 		private function InitializeWorkingSequence()
 		{
-			//this.AddToTraining(ControlDictionary["Включатель"],"Включите тумблер",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Включатель"],"Включите питание",ControlElement.S_B_CHOSEN);
 		}		
 		
 		private function CreateCommunication()
