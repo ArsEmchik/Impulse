@@ -58,6 +58,8 @@
 			this.ControlDictionary["П1 перемычка 9"]=jumper25;
 			this.ControlDictionary["П1 перемычка 5"]=jumper26;
 			
+			this.ControlDictionary["Тумблер скорости"]=tumble;
+			
 			InitializeControls();
 			CreateCommunication();
 			// constructor code
@@ -85,6 +87,15 @@
 		private function InitializeTrainingSequence()
 		{
 			// выбрать скорость 
+			if (ModeInfo.modeInfo.Speed==ModeInfo.S_2048)
+			{
+				this.AddToTraining(ControlDictionary["Тумблер скорости"],"Установите скорость передачи в положение 2048",ControlElement.S_B_CHOSEN);
+			}
+			else if (ModeInfo.modeInfo.Speed==ModeInfo.S_480 || ModeInfo.modeInfo.Speed==ModeInfo.S_480x2)
+			{
+				this.AddToTraining(ControlDictionary["Тумблер скорости"],"Установите скорость передачи в положение 480",ControlElement.S_B_DEFAULT);				
+			}
+
 			this.AddToTraining(ControlDictionary["АДВ перемычка О"],"Выберите режим на блоке АДВ",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["ДК перемычка РУЧ"],"Установите перемычку в положение РУЧ",ControlElement.S_B_CHOSEN);
 			this.AddToTraining(ControlDictionary["Включатель"],"Включите питание для проверки работоспособности",ControlElement.S_B_CHOSEN);
