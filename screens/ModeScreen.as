@@ -217,13 +217,10 @@
 				case ModeInfo.MM_INSTRUCTION:
 				case ModeInfo.MM_TRAINIGWITHHINT:
 				case ModeInfo.MM_TRAINIGWITHOUTHINT:
+				case ModeInfo.MM_CONTROL:
 					mode_0.selected=true;
 					mode_mas_group.SetVisible(true);
-					break;
-				case ModeInfo.MM_CONTROL:
-					fio_group.SetVisible(true);
-					start_group.SetVisible(true);
-					break;					
+					break;			
 				default: throw new Error("Некорректна логика");
 			}
 		}
@@ -250,6 +247,13 @@
 			var clear_groups: Vector.<ComponentGroup> = new Vector.<ComponentGroup>();
 			clear_groups.push(local_mode_group,speed_group,channel_group,cable_group,start_group,speed_preapare_group);
 			ClearGroups(clear_groups);
+			if (this.main_mode==ModeInfo.MM_CONTROL)
+			{
+				fio_group.SetVisible(true);
+				start_group.SetVisible(true);
+				GenerateRandomMode();
+				return;
+			}
 			if (ModeInfo.M_COMMUTATION==impuls_mode)
 			{
 				local_mode_group.SetVisible(true);
@@ -545,6 +549,51 @@
 				if (this.radiobuttons2[i].selected)
 					ModeInfo.modeInfo.P296n2 = i;
 			ModeInfo.modeInfo.SetBlocks();
+		}
+		private function GenerateRandomMode()
+		{
+			switch (this.impuls_mode)
+			{
+				case ModeInfo.M_PREPARING:
+				case ModeInfo.M_WORKING:
+					SetSpeed();
+					break;
+				case ModeInfo.M_COMMUTATION:
+					SetRandomCommutation();
+					break;
+				default: throw new Error();
+			}
+		}
+		private function SetSpeed()
+		{
+			var speedVector: Vector.<int> = new Vector.<int>();
+			speedVector.push(ModeInfo.S_48,ModeInfo.S_480,ModeInfo.S_2048);
+			this.speed_mode = ModeInfo.S_2048;
+			//this.speed_mode = speedVector[(int)(speedVector.length*Math.random())];
+		}
+		private function SetRandomCommutation()
+		{
+			//need to be real random
+			this.speed_mode = ModeInfo.S_480;
+			this.local_mode = ModeInfo.L_OK1;
+			this.channel_count.value = 4;
+			this.ktch_count = 2;
+			this.zk_count = 2;
+			var i: int;
+			for (i=0; i<this.cable1_ktch.length; i++)
+				this.cable1_ktch[i].value=0;
+			for (i=0; i<this.cable2_ktch.length; i++)
+				this.cable2_ktch[i].value=0;	
+			for (i=0; i<this.cable1_zk.length; i++)
+				this.cable1_zk[i].value=0;
+			for (i=0; i<this.cable2_zk.length; i++)
+				this.cable2_zk[i].value=0;				
+			this.cable1_ktch[0].value = 1;
+			this.cable1_ktch[1].value = 1;
+			this.cable1_zk[0].value = 1;
+			this.cable1_zk[2].value = 1;
+			trace(cable1_ktch);
+			trace(cable1_zk);
 		}
 	}
 }

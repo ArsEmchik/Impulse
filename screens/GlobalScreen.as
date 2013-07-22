@@ -36,6 +36,7 @@
 			main_screen=p_main_screen;
 			modeInfo.TraceModeInfo();	
 			AddMouseUp();
+			SetErrorCount();
 		}
 		public function SetMessage(text_message: String)
 		{
@@ -115,6 +116,20 @@
 					main_screen.InitializeITAScreen();
 					break;
 				default: throw new Error("Некоректный блок");
+			}
+		}
+		private function SetErrorCount()
+		{
+			var i: int;
+			var count: int=0;
+			if (ModeInfo.modeInfo.MainMode==ModeInfo.MM_CONTROL)
+			{
+				for (i=0; i<ModeInfo.modeInfo.blockInfo.length; i++)
+				{
+					if (ModeInfo.modeInfo.blockInfo[i]!=null)
+						count+=ModeInfo.modeInfo.blockInfo[i].errorCount;
+				}
+				errorCount.text = "Количество ошибок: "+count.toString();
 			}
 		}
 	}	

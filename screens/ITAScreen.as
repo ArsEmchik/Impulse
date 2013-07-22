@@ -5,11 +5,12 @@
 	
 	
 	public class ITAScreen extends BlockScreen {
-		private var mainScreen: MainScreen;
+		
 		private var ITAUnit: ITABlock;
 		
 		public function ITAScreen() {
 			ITAUnit=tITAUnit;
+			this.block = ITAUnit;
 			// constructor code
 		}
 		
@@ -18,10 +19,6 @@
 			mainScreen=p_mainScreen;
 			outButton.addEventListener(MouseEvent.CLICK,GoToNewScreen);
 			this.InitializeBlockScreen(ITAUnit,textBox,outButton);
-		}
-		public function GoToNewScreen(e: MouseEvent)
-		{
-			mainScreen.InitializeGlobalScreen();
-		}		
+		}	
 	}
 }

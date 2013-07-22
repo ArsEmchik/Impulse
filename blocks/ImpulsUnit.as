@@ -9,6 +9,8 @@
 
 	public class ImpulsUnit extends MovieClip
 	{
+		private var DefaultStates: Vector.<int>;
+		private var ControlStates: Vector.<int>;
 		protected var ControlElements: Vector.<ControlElement>;
 		protected var ControlDictionary: Dictionary;
 		public var ImpulseMode: int;
@@ -64,6 +66,7 @@
 					break;
 				case ModeInfo.MM_CONTROL:
 					outButton.visible=true;
+					this.RememberDefault();
 					break;
 				default: throw new Error("Нет такого типа обучения");
 			}
@@ -149,8 +152,71 @@
 			var i: int;
 			var mouseEvent: MouseEvent = new MouseEvent(MouseEvent.CLICK);
 			for (i=0; i<TrainingSequence.length; i++)
-				TrainingSequence[i].dispatchEvent(mouseEvent);
+			{
+				while (TrainingSequence[i].CurrentState!=trainingState[i])
+				{
+					TrainingSequence[i].dispatchEvent(mouseEvent);
+				}
+			}
 			StartInitialize();
+		}
+		public function RememberDefault()
+		{
+			DefaultStates = new Vector.<int>(ControlElements.length);
+			var i: int;
+			for (i=0; i<ControlElements.length; i++)
+			{
+				DefaultStates[i]=ControlElements[i].CurrentState;
+			}
+		}
+		public function TestForErrors()
+		{
+			RememberControlStates()
+			GoToDefaultState();
+			InitializeToTestControl();
+			GetErrorsProc();
+		}
+		private function RememberControlStates()
+		{
+			ControlStates = new Vector.<int>(ControlElements.length);
+			var i: int;
+			for (i=0; i<ControlStates.length; i++)
+			{
+				ControlStates[i]=ControlElements[i].CurrentState;
+			}			
+		}
+		private function GoToDefaultState()
+		{
+			var i: int;
+			for (i=0; i<ControlElements.length; i++)
+			{
+				ControlElements[i].GoToState(DefaultStates[i],false);
+			}			
+		}
+		private function InitializeToTestControl()
+		{
+			var i: int;
+			var mouseEvent: MouseEvent = new MouseEvent(MouseEvent.CLICK);
+			for (i=0; i<TrainingSequence.length; i++)
+			{
+				while (TrainingSequence[i].CurrentState!=trainingState[i])
+				{
+					TrainingSequence[i].dispatchEvent(mouseEvent);
+				}
+			}			
+		}
+		private function GetErrorsProc()
+		{
+			var i: int;
+			var count: int=0;
+			for (i=0; i<ControlElements.length; i++)
+			{
+				if (ControlStates[i]!=ControlElements[i].CurrentState)
+				{
+					count++;
+				}
+			}
+			ModeInfo.modeInfo.blockInfo[ModeInfo.modeInfo.currentBlock].errorCount = count;
 		}
 	}
 }

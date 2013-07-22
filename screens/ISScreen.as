@@ -7,7 +7,6 @@
 	
 	public class ISScreen extends BlockScreen {
 		
-		private var mainScreen: MainScreen;
 		private var ISUnit: ISBlock;
 		
 		public function InitializeISScreen(p_mainScreen: MainScreen)
@@ -20,11 +19,8 @@
 		public function ISScreen() 
 		{
 			ISUnit=tISUnit;
+			this.block = ISUnit;
 			// constructor code
-		}
-		public function GoToNewScreen(e: MouseEvent)
-		{
-			mainScreen.InitializeGlobalScreen();
 		}
 	}
 	
