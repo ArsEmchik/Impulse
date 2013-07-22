@@ -37,6 +37,7 @@
 		private var nesesaryState: int;
 		private var emiting: Boolean
 		private var MouseOver: Boolean;
+		public var OneState: Boolean=false;
 		
 		public function ControlElement()
 		{

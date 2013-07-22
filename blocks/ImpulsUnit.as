@@ -153,10 +153,12 @@
 			var mouseEvent: MouseEvent = new MouseEvent(MouseEvent.CLICK);
 			for (i=0; i<TrainingSequence.length; i++)
 			{
-				while (TrainingSequence[i].CurrentState!=trainingState[i])
+				while (TrainingSequence[i].CurrentState!=trainingState[i] && !TrainingSequence[i].OneState)
 				{
 					TrainingSequence[i].dispatchEvent(mouseEvent);
 				}
+				if (TrainingSequence[i].OneState)
+					TrainingSequence[i].dispatchEvent(mouseEvent);
 			}
 			StartInitialize();
 		}
@@ -191,7 +193,7 @@
 			for (i=0; i<ControlElements.length; i++)
 			{
 				ControlElements[i].GoToState(DefaultStates[i],false);
-			}			
+			}
 		}
 		private function InitializeToTestControl()
 		{
@@ -199,10 +201,12 @@
 			var mouseEvent: MouseEvent = new MouseEvent(MouseEvent.CLICK);
 			for (i=0; i<TrainingSequence.length; i++)
 			{
-				while (TrainingSequence[i].CurrentState!=trainingState[i])
+				while (TrainingSequence[i].CurrentState!=trainingState[i] && !TrainingSequence[i].OneState)
 				{
 					TrainingSequence[i].dispatchEvent(mouseEvent);
 				}
+				if (TrainingSequence[i].OneState)
+					TrainingSequence[i].dispatchEvent(mouseEvent);
 			}			
 		}
 		private function GetErrorsProc()

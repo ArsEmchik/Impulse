@@ -11,6 +11,7 @@
 		public function IL34Button() 
 		{
 			// constructor code
+			this.OneState=true;
 			this.InitializeControlElement(ControlElement.S_BINARY,ControlElement.S_B_DEFAULT,true);
 			this.addEventListener(MouseEvent.CLICK,SwitchMouseDown);
 		}
