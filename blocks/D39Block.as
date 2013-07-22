@@ -133,10 +133,11 @@
 				{
 					case "Сброс":
 					{
-						comm_stage = 0;
+						
 						if (comm_channels[0])(comm_channels[0] as ControlElement).GoToState(ControlElement.S_B_DEFAULT, false);
 						if (comm_channels[1])(comm_channels[1] as ControlElement).GoToState(ControlElement.S_B_DEFAULT, false);
 						TurnOffButtons();
+						comm_stage = 0;
 						break;
 					}
 					case "Вкл":
@@ -166,17 +167,19 @@
 					}
 					case "Откл":
 					{
-						
-						for (item in this.ControlDictionary)
+						if (comm_stage == 2)
 						{
-							if (ControlDictionary[item] is DigitPanel)
+							for (item in this.ControlDictionary)
 							{
-								
-								digitPanel = (int)(item.split(" ")[1]);
-								if (digitPanel == comm_channels[0].GetType())
-									(ControlDictionary[item]as ControlElement).GoToState(100, false)
-								if (digitPanel == comm_channels[1].GetType())
-									(ControlDictionary[item]as ControlElement).GoToState(100, false)
+								if (ControlDictionary[item] is DigitPanel)
+								{
+									
+									digitPanel = (int)(item.split(" ")[1]);
+									if (digitPanel == comm_channels[0].GetType())
+										(ControlDictionary[item]as ControlElement).GoToState(100, false)
+									if (digitPanel == comm_channels[1].GetType())
+										(ControlDictionary[item]as ControlElement).GoToState(100, false)
+								}
 							}
 						}
 						comm_stage = 0;
