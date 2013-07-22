@@ -4,9 +4,13 @@
 	import flash.events.MouseEvent;
 	import flash.text.TextField;
 	import fl.controls.Button;
+	import controls.Bulb;
+	import controls.Tumble;
+	import flash.utils.Dictionary;
 	
 	public class IO3ABlock extends ImpulsUnit {
 		
+		private var dict: Dictionary = new Dictionary();
 		
 		public function IO3ABlock() {
 			super();
@@ -242,7 +246,6 @@
 			this.ControlDictionary["Б П2 перемычка 27"]=jumper175;
 			this.ControlDictionary["Б П2 перемычка 24"]=jumper176;
 			this.ControlDictionary["Б П2 перемычка СРТ"]=jumper177;
-			
 			InitializeControls();
 			CreateCommunication();
 			// constructor code
@@ -306,6 +309,9 @@
 		}
 		private function InitializeWorkingSequence()
 		{
+			this.AddToTraining(ControlDictionary["А Включатель"],"Установите Тумблер М-Д в положение М",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Б Включатель"],"Установите Тумблер М-Д в положение М",ControlElement.S_B_CHOSEN);
+			
 			if ((ControlDictionary["А ГКА перемычка А"] as ControlElement).CurrentState != ControlElement.S_B_CHOSEN)
 			{
 				if  (ModeInfo.modeInfo.Speed == ModeInfo.S_480)
@@ -392,6 +398,34 @@
 			var newState: int = (ControlDictionary["А Включатель"] as ControlElement).CurrentState;
 			(ControlDictionary["А П2 вкл зел. лампочка"] as ControlElement).GoToState(newState, false);
 			(ControlDictionary["А ГА3 зел. лампочка"] as ControlElement).GoToState(newState, false);
+			if (newState == ControlElement.S_B_DEFAULT)
+			{
+				var item: String;
+				for (item in ControlDictionary)
+				{
+					if (item.charCodeAt(0)=="А".charCodeAt(0))
+					{
+						if ((ControlDictionary[item] as Bulb)!=null)
+						{
+							(ControlDictionary[item] as ControlElement).GoToState(ControlElement.S_B_DEFAULT, false)
+						}
+					}
+				}
+			}
+			else
+			{
+				JumperClick1(null);
+				JumperClick2(null);
+				JumperClick3(null);
+				JumperClick4(null);
+				JumperClick5(null);
+				JumperClick6(null);
+				JumperClick7(null);
+				JumperClick8(null);
+				JumperClick9(null);
+				JumperClick10(null);
+				JumperClick11(null);
+			}
 		}
 		
 		private function SwitchMouseClick2(e: MouseEvent)
@@ -399,6 +433,24 @@
 			var newState: int = (ControlDictionary["Б Включатель"] as ControlElement).CurrentState;
 			(ControlDictionary["Б П2 вкл зел. лампочка"] as ControlElement).GoToState(newState, false);
 			(ControlDictionary["Б ГБ3 зел. лампочка"] as ControlElement).GoToState(newState, false);
+			if (newState == ControlElement.S_B_DEFAULT)
+			{
+				var item: String;
+				for (item in ControlDictionary)
+				{
+					if (item.charCodeAt(0)=="Б".charCodeAt(0))
+					{
+						if ((ControlDictionary[item] as Bulb)!=null)
+						{
+							(ControlDictionary[item] as ControlElement).GoToState(ControlElement.S_B_DEFAULT, false)
+						}
+					}
+				}
+			}
+			else
+			{
+				JumperClick12(null);
+			}
 		}
 		
 		private function JumperClick10(e: MouseEvent)

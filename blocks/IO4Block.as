@@ -4,6 +4,7 @@
 	import flash.events.MouseEvent;
 	import flash.text.TextField;
 	import fl.controls.Button;
+	import controls.Bulb;
 	
 	
 	public class IO4Block extends ImpulsUnit {
@@ -165,6 +166,21 @@
 			var newState: int = (ControlDictionary["П2 включатель"] as ControlElement).CurrentState;
 			(ControlDictionary["П2 зел. лампа"] as ControlElement).GoToState(newState,false);
 			(ControlDictionary["ГБ4 зел. лампа СИНХРОНИЗАЦИЯ"] as ControlElement).GoToState(newState,false);
+			if (newState == ControlElement.S_B_DEFAULT)
+			{
+				var item: String;
+				for (item in ControlDictionary)
+				{
+					if ((ControlDictionary[item] as Bulb)!=null)
+					{
+						(ControlDictionary[item] as ControlElement).GoToState(ControlElement.S_B_DEFAULT, false)
+					}
+				}
+			}
+			else
+			{
+				SwitchMouseClick2(null);
+			}
 		}
 		
 		private function SwitchMouseClick2(e: MouseEvent)
