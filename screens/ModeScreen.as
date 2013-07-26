@@ -132,7 +132,7 @@
 		private function SetGroups()
 		{
 			var speed_group_mas: Vector.<DisplayObject> = new Vector.<DisplayObject>();
-			speed_group_mas.push(speed_combo_box,speed_label);
+			speed_group_mas.push(t_speed_combo_box,speed_label,t_speed_combo_box_2,speed_label_2);
 			var channel_group_mas: Vector.<DisplayObject> = new Vector.<DisplayObject>();
 			channel_group_mas.push(t_channel_count,channel_label1,channel_label2,t_channel_slider,channel_label3,channel_label4);
 			var fio_group_mas: Vector.<DisplayObject> = new Vector.<DisplayObject>();
@@ -278,18 +278,24 @@
 			clear_groups.push(speed_group,channel_group,cable_group,start_group,speed_preapare_group);
 			ClearGroups(clear_groups);
 			speed_group.SetVisible(true);
-			FillComboBox(local_mode);
+			if (local_mode==ModeInfo.L_OK2 || local_mode==ModeInfo.L_RETR2 || local_mode==ModeInfo.L_UZL2)
+			{
+				this.removeChild(speed_label_2);
+				this.removeChild(t_speed_combo_box_2);
+			}
+			FillComboBox(local_mode,speed_combo_box);
+			FillComboBox(local_mode,t_speed_combo_box_2);
 		}
-		private function FillComboBox(t_local_mode: int)
+		private function FillComboBox(t_local_mode: int, comboBox: ComboBox)
 		{
-			speed_combo_box.removeAll();
-			speed_combo_box.addItem(new ValueData("",-1));
+			comboBox.removeAll();
+			comboBox.addItem(new ValueData("",-1));
 			if (t_local_mode!=ModeInfo.L_UZL1 && t_local_mode!=ModeInfo.L_UZL2)
-				speed_combo_box.addItem(new ValueData("48 кбит",ModeInfo.S_48));
-			speed_combo_box.addItem(new ValueData("480 кбит",ModeInfo.S_480));
-			speed_combo_box.addItem(new ValueData("480x2 кбит",ModeInfo.S_480x2));
+				comboBox.addItem(new ValueData("48 кбит",ModeInfo.S_48));
+			comboBox.addItem(new ValueData("480 кбит",ModeInfo.S_480));
+			comboBox.addItem(new ValueData("480x2 кбит",ModeInfo.S_480x2));
 			if (t_local_mode!=ModeInfo.L_UZL1)
-				speed_combo_box.addItem(new ValueData("2048 кбит",ModeInfo.S_2048));
+				comboBox.addItem(new ValueData("2048 кбит",ModeInfo.S_2048));
 		}
 		private function FillPrepareComboBox()
 		{
@@ -396,6 +402,9 @@
 			tb_fio.setStyle("textFormat",tf);
 			tb_num.setStyle("textFormat",tf);
 			speed_label.setStyle("textFormat",tf);
+			speed_label_2.setStyle("textFormat",tf);
+			main_mode_2_l.setStyle("textFormat",tf);
+			main_mode_3_l.setStyle("textFormat",tf);
 			speed_label_prepare.setStyle("textFormat",tf);
 			channel_label1.setStyle("textFormat",tf);
 			channel_label2.setStyle("textFormat",tf);

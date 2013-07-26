@@ -6,6 +6,7 @@
 
 	public class ControlElement extends MovieClip
 	{
+		// константы - для обозначения состояний. например у перемычки 2 состояния, а вот у LCD дисплея 101(пустое+ числа от 1 до 99)
 		public static const S_BINARY: int=2;
 		
 		public static const S_B_DEFAULT: int=1;
@@ -29,15 +30,16 @@
 				
 		public static const S_101: int=101;		
 				
-		public var StateCount: int;
-		public var CurrentState: int;
-		public var MouseEnabled: Boolean;
-		private var blocked: Boolean;
+		public var StateCount: int; // сколько всего состояний
+		public var CurrentState: int; // текущее состояние
+		public var MouseEnabled: Boolean; // лампочки нельзя менять, а например тумблеры - можно
+		private var blocked: Boolean; // блокировка - например для режима обучения можно нажимать только на правильный контрол. Остальные блокированы
 		protected var parentUnit: ImpulsUnit;
-		private var nesesaryState: int;
-		private var emiting: Boolean
-		private var MouseOver: Boolean;
-		public var OneState: Boolean=false;
+		private var nesesaryState: int; // ожидаемое состояние - в основном нужно для ImpulsUnit
+		private var emiting: Boolean // подсвечивается ли контрол
+		private var MouseOver: Boolean; // мышка над этим констролом?
+		public var OneState: Boolean=false; // у констрола есть только 1 состояние?(это частный случай)
+		public var elementName: String;
 		
 		public function ControlElement()
 		{
@@ -52,6 +54,7 @@
 			if (MouseEnabled)
 				InitializeMouseOverOut();
 		}
+		// меняет состояние на указанное
 		public function GoToState(newState: int, reallyPressed: Boolean=false)
 		{
 			if (!IsBlocked())
@@ -159,6 +162,7 @@
 		{
 			nesesaryState=pNesesaryState;
 		}
+		// подствечиваться жёлтым или зелёным цветом
 		public function EmitControl()
 		{
 			this.emiting=true;

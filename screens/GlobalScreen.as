@@ -4,6 +4,7 @@
 	import flash.events.MouseEvent;
 	import blocks.ModeInfo;
 	import buttons.ButtonClass;
+	import fl.controls.Button;
 	
 	
 	public class GlobalScreen extends MovieClip {
@@ -11,9 +12,11 @@
 		var main_screen: MainScreen;
 		var modeInfo: ModeInfo;
 		var blockButtons: Vector.<ButtonClass>;
+		var addedErrorMessage: Boolean=false;
 		
 		public function GlobalScreen() 
 		{
+			errorArea.visible=false;
 			blockButtons = new Vector.<ButtonClass>();
 			blockButtons.push(block_ip,block_io4,block_io3a,block_ita,block_is,block_il34,block_io3a2,block_io42,block_il342,block_d39,block_d0031,input_block);
 			block_ip.AddOverFun(SetMessage,"Блок ИП");
@@ -27,7 +30,7 @@
 			block_io42.AddOverFun(SetMessage,"Блок ИО-4(2)");
 			block_d0031.AddOverFun(SetMessage,"Блок Д-00-31");
 			block_d39.AddOverFun(SetMessage,"Блок Д-39");
-			input_block.AddOverFun(SetMessage,"Входной щит");
+			input_block.AddOverFun(SetMessage,"Вводный щит");
 			// constructor code
 		}
 		public function InitializeGlobalScreen(p_main_screen: MainScreen)
@@ -82,37 +85,51 @@
 			switch(i)
 			{
 				case ModeInfo.BLOCK_D_00_01:
+					this.modeInfo.blockName="Блок D-00-01";
 					main_screen.InitializeD00Screen();
 					break;
 				case ModeInfo.BLOCK_D_39:
+					this.modeInfo.blockName="Блок D-39";
 					main_screen.InitializeD39Block();
 					break;
 				case ModeInfo.BLOCK_IL34:
+					this.modeInfo.blockName="Блок ИЛ-3/4";
 					main_screen.InitializeIL34Screen();
 					break;
 				case ModeInfo.BLOCK_IL34_2:
+					this.modeInfo.blockName="Блок ИЛ-3/4(2)";
 					main_screen.InitializeIL34Screen();
 					break;
 				case ModeInfo.BLOCK_INPUT:
+					this.modeInfo.blockName="Вводный щит";
 					main_screen.InitializeInputBlock();
 					break;
 				case ModeInfo.BLOCK_IO3A:
+					this.modeInfo.blockName="Блок ИО-3A";
+					main_screen.InitializeIO3AScreen();
+					break;				
 				case ModeInfo.BLOCK_IO3A_2:
+					this.modeInfo.blockName="Блок ИО-3A(2)";
 					main_screen.InitializeIO3AScreen();
 					break;
 				case ModeInfo.BLOCK_IO4:
+					this.modeInfo.blockName="Блок ИО-4";
 					main_screen.InitializeIO4Screen();
 					break;
 				case ModeInfo.BLOCK_IO4_2:
+					this.modeInfo.blockName="Блок ИО-4(2)";
 					main_screen.InitializeIO4Screen();
 					break;
 				case ModeInfo.BLOCK_IP:
+					this.modeInfo.blockName="Блок ИП";
 					main_screen.InitializeIPScreen();
 					break;
 				case ModeInfo.BLOCK_IS:
+					this.modeInfo.blockName="Блок ИС";
 					main_screen.InitializeISScreen();
 					break;
 				case ModeInfo.BLOCK_ITA:
+					this.modeInfo.blockName="Блок ИТА";
 					main_screen.InitializeITAScreen();
 					break;
 				default: throw new Error("Некоректный блок");
@@ -129,7 +146,24 @@
 					if (ModeInfo.modeInfo.blockInfo[i]!=null)
 						count+=ModeInfo.modeInfo.blockInfo[i].errorCount;
 				}
+				errorArea.text.text = ModeInfo.modeInfo.errorText;
 				errorCount.text = "Количество ошибок: "+count.toString();
+				errorButton.addEventListener(MouseEvent.CLICK,ShowErrors);
+				
+			} else errorButton.visible=false;
+		}
+		private function ShowErrors(e: MouseEvent)
+		{
+			addedErrorMessage = !addedErrorMessage;
+			if (addedErrorMessage)
+			{
+				(errorButton as Button).label = "Убрать окно";
+				errorArea.visible=true;
+			}
+			else
+			{
+				(errorButton as Button).label = "Ошибки";
+				errorArea.visible=false;
 			}
 		}
 	}	

@@ -9,22 +9,33 @@
 
 	public class ImpulsUnit extends MovieClip
 	{
-		private var DefaultStates: Vector.<int>;
+		// след 2 поля для контроля - запомнить изначальное состояние перемычек(DefaultStates). Пользователь что-то делает(ControlStates)
+		// потом переводим обратно DefaultStates делаем по TrainingSequence как надо и сравнимает с ControlStates
+
+		private var DefaultStates: Vector.<int>; 
 		private var ControlStates: Vector.<int>;
-		protected var ControlElements: Vector.<ControlElement>;
-		protected var ControlDictionary: Dictionary;
-		public var ImpulseMode: int;
-		private var TrainingSequence: Vector.<ControlElement>;
-		private var trainingDescriptions: Vector.<String>;
-		private var trainingState: Vector.<int>;
+
+
+		protected var ControlElements: Vector.<ControlElement>; // элементы блока в массиве
+		protected var ControlDictionary: Dictionary; // они же в коллекции
+		public var ImpulseMode: int; // режим - констроль, обучение и т.д.
+
+		// следующие 3 поля логически связаны. какой элемент задействовать, описание действие, в какое сосотояние его перевести
+
+		private var TrainingSequence: Vector.<ControlElement>; 
+		private var trainingDescriptions: Vector.<String>; 
+		private var trainingState: Vector.<int>; 
+
+		// текущее состояние TrainingSequence
 		private var blockState: int;
+
+		
+		// кнопка и текстбокс для выхода и вывода информации
 		protected var decriptionField: TextField;
 		private var outButton: Button;
-		private var free: Boolean;
 		
 		public function ImpulsUnit(pFree: Boolean=false)
 		{
-			free = pFree;
 			ControlElements = new Vector.<ControlElement>();
 			ControlDictionary = new Dictionary();
 			StartInitialize();
@@ -40,10 +51,11 @@
 		
 		protected function InitializeControls()
 		{
-			var item: ControlElement;
-			for each (item in ControlDictionary)
+			var item: String;
+			for (item in ControlDictionary)
 			{
-				ControlElements.push(item);
+				(ControlDictionary[item] as ControlElement).elementName = item;
+				ControlElements.push(ControlDictionary[item]);
 			}
 		}
 		public function InitializeImpulsUnit(pDecriptionField: TextField, pOutButton: Button)
@@ -147,6 +159,7 @@
 			trainingDescriptions.push(decription);
 			trainingState.push(nessesaryState);
 		}
+		// делает "подготовку" для того чтобы сделать "Настройку(включение)"
 		public function PrepareToWork()
 		{
 			var i: int;
@@ -171,6 +184,7 @@
 				DefaultStates[i]=ControlElements[i].CurrentState;
 			}
 		}
+		//след 5 процедур - для контроля - сравнение правильности последовательности и узнавании ошибок
 		public function TestForErrors()
 		{
 			RememberControlStates()
@@ -213,10 +227,21 @@
 		{
 			var i: int;
 			var count: int=0;
+			var firstTime: Boolean=true;
 			for (i=0; i<ControlElements.length; i++)
 			{
 				if (ControlStates[i]!=ControlElements[i].CurrentState)
 				{
+					if (firstTime)
+						ModeInfo.modeInfo.errorText+=ModeInfo.modeInfo.blockName+"\r\n";
+					firstTime=false;
+					if (ControlElements[i].StateCount==2)
+					{
+						if (ControlElements[i].CurrentState==1)
+							ModeInfo.modeInfo.errorText+="\t"+ControlElements[i].elementName+" должна находится в неактивном состоянии\r\n";
+						else ModeInfo.modeInfo.errorText+="\t"+ControlElements[i].elementName+" должна находится в активном состоянии\r\n";
+					}
+					else ModeInfo.modeInfo.errorText+="\t"+ControlElements[i].elementName+" находится в неверном состоянии\r\n";
 					count++;
 				}
 			}

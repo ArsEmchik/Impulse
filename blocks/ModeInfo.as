@@ -42,19 +42,21 @@
 		public static const P296_480: int=1;
 		public static const P296_2048: int=2;		
 		
-		public var MainMode: int;
-		public var Mode: int;
-		public var LocalMode: int;
-		public var Speed: int;
-		public var ChannelCount: int;
-		public var KtchCount: int;
-		public var Czk48Count: int;
-		public var Czk86Channels: Vector.<int>;
-		public var KtchChannels: Vector.<int>;
-		public var P296n1: int;
-		public var P296n2: int;
-		public var currentBlock: int;
+		public var MainMode: int; // обучение, контоль и т.д.
+		public var Mode: int; // подготовка, работа...
+		public var LocalMode: int; // ОК-1, ретрансляция
+		public var Speed: int; // 2048 кб ...
+		public var ChannelCount: int; // количество каналов
+		public var KtchCount: int; // количество каналов КТЧ
+		public var Czk48Count: int; // количество каналов ЦК
+		public var Czk86Channels: Vector.<int>; // как распределены на кабелям ПТРК
+		public var KtchChannels: Vector.<int>; // как распределены на кабелям ПТРК
+		public var P296n1: int; // сколько каналов передаётся через P296(1 полукомплект) 
+		public var P296n2: int; // сколько каналов передаётся через P296(2 полукомплект)
+		public var currentBlock: int; // для blockInfo - текущий блок, который проходится(нужно для подсчёта ошибок + какие блоки уже обработаны)
 		public var blockInfo: Vector.<BlockInfo> = new Vector.<BlockInfo>(12);
+		public var errorText: String="";
+		public var blockName: String="";
 		
 		public function ModeInfo()
 		{
