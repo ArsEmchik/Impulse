@@ -136,6 +136,7 @@
 						
 						if (comm_channels[0])(comm_channels[0] as ControlElement).GoToState(ControlElement.S_B_DEFAULT, false);
 						if (comm_channels[1])(comm_channels[1] as ControlElement).GoToState(ControlElement.S_B_DEFAULT, false);
+						this.decriptionField.text="Выберите первого абонента";
 						TurnOffButtons();
 						comm_stage = 0;
 						break;
@@ -179,6 +180,7 @@
 										(ControlDictionary[item]as ControlElement).GoToState(100, false)
 									if (digitPanel == comm_channels[1].GetType())
 										(ControlDictionary[item]as ControlElement).GoToState(100, false)
+									this.decriptionField.text="Выберите первого абонента";
 								}
 							}
 						}
@@ -238,14 +240,6 @@
 		{
 			var newState: int = (ControlDictionary["Включатель 1"] as ControlElement).CurrentState;
 			(ControlDictionary["Вкл. зел. лампочка 1"] as ControlElement).GoToState(newState, false);
-			/*if (!(ControlDictionary["Панель"] as ControlElement).IsBlocked())
-			{
-				var newState: int = (ControlDictionary["Панель"] as ControlElement).CurrentState;
-				if (newState==100)
-					newState=0;
-				else newState++;
-				(ControlDictionary["Панель"] as ControlElement).GoToState(newState);
-			}*/
 		}		
 		private function SwitchMouseClick2(e: MouseEvent)
 		{
