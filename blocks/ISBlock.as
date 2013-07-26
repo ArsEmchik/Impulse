@@ -69,6 +69,41 @@
 			this.ControlDictionary["ПС +7-7 пермычка"]=jumper37;
 			this.ControlDictionary["ПС источник напряжения пермычка"]=jumper38;
 			
+			this.ControlDictionary["ПССА кнопка УССА"]=button1;
+			this.ControlDictionary["ПССА кнопка УССБ"]=button2;
+			this.ControlDictionary["ПССА кнопка ВА"]=button3;
+			this.ControlDictionary["ПССА кнопка 4ПР1"]=button4;
+			this.ControlDictionary["ПССА кнопка ЛССА"]=button5;
+			this.ControlDictionary["ПССА кнопка ЛССБ"]=button6;
+			this.ControlDictionary["ПССБ кнопка УССА"]=button7;
+			this.ControlDictionary["ПССБ кнопка УССБ"]=button8;
+			this.ControlDictionary["ПССБ кнопка ВА"]=button9;
+			this.ControlDictionary["ПССБ кнопка 4ПР1"]=button10;
+			this.ControlDictionary["ПССБ кнопка ЛССА"]=button11;
+			this.ControlDictionary["ПССБ кнопка ЛССБ"]=button12;
+			this.ControlDictionary["ВА кнопка УССА"]=button13;
+			this.ControlDictionary["ВА кнопка УССБ"]=button14;
+			this.ControlDictionary["ВА кнопка ЛССА"]=button15;
+			this.ControlDictionary["ВА кнопка ЛССБ"]=button16;
+			this.ControlDictionary["Кнопка А1"]=button17;
+			this.ControlDictionary["Кнопка Б1"]=button18;
+			this.ControlDictionary["Пустая кнопка1"]=button19;
+			this.ControlDictionary["Кнопка А2"]=button20;
+			this.ControlDictionary["Кнопка Б2"]=button21;
+			this.ControlDictionary["Кнопка А3"]=button22;
+			this.ControlDictionary["Кнопка Б3"]=button23;
+			this.ControlDictionary["Кнопка А4"]=button24;
+			this.ControlDictionary["Кнопка Б4"]=button25;
+			this.ControlDictionary["Пустая кнопка2"]=button26;
+			this.ControlDictionary["Кнопка А5"]=button27;
+			this.ControlDictionary["Кнопка Б5"]=button28;
+			this.ControlDictionary["Кнопка А6"]=button29;
+			this.ControlDictionary["Кнопка Б6"]=button30;
+			this.ControlDictionary["Кнопка ГИ1"]=button27;
+			this.ControlDictionary["Кнопка ГИ2"]=button28;
+			this.ControlDictionary["Кнопка ЦГ"]=button29;
+			this.ControlDictionary["Пустая кнопка3"]=button30;
+			
 			InitializeControls();
 			CreateCommunication();
 		}
