@@ -65,17 +65,17 @@
 			// constructor code
 		}
 		
-		public override function InitializeImpulsUnit(pDecriptionField: TextField, outButton: Button)
+		public override function InitializeImpulsUnit(pDecriptionField: TextField, outButton: Button, txtNext:TextField)
 		{
-			super.InitializeImpulsUnit(pDecriptionField,outButton);
+			super.InitializeImpulsUnit(pDecriptionField,outButton,txtNext);
 			switch (ModeInfo.modeInfo.Mode)
 			{
 				case ModeInfo.M_PREPARING:
 					InitializeTrainingSequence();
 					break;
 				case ModeInfo.M_WORKING:
-					InitializeTrainingSequence();
-					PrepareToWork();
+					//InitializeTrainingSequence();
+					//PrepareToWork();
 					InitializeWorkingSequence();
 					break;
 				default: throw new Error("Нет такого мода");
@@ -105,6 +105,14 @@
 		}
 		private function InitializeWorkingSequence()
 		{
+			if (ModeInfo.modeInfo.Speed==ModeInfo.S_2048)
+			{
+				this.AddToTraining(ControlDictionary["Тумблер скорости"],"Установите скорость передачи в положение 2048",ControlElement.S_B_CHOSEN);
+			}
+			else if (ModeInfo.modeInfo.Speed==ModeInfo.S_480 || ModeInfo.modeInfo.Speed==ModeInfo.S_480x2)
+			{
+				this.AddToTraining(ControlDictionary["Тумблер скорости"],"Установите скорость передачи в положение 480",ControlElement.S_B_DEFAULT);				
+			}
 			this.AddToTraining(ControlDictionary["Включатель"],"Включите питание",ControlElement.S_B_CHOSEN);
 		}		
 		
@@ -125,6 +133,7 @@
 			(ControlDictionary["АДВ	сигн зел. лампочка"] as ControlElement).GoToState(newState, false);
 			(ControlDictionary["АДВ	сигн Б зел. лампочка"] as ControlElement).GoToState(newState, false);
 		}
+		
 		
 		private function SwitchMouseClick2(e: MouseEvent)
 		{

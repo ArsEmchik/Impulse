@@ -13,17 +13,17 @@
 			this.ControlDictionary["ПТРК-1-1"]=ptrk11;
 			this.ControlDictionary["ПТРК-1-2"]=ptrk12;
 			this.ControlDictionary["ПТРК-1-3"]=ptrk13;	
-			this.ControlDictionary["П296-1"]=p2961;
+			this.ControlDictionary["П-296-1"]=p2961;
 			this.ControlDictionary["ПТРК-2-1"]=ptrk21;
 			this.ControlDictionary["ПТРК-2-2"]=ptrk22;
 			this.ControlDictionary["ПТРК-2-3"]=ptrk23;	
-			this.ControlDictionary["П296-2"]=p2962;	
+			this.ControlDictionary["П-296-2"]=p2962;	
 			InitializeControls();		
 		}
 		
-		public override function InitializeImpulsUnit(pDecriptionField: TextField, outButton: Button)
+		public override function InitializeImpulsUnit(pDecriptionField: TextField, outButton: Button, txtNext:TextField)
 		{
-			super.InitializeImpulsUnit(pDecriptionField,outButton);
+			super.InitializeImpulsUnit(pDecriptionField,outButton,txtNext);
 			InitializeSequence();
 			SetMode(ModeInfo.modeInfo.MainMode);
 		}
@@ -41,13 +41,18 @@
 					else key+="2-";
 					key+=((i%3)+1).toString();
 					trace(ControlDictionary[key]);
-					this.AddToTraining(ControlDictionary[key],"Вставьте кабель ПТРК",ControlElement.S_B_CHOSEN);
+					
+					if (i<3)
+						this.AddToTraining(ControlDictionary[key],"Подключите кабель ПТРК-10х2 к разъему «Кабель " + (i + 1).toString() + "» 1-го полуклмплекта." ,ControlElement.S_B_CHOSEN);
+					else 
+						this.AddToTraining(ControlDictionary[key],"Подключите кабель ПТРК-10х2 к разъему «Кабель " + (i - 2).toString() + "» 2-го полуклмплекта." ,ControlElement.S_B_CHOSEN);
 				}
 			}
-			if (ModeInfo.modeInfo.P296n1!=0)
-				this.AddToTraining(ControlDictionary["П296-1"],"Вставте кабель П296",ControlElement.S_B_CHOSEN);
+			if (ModeInfo.modeInfo.P296n1!=0){
+				this.AddToTraining(ControlDictionary["П-296-1"],"Подключите кабель П-296 к первому полукомплекту",ControlElement.S_B_CHOSEN);
+			}
 			if (ModeInfo.modeInfo.P296n2!=0)
-				this.AddToTraining(ControlDictionary["П296-1"],"Вставте кабель П296",ControlElement.S_B_CHOSEN);				
+				this.AddToTraining(ControlDictionary["П-296-2"],"Вставте кабель П-296 ко второму полукомплекту",ControlElement.S_B_CHOSEN);				
 		}
 	}	
 }

@@ -5,6 +5,9 @@
 	import fl.controls.Button;
 	import flash.events.MouseEvent;
 	import controls.D39Button;
+	import controls.Bulb;
+	import controls.Tumble;
+	import controls.Switch;
 	import controls.DigitPanel;
 	
 	
@@ -16,25 +19,25 @@
 		public function D39Block() 
 		{
 			super();
-			this.ControlDictionary["Включатель 1"]=turnOnOff1;
-			this.ControlDictionary["Включатель 2"]=turnOnOff2;
+			this.ControlDictionary["Тумблер питания 1"]=turnOnOff1;
+			this.ControlDictionary["Тумблер питания 2"]=turnOnOff2;
 			
-			this.ControlDictionary["Панель 1"]=panel1;
-			this.ControlDictionary["Панель 2"]=panel2;
-			this.ControlDictionary["Панель 3"]=panel3;
-			this.ControlDictionary["Панель 4"]=panel4;
-			this.ControlDictionary["Панель 5"]=panel5;
-			this.ControlDictionary["Панель 6"]=panel6;
-			this.ControlDictionary["Панель 7"]=panel7;
-			this.ControlDictionary["Панель 8"]=panel8;
-			this.ControlDictionary["Панель 9"]=panel9;
-			this.ControlDictionary["Панель 10"]=panel10;
-			this.ControlDictionary["Панель 11"]=panel11;
-			this.ControlDictionary["Панель 12"]=panel12;
-			this.ControlDictionary["Панель 13"]=panel13;
-			this.ControlDictionary["Панель 14"]=panel14;
-			this.ControlDictionary["Панель 15"]=panel15;
-			this.ControlDictionary["Панель 16"]=panel16;
+			this.ControlDictionary["Абонент 1"]=panel1;
+			this.ControlDictionary["Абонент 2"]=panel2;
+			this.ControlDictionary["Абонент 3"]=panel3;
+			this.ControlDictionary["Абонент 4"]=panel4;
+			this.ControlDictionary["Абонент 5"]=panel5;
+			this.ControlDictionary["Абонент 6"]=panel6;
+			this.ControlDictionary["Абонент 7"]=panel7;
+			this.ControlDictionary["Абонент 8"]=panel8;
+			this.ControlDictionary["Абонент 9"]=panel9;
+			this.ControlDictionary["Абонент 10"]=panel10;
+			this.ControlDictionary["Абонент 11"]=panel11;
+			this.ControlDictionary["Абонент 12"]=panel12;
+			this.ControlDictionary["Абонент 13"]=panel13;
+			this.ControlDictionary["Абонент 14"]=panel14;
+			this.ControlDictionary["Абонент 15"]=panel15;
+			this.ControlDictionary["Абонент 16"]=panel16;
 			
 			this.ControlDictionary["Кнопка 1"]=button1;
 			this.ControlDictionary["Кнопка 2"]=button2;
@@ -61,21 +64,36 @@
 			this.ControlDictionary["Коммутация зел. лампочка 2"]=greenBulb3;
 			this.ControlDictionary["Вкл. зел. лампочка 2"]=greenBulb4;
 			
-			
-			
 			InitializeControls();
 			CreateCommunication();
 		}
-		public override function InitializeImpulsUnit(pDecriptionField: TextField, outButton: Button)
+		public override function InitializeImpulsUnit(pDecriptionField: TextField, outButton: Button, txtNext:TextField)
 		{
-			super.InitializeImpulsUnit(pDecriptionField,outButton);
-			this.decriptionField.text="Выберите первого абонента";
+			super.InitializeImpulsUnit(pDecriptionField,outButton,txtNext);
+			if(ModeInfo.modeInfo.MainMode != ModeInfo.MM_INSTRUCTION) this.decriptionField.text="Выберите первого абонента";
 			InitializeSequence();
 			SetMode(ModeInfo.modeInfo.MainMode);
 		}
 		private function InitializeSequence()
 		{
+			this.AddToTraining(ControlDictionary["Тумблер питания 1"],"Установите тумблер питания в положение «ВКЛ» 2-х кассет Д-41-00-07",ControlElement.S_B_CHOSEN);
+			this.AddToTraining(ControlDictionary["Тумблер питания 2"],"Установите тумблер питания в положение «ВКЛ» 2-х кассет Д-41-00-07",ControlElement.S_B_CHOSEN);
 			
+			var step: int;
+			var i:int;
+			var abonentNumber: String;
+			for(step = 0; step < ModeInfo.modeInfo.SeqLink.length; step++){
+				
+				for(i = 0; i < 2; i++){
+					abonentNumber = ModeInfo.modeInfo.SeqLink[step][i].toString();
+					this.AddToTraining(ControlDictionary["Кнопка " + abonentNumber],"Выберите первого абонента (Абонент №" + abonentNumber + ")",ControlElement.S_B_CHOSEN);
+				}
+				this.AddToTraining(ControlDictionary["Кнопка 18"],"Скоммутируйте абонентов (Нажмите кнопку «ВКЛ»)",ControlElement.S_B_CHOSEN);
+			}
+			
+			
+			//this.AddToTraining(this.ControlDictionary["Тумблер питания 1"],"Абоненты скоммутированы. Установите тумблер питания в положение «ВЫКЛ» 2-х кассет Д-41-00-07",ControlElement.S_B_DEFAULT);
+			//this.AddToTraining(this.ControlDictionary["Тумблер питания 2"],"Абоненты скоммутированы. Установите тумблер питания в положение «ВЫКЛ» 2-х кассет Д-41-00-07",ControlElement.S_B_DEFAULT);
 		}
 		private function CreateCommunication()
 		{
@@ -98,8 +116,8 @@
 			(ControlDictionary["Кнопка 17"]  as D39Button).ChangeID("Сброс");						
 			(ControlDictionary["Кнопка 18"]  as D39Button).ChangeID("Вкл");
 			(ControlDictionary["Кнопка 19"]  as D39Button).ChangeID("Откл");
-			(ControlDictionary["Включатель 1"] as ControlElement).addEventListener(MouseEvent.CLICK,SwitchMouseClick1);
-			(ControlDictionary["Включатель 2"] as ControlElement).addEventListener(MouseEvent.CLICK,SwitchMouseClick2);
+			(ControlDictionary["Тумблер питания 1"] as ControlElement).addEventListener(MouseEvent.CLICK,SwitchMouseClick1);
+			(ControlDictionary["Тумблер питания 2"] as ControlElement).addEventListener(MouseEvent.CLICK,SwitchMouseClick2);
 			(ControlDictionary["Кнопка 1"] as ControlElement).addEventListener(MouseEvent.CLICK,Commutation);
 			(ControlDictionary["Кнопка 2"] as ControlElement).addEventListener(MouseEvent.CLICK,Commutation);
 			(ControlDictionary["Кнопка 3"] as ControlElement).addEventListener(MouseEvent.CLICK,Commutation);
@@ -125,7 +143,18 @@
 		{
 			var button: D39Button  = e.currentTarget as D39Button;
 			var item: String;
-			var digitPanel: int;
+			var digitPanel: int;			
+						
+			if(ModeInfo.modeInfo.MainMode == ModeInfo.MM_INSTRUCTION){
+				if(this.blockState != 0){
+					this.TrainingSequence[this.blockState - 1].UnblockElement();
+				}
+				
+				if(button.IsBlocked() == true){
+					return;
+				}
+			}
+			
 			if (button.GetType() == 0)
 			{
 				trace ("0",comm_stage);
@@ -136,7 +165,8 @@
 						
 						if (comm_channels[0])(comm_channels[0] as ControlElement).GoToState(ControlElement.S_B_DEFAULT, false);
 						if (comm_channels[1])(comm_channels[1] as ControlElement).GoToState(ControlElement.S_B_DEFAULT, false);
-						this.decriptionField.text="Выберите первого абонента";
+						
+						if(ModeInfo.modeInfo.MainMode != ModeInfo.MM_INSTRUCTION) this.decriptionField.text="Выберите первого абонента";
 						TurnOffButtons();
 						comm_stage = 0;
 						break;
@@ -156,11 +186,11 @@
 										(ControlDictionary[item]as ControlElement).GoToState(comm_channels[0].GetType(), false)
 								}
 							}
-							this.decriptionField.text="Выберите первого абонента";
+							if(ModeInfo.modeInfo.MainMode != ModeInfo.MM_INSTRUCTION) this.decriptionField.text="Выберите первого абонента";
 						}
 						else
 						{
-							this.decriptionField.text="Выберите двух абонентов";							
+							if(ModeInfo.modeInfo.MainMode != ModeInfo.MM_INSTRUCTION) this.decriptionField.text="Выберите двух абонентов";							
 						}
 						comm_stage = 0;
 						TurnOffButtons();
@@ -180,7 +210,7 @@
 										(ControlDictionary[item]as ControlElement).GoToState(100, false)
 									if (digitPanel == comm_channels[1].GetType())
 										(ControlDictionary[item]as ControlElement).GoToState(100, false)
-									this.decriptionField.text="Выберите первого абонента";
+									if(ModeInfo.modeInfo.MainMode != ModeInfo.MM_INSTRUCTION) this.decriptionField.text="Выберите первого абонента";
 								}
 							}
 						}
@@ -197,7 +227,7 @@
 				{
 					case 0:
 					{
-						this.decriptionField.text="Выберите второго абонента";
+						if(ModeInfo.modeInfo.MainMode != ModeInfo.MM_INSTRUCTION) this.decriptionField.text="Выберите второго абонента";
 						(ControlDictionary["Коммутация зел. лампочка 1"] as ControlElement).GoToState(ControlElement.S_B_CHOSEN, false);
 						comm_stage = 1;
 						comm_channels[0] = button;
@@ -205,7 +235,7 @@
 					}
 					case 1:
 					{
-						this.decriptionField.text="Нажмите кнопку ВКЛ";
+						if(ModeInfo.modeInfo.MainMode != ModeInfo.MM_INSTRUCTION) this.decriptionField.text="Нажмите кнопку ВКЛ";
 						(ControlDictionary["Коммутация зел. лампочка 1"] as ControlElement).GoToState(ControlElement.S_B_DEFAULT, false);
 						(ControlDictionary["Коммутация зел. лампочка 2"] as ControlElement).GoToState(ControlElement.S_B_CHOSEN, false);
 						comm_stage = 2;
@@ -214,11 +244,16 @@
 					}
 					case 2:
 					{
-						this.decriptionField.text="Нажмите кнопку ВКЛ или СБРОС";
+						if(ModeInfo.modeInfo.MainMode != ModeInfo.MM_INSTRUCTION) this.decriptionField.text="Нажмите кнопку ВКЛ или СБРОС";
 						(button as ControlElement).GoToState(ControlElement.S_B_DEFAULT, false);
 						break;
 					}
 				}
+			}
+			
+			
+			if(ModeInfo.modeInfo.MainMode == ModeInfo.MM_INSTRUCTION){
+				this.TrainingSequence[this.blockState - 1].BlockElement();
 			}
 			trace (button);
 		}
@@ -238,12 +273,12 @@
 		
 		private function SwitchMouseClick1(e: MouseEvent)
 		{
-			var newState: int = (ControlDictionary["Включатель 1"] as ControlElement).CurrentState;
+			var newState: int = (ControlDictionary["Тумблер питания 1"] as ControlElement).CurrentState;
 			(ControlDictionary["Вкл. зел. лампочка 1"] as ControlElement).GoToState(newState, false);
 		}		
 		private function SwitchMouseClick2(e: MouseEvent)
 		{
-			var newState: int = (ControlDictionary["Включатель 2"] as ControlElement).CurrentState;
+			var newState: int = (ControlDictionary["Тумблер питания 2"] as ControlElement).CurrentState;
 			(ControlDictionary["Вкл. зел. лампочка 2"] as ControlElement).GoToState(newState, false);
 		}		
 	}

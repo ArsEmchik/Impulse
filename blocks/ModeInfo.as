@@ -2,6 +2,13 @@
 {
 	public class ModeInfo
 	{
+	
+		public var SeqCommutation:Array = new Array();	
+		public var SeqLink:Array = new Array();		
+		public var scenario:int;
+		public var scenarioDescription:String;
+		
+		
 		public static var modeInfo: ModeInfo = new ModeInfo();
 		
 		public static const BLOCK_IP: int=0;
@@ -42,6 +49,9 @@
 		public static const P296_480: int=1;
 		public static const P296_2048: int=2;		
 		
+		
+		
+		
 		public var MainMode: int; // обучение, контоль и т.д.
 		public var Mode: int; // подготовка, работа...
 		public var LocalMode: int; // ОК-1, ретрансляция
@@ -49,14 +59,17 @@
 		public var ChannelCount: int; // количество каналов
 		public var KtchCount: int; // количество каналов КТЧ
 		public var Czk48Count: int; // количество каналов ЦК
-		public var Czk86Channels: Vector.<int>; // как распределены на кабелям ПТРК
-		public var KtchChannels: Vector.<int>; // как распределены на кабелям ПТРК
+		public var Czk86Channels: Vector.<int> = new Vector.<int>(6);; // как распределены на кабелям ПТРК
+		public var KtchChannels: Vector.<int> = new Vector.<int>(6);; // как распределены на кабелям ПТРК
 		public var P296n1: int; // сколько каналов передаётся через P296(1 полукомплект) 
 		public var P296n2: int; // сколько каналов передаётся через P296(2 полукомплект)
 		public var currentBlock: int; // для blockInfo - текущий блок, который проходится(нужно для подсчёта ошибок + какие блоки уже обработаны)
 		public var blockInfo: Vector.<BlockInfo> = new Vector.<BlockInfo>(12);
 		public var errorText: String="";
 		public var blockName: String="";
+		public var fio: String="";
+		public var vzv_num: String="";
+		public var error_count_summary: int=0;
 		
 		public function ModeInfo()
 		{

@@ -40,6 +40,7 @@
 			modeInfo.TraceModeInfo();	
 			AddMouseUp();
 			SetErrorCount();
+			exitButton.addEventListener(MouseEvent.CLICK,ExitBTNClick);
 		}
 		public function SetMessage(text_message: String)
 		{
@@ -49,12 +50,18 @@
 		{
 			block_ip.addEventListener(MouseEvent.MOUSE_UP,GlobalScreenUp);
 		}
+		
+		public function ExitBTNClick(e: MouseEvent){
+			main_screen.InitializeFinalScreen();
+		}
+		
 		public function GlobalScreenUp(e: MouseEvent)
 		{
 			
 		}
 		private function AddMouseUp()
 		{
+			exitButton.visible = false;
 			var i: int;
 			var count: int=0;
 			trace(modeInfo.blockInfo);
@@ -67,8 +74,9 @@
 				}
 				else blockButtons[i].Block();
 			}
-			if (count==0)
-				main_screen.InitializeFinalScreen();
+			if (count==0){
+				exitButton.visible = true;
+			}
 		}
 		public function GoToScreen(e: MouseEvent)
 		{
@@ -148,6 +156,7 @@
 				}
 				errorArea.text.text = ModeInfo.modeInfo.errorText;
 				errorCount.text = "Количество ошибок: "+count.toString();
+				ModeInfo.modeInfo.error_count_summary = count;
 				errorButton.addEventListener(MouseEvent.CLICK,ShowErrors);
 				
 			} else errorButton.visible=false;

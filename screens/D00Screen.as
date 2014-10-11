@@ -4,6 +4,7 @@
 	import fl.controls.Button;
 	import flash.events.MouseEvent;
 	import blocks.D00Block;
+	import blocks.ModeInfo;
 	
 	public class D00Screen extends BlockScreen {
 		
@@ -13,7 +14,9 @@
 		{
 			mainScreen=p_mainScreen;
 			outButton.addEventListener(MouseEvent.CLICK,GoToNewScreen);
-			this.InitializeBlockScreen(D00Unit, textBox,outButton);
+			backButton1.addEventListener(MouseEvent.CLICK,backScreen);
+			taskTextBox.text = ModeInfo.modeInfo.scenarioDescription;
+			this.InitializeBlockScreen(D00Unit, textBox,outButton, textBoxNext);
 		}
 		
 		public function D00Screen() {

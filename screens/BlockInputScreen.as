@@ -19,8 +19,9 @@
 		public function InitializeInputBlockScreen(p_mainScreen: MainScreen)
 		{
 			mainScreen=p_mainScreen;
+			backButton1.addEventListener(MouseEvent.CLICK,backScreen);
 			outButton.addEventListener(MouseEvent.CLICK,GoToNewScreen);
-			this.InitializeBlockScreen(inputBlock,textBox,outButton);
+			this.InitializeBlockScreen(inputBlock,textBox,outButton, textBoxNext);
 		}		
 	}
 	

@@ -22,17 +22,18 @@
 
 		// следующие 3 поля логически связаны. какой элемент задействовать, описание действие, в какое сосотояние его перевести
 
-		private var TrainingSequence: Vector.<ControlElement>; 
+		public var TrainingSequence: Vector.<ControlElement>; 
 		private var trainingDescriptions: Vector.<String>; 
 		private var trainingState: Vector.<int>; 
 
 		// текущее состояние TrainingSequence
-		private var blockState: int;
+		public var blockState: int;
 
 		
 		// кнопка и текстбокс для выхода и вывода информации
 		protected var decriptionField: TextField;
 		private var outButton: Button;
+		protected var textBoxNext: TextField;
 		
 		public function ImpulsUnit(pFree: Boolean=false)
 		{
@@ -58,10 +59,12 @@
 				ControlElements.push(ControlDictionary[item]);
 			}
 		}
-		public function InitializeImpulsUnit(pDecriptionField: TextField, pOutButton: Button)
+		public function InitializeImpulsUnit(pDecriptionField: TextField, pOutButton: Button, ptextBoxNext: TextField)
 		{
 			decriptionField=pDecriptionField;
 			outButton=pOutButton;
+			textBoxNext = ptextBoxNext;
+			textBoxNext.visible = false;
 		}
 		public function SetMode(impulseMode: int)
 		{
@@ -78,6 +81,7 @@
 					break;
 				case ModeInfo.MM_CONTROL:
 					outButton.visible=true;
+					textBoxNext.visible = true;
 					this.RememberDefault();
 					break;
 				default: throw new Error("Нет такого типа обучения");
@@ -108,13 +112,17 @@
 					TrainingSequence[blockState-1].BlockElement();
 					TrainingSequence[blockState-1].RemoveEmit();
 				}
+				
 				TrainingSequence[blockState].UnblockElement();
+				
 				if (ImpulseMode==ModeInfo.MM_INSTRUCTION)
 				{
 					TrainingSequence[blockState].EmitControl();
+				trace(TrainingSequence[blockState].elementName);
 					this.decriptionField.text = this.trainingDescriptions[blockState];
 				} else this.decriptionField.text="";
 				TrainingSequence[blockState].SetNessesaryState(trainingState[blockState]);
+				trace(TrainingSequence[blockState].elementName);
 				
 			}
 		}
@@ -125,7 +133,7 @@
 				TrainingSequence[TrainingSequence.length-1].BlockElement();
 				TrainingSequence[TrainingSequence.length-1].RemoveEmit();
 			}
-			this.decriptionField.text = "Вы выполнили все действия.";
+			this.decriptionField.text = "Вы выполнили все действия. Нажмите «Далее» для завершения настройки блока.";
 			this.outButton.visible=true;
 		}
 		private function IncrementState()
@@ -154,7 +162,7 @@
 			UpdateState();
 		}
 		public function AddToTraining(element: ControlElement,decription: String, nessesaryState: int)
-		{
+		{			
 			TrainingSequence.push(element);
 			trainingDescriptions.push(decription);
 			trainingState.push(nessesaryState);
@@ -166,6 +174,7 @@
 			var mouseEvent: MouseEvent = new MouseEvent(MouseEvent.CLICK);
 			for (i=0; i<TrainingSequence.length; i++)
 			{
+			//ControlElements[i].elementName
 				while (TrainingSequence[i].CurrentState!=trainingState[i] && !TrainingSequence[i].OneState)
 				{
 					TrainingSequence[i].dispatchEvent(mouseEvent);
@@ -213,10 +222,17 @@
 		{
 			var i: int;
 			var mouseEvent: MouseEvent = new MouseEvent(MouseEvent.CLICK);
+			trace(TrainingSequence.length);
+			
 			for (i=0; i<TrainingSequence.length; i++)
 			{
+				
+				
 				while (TrainingSequence[i].CurrentState!=trainingState[i] && !TrainingSequence[i].OneState)
 				{
+					if((ModeInfo.modeInfo.blockName == "Блок D-39") && !((TrainingSequence[i].elementName == "Тумблер питания 1") || (TrainingSequence[i].elementName == "Тумблер питания 2"))){
+						break;
+					}
 					TrainingSequence[i].dispatchEvent(mouseEvent);
 				}
 				if (TrainingSequence[i].OneState)
@@ -230,6 +246,8 @@
 			var firstTime: Boolean=true;
 			for (i=0; i<ControlElements.length; i++)
 			{
+				
+				
 				if (ControlStates[i]!=ControlElements[i].CurrentState)
 				{
 					if (firstTime)

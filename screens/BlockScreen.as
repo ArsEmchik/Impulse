@@ -17,16 +17,24 @@
 		{
 			
 		}
-		public function InitializeBlockScreen(p_BlockUnit: ImpulsUnit, textBox: TextField, outButton: Button)
+		public function InitializeBlockScreen(p_BlockUnit: ImpulsUnit, textBox: TextField, outButton: Button, txtNext: TextField)
 		{
 			BlockUnit=p_BlockUnit;
-			BlockUnit.InitializeImpulsUnit(textBox,outButton);
+			BlockUnit.InitializeImpulsUnit(textBox,outButton, txtNext);
 		}
 		public function GoToNewScreen(e: MouseEvent)
 		{
 			trace(ModeInfo.modeInfo.MainMode,ModeInfo.MM_CONTROL);
 			if (ModeInfo.modeInfo.MainMode==ModeInfo.MM_CONTROL)
 				block.TestForErrors();
+			mainScreen.InitializeGlobalScreen();
+		}
+		public function backScreen(e: MouseEvent)
+		{
+			trace(ModeInfo.modeInfo.MainMode,ModeInfo.MM_CONTROL);
+			
+			ModeInfo.modeInfo.blockInfo[ModeInfo.modeInfo.currentBlock].blockDone = false;
+			
 			mainScreen.InitializeGlobalScreen();
 		}			
 	}

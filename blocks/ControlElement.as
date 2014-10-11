@@ -33,7 +33,7 @@
 		public var StateCount: int; // сколько всего состояний
 		public var CurrentState: int; // текущее состояние
 		public var MouseEnabled: Boolean; // лампочки нельзя менять, а например тумблеры - можно
-		private var blocked: Boolean; // блокировка - например для режима обучения можно нажимать только на правильный контрол. Остальные блокированы
+		public var blocked: Boolean; // блокировка - например для режима обучения можно нажимать только на правильный контрол. Остальные блокированы
 		protected var parentUnit: ImpulsUnit;
 		private var nesesaryState: int; // ожидаемое состояние - в основном нужно для ImpulsUnit
 		private var emiting: Boolean // подсвечивается ли контрол

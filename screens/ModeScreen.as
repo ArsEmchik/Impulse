@@ -17,6 +17,7 @@
 	import flash.events.Event;
 	import flash.text.TextFormat;
 	import buttons.MessageBoxClass;
+	import fl.controls.CheckBox;
 
 	public dynamic class ModeScreen extends MovieClip {;
 
@@ -31,7 +32,6 @@
 	var main_screen:MainScreen;
 	var main_mode_mas: Vector.<RadioButton> = new Vector.<RadioButton>();//обуч трен контроль
 	var mode_mas: Vector.<RadioButton> = new Vector.<RadioButton>();//подготовка включение коммутация
-	var local_mode_mas: Vector.<RadioButton> = new Vector.<RadioButton>();// ок1...
 	var speed_combo_box:ComboBox;// 48 кбит
 	var channel_count:NumericStepper;
 	var channel_slider:Slider;// цк - ктч
@@ -49,13 +49,15 @@
 
 	var main_mode_group:ComponentGroup;
 	var mode_mas_group:ComponentGroup;
-	var local_mode_group:ComponentGroup;
 	var speed_group:ComponentGroup;
 	var channel_group:ComponentGroup;
 	var cable_group:ComponentGroup;
 	var fio_group:ComponentGroup;
 	var start_group:ComponentGroup;
 	var speed_preapare_group:ComponentGroup;
+	var scenario_infoes: Array = new Array();
+	var scenario_sequential_infoes: Array = new Array();
+
 	//var mode_info: ModeInfo = new ModeInfo();
 
 	public function ModeScreen()
@@ -68,74 +70,24 @@
 		mode_mas.push(mode_1);
 		mode_mas.push(mode_2);
 		mode_mas.push(mode_3);
-		local_mode_mas.push(local_mode_1);
-		local_mode_mas.push(local_mode_2);
-		local_mode_mas.push(local_mode_3);
-		local_mode_mas.push(local_mode_4);
-		local_mode_mas.push(local_mode_5);
-		local_mode_mas.push(local_mode_6);
-		speed_combo_box = t_speed_combo_box;
 		speed_combo_box_prepare = t_speed_combo_box_prepare;
-		channel_slider = t_channel_slider;
 		start_button = t_start_button;
-		cable1_zk.push(cable11_zkb);
-		cable1_zk.push(cable12_zk);
-		cable1_zk.push(cable13_zkb);
-		cable2_zk.push(cable21_zk);
-		cable2_zk.push(cable22_zk);
-		cable2_zk.push(cable23_zk);
-		radiobuttons1.push(comp0);
-		radiobuttons1.push(comp1);
-		radiobuttons1.push(comp2);
-		radiobuttons2.push(comp5);
-		radiobuttons2.push(comp3);
-		radiobuttons2.push(comp4);
-		cable1_ktch.push(cable11_ktch);
-		cable1_ktch.push(cable12_ktch);
-		cable1_ktch.push(cable13_ktch);
-		cable2_ktch.push(cable21_ktch);
-		cable2_ktch.push(cable22_ktch);
-		cable2_ktch.push(cable23_ktch);
-		cable_label.push(l1);
-		cable_label.push(l2);
-		cable_label.push(l3);
-		cable_label.push(l4);
-		cable_label.push(l5);
-		cable_label.push(l6);
-		//cable_label.push(l7);
-		//cable_label.push(l8);
-		cable_label.push(l10);
-		//cable_label.push(l11);
-		//cable_label.push(l12);
-		cable_label.push(l14);
-		cable_label.push(l15);
-		cable_label.push(l16);
-		cable_label.push(l17);
-		cable_label.push(l18);
-		//cable_label.push(l19);
-		//cable_label.push(l20);
-		cable_label.push(l22);
-		cable_label.push(l23);
-		//cable_label.push(l24);
-		//cable_label.push(l25);
-		channel_count = t_channel_count;
 		tb_fio = t_tb_fio;
 		tb_num = t_tb_num;
 		SetGroups();
 		SetEvents();
 		SetStyleToRadioButtonsAndLabels();
-		InitializeStartStepperValues();
 	}
 	public function InitializeStartModeScreen(p_main_screen: MainScreen)
 	{
 		main_screen = p_main_screen;
 	}
+
+
 	private function SetGroups()
 	{
 		var speed_group_mas: Vector.<DisplayObject> = new Vector.<DisplayObject>();
-		speed_group_mas.push(t_speed_combo_box,speed_label,t_speed_combo_box_2,speed_label_2);
 		var channel_group_mas: Vector.<DisplayObject> = new Vector.<DisplayObject>();
-		channel_group_mas.push(t_channel_count,channel_label1,/*channel_label2,*/t_channel_slider,channel_label3,channel_label4);
 		var fio_group_mas: Vector.<DisplayObject> = new Vector.<DisplayObject>();
 		fio_group_mas.push(tb_fio,tb_num,fio_label1,fio_label2);
 		var start_group_mas: Vector.<DisplayObject> = new Vector.<DisplayObject>();
@@ -144,7 +96,6 @@
 		prepare_group_mas.push(this.speed_combo_box_prepare,speed_label_prepare);
 		main_mode_group = new ComponentGroup(this,(new Vector.<DisplayObject>()).concat(main_mode_mas));
 		mode_mas_group = new ComponentGroup(this,(new Vector.<DisplayObject>()).concat(mode_mas));
-		local_mode_group = new ComponentGroup(this,(new Vector.<DisplayObject>()).concat(local_mode_mas));
 		speed_group = new ComponentGroup(this,speed_group_mas);
 		channel_group = new ComponentGroup(this,channel_group_mas);
 		cable_group = new ComponentGroup(this,GetCableGroupAsDislayObjects());
@@ -199,31 +150,8 @@
 		{
 			mode_mas[i].addEventListener(MouseEvent.CLICK,ModeRadioButton);
 		}
-		for (i=0; i<local_mode_mas.length; i++)
-		{
-			local_mode_mas[i].addEventListener(MouseEvent.CLICK,LocalModeRadioButton);
-		}
-		for (i=0; i<this.radiobuttons1.length; i++)
-		{
-			this.radiobuttons1[i].addEventListener(MouseEvent.CLICK,P296Click);
-		}
-		for (i=0; i<this.radiobuttons2.length; i++)
-		{
-			this.radiobuttons2[i].addEventListener(MouseEvent.CLICK,P296Click2);
-		}
-		speed_combo_box.addEventListener(Event.CHANGE,ComboBoxChange);
 		speed_combo_box_prepare.addEventListener(Event.CHANGE,PrepareComboBoxChange);
-		channel_count.addEventListener(Event.CHANGE,ChannelCountChange);
-		channel_slider.addEventListener(Event.CHANGE,ChannelSliderChange);
 		this.start_button.addEventListener(MouseEvent.MOUSE_UP,StartButtonClick);
-	}
-	private function P296Click(e: MouseEvent)
-	{
-
-	}
-	private function P296Click2(e: MouseEvent)
-	{
-
 	}
 	private function MainModeRadioButton(e: MouseEvent)
 	{
@@ -232,15 +160,16 @@
 		RadioButtonCheck(r_button);
 		for (i=0; i<main_mode_mas.length; i++)
 		{
-			if (r_button==main_mode_mas[i])
+			if (r_button == main_mode_mas[i])
 			{
 				break;
 			}
 		}
 		main_mode = i;
 		var clear_groups: Vector.<ComponentGroup> = new Vector.<ComponentGroup>();
-		clear_groups.push(mode_mas_group,local_mode_group,speed_group,channel_group,cable_group,fio_group,start_group,speed_preapare_group);
+		clear_groups.push(mode_mas_group,speed_group,channel_group,cable_group,fio_group,start_group,speed_preapare_group);
 		ClearGroups(clear_groups);
+		this.SetVisibleScenarioInfo(false);
 		switch (main_mode)
 		{
 			case ModeInfo.MM_INSTRUCTION :
@@ -256,7 +185,7 @@
 	}
 	private function RadioButtonCheck(r_button: RadioButton)
 	{
-		if (r_button==null)
+		if (r_button == null)
 		{
 			throw new Error("Только для радиобатонов");
 		}
@@ -276,71 +205,31 @@
 		RadioButtonCheck(r_button);
 		for (i=0; i<mode_mas.length; i++)
 		{
-			if (r_button==mode_mas[i])
+			if (r_button == mode_mas[i])
 			{
 				break;
 			}
 		}
 		impuls_mode = i;
 		var clear_groups: Vector.<ComponentGroup> = new Vector.<ComponentGroup>();
-		clear_groups.push(local_mode_group,speed_group,channel_group,cable_group,start_group,speed_preapare_group);
+		clear_groups.push(speed_group,channel_group,cable_group,start_group,speed_preapare_group);
 		ClearGroups(clear_groups);
+		this.SetVisibleScenarioInfo(false);
 		if (this.main_mode == ModeInfo.MM_CONTROL)
 		{
 			fio_group.SetVisible(true);
-			start_group.SetVisible(true);
-			GenerateRandomMode();
-			return;
 		}
 		if (ModeInfo.M_COMMUTATION == impuls_mode)
 		{
-			local_mode_group.SetVisible(true);
-			local_mode_0.selected = true;
+			this.speed_label_prepare.text = "Сценарий";
+			LoadScenarioInfoes();
+			speed_preapare_group.SetVisible(true);
 		}
 		else
 		{
+			this.speed_label_prepare.text = "Скорость";
 			FillPrepareComboBox();
 			speed_preapare_group.SetVisible(true);
-		}
-	}
-	private function LocalModeRadioButton(e: MouseEvent)
-	{
-		var i:int;
-		var r_button: RadioButton = (e.target as RadioButton);
-		RadioButtonCheck(r_button);
-		for (i=1; i<local_mode_mas.length; i++)
-		{
-			if (r_button==local_mode_mas[i])
-			{
-				break;
-			}
-		}
-		local_mode = i;
-		var clear_groups: Vector.<ComponentGroup> = new Vector.<ComponentGroup>();
-		clear_groups.push(speed_group,channel_group,cable_group,start_group,speed_preapare_group);
-		ClearGroups(clear_groups);
-		speed_group.SetVisible(true);
-		if (local_mode==ModeInfo.L_OK2 || local_mode==ModeInfo.L_RETR2 || local_mode==ModeInfo.L_UZL2)
-		{
-			this.removeChild(speed_label_2);
-			this.removeChild(t_speed_combo_box_2);
-		}
-		FillComboBox(local_mode,speed_combo_box);
-		FillComboBox(local_mode,t_speed_combo_box_2);
-	}
-	private function FillComboBox(t_local_mode: int, comboBox: ComboBox)
-	{
-		comboBox.removeAll();
-		comboBox.addItem(new ValueData("",-1));
-		if (t_local_mode!=ModeInfo.L_UZL1 && t_local_mode!=ModeInfo.L_UZL2)
-		{
-			comboBox.addItem(new ValueData("48 кбит",ModeInfo.S_48));
-		}
-		comboBox.addItem(new ValueData("480 кбит",ModeInfo.S_480));
-		comboBox.addItem(new ValueData("480x2 кбит",ModeInfo.S_480x2));
-		if (t_local_mode!=ModeInfo.L_UZL1)
-		{
-			comboBox.addItem(new ValueData("2048 кбит",ModeInfo.S_2048));
 		}
 	}
 	private function FillPrepareComboBox()
@@ -354,79 +243,23 @@
 	private function PrepareComboBoxChange(e: Event)
 	{
 		start_group.SetVisible(false);
+		this.SetVisibleScenarioInfo(true);
+		this.txt_scenario_info.text = "";
 		if ((speed_combo_box_prepare.selectedItem as ValueData).data!=-1)
 		{
 			start_group.SetVisible(true);
-			this.speed_mode=(speed_combo_box_prepare.selectedItem as ValueData).data;
-		}
-	}
-	private function ComboBoxChange(e: Event)
-	{
-		var clear_groups: Vector.<ComponentGroup> = new Vector.<ComponentGroup>();
-		clear_groups.push(channel_group,cable_group,start_group,speed_preapare_group);
-		ClearGroups(clear_groups);
-		if ((speed_combo_box.selectedItem as ValueData).data!=-1)
-		{
-			var max_channel_count:int = 0;
-			switch ((speed_combo_box.selectedItem as ValueData).data)
+			if (ModeInfo.M_COMMUTATION == impuls_mode)
 			{
-				case ModeInfo.S_48 :
-					max_channel_count = 1;
-					this.speed_mode = ModeInfo.S_48;
-					EnableP296Radiobuttons(false);
-					break;
-				case ModeInfo.S_480 :
-					max_channel_count = 9;
-					this.speed_mode = ModeInfo.S_480;
-					EnableP296Radiobuttons(true);
-					break;
-				case ModeInfo.S_480x2 :
-					max_channel_count = 18;
-					this.speed_mode = ModeInfo.S_480x2;
-					EnableP296Radiobuttons(true);
-					break;
-				case ModeInfo.S_2048 :
-					max_channel_count = 36;
-					this.speed_mode = ModeInfo.S_2048;
-					EnableP296Radiobuttons(true,true);
-					break;
+				///TODO
+
+				this.SetVisibleScenarioInfo(true);
+				this.txt_scenario_info.text = scenario_infoes[(speed_combo_box_prepare.selectedItem as ValueData).data];
 			}
-			channel_group.SetVisible(true);
-			channel_count.value = 0;
-			channel_count.minimum = 0;
-			channel_count.maximum = max_channel_count;
-			channel_slider.minimum = 0;
-			channel_slider.maximum = 0;
-			channel_slider.value = 0;
-			channel_label3.text = "ЦК-48 (0)";
-			channel_label4.text = "КТЧ (0)";
+			else
+			{
+				this.speed_mode=(speed_combo_box_prepare.selectedItem as ValueData).data;
+			}
 		}
-	}
-	private function ChannelCountChange(e: Event)
-	{
-		var clear_groups: Vector.<ComponentGroup> = new Vector.<ComponentGroup>();
-		clear_groups.push(cable_group,start_group);
-		ClearGroups(clear_groups);
-		channel_slider.maximum = e.target.value;
-		channel_slider.value = 0;
-		channel_label3.text = "ЦК-48 (0)";
-		channel_label4.text = "КТЧ (" + e.target.value + ")";
-		this.zk_count = 0;
-		this.ktch_count = e.target.value;
-		if (e.target.value != 0)
-		{
-			SetStepperValues(0,e.target.value);
-			cable_group.SetVisible(true);
-		}
-	}
-	private function ChannelSliderChange(e: Event)
-	{
-		SetStepperValues(e.target.value,channel_slider.maximum-e.target.value);
-		channel_label3.text = "ЦК-48 (" + e.target.value.toString() + ")";
-		channel_label4.text = "КТЧ ("+(channel_slider.maximum-e.target.value).toString()+")";
-		trace("mi",e.target.value,channel_slider.maximum-e.target.value);
-		this.zk_count = e.target.value;
-		this.ktch_count = channel_slider.maximum - e.target.value;
 	}
 	private function SetStyleToRadioButtonsAndLabels()
 	{
@@ -441,152 +274,25 @@
 		{
 			mode_mas[i].setStyle("textFormat",tf);
 		}
-		for (i=0; i<local_mode_mas.length; i++)
-		{
-			local_mode_mas[i].setStyle("textFormat",tf);
-		}
 		for (i=0; i<cable_label.length; i++)
 		{
 			cable_label[i].setStyle("textFormat",tf);
 		}
 		start_button.setStyle("textFormat",tf);
-		speed_combo_box.setStyle("textFormat",tf);
 		speed_combo_box_prepare.setStyle("textFormat",tf);
-		channel_slider.setStyle("textFormat",tf);
 		tb_fio.setStyle("textFormat",tf);
 		tb_num.setStyle("textFormat",tf);
-		speed_label.setStyle("textFormat",tf);
-		speed_label_2.setStyle("textFormat",tf);
 		main_mode_2_l.setStyle("textFormat",tf);
 		main_mode_3_l.setStyle("textFormat",tf);
 		speed_label_prepare.setStyle("textFormat",tf);
-		channel_label1.setStyle("textFormat",tf);
-		//channel_label2.setStyle("textFormat",tf);
-		channel_label3.setStyle("textFormat",tf);
-		channel_label4.setStyle("textFormat",tf);
 		fio_label1.setStyle("textFormat",tf);
 		fio_label2.setStyle("textFormat",tf);
 	}
-	private function EnableP296Radiobuttons(newEnable: Boolean, with_2048: Boolean=false)
-	{
-		var i:int;
-		for (i=0; i<this.radiobuttons1.length; i++)
-		{
-			this.radiobuttons1[i].enabled = newEnable;
-		}
-		for (i=0; i<this.radiobuttons2.length; i++)
-		{
-			this.radiobuttons2[i].enabled = newEnable;
-		}
-		this.radiobuttons1[0].selected = true;
-		this.radiobuttons2[0].selected = true;
-		if (! with_2048)
-		{
-			this.radiobuttons1[2].enabled = false;
-			this.radiobuttons2[2].enabled = false;
-		}
-	}
-	private function InitializeSteppersToZero()
-	{
-		var i:int;
-		for (i=0; i<cable1_zk.length; i++)
-		{
-			cable1_zk[i].value = 0;
-		}
-		for (i=0; i<cable2_zk.length; i++)
-		{
-			cable2_zk[i].value = 0;
-		}
-		for (i=0; i<cable1_ktch.length; i++)
-		{
-			cable1_ktch[i].value = 0;
-		}
-		for (i=0; i<cable2_ktch.length; i++)
-		{
-			cable2_ktch[i].value = 0;
-		}
-	}
-	private function InitializeStartStepperValues()
-	{
-		var i:int;
-		for (i=0; i<cable1_zk.length; i++)
-		{
-			cable1_zk[i].maximum = 4;
-			cable1_zk[i].minimum = 0;
-		}
-		for (i=0; i<cable2_zk.length; i++)
-		{
-			cable2_zk[i].maximum = 4;
-			cable2_zk[i].minimum = 0;
-		}
-		for (i=0; i<cable1_ktch.length; i++)
-		{
-			cable1_ktch[i].maximum = 4;
-			cable1_ktch[i].minimum = 0;
-		}
-		for (i=0; i<cable2_ktch.length; i++)
-		{
-			cable2_ktch[i].maximum = 4;
-			cable2_ktch[i].minimum = 0;
-		}
-	}
-	private function SetStepperValues(zk: int, ktch: int)
-	{
-		InitializeSteppersToZero();
-		if (this.speed_mode == ModeInfo.S_2048)
-		{
-			return;
-		}
-		var i:int;
-		var sub:int = 0;
-		var min:int;
-		var cable_mas_zk: Vector.<NumericStepper> = new Vector.<NumericStepper>();
-		var cable_mas_ktch: Vector.<NumericStepper> = new Vector.<NumericStepper>();
-		cable_mas_zk.push(this.cable1_zk[0],this.cable1_zk[1],this.cable1_zk[2],
-		   this.cable2_zk[0],this.cable2_zk[1],this.cable2_zk[2]);
-		cable_mas_ktch.push(this.cable1_ktch[0],this.cable1_ktch[1],this.cable1_ktch[2],
-		  this.cable2_ktch[0],this.cable2_ktch[1],this.cable2_ktch[2]);
-		for (i=0; i<cable_mas_zk.length; i++)
-		{
-			if (zk>=4)
-			{
-				sub = 4;
-			}
-			else
-			{
-				sub = zk;
-			}
-			cable_mas_zk[i].value = sub;
-			zk -=  sub;
-			if (zk==0)
-			{
-				break;
-			}
-		}
-		for (i=0; i<cable_mas_ktch.length; i++)
-		{
-			min = 4 - cable_mas_zk[i].value;
-			if (ktch>=min)
-			{
-				sub = min;
-			}
-			else
-			{
-				sub = ktch;
-			}
-			ktch -=  sub;
-			cable_mas_ktch[i].value = sub;
-			if (ktch==0)
-			{
-				break;
-			}
-		}
-	}
 	private function StartButtonClick(e: MouseEvent)
 	{
-		if (ModeInfo.M_COMMUTATION == this.impuls_mode && ! TestChannelCount())
-		{
-			(message_box as MessageBoxClass).InitializeMessageBox(null,"Некорректно определено количество каналов",this);
+		
+		if((t_tb_fio.text == "") && (this.main_mode == ModeInfo.MM_CONTROL)){
+			(message_box as MessageBoxClass).InitializeMessageBox(null,"Поле «ФИО» обязательно для заполнения",this);
 			return;
 		}
 		FillModeInfo();
@@ -594,128 +300,124 @@
 		trace(main_screen.info);
 		this.main_screen.InitializeGlobalScreen();
 	}
-	private function TestChannelCount()
-	{
-		var i:int;
-		var zk_sum:int = 0;
-		var ktch_sum:int = 0;
-		for (i=0; i<3; i++)
-		{
-			if (this.cable1_zk[i].value + this.cable1_ktch[i].value > 4)
-			{
-				return false;
-			}
-			if (this.cable2_zk[i].value + this.cable2_ktch[i].value > 4)
-			{
-				return false;
-			}
-			zk_sum +=  this.cable1_zk[i].value + this.cable2_zk[i].value;
-			ktch_sum +=  this.cable1_ktch[i].value + this.cable2_ktch[i].value;
-		}
-		trace(zk_sum,zk_count,ktch_sum,ktch_count);
-		if (zk_sum!=this.zk_count || ktch_sum!=this.ktch_count)
-		{
-			return (false);
-		}
-		return true;
-	}
 	private function FillModeInfo()
 	{
+		if (ModeInfo.M_COMMUTATION == this.impuls_mode)
+		{
+			SaveScenario();
+		}
+		ModeInfo.modeInfo.fio = t_tb_fio.text;
+		ModeInfo.modeInfo.vzv_num = t_tb_num.text;
 		ModeInfo.modeInfo.MainMode = this.main_mode;
 		ModeInfo.modeInfo.Mode = this.impuls_mode;
 		ModeInfo.modeInfo.Speed = this.speed_mode;
 		ModeInfo.modeInfo.LocalMode = this.local_mode;
-		ModeInfo.modeInfo.ChannelCount = this.channel_count.value;
-		ModeInfo.modeInfo.KtchCount = this.ktch_count;
-		ModeInfo.modeInfo.Czk48Count = this.zk_count;
-		ModeInfo.modeInfo.Czk86Channels = new Vector.<int>();
-		ModeInfo.modeInfo.KtchChannels = new Vector.<int>();
-		var i:int;
-		for (i=0; i<this.cable1_ktch.length; i++)
-		{
-			ModeInfo.modeInfo.KtchChannels.push(this.cable1_ktch[i].value);
-		}
-		for (i=0; i<this.cable2_ktch.length; i++)
-		{
-			ModeInfo.modeInfo.KtchChannels.push(this.cable2_ktch[i].value);
-		}
-		for (i=0; i<this.cable1_zk.length; i++)
-		{
-			ModeInfo.modeInfo.Czk86Channels.push(this.cable1_zk[i].value);
-		}
-		for (i=0; i<this.cable2_zk.length; i++)
-		{
-			ModeInfo.modeInfo.Czk86Channels.push(this.cable2_zk[i].value);
-		}
-		for (i=0; i<this.radiobuttons1.length; i++)
-		{
-			if (this.radiobuttons1[i].selected)
-			{
-				ModeInfo.modeInfo.P296n1 = i;
-			}
-		}
-		for (i=0; i<this.radiobuttons2.length; i++)
-		{
-			if (this.radiobuttons2[i].selected)
-			{
-				ModeInfo.modeInfo.P296n2 = i;
-			}
-		}
+		ModeInfo.modeInfo.scenario = (speed_combo_box_prepare.selectedItem as ValueData).data;
 		ModeInfo.modeInfo.SetBlocks();
 	}
-	private function GenerateRandomMode()
+	private function LoadScenarioInfoes()
 	{
-		switch (this.impuls_mode)
-		{
-			case ModeInfo.M_PREPARING :
-			case ModeInfo.M_WORKING :
-				SetSpeed();
-				break;
-			case ModeInfo.M_COMMUTATION :
-				SetRandomCommutation();
-				break;
-			default :
-				throw new Error;
-		}
+		///TODO: loading from file or ...
+
+		speed_combo_box_prepare.removeAll();
+		this.txt_scenario_info.text = "";
+		speed_combo_box_prepare.addItem(new ValueData("",-1));
+
+		//speed_combo_box_prepare.addItem(new ValueData("Сценарий №1",0));
+		//scenario_infoes.push("Общестанционный режим: ОК-2\nСкоростной режим: 2х480 кбит/с\nОрганизовать передачу:\n   - 10 каналов тональной частоты (Используя 1-ю, 3-ю, 4-ю, 7-ю пары I-ого кабеля ПТРК-10х2 и 3-ю, 6-ю пары II-го кабеля ПТРК-10х2 полукомплекта А)\n   - 4 цифровых канала ЦК-48 (Используя 2-ю, 6-ю, 8-ю, 9-ю пары I-го кабеля ПТРК-10х2 полукомплекта А)\n   - АбЦП со скоростью 480 кбит/с (Используя полукомплект А)\nОрганизовать трансфер между каналами:\n   - Канал тональной частоты с 4-й на 2-ю пару 2-го кабеля ПТРК-10х2 полукомлекта А\n   - Цифровой канал ЦК-48 с 7-й на 4-ю пару 2-го кабеля ПТРК-10х2 полукомлекта А");
+		//scenario_sequential_infoes.push("1|2*2*0*2*0*0*1*2x0x0xУстановите оконечный режим 1-го канала полукомплекта А>2x4x0xСкомутируйте 1-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x0xСкомутируйте цифровой выход ИТ/А с 1-м каналом ИО-3А полукомплекта А>2x6x0xСкомутируйте 2-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с 1-м каналом ИО-3Б полукомплекта А*2x0x1xУстановите оконечный режим 2-го канала полукомплекта А>2x4x1xСкомутируйте 3-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x1xСкомутируйте цифровой выход ИТ/А со 2-м каналом ИО-3А полукомплекта А>2x5x1xСкомутируйте 4-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x1xСкомутируйте цифровой выход ИТ/А со 2-м каналом ИО-3Б полукомплекта А*2x0x2xУстановите оконечный режим 3-го канала полукомплекта А>2x3x2xСкомутируйте 6-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с 3-м каналом ИО-3А полукомплекта А>2x5x2xСкомутируйте 7-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x2xСкомутируйте цифровой выход ИТ/А с 3-м каналом ИО-3Б полукомплекта А*2x0x3xУстановите оконечный режим 4-го канала полукомплекта А>2x3x3xСкомутируйте 8-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с 4-м каналом ИО-3А полукомплекта А>2x6x3xСкомутируйте 9-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с 3-м каналом ИО-3Б полукомплекта А*2x0x4xУстановите оконечный режим 5-го канала полукомплекта А>2x0x5xУстановите оконечный режим 6-го канала полукомплекта А>2x4x5xСкомутируйте 3-ю пару 2-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x5xСкомутируйте цифровой выход ИТ/А с 6-м каналом ИО-3А полукомплекта А>2x5x5xСкомутируйте 4-ю пару 2-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>1x7x5xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 5-м каналом ИО-3Б полукомплекта А>1x6x4xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 5-м каналом ИО-3Б полукомплекта А*2x0x6xУстановите оконечный режим 7-го канала полукомплекта А>2x4x6xСкомутируйте 6-ю пару 2-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x6xСкомутируйте цифровой выход ИТ/А с 7-м каналом ИО-3А полукомплекта А>1x5x6xСоедините 2-х проводной перемычкой 7-ю пару 2-го кабеля ПТРК-10х2 полукомплекта А с 6-м каналом ИО-3Б полукомплекта А>1x6x5xСоедините 2-х проводной перемычкой 7-ю пару 2-го кабеля ПТРК-10х2 полукомплекта А с 6-м каналом ИО-3Б полукомплекта А|0*1*0*0*0*0*0*2x14x0xУстановите оконечный режим 1-го канала полукомплекта Б>2x14x9xУстановите оконечный режим 10-го канала полукомплекта Б>1x10x0xСоедините 2-х проводной перемычкой 1-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с входным разъемом 48кбит/с полукомплекта Б>1x9x9xСоедините 2-х проводной перемычкой 1-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с входным разъемом 48кбит/с полукомплекта Б>1x14x9xСоедините 2-х проводной перемычкой выходящий разъем 48кбит/с полукомплекта Б со 2-й парой 1-го кабеля ПТРК-10х2 полукомплекта Б>1x14x0xСоедините 2-х проводной перемычкой выходящий разъем 48кбит/с полукомплекта Б со 2-й парой 1-го кабеля ПТРК-10х2 полукомплекта Б|3>13*1>14");
+
+//1
+speed_combo_box_prepare.addItem(new ValueData("Сценарий №1",0));
+scenario_infoes.push("Общестанционный режим: ОК-2\nСкоростной режим: 2х480 кбит/с\nОрганизовать передачу:\n   - 12 каналов тональной частоты (Используя 1-ю, 3-ю, 4-ю, 6-ю, 7-ю, 8-ю пары I-ого кабеля ПТРК-10х2, 1-ю, 2-ю, 7-ю пары II-го кабеля ПТРК-10х2 полукомплекта А, 2-ю, 3-ю, 6-ю пары I-го кабеля ПТРК-10х2 полукомплекта Б)\n   - 4 цифровых канала ЦК-48 (Используя 2-ю пару I-го кабеля ПТРК-10х2, 3-ю пару II-го кабеля ПТРК-10х2 полукомплекта А, 8-ю, 9-ю пары I-го кабеля ПТРК-10х2 полукомплекта Б)\nОрганизовать трансфер между каналами:\n   - Канал тональной частоты с 9-й пары 1-го кабеля ПТРК-10х2 на 4-ю пару 2-го кабеля ПТРК-10х2 полукомлекта А\n   - Цифровой канал ЦК-48 с 7-й на 1-ю пару 1-го кабеля ПТРК-10х2 полукомлекта Б");
+scenario_sequential_infoes.push("1|7*1*3*1*0*0*0*2x0x0xУстановите оконечный режим 1-го канала полукомплекта А>2x0x1xУстановите оконечный режим 2-го канала полукомплекта А>2x0x2xУстановите оконечный режим 3-го канала полукомплекта А>2x0x3xУстановите оконечный режим 4-го канала полукомплекта А>2x0x4xУстановите оконечный режим 5-го канала полукомплекта А>2x0x5xУстановите оконечный режим 6-го канала полукомплекта А>2x0x6xУстановите оконечный режим 7-го канала полукомплекта А>2x4x0xСкомутируйте 1-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x0xСкомутируйте цифровой выход ИТ/А с 1-м каналом ИО-3А полукомплекта А>2x4x1xСкомутируйте 3-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x1xСкомутируйте цифровой выход ИТ/А с 2-м каналом ИО-3А полукомплекта А>2x5x1xСкомутируйте 4-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x1xСкомутируйте цифровой выход ИТ/А с 2-м каналом ИО-3Б полукомплекта А>2x4x2xСкомутируйте 6-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x2xСкомутируйте цифровой выход ИТ/А с 3-м каналом ИО-3А полукомплекта А>2x5x2xСкомутируйте 7-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x2xСкомутируйте цифровой выход ИТ/А с 3-м каналом ИО-3Б полукомплекта А>2x4x3xСкомутируйте 8-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x3xСкомутируйте цифровой выход ИТ/А с 4-м каналом ИО-3А полукомплекта А>2x4x4xСкомутируйте 1-ю пару 2-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x4xСкомутируйте цифровой выход ИТ/А с 5-м каналом ИО-3А полукомплекта А>2x5x4xСкомутируйте 2-ю пару 2-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x4xСкомутируйте цифровой выход ИТ/А с 5-м каналом ИО-3Б полукомплекта А>2x5x6xСкомутируйте 7-ю пару 2-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x6xСкомутируйте цифровой выход ИТ/А с 7-м каналом ИО-3Б полукомплекта А>2x6x0xСкомутируйте 2-ю пару 1-го кабеля ПТРК-10х2 с 1-м каналом ИО-3Б полукомплекта А>2x3x5xСкомутируйте 3-ю пару 2-го кабеля ПТРК-10х2 с 6-м каналом ИО-3А полукомплекта А>2x5x3xСкомутируйте 9-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>1x7x3xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 6-м каналом ИО-3Б полукомплекта А>1x6x5xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 6-м каналом ИО-3Б полукомплекта А|3*3*0*0*0*0*0*2x14x0xУстановите оконечный режим 1-го канала полукомплекта Б>2x14x1xУстановите оконечный режим 2-го канала полукомплекта Б>2x14x2xУстановите оконечный режим 3-го канала полукомплекта Б>2x14x3xУстановите оконечный режим 4-го канала полукомплекта Б>2x11x0xСкомутируйте 2-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x13x0xСкомутируйте цифровой выход ИТ/А с 1-м каналом ИО-3Б полукомплекта Б>2x10x1xСкомутируйте 3-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x8x1xСкомутируйте цифровой выход ИТ/А с 2-м каналом ИО-3А полукомплекта Б>2x10x2xСкомутируйте 6-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x8x2xСкомутируйте цифровой выход ИТ/А с 3-м каналом ИО-3А полукомплекта Б>2x9x3xСкомутируйте 8-ю пару 1-го кабеля ПТРК-10х2 с 4-м каналом ИО-3А полукомплекта Б>2x12x3xСкомутируйте 9-ю пару 1-го кабеля ПТРК-10х2 с 4-м каналом ИО-3Б полукомплекта Б>1x13x2xСоедините 2-х проводной перемычкой 7-ю пару 1-го кабеля ПТРК-10х2 с 1-м каналом ИО-3А полукомплекта Б>1x9x0xСоедините 2-х проводной перемычкой 7-ю пару 1-го кабеля ПТРК-10х2 с 1-м каналом ИО-3А полукомплекта Б|3>13*4>15");
+//2
+speed_combo_box_prepare.addItem(new ValueData("Сценарий №2",1));
+scenario_infoes.push("Общестанционный режим: ОК-2\nСкоростной режим: 2048 кбит/с\nОрганизовать передачу:\n   - 6 каналов тональной частоты (Используя 1-ю, 2-ю, 9-ю пары I-ого кабеля ПТРК-10х2 полукомплекта А и 2-ю, 6-ю, 7-ю пары I-го кабеля ПТРК-10х2 полукомплекта Б)\n   - 3 цифровых канала ЦК-48 (Используя 4-ю, 8-ю 9-ю пары I-го кабеля ПТРК-10х2 полукомплекта Б)\n   - АбЦП со скоростью 2048 кбит/с (Используя полукомплект Б)\nОрганизовать трансфер между каналами:\n   - Канал тональной частоты с 3-й на 6-ю пару 1-го кабеля ПТРК-10х2 полукомлекта А\n   - Канал тональной частоты с 4-й пары 2-го кабеля ПТРК-10х2 полукомплекта А на 2-ю пару 2-го кабеля ПТРК-10х2 полукомлекта Б\n   - Цифровой канал ЦК-48 с 7-й пары 1-го кабеля ПТРК-10х2 на 1-ю пару 2-го кабеля ПТРК-10х2 полукомлекта А");
+scenario_sequential_infoes.push("1|4*1*1*0*0*0*0*2x0x0xУстановите оконечный режим 1-го канала полукомплекта А>2x0x1xУстановите оконечный режим 2-го канала полукомплекта А>2x0x2xУстановите оконечный режим 3-го канала полукомплекта А>2x0x3xУстановите оконечный режим 4-го канала полукомплекта А>2x0x4xУстановите оконечный режим 5-го канала полукомплекта А>2x0x5xУстановите оконечный режим 6-го канала полукомплекта А>2x4x0xСкомутируйте 1-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x0xСкомутируйте цифровой выход ИТ/А с 1-м каналом ИО-3А полукомплекта А>2x5x0xСкомутируйте 2-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x0xСкомутируйте цифровой выход ИТ/А с 1-м каналом ИО-3Б полукомплекта А>2x5x3xСкомутируйте 9-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x3xСкомутируйте цифровой выход ИТ/А с 4-м каналом ИО-3Б полукомплекта А>2x4x1xСкомутируйте 3-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>1x0x1xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 3-м каналом ИО-3А полукомплекта А>1x1x2xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 3-м каналом ИО-3А полукомплекта А>2x5x5xСкомутируйте 4-ю пару 2-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>1x7x5xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 5-м каналом ИО-3Б полукомплекта Б>1x14x4xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 5-м каналом ИО-3Б полукомплекта Б>1x5x2xСоедините 2-х проводной перемычкой 7-ю пару 1-го кабеля ПТРК-10х2 с 5-м каналом ИО-3А полукомплекта А>1x1x4xСоедините 2-х проводной перемычкой 7-ю пару 1-го кабеля ПТРК-10х2 с 5-м каналом ИО-3А полукомплекта А|3*3*0*0*0*0*16*2x14x0xУстановите оконечный режим 1-го канала полукомплекта Б>2x14x1xУстановите оконечный режим 2-го канала полукомплекта Б>2x14x2xУстановите оконечный режим 3-го канала полукомплекта Б>2x14x3xУстановите оконечный режим 4-го канала полукомплекта Б>2x14x4xУстановите оконечный режим 5-го канала полукомплекта Б>2x11x0xСкомутируйте 2-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x13x0xСкомутируйте цифровой выход ИТ/А с 1-м каналом ИО-3Б полукомплекта Б>2x10x2xСкомутируйте 6-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x8x2xСкомутируйте цифровой выход ИТ/А с 3-м каналом ИО-3А полукомплекта Б>2x11x2xСкомутируйте 7-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x13x2xСкомутируйте цифровой выход ИТ/А с 3-м каналом ИО-3Б полукомплекта Б>2x12x1xСкомутируйте 4-ю пару 1-го кабеля ПТРК-10х2 с 2-м каналом ИО-3Б полукомплекта Б>2x9x3xСкомутируйте 8-ю пару 1-го кабеля ПТРК-10х2 с 4-м каналом ИО-3А полукомплекта Б>2x12x3xСкомутируйте 9-ю пару 1-го кабеля ПТРК-10х2 с 4-м каналом ИО-3Б полукомплекта Б|3>13*4>15*12>16");
+//3
+speed_combo_box_prepare.addItem(new ValueData("Сценарий №3",2));
+scenario_infoes.push("Общестанционный режим: ОК-2\nСкоростной режим: 2048 кбит/с\nОрганизовать передачу:\n   - 9 каналов тональной частоты (Используя 1-ю, 6-ю пары I-ого кабеля ПТРК-10х2, 1-ю, 2-ю пары II-го кабеля ПТРК-10х2 полукомплекта А,  1-ю, 2-ю, 4-ю, 7-ю пары I-го кабеля ПТРК-10х2 полукомплекта Б и 7-ю пару II-го кабеля ПТРК-10х2 полукомплекта Б)\n   - 5 цифровых канала ЦК-48 (Используя 3-ю, 8-ю пары I-го кабеля ПТРК-10х2 полукомплекта А, 8-ю, 9-ю пары I-го кабеля ПТРК-10х2 и 2-ю пару II-го кабеля ПТРК-10х2 полукомплекта Б)\n   - АбЦП со скоростью 480 кбит/с (Используя полукомплект Б)\nОрганизовать трансфер между каналами:\n   - Канал тональной частоты с 2-й на 7-ю пару 1-го кабеля ПТРК-10х2 полукомлекта А\n   - Канал тональной частоты с 3-й на 6-ю пару 1-го кабеля ПТРК-10х2 полукомлекта Б\n   - Канал тональной частоты с 4-й пары 2-го кабеля ПТРК-10х2 полукомплекта Б на 6-ю пару 2-го кабеля ПТРК-10х2 полукомлекта А\n   - Цифровой канал ЦК-48 с 1-й пары 2-го кабеля ПТРК-10х2 полукомплекта Б на 3-ю пару 2-го кабеля ПТРК-10х2 полукомлекта А");
+scenario_sequential_infoes.push("1|3*2*2*0*0*0*0*2x0x0xУстановите оконечный режим 1-го канала полукомплекта А>2x0x1xУстановите оконечный режим 2-го канала полукомплекта А>2x0x2xУстановите оконечный режим 3-го канала полукомплекта А>2x0x3xУстановите оконечный режим 4-го канала полукомплекта А>2x0x4xУстановите оконечный режим 5-го канала полукомплекта А>2x0x5xУстановите оконечный режим 6-го канала полукомплекта А>2x0x6xУстановите оконечный режим 7-го канала полукомплекта А>2x4x0xСкомутируйте 1-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x0xСкомутируйте цифровой выход ИТ/А с 1-м каналом ИО-3А полукомплекта А>2x4x2xСкомутируйте 6-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x2xСкомутируйте цифровой выход ИТ/А с 3-м каналом ИО-3А полукомплекта А>2x4x4xСкомутируйте 1-ю пару 2-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x4xСкомутируйте цифровой выход ИТ/А с 5-м каналом ИО-3А полукомплекта А>2x5x4xСкомутируйте 2-ю пару 2-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x4xСкомутируйте цифровой выход ИТ/А с 5-м каналом ИО-3Б полукомплекта А>2x3x1xСкомутируйте 3-ю пару 1-го кабеля ПТРК-10х2 с 2-м каналом ИО-3А полукомплекта А>2x3x3xСкомутируйте 8-ю пару 1-го кабеля ПТРК-10х2 с 4-м каналом ИО-3А полукомплекта А>2x5x0xСкомутируйте 2-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>1x7x0xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 3-м каналом ИО-3Б полукомплекта А>1x6x2xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 3-м каналом ИО-3Б полукомплекта А|5*2*2*2*0*0*9*2x14x0xУстановите оконечный режим 1-го канала полукомплекта Б>2x14x1xУстановите оконечный режим 2-го канала полукомплекта Б>2x14x2xУстановите оконечный режим 3-го канала полукомплекта Б>2x14x3xУстановите оконечный режим 4-го канала полукомплекта Б>2x14x4xУстановите оконечный режим 5-го канала полукомплекта Б>2x14x5xУстановите оконечный режим 6-го канала полукомплекта Б>2x14x6xУстановите оконечный режим 7-го канала полукомплекта Б>	2x10x0xСкомутируйте 1-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x8x0xСкомутируйте цифровой выход ИТ/А с 1-м каналом ИО-3А полукомплекта Б>2x11x0xСкомутируйте 2-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x13x0xСкомутируйте цифровой выход ИТ/А с 1-м каналом ИО-3Б полукомплекта Б>2x11x1xСкомутируйте 4-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x13x1xСкомутируйте цифровой выход ИТ/А с 2-м каналом ИО-3Б полукомплекта Б>2x11x2xСкомутируйте 7-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x13x2xСкомутируйте цифровой выход ИТ/А с 3-м каналом ИО-3Б полукомплекта Б>2x11x6xСкомутируйте 7-ю пару 2-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x13x6xСкомутируйте цифровой выход ИТ/А с 7-м каналом ИО-3Б полукомплекта Б>2x9x3xСкомутируйте 8-ю пару 1-го кабеля ПТРК-10х2 с 4-м каналом ИО-3А полукомплекта Б>2x12x3xСкомутируйте 9-ю пару 1-го кабеля ПТРК-10х2 с 4-м каналом ИО-3Б полукомплекта Б>2x12x4xСкомутируйте 2-ю пару 2-го кабеля ПТРК-10х2 с 5-м каналом ИО-3Б полукомплекта Б>2x10x1xСкомутируйте 3-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>1x8x1xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 3-м каналом ИО-3А полукомплекта А>1x9x2xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 3-м каналом ИО-3А полукомплекта А>2x11x5xСкомутируйте 4-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>1x15x5xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 7-м каналом ИО-3А полукомплекта А>1x1x6xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 7-м каналом ИО-3А полукомплекта А>1x10x4xСоедините 2-х проводной перемычкой 1-ю пару 2-го кабеля ПТРК-10х2 с 6-м каналом ИО-3А полукомплекта А>1x1x5xСоедините 2-х проводной перемычкой 1-ю пару 2-го кабеля ПТРК-10х2 с 6-м каналом ИО-3А полукомплекта А|3>13*4>15*2>16");
+//4
+speed_combo_box_prepare.addItem(new ValueData("Сценарий №4",3));
+scenario_infoes.push("Общестанционный режим: ОК-2\nСкоростной режим: 2х480 кбит/с\nОрганизовать передачу:\n   - 3 каналов тональной частоты (Используя 1-ю, 2-ю, 7-ю пары I-ого кабеля ПТРК-10х2 полукомплекта А)\n   - 3 цифровых канала ЦК-48 (Используя 3-ю, 4-ю, 8-ю пары I-го кабеля ПТРК-10х2 полукомплекта А)\n   - АбЦП со скоростью 480 кбит/с (Используя полукомплект А)\nОрганизовать трансфер между каналами:\n   - Канал тональной частоты с 1-й пары 2-го кабеля ПТРК-10х2 на 8-ю пару 1-го кабеля ПТРК-10х2 полукомлекта Б\n   - Цифровой канал ЦК-48 с 6-й на 9-ю пару 1-го кабеля ПТРК-10х2 полукомлекта А\n   - Цифровой канал ЦК-48 с 2-й на 3-ю пару 2-го кабеля ПТРК-10х2 полукомлекта Б");
+scenario_sequential_infoes.push("1|3*4*0*0*0*0*4*2x0x0xУстановите оконечный режим 1-го канала полукомплекта А>2x0x1xУстановите оконечный режим 2-го канала полукомплекта А>2x0x2xУстановите оконечный режим 3-го канала полукомплекта А>2x0x3xУстановите оконечный режим 4-го канала полукомплекта А>2x4x0xСкоммутируйте 1-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x0xСкоммутируйте цифровой выход ИТ/А с 1-м каналом ИО-3А полукомплекта А>2x5x0xСкоммутируйте 2-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x0xСкоммутируйте цифровой выход ИТ/А с 1-м каналом ИО-3Б полукомплекта А>		2x5x2xСкоммутируйте 7-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x2xСкоммутируйте цифровой выход ИТ/А с 3-м каналом ИО-3Б полукомплекта А>2x3x1xСкоммутируйте 3-ю пару 1-го кабеля ПТРК-10х2 со 2-м каналом ИО-3А полукомплекта Б>2x6x1xСкоммутируйте 4-ю пару 1-го кабеля ПТРК-10х2 со 2-м каналом ИО-3Б полукомплекта Б>2x3x3xСкоммутируйте 8-ю пару 1-го кабеля ПТРК-10х2 с 4-м каналом ИО-3А полукомплекта Б>1x2x2xСоедините 2-х проводной перемычкой 6-ю пару 1-го кабеля ПТРК-10х2 с 4-м каналом ИО-3Б полукомплекта А>1x6x3xСоедините 2-х проводной перемычкой 6-ю пару 1-го кабеля ПТРК-10х2 с 4-м каналом ИО-3Б полукомплекта А|0*0*1*1*0*0*0*2x14x3xУстановите оконечный режим 4-го канала полукомплекта Б>2x14x4xУстановите оконечный режим 5-го канала полукомплекта Б>2x14x5xУстановите оконечный режим 1-го канала полукомплекта Б>2x10x4xСкоммутируйте 1-ю пару 2-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>1x8x4xСоедините 2-х проводной перемычкой 1-ю пару 2-го кабеля ПТРК-10х2 с 4-м каналом ИО-3А полукомплекта Б>1x9x3xСоедините 2-х проводной перемычкой 1-ю пару 2-го кабеля ПТРК-10х2 с 4-м каналом ИО-3А полукомплекта Б>		1x13x4xСоедините 2-х проводной перемычкой 2-ю пару 2-го кабеля ПТРК-10х2 с 5-м каналом ИО-3А полукомплекта Б>1x9x5xСоедините 2-х проводной перемычкой 2-ю пару 2-го кабеля ПТРК-10х2 с 5-м каналом ИО-3А полукомплекта Б|3>13*4>15*1>14");
+//5
+speed_combo_box_prepare.addItem(new ValueData("Сценарий №5",4));
+scenario_infoes.push("Общестанционный режим: ОК-2\nСкоростной режим: 2048 кбит/с\nОрганизовать передачу:\n   - 8 каналов тональной частоты (Используя 1-ю, 2-ю, 3-ю, 7-ю, 9-ю пары I-ого кабеля ПТРК-10х2 полукомплекта А и 2-ю, 3-ю, 4-ю пары I-го кабеля ПТРК-10х2 полукомплекта Б)\n   - 4 цифровых канала ЦК-48 (Используя 6-ю, 7-ю, 8-ю, 9-ю пары I-го кабеля ПТРК-10х2 полукомплекта Б)\n   - АбЦП со скоростью 2048 кбит/с (Используя полукомплект А)\nОрганизовать трансфер между каналами:\n   - Канал тональной частоты с 7-й на 8-ю пару 2-го кабеля ПТРК-10х2 полукомлекта Б\n   - Цифровой канал ЦК-48 с 8-й пары 1-го кабеля ПТРК-10х2 на 1-ю пару 2-го кабеля ПТРК-10х2 полукомлекта А");
+scenario_sequential_infoes.push("1|5*1*0*0*0*0*16*2x0x0xУстановите оконечный режим 1-го канала полукомплекта А>2x0x1xУстановите оконечный режим 2-го канала полукомплекта А>2x0x2xУстановите оконечный режим 3-го канала полукомплекта А>2x0x3xУстановите оконечный режим 4-го канала полукомплекта А>2x0x4xУстановите оконечный режим 5-го канала полукомплекта А>2x4x0xСкоммутируйте 1-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x0xСкоммутируйте цифровой выход ИТ/А с 1-м каналом ИО-3А полукомплекта А>2x5x0xСкоммутируйте 2-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x0xСкоммутируйте цифровой выход ИТ/А с 1-м каналом ИО-3Б полукомплекта А>2x4x1xСкоммутируйте 3-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x1xСкоммутируйте цифровой выход ИТ/А со 2-м каналом ИО-3А полукомплекта А>2x5x2xСкоммутируйте 7-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x2xСкоммутируйте цифровой выход ИТ/А с 3-м каналом ИО-3Б полукомплекта А>2x5x3xСкоммутируйте 9-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x3xСкоммутируйте цифровой выход ИТ/А с 4-м каналом ИО-3Б полукомплекта А>1x2x3xСоедините 2-х проводной перемычкой 8-ю пару 1-го кабеля ПТРК-10х2 с 5-м каналом ИО-3А полукомплекта А>1x1x4xСоедините 2-х проводной перемычкой 8-ю пару 1-го кабеля ПТРК-10х2 с 5-м каналом ИО-3А полукомплекта А1|3*4*1*0*0*0*0*2x14x0xУстановите оконечный режим 1-го канала полукомплекта Б>2x14x1xУстановите оконечный режим 2-го канала полукомплекта Б>2x14x2xУстановите оконечный режим 3-го канала полукомплекта Б>2x14x3xУстановите оконечный режим 4-го канала полукомплекта Б>2x14x6xУстановите оконечный режим 7-го канала полукомплекта Б>2x14x7xУстановите оконечный режим 8-го канала полукомплекта Б>2x11x0xСкоммутируйте 2-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x13x0xСкоммутируйте цифровой выход ИТ/А с 1-м каналом ИО-3Б полукомплекта Б>2x10x1xСкоммутируйте 3-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x8x1xСкоммутируйте цифровой выход ИТ/А со 2-м каналом ИО-3А полукомплекта Б>2x11x1xСкоммутируйте 4-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x13x1xСкоммутируйте цифровой выход ИТ/А со 2-м каналом ИО-3Б полукомплекта Б>2x9x2xСкоммутируйте 6-ю пару 1-го кабеля ПТРК-10х2 с 3-м каналом ИО-3А полукомплекта Б >2x12x2xСкоммутируйте 7-ю пару 1-го кабеля ПТРК-10х2 с 3-м каналом ИО-3Б полукомплекта Б >2x9x3xСкоммутируйте 8-ю пару 1-го кабеля ПТРК-10х2 с 4-м каналом ИО-3А полукомплекта Б >2x12x3xСкоммутируйте 9-ю пару 1-го кабеля ПТРК-10х2 с 4-м каналом ИО-3Б полукомплекта Б >2x11x6xСкоммутируйте 7-ю пару 2-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>1x15x6xСоедините 2-х проводной перемычкой 7-ю пару 2-го кабеля ПТРК-10х2 с 8-м каналом ИО-3А полукомплекта Б>1x9x7xСоедините 2-х проводной перемычкой 7-ю пару 2-го кабеля ПТРК-10х2 с 8-м каналом ИО-3А полукомплекта Б|3>13*4>15*11>14");
+//6
+//speed_combo_box_prepare.addItem(new ValueData("Сценарий №6",5));
+//scenario_infoes.push("Общестанционный режим: ОК-2\nСкоростной режим: 2048 кбит/с\nОрганизовать передачу:\n   - 10 каналов тональной частоты (Используя 1-ю, 2-ю, 8-ю пары I-ого кабеля ПТРК-10х2, 6-ю, 7-ю пары II-ого кабеля ПТРК-10х2 полукомплекта А, 3-ю, 4-ю, 8-ю пары I-го кабеля ПТРК-10х2, 1-ю, 2-ю пары II-ого кабеля ПТРК-10х2 полукомплекта Б)\n   - 5 цифровых канала ЦК-48 (Используя 3-ю пару I-го кабеля ПТРК-10х2, 3-ю, 4-ю пары II-го кабеля ПТРК-10х2 полукомплекта А, 7-ю пару I-го кабеля ПТРК-10х2, 4-ю пару II-го кабеля ПТРК-10х2 полукомплекта Б)\n   - АбЦП со скоростью 2048 кбит/с (Используя полукомплект Б)\nОрганизовать трансфер между каналами:\n   - Канал тональной частоты с 1-й пары 1-го кабеля ПТРК-10х2 полукомплекта Б на 6-ю пару 1-го кабеля ПТРК-10х2 полукомлекта А\n   - Канал тональной частоты с 9-й пары 1-го кабеля ПТРК-10х2 на 3-ю пару 2-го кабеля ПТРК-10х2 полукомлекта Б\n   - Цифровой канал ЦК-48 с 2-й пары 1-го кабеля ПТРК-10х2 полукомплекта Б на 7-ю пару 1-го кабеля ПТРК-10х2 полукомлекта А\n   - Цифровой канал ЦК-48 с 1-й пары 2-го кабеля ПТРК-10х2 полукомплекта А на 6-ю пару 1-го кабеля ПТРК-10х2 полукомлекта Б");
+//scenario_sequential_infoes.push("1|3*1*2*3*0*0*17*2x0x0xУстановите оконечный режим 1-го канала полукомплекта А>2x0x1xУстановите оконечный режим 2-го канала полукомплекта А>2x0x2xУстановите оконечный режим 3-го канала полукомплекта А>2x0x3xУстановите оконечный режим 4-го канала полукомплекта А>2x0x4xУстановите оконечный режим 5-го канала полукомплекта А>2x0x5xУстановите оконечный режим 6-го канала полукомплекта А>2x0x6xУстановите оконечный режим 7-го канала полукомплекта А>2x4x0xСкомутируйте 1-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x0xСкомутируйте цифровой выход ИТ/А с 1-м каналом ИО-3А полукомплекта А>2x5x0xСкомутируйте 2-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x0xСкомутируйте цифровой выход ИТ/А с 1-м каналом ИО-3Б полукомплекта А>	2x4x3xСкомутируйте 8-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x3xСкомутируйте цифровой выход ИТ/А с 4-м каналом ИО-3А полукомплекта А>2x4x6xСкомутируйте 6-ю пару 2-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x6xСкомутируйте цифровой выход ИТ/А с 7-м каналом ИО-3А полукомплекта А>2x5x6xСкомутируйте 7-ю пару 2-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x6xСкомутируйте цифровой выход ИТ/А с 7-м каналом ИО-3Б полукомплекта А>2x3x1xСкомутируйте 3-ю пару 1-го кабеля ПТРК-10х2 с 2-м каналом ИО-3А полукомплекта А>2x3x5xСкомутируйте 3-ю пару 2-го кабеля ПТРК-10х2 с 6-м каналом ИО-3Б полукомплекта А>2x6x5xСкомутируйте 4-ю пару 2-го кабеля ПТРК-10х2 с 6-м каналом ИО-3Б полукомплекта А>1x2x4xСоедините 2-х проводной перемычкой 1-ю пару 2-го кабеля ПТРК-10х2 с 3-м каналом ИО-3А полукомплекта А>1x7x2xСоедините 2-х проводной перемычкой 1-ю пару 2-го кабеля ПТРК-10х2 с 3-м каналом ИО-3А полукомплекта Б|5*2*2*1*0*0*0*2x14x0xУстановите оконечный режим 1-го канала полукомплекта Б>2x14x1xУстановите оконечный режим 2-го канала полукомплекта Б>2x14x2xУстановите оконечный режим 3-го канала полукомплекта Б>2x14x3xУстановите оконечный режим 4-го канала полукомплекта Б>2x14x4xУстановите оконечный режим 5-го канала полукомплекта Б>2x14x5xУстановите оконечный режим 6-го канала полукомплекта Б>	2x10x1xСкомутируйте 3-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x8x1xСкомутируйте цифровой выход ИТ/А с 2-м каналом ИО-3А полукомплекта Б>2x11x1xСкомутируйте 4-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x13x1xСкомутируйте цифровой выход ИТ/А с 2-м каналом ИО-3Б полукомплекта Б>	2x10x3xСкомутируйте 8-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x8x3xСкомутируйте цифровой выход ИТ/А с 3-м каналом ИО-3Б полукомплекта Б>2x10x4xСкомутируйте 1-ю пару 2-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x8x4xСкомутируйте цифровой выход ИТ/А с 2-м каналом ИО-3А полукомплекта Б>2x11x4xСкомутируйте 2-ю пару 2-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x13x4xСкомутируйте цифровой выход ИТ/А с 5-м каналом ИО-3Б полукомплекта Б>2x12x2xСкомутируйте 7-ю пару 1-го кабеля ПТРК-10х2 с 3-м каналом ИО-3Б полукомплекта Б>2x12x5xСкомутируйте 4-ю пару 2-го кабеля ПТРК-10х2 с 6-м каналом ИО-3Б полукомплекта Б>2x9x0xСкомутируйте 1-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/Б>1x8x0xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 3-м каналом ИО-3А полукомплекта Б>1x2x2xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 3-м каналом ИО-3А полукомплекта Б>1x11x0xСоедините 2-х проводной перемычкой 2-ю пару 1-го кабеля ПТРК-10х2 с 3-м каналом ИО-3А полукомплекта Б>1x8x2xСоедините 2-х проводной перемычкой 6-ю пару 1-го кабеля ПТРК-10х2 с 3-м каналом ИО-3А полукомплекта Б>2x11x4xСкомутируйте 9-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>1x13x4xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 7-м каналом ИО-3Б полукомплекта Б>1x8x6xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 7-м каналом ИО-3А полукомплекта Б|3>13*4>15*11>16");
+//7
+speed_combo_box_prepare.addItem(new ValueData("Сценарий №6",5));
+scenario_infoes.push("Общестанционный режим: ОК-2\nСкоростной режим: 2х480 кбит/с\nОрганизовать передачу:\n   - 4 каналов тональной частоты (Используя 3-ю, 9-ю пары I-ого кабеля ПТРК-10х2 полукомплекта А, 4-ю пару I-го кабеля ПТРК-10х2, 9-ю пару II-го кабеля ПТРК-10х2 полукомплекта Б)\n   - 3 цифровых канала ЦК-48 (Используя 4-ю пару II-го кабеля ПТРК-10х2 полукомплекта А, 8-ю пару I-го кабеля ПТРК-10х2, 4-ю пару II-го кабеля ПТРК-10х2 полукомплекта Б)\n   - АбЦП со скоростью 480 кбит/с (Используя полукомплект А)\nОрганизовать трансфер между каналами:\n   - Канал тональной частоты с 2-й на 9-ю пару 2-го кабеля ПТРК-10х2 полукомлекта А");
+scenario_sequential_infoes.push("1|2*0*1*1*0*0*1*2x0x1xУстановите оконечный режим 2-го канала полукомплекта А>2x0x3xУстановите оконечный режим 4-го канала полукомплекта А>2x0x4xУстановите оконечный режим 5-го канала полукомплекта А>2x0x5xУстановите оконечный режим 6-го канала полукомплекта А>2x0x7xУстановите оконечный режим 8-го канала полукомплекта А>2x4x1xСкомутируйте 3-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x1xСкомутируйте цифровой выход ИТ/А с 2-м каналом ИО-3А полукомплекта А>2x5x3xСкомутируйте 9-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x3xСкомутируйте цифровой выход ИТ/А с 4-м каналом ИО-3Б полукомплекта А>	2x6x5xСкомутируйте 4-ю пару 2-го кабеля ПТРК-10х2 с 6-м каналом ИО-3Б полукомплекта А>2x5x4xСкомутируйте 2-ю пару 2-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/Б>1x7x4xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 8-м каналом ИО-3Б полукомплекта Б>1x6x7xСоедините 2-х проводной перемычкой цифровой выход ИТ/А с 8-м каналом ИО-3Б полукомплекта Б|1*1*1*1*0*0*0*2x14x1xУстановите оконечный режим 2-го канала полукомплекта Б>2x14x3xУстановите оконечный режим 4-го канала полукомплекта Б>2x14x5xУстановите оконечный режим 6-го канала полукомплекта Б>2x14x7xУстановите оконечный режим 8-го канала полукомплекта Б>	2x11x1xСкомутируйте 4-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x13x1xСкомутируйте цифровой выход ИТ/А с 2-м каналом ИО-3Б полукомплекта Б>2x11x7xСкомутируйте 9-ю пару 2-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>2x13x7xСкомутируйте цифровой выход ИТ/А с 8-м каналом ИО-3Б полукомплекта Б>2x9x3xСкомутируйте 8-ю пару 1-го кабеля ПТРК-10х2 с 4-м каналом ИО-3А полукомплекта Б>2x12x5xСкомутируйте 4-ю пару 2-го кабеля ПТРК-10х2 с 6-м каналом ИО-3Б полукомплекта Б|3>13*4>15*1>14");
+//8
+speed_combo_box_prepare.addItem(new ValueData("Сценарий №7",6));
+scenario_infoes.push("Общестанционный режим: ОК-2\nСкоростной режим: 2х480 кбит/с\nОрганизовать передачу:\n   - 5 каналов тональной частоты (Используя 1-ю, 2-ю, 3-ю, 4-ю пары I-ого кабеля ПТРК-10х2 полукомплекта А и 2-ю пару I-го кабеля ПТРК-10х2 полукомплекта Б)\n   - 3 цифровых канала ЦК-48 (Используя 6-ю, 7-ю пары I-го кабеля ПТРК-10х2 и 6-ю пару II-го кабеля ПТРК-10х2 полукомплекта А)\n   - АбЦП со скоростью 480 кбит/с (Используя полукомплект Б)\nОрганизовать трансфер между каналами:\n   - Канал тональной частоты с 8-й пары 1-го кабеля ПТРК-10х2 полукомплекта Б на 8-ю пару 1-го кабеля ПТРК-10х2 полукомлекта А\n   - Цифровой канал ЦК-48 с 9-й пары 1-го кабеля ПТРК-10х2 на 1-ю пару 2-го кабеля ПТРК-10х2 полукомлекта Б\n   - Цифровой канал ЦК-48 с 3-й пары 1-го кабеля ПТРК-10х2 полукомплекта Б на 8-ю пару 2-го кабеля ПТРК-10х2 полукомлекта А\n   - Цифровой канал ЦК-48 с 7-й на 9-ю пару 2-го кабеля ПТРК-10х2 полукомлекта А");
+scenario_sequential_infoes.push("1|4*2*0*2*0*0*0*2x0x0xУстановите оконечный режим 1-го канала полукомплекта А>2x0x1xУстановите оконечный режим 2-го канала полукомплекта А>2x0x2xУстановите оконечный режим 3-го канала полукомплекта А>2x0x3xУстановите оконечный режим 4-го канала полукомплекта А>2x0x6xУстановите оконечный режим 7-го канала полукомплекта А>2x0x7xУстановите оконечный режим 8-го канала полукомплекта А>2x4x0xСкоммутируйте 1-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x0xСкоммутируйте цифровой выход ИТ/А с 1-м каналом ИО-3А полукомплекта А>2x5x0xСкоммутируйте 2-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x0xСкоммутируйте цифровой выход ИТ/А с 1-м каналом ИО-3Б полукомплекта А>2x4x1xСкоммутируйте 3-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x2x1xСкоммутируйте цифровой выход ИТ/А со 2-м каналом ИО-3А полукомплекта А>2x5x1xСкоммутируйте 4-ю пару 1-го кабеля ПТРК-10х2 полукомплекта А с аналоговым входом ИТ/А>2x7x1xСкоммутируйте цифровой выход ИТ/А с 1-м каналом ИО-3Б полукомплекта А>2x3x2xСкоммутируйте 6-ю пару 1-го кабеля ПТРК-10х2 с 3-м каналом ИО-3А полукомплекта А>2x6x2xСкоммутируйте 7-ю пару 1-го кабеля ПТРК-10х2 с 3-м каналом ИО-3Б полукомплекта А>2x3x6xСкоммутируйте 6-ю пару 2-го кабеля ПТРК-10х2 с 7-м каналом ИО-3А полукомплекта А>1x5x6xСоедините 2-х проводной перемычкой 7-ю пару 2-го кабеля ПТРК-10х2 с 8-м каналом ИО-3А полукомплекта А>1x6x7xСоедините 2-х проводной перемычкой 7-ю пару 2-го кабеля ПТРК-10х2 с 8-м каналом ИО-3А полукомплекта А|2*2*0*0*0*0*4*2x14x0xУстановите оконечный режим 1-го канала полукомплекта А>2x14x1xУстановите оконечный режим 2-го канала полукомплекта А>2x14x3xУстановите оконечный режим 4-го канала полукомплекта А>2x14x4xУстановите оконечный режим 5-го канала полукомплекта А>2x11x0xСкоммутируйте 2-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/Б>2x13x0xСкоммутируйте цифровой выход ИТ/А с 1-м каналом ИО-3Б полукомплекта Б>1x10x1xСоедините 2-х проводной перемычкой 3-ю пару 1-го кабеля ПТРК-10х2 с 7-м каналом ИО-3А полукомплекта А>1x1x7xСоедините 2-х проводной перемычкой 3-ю пару 1-го кабеля ПТРК-10х2 с 7-м каналом ИО-3А полукомплекта А>1x13x3xСоедините 2-х проводной перемычкой 9-ю пару 1-го кабеля ПТРК-10х2 с 5-м каналом ИО-3А полукомплекта Б>1x9x4xСоедините 2-х проводной перемычкой 9-ю пару 1-го кабеля ПТРК-10х2 с 5-м каналом ИО-3А полукомплекта Б>2x10x3xСкоммутируйте 8-ю пару 1-го кабеля ПТРК-10х2 полукомплекта Б с аналоговым входом ИТ/А>1x8x3xСоедините 2-х проводной перемычкой 8-ю пару 1-го кабеля ПТРК-10х2 с 4-м каналом ИО-3А полукомплекта А>1x1x3xСоедините 2-х проводной перемычкой 8-ю пару 1-го кабеля ПТРК-10х2 с 4-м каналом ИО-3А полукомплекта А|3>13*4>15*2>16");
+
+
+
 	}
-	private function SetSpeed()
+	private function SetVisibleScenarioInfo(val: Boolean)
 	{
-		var speedVector: Vector.<int> = new Vector.<int>();
-		speedVector.push(ModeInfo.S_48,ModeInfo.S_480,ModeInfo.S_2048);
-		this.speed_mode = ModeInfo.S_2048;
-		//this.speed_mode = speedVector[(int)(speedVector.length*Math.random())];
+		this.txt_scenario_info.visible = val;
 	}
-	private function SetRandomCommutation()
+	private function SaveScenario()
 	{
-		//need to be real random
-		this.speed_mode = ModeInfo.S_480;
-		this.local_mode = ModeInfo.L_OK1;
-		this.channel_count.value = 4;
-		this.ktch_count = 2;
-		this.zk_count = 2;
+		var parsedCommonInfo:Array;
+		ModeInfo.modeInfo.SeqCommutation = new Array();
+		ModeInfo.modeInfo.SeqLink = new Array();
+		ModeInfo.modeInfo.scenarioDescription = scenario_infoes[(speed_combo_box_prepare.selectedItem as ValueData).data];
+		
+		parsedCommonInfo = scenario_sequential_infoes[(speed_combo_box_prepare.selectedItem as ValueData).data].split("|",4);
+		this.local_mode = int(parsedCommonInfo[0]);
+
+		var parsedComplectInfo:Array;
+		parsedComplectInfo = parsedCommonInfo[1].split("*",100);
+		ModeInfo.modeInfo.KtchChannels[0] = int(parsedComplectInfo[0]);
+		ModeInfo.modeInfo.Czk86Channels[0] = int(parsedComplectInfo[1]);
+		ModeInfo.modeInfo.KtchChannels[1] = int(parsedComplectInfo[2]);
+		ModeInfo.modeInfo.Czk86Channels[1] = int(parsedComplectInfo[3]);
+		ModeInfo.modeInfo.KtchChannels[2] = int(parsedComplectInfo[4]);
+		ModeInfo.modeInfo.Czk86Channels[2] = int(parsedComplectInfo[5]);
+		ModeInfo.modeInfo.P296n1 = int(parsedComplectInfo[6]);
+		
+		var parsedStepsInfo:Array;
 		var i:int;
-		for (i=0; i<this.cable1_ktch.length; i++)
+		for(i = 7; i < parsedComplectInfo.length; i++)
 		{
-			this.cable1_ktch[i].value = 0;
+			parsedStepsInfo = parsedComplectInfo[i].split(">", 100)
+			ModeInfo.modeInfo.SeqCommutation.push(parsedStepsInfo);
 		}
-		for (i=0; i<this.cable2_ktch.length; i++)
+
+		parsedComplectInfo = parsedCommonInfo[2].split("*",100);
+		ModeInfo.modeInfo.KtchChannels[3] = int(parsedComplectInfo[0]);
+		ModeInfo.modeInfo.Czk86Channels[3] = int(parsedComplectInfo[1]);
+		ModeInfo.modeInfo.KtchChannels[4] = int(parsedComplectInfo[2]);
+		ModeInfo.modeInfo.Czk86Channels[4] = int(parsedComplectInfo[3]);
+		ModeInfo.modeInfo.KtchChannels[5] = int(parsedComplectInfo[4]);
+		ModeInfo.modeInfo.Czk86Channels[5] = int(parsedComplectInfo[5]);
+		ModeInfo.modeInfo.P296n2 = int(parsedComplectInfo[6]);
+		
+		for(i = 7; i < parsedComplectInfo.length; i++)
 		{
-			this.cable2_ktch[i].value = 0;
+			parsedStepsInfo = parsedComplectInfo[i].split(">", 100);
+			ModeInfo.modeInfo.SeqCommutation.push(parsedStepsInfo);
 		}
-		for (i=0; i<this.cable1_zk.length; i++)
-		{
-			this.cable1_zk[i].value = 0;
+		
+		
+		var parsedLinkInfo:Array;
+		parsedLinkInfo = parsedCommonInfo[3].split("*",100);
+		
+		for(i = 0; i < parsedLinkInfo.length; i++){
+			ModeInfo.modeInfo.SeqLink.push(parsedLinkInfo[i].split(">",100));
 		}
-		for (i=0; i<this.cable2_zk.length; i++)
-		{
-			this.cable2_zk[i].value = 0;
-		}
-		this.cable1_ktch[0].value = 1;
-		this.cable1_ktch[1].value = 1;
-		this.cable1_zk[0].value = 1;
-		this.cable1_zk[2].value = 1;
-		trace(cable1_ktch);
-		trace(cable1_zk);
+
 	}
 }
 }

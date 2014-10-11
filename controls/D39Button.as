@@ -11,6 +11,7 @@
 		private var emptyButtonID: String;
 		public function D39Button() 
 		{
+			this.OneState=true;
 			this.InitializeControlElement(ControlElement.S_BINARY,ControlElement.S_B_DEFAULT,true);
 			this.addEventListener(MouseEvent.CLICK,SwitchMouseDown);			
 		}
@@ -38,6 +39,8 @@
 		}
 		private function SwitchMouseDown(e: MouseEvent)
 		{
+			if(this.blocked	== true) return;
+			
 			var newState: int;
 			if (this.CurrentState==ControlElement.S_B_DEFAULT)
 				newState=ControlElement.S_B_CHOSEN;

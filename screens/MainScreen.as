@@ -3,27 +3,29 @@
 	import flash.display.MovieClip;
 	import blocks.ModeInfo;
 	
+	
 	public dynamic class MainScreen extends MovieClip 
 	{
 		public var info: ModeInfo;
 		public function MainScreen() 
 		{
 			InitializeStartScreen();
+			// constructor code
 		}
 		public function InitializeModeScreen()
 		{
 			this.gotoAndStop("ModeScreen");
-			mode_screen.InitializeStartModeScreen(this);
+			this.mode_screen.InitializeStartModeScreen(this);
 		}	
 		public function InitializeStartScreen()
 		{
 			this.gotoAndStop("StartScreen");
-			start_screen.InitializeStartMainScreen(this);
+			this.start_screen.InitializeStartMainScreen(this);
 		}			
 		public function InitializeGlobalScreen()
 		{
 			this.gotoAndStop("GlobalScreen");
-			global_screen.InitializeGlobalScreen(this);
+			this.global_screen.InitializeGlobalScreen(this);
 		}
 		public function InitializeIPScreen()
 		{
@@ -63,6 +65,8 @@
 		public function InitializeFinalScreen()
 		{
 			this.gotoAndStop("Final");
+			FinalScreenInstance.InitScreen(this);
+			
 		}
 		public function InitializeInputBlock()
 		{

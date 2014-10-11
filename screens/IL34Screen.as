@@ -14,7 +14,8 @@
 		{
 			mainScreen=p_mainScreen;
 			outButton.addEventListener(MouseEvent.CLICK,GoToNewScreen);
-			this.InitializeBlockScreen(IL34Unit, textBox,outButton);
+			backButton1.addEventListener(MouseEvent.CLICK,backScreen);
+			this.InitializeBlockScreen(IL34Unit, textBox,outButton, textBoxNext);
 			speedTextbox.text = "Выбранная скорость: "+ModeInfo.SpeedString()+" кбит";
 		}
 	

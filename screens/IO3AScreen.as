@@ -13,7 +13,8 @@
 		{
 			mainScreen=p_mainScreen;
 			outButton.addEventListener(MouseEvent.CLICK,GoToNewScreen);
-			this.InitializeBlockScreen(IO3AUnit, textBox,outButton);
+			backButton1.addEventListener(MouseEvent.CLICK,backScreen);
+			this.InitializeBlockScreen(IO3AUnit, textBox,outButton, textBoxNext);
 		}
 	
 		public function IO3AScreen() 

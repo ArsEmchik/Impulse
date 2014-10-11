@@ -3,6 +3,7 @@
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
 	import blocks.D39Block;
+	import blocks.ModeInfo;
 	
 	
 	public class D39Screen extends BlockScreen {
@@ -20,7 +21,9 @@
 		{
 			mainScreen=p_mainScreen;
 			outButton.addEventListener(MouseEvent.CLICK,GoToNewScreen);
-			this.InitializeBlockScreen(D39Unit, textBox,outButton);
+			backButton1.addEventListener(MouseEvent.CLICK,backScreen);
+			taskTextBox.text = ModeInfo.modeInfo.scenarioDescription;
+			this.InitializeBlockScreen(D39Unit, textBox,outButton, textBoxNext);
 		}		
 	}
 	

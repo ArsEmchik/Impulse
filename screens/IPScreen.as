@@ -19,7 +19,8 @@
 		{
 			mainScreen=p_mainScreen;
 			outButton.addEventListener(MouseEvent.CLICK,GoToNewScreen);
-			this.InitializeBlockScreen(IPUnit,textBox,outButton);
+			backButton1.addEventListener(MouseEvent.CLICK,backScreen);
+			this.InitializeBlockScreen(IPUnit,textBox,outButton, textBoxNext);
 		}	
 	}
 	

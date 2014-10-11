@@ -133,9 +133,9 @@
 			CreateCommunication();
 		}
 		
-		public override function InitializeImpulsUnit(pDecriptionField: TextField, outButton: Button)
+		public override function InitializeImpulsUnit(pDecriptionField: TextField, outButton: Button, txtNext:TextField)
 		{
-			super.InitializeImpulsUnit(pDecriptionField,outButton);
+			super.InitializeImpulsUnit(pDecriptionField,outButton,txtNext);
 			switch (ModeInfo.modeInfo.Mode)
 			{
 				case ModeInfo.M_PREPARING:

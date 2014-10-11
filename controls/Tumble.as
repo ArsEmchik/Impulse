@@ -17,9 +17,9 @@
 		private function SwitchMouseDown(e: MouseEvent)
 		{
 			var newState: int;
-			if (this.CurrentState==3)
+			if (this.CurrentState==2)
 				newState=1;
-			else newState=this.CurrentState+1;
+			else newState=2;
 			this.GoToState(newState,true);
 		}
 	}
