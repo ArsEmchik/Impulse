@@ -4,9 +4,13 @@
 	import buttons.MessageBoxClass;
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
+	import fl.controls.Button;
 	
 	public class MessageBoxClass extends MovieClip
 	{
+		/*protected var tb_text: TextField;
+		protected var b_ok: Button;*/
+		
 		protected var ok_fun: Function;
 		protected var parent_movieclip: MovieClip;
 		public function MessageBoxClass()

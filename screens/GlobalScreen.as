@@ -5,14 +5,33 @@
 	import blocks.ModeInfo;
 	import buttons.ButtonClass;
 	import fl.controls.Button;
+	import flash.text.TextField;
 	
 	
 	public class GlobalScreen extends MovieClip {
 		
-		var main_screen: MainScreen;
-		var modeInfo: ModeInfo;
-		var blockButtons: Vector.<ButtonClass>;
-		var addedErrorMessage: Boolean=false;
+		/*private var errorArea: ErrorArea;
+		private var block_ita: ITAImage;
+		private var block_ip: IPImage;
+		private var block_is: ISImage;
+		private var block_io3a: IO3AImage;
+		private var block_il34: IL34Image;
+		private var block_io4: IO4Image;
+		private var block_d0031: D0034Image;
+		private var block_io3a2: IO3AImage;
+		private var block_il342: IL34Image;
+		private var block_io42: IO4Image;
+		private var block_d39: D39Image;
+		private var input_block: InputShield;
+		private var errorButton: Button;
+		private var exitButton: Button;
+		private var text_field: TextField;
+		private var errorCount: TextField;*/
+		
+		private var main_screen: MainScreen;
+		private var modeInfo: ModeInfo;
+		private var blockButtons: Vector.<ButtonClass>;
+		private var addedErrorMessage: Boolean=false;
 		
 		public function GlobalScreen() 
 		{
@@ -37,7 +56,7 @@
 		{
 			modeInfo = ModeInfo.modeInfo;
 			main_screen=p_main_screen;
-			modeInfo.TraceModeInfo();	
+			trace(modeInfo);	
 			AddMouseUp();
 			SetErrorCount();
 			exitButton.addEventListener(MouseEvent.CLICK,ExitBTNClick);

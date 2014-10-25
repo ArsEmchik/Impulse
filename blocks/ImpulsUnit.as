@@ -56,6 +56,7 @@
 			for (item in ControlDictionary)
 			{
 				(ControlDictionary[item] as ControlElement).elementName = item;
+				(ControlDictionary[item] as ControlElement).SetParent(this);
 				ControlElements.push(ControlDictionary[item]);
 			}
 		}
@@ -118,7 +119,7 @@
 				if (ImpulseMode==ModeInfo.MM_INSTRUCTION)
 				{
 					TrainingSequence[blockState].EmitControl();
-				trace(TrainingSequence[blockState].elementName);
+					trace(TrainingSequence[blockState].elementName);
 					this.decriptionField.text = this.trainingDescriptions[blockState];
 				} else this.decriptionField.text="";
 				TrainingSequence[blockState].SetNessesaryState(trainingState[blockState]);
@@ -246,8 +247,6 @@
 			var firstTime: Boolean=true;
 			for (i=0; i<ControlElements.length; i++)
 			{
-				
-				
 				if (ControlStates[i]!=ControlElements[i].CurrentState)
 				{
 					if (firstTime)

@@ -78,6 +78,7 @@
   <hiddenPaths>
     <hidden path=".settings" />
     <hidden path="build" />
+    <hidden path="obj" />
   </hiddenPaths>
   <!-- Executed before build -->
   <preBuildCommand />

@@ -3,80 +3,93 @@
 	import flash.display.MovieClip;
 	import blocks.ModeInfo;
 	
-	
 	public dynamic class MainScreen extends MovieClip 
 	{
+		/*private var start_screen: StartMainScreen;
+		private var mode_screen: ModeScreen;
+		private var global_screen: GlobalScreen;
+		private var ip_screen: IPScreen;
+		private var io3a_screen: IO3AScreen;
+		private var final_screen: FinalScreen;
+		private var ita_screen: ITAScreen;
+		private var is_screen: ISScreen;
+		private var io4_screen: IO4Screen;
+		private var il34_screen: IL34Screen;
+		private var block_input_screen: BlockInputScreen;
+		private var d39_screen: D39Screen;
+		private var d00_screen: D00Screen;*/
+		
 		public var info: ModeInfo;
+		
 		public function MainScreen() 
 		{
 			InitializeStartScreen();
-			// constructor code
 		}
 		public function InitializeModeScreen()
 		{
-			this.gotoAndStop("ModeScreen");
-			this.mode_screen.InitializeStartModeScreen(this);
+			gotoAndStop("ModeScreen");
+			mode_screen.InitializeStartModeScreen(this);
 		}	
 		public function InitializeStartScreen()
 		{
-			this.gotoAndStop("StartScreen");
-			this.start_screen.InitializeStartMainScreen(this);
+			gotoAndStop("StartScreen");
+			start_screen.InitializeStartMainScreen(this);
 		}			
 		public function InitializeGlobalScreen()
 		{
-			this.gotoAndStop("GlobalScreen");
-			this.global_screen.InitializeGlobalScreen(this);
+			gotoAndStop("GlobalScreen");
+			global_screen.InitializeGlobalScreen(this);
 		}
 		public function InitializeIPScreen()
 		{
-			this.gotoAndStop("IPBLock");
-			IPScreen.InitializeIPScreen(this);
+			gotoAndStop("IPBLock");
+			ip_screen.InitializeIPScreen(this);
 		}
 		public function InitializeIO3AScreen()
 		{
-			this.gotoAndStop("IO3ABlock");
-			IO3AScreen.InitializeIO3AScreen(this);
+			gotoAndStop("IO3ABlock");
+			io3a_screen.InitializeIO3AScreen(this);
 		}
 		public function InitializeIO4Screen()
 		{
-			this.gotoAndStop("IO4Block");
-			IO4Screen.InitializeIO4Screen(this);
+			gotoAndStop("IO4Block");
+			io4_screen.InitializeIO4Screen(this);
 		}
 		public function InitializeITAScreen()
 		{
-			this.gotoAndStop("ITABlock");
-			ITAScreen.InitializeITAScreen(this);
+			gotoAndStop("ITABlock");
+			ita_screen.InitializeITAScreen(this);
 		}		
 		public function InitializeISScreen()
 		{
-			this.gotoAndStop("ISBlock");
-			ISScreen.InitializeISScreen(this);
+			gotoAndStop("ISBlock");
+			is_screen.InitializeISScreen(this);
 		}	
 		public function InitializeIL34Screen()
 		{
-			this.gotoAndStop("IL34Block");
-			IL34Screen.InitializeIL34Screen(this);
+			gotoAndStop("IL34Block");
+			il34_screen.InitializeIL34Screen(this);
 		}	
 		public function InitializeD00Screen()
 		{
-			this.gotoAndStop("D00Block");
-			D00Screen.InitializeD00Screen(this);
+			gotoAndStop("D00Block");
+			d00_screen.InitializeD00Screen(this);
 		}
 		public function InitializeFinalScreen()
 		{
-			this.gotoAndStop("Final");
-			FinalScreenInstance.InitScreen(this);
+			gotoAndStop("Final");
+			final_screen.InitScreen(this);
 			
 		}
 		public function InitializeInputBlock()
 		{
-			this.gotoAndStop("BlockInput");
-			InputBlockScreen.InitializeInputBlockScreen(this);
+			gotoAndStop("BlockInput");
+			block_input_screen.InitializeInputBlockScreen(this);
 		}
 		public function InitializeD39Block()
 		{
-			this.gotoAndStop("D39Block");
-			D39BlockScreen.InitializeD39Screen(this);
+			gotoAndStop("D39Block");
+			d39_screen.InitializeD39Screen(this);
 		}		
 	}
 	

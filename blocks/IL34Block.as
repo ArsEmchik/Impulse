@@ -7,7 +7,53 @@
 	import blocks.ImpulsUnit;
 	
 	public class IL34Block extends  ImpulsUnit {
+		/*private var greenBulb1: GreenBulb;
+		private var greenBulb2: GreenBulb;
+		private var greenBulb3: GreenBulb;
+		private var greenBulb4: GreenBulb;
+		private var greenBulb5: GreenBulb;
+		private var greenBulb6: GreenBulb;
+		private var greenBulb7: GreenBulb;
+		private var greenBulb8: GreenBulb;
+		private var greenBulb9: GreenBulb;
 		
+		private var redBulb1: RedBulb;
+		private var redBulb2: RedBulb;
+		private var redBulb3: RedBulb;
+		private var redBulb4: RedBulb;
+		private var redBulb5: RedBulb;
+		private var redBulb6: RedBulb;
+		private var redBulb7: RedBulb;
+		
+		private var jumper1: Jumper;
+		private var jumper2: Jumper;
+		private var jumper3: Jumper;
+		private var jumper4: Jumper;
+		private var jumper5: Jumper;
+		private var jumper6: Jumper;
+		private var jumper7: Jumper;
+		private var jumper8: Jumper;
+		private var jumper9: Jumper;
+		private var jumper10: Jumper;
+		private var jumper11: Jumper;
+		private var jumper12: Jumper;
+		private var jumper13: Jumper;
+		private var jumper14: Jumper;
+		private var jumper15: Jumper;
+		private var jumper16: Jumper;
+		private var jumper17: Jumper;
+		private var jumper18: Jumper;
+		private var jumper19: Jumper;
+		private var jumper20: Jumper;
+		private var jumper21: Jumper;
+		private var jumper22: Jumper;
+		private var jumper23: Jumper;
+		private var jumper24: Jumper;
+		private var jumper25: Jumper;
+		private var jumper26: Jumper;
+		
+		private var turnSwitch: TurnOnOffMetal;
+		private var tumble: IIL34Tumble;*/
 		
 		public function IL34Block() {
 			super();

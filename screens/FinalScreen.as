@@ -4,9 +4,15 @@
 	import blocks.ModeInfo;
 	import screens.MainScreen;
 	import flash.events.MouseEvent;
+	import fl.controls.Button;
+	import flash.text.TextField;
 	
 	
 	public class FinalScreen extends MovieClip {
+		/*private var goStartScreen: Button;
+		private var errorButton: Button;
+		private var errorArea: ErrorArea;
+		private var txtFinalOutputMessage: TextField;*/
 		
 		var addedErrorMessage: Boolean=false;
 		private var main_screen: MainScreen;

@@ -7,12 +7,56 @@
 	import controls.D39Button;
 	import controls.Bulb;
 	import controls.Tumble;
-	import controls.Switch;
 	import controls.DigitPanel;
 	
 	
 	public class D39Block extends ImpulsUnit
 	{
+		/*private var button1: D39Button;
+		private var button2: D39Button;
+		private var button3: D39Button;
+		private var button4: D39Button;
+		private var button5: D39Button;
+		private var button6: D39Button;
+		private var button7: D39Button;
+		private var button8: D39Button;
+		private var button9: D39Button;
+		private var button10: D39Button;
+		private var button11: D39Button;
+		private var button12: D39Button;
+		private var button13: D39Button;
+		private var button14: D39Button;
+		private var button15: D39Button;
+		private var button16: D39Button;
+		private var button17: D39Button;
+		private var button18: D39Button;
+		private var button19: D39Button;
+		
+		private var panel1: D39FullDigitPanel;
+		private var panel2: D39FullDigitPanel;
+		private var panel3: D39FullDigitPanel;
+		private var panel4: D39FullDigitPanel;
+		private var panel5: D39FullDigitPanel;
+		private var panel6: D39FullDigitPanel;
+		private var panel7: D39FullDigitPanel;
+		private var panel8: D39FullDigitPanel;
+		private var panel9: D39FullDigitPanel;
+		private var panel10: D39FullDigitPanel;
+		private var panel11: D39FullDigitPanel;
+		private var panel12: D39FullDigitPanel;
+		private var panel13: D39FullDigitPanel;
+		private var panel14: D39FullDigitPanel;
+		private var panel15: D39FullDigitPanel;
+		private var panel16: D39FullDigitPanel;
+		
+		private var turnOnOff1: D39TurnOnOff;
+		private var turnOnOff2: D39TurnOnOff;
+		
+		private var greenBulb1: D39GreenBulb;
+		private var greenBulb2: D39GreenBulb;
+		private var greenBulb3: D39GreenBulb;
+		private var greenBulb4: D39GreenBulb;*/
+		
 		var comm_channels: Vector.<D39Button> = new Vector.<D39Button>(2);
 		var comm_stage:int;
 		

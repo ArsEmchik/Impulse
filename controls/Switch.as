@@ -1,27 +1,28 @@
-﻿package controls {
+﻿package controls
+{
 	
 	import flash.display.MovieClip;
 	import blocks.ControlElement;
 	import flash.events.MouseEvent;
-
-
+	
 	public class Switch extends ControlElement
 	{
 		
-		public function Switch() 
+		public function Switch()
 		{
-			// constructor code
-			this.InitializeControlElement(ControlElement.S_BINARY,ControlElement.S_B_DEFAULT,true);
-			this.addEventListener(MouseEvent.CLICK,SwitchMouseDown);
+			InitializeControlElement(ControlElement.S_BINARY, ControlElement.S_B_DEFAULT, true);
+			addEventListener(MouseEvent.CLICK, SwitchMouseDown);
 		}
-		private function SwitchMouseDown(e: MouseEvent)
+		
+		private function SwitchMouseDown(e:MouseEvent)
 		{
-			var newState: int;
-			if (this.CurrentState==ControlElement.S_B_DEFAULT)
-				newState=ControlElement.S_B_CHOSEN;
-			else newState=ControlElement.S_B_DEFAULT;
-			this.GoToState(newState,true);
+			var newState:int;
+			if (CurrentState == ControlElement.S_B_DEFAULT)
+				newState = ControlElement.S_B_CHOSEN;
+			else
+				newState = ControlElement.S_B_DEFAULT;
+			GoToState(newState, true);
 		}
 	}
-	
+
 }

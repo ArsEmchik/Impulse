@@ -1,5 +1,9 @@
 ﻿package blocks
 {
+	import flash.sampler.Sample;
+	import flash.globalization.StringTools;
+	import flash.utils.getQualifiedClassName;
+
 	public class ModeInfo
 	{
 	
@@ -75,21 +79,25 @@
 		{
 			
 		}
-		public function TraceModeInfo()
+		
+		public function toString(): String
 		{
-			trace("Main mode:",MainMode);
-			trace("Mode:",Mode);
-			trace("LocalMode:",LocalMode);
-			trace("Speed:",Speed);
-			trace("ChannelCount:",ChannelCount);
-			trace("KtchCount:",KtchCount);
-			trace("Czk48Count:",Czk48Count);
-			trace("Czk86Channels:",Czk86Channels);
-			trace("KtchChannels:",KtchChannels);
-			trace("P296 1",P296n1);
-			trace("P296 2",P296n2);
-			trace(this.blockInfo);
+			return getQualifiedClassName(this) + " Object {"
+			+ "\n MainMode: " + MainMode
+			+ "\n Mode:" + Mode
+			+ "\n LocalMode:" + LocalMode
+			+ "\n Speed:" + Speed
+			+ "\n ChannelCount:" + ChannelCount
+			+ "\n KtchCount:" + KtchCount
+			+ "\n Czk48Count:" + Czk48Count
+			+ "\n Czk86Channels:" + Czk86Channels
+			+ "\n KtchChannels:" + KtchChannels
+			+ "\n P296 1: " + P296n1
+			+ "\n P296 2: " + P296n2
+			+ "\n blockInfo: " + blockInfo
+			+ "\n}";
 		}
+		
 		public static function InitializeModeInfo()
 		{
 			modeInfo = new ModeInfo();
