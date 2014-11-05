@@ -5,9 +5,7 @@
 	
 	public class D31Jumper extends ControlElement
 	{
-		private static var prevClicked: D31Jumper = null;
-
-		private var linked: D31Jumper;
+		private static var prevClicked: ControlElement = null;
 		private var wire: Wire;
 
 		public function D31Jumper()
@@ -18,46 +16,55 @@
 
 		private function SwitchMouseDown(e:MouseEvent)
 		{
+			if (blocked)
+			{
+				return;
+			}
+			
 			var newState:int;
 			if (prevClicked != null)
 			{
 				if (CurrentState == ControlElement.S_B_DEFAULT)
 				{
 					newState = ControlElement.S_B_CHOSEN;
-					linked = prevClicked;
-					linked.linked = this;
+					linkedElement = prevClicked;
+					linkedElement.linkedElement = this;
 					prevClicked = null;
-					
-					trace("Coords: ", X, " ", Y);
 					
 					if (wire == null)
 					{
 						wire = new Wire(parentUnit);
 					}
 					
-					wire.drawWire(this, linked);
+					wire.drawWire(this, linkedElement);
 				}
 			}
 			else
 			{
 				if (CurrentState == ControlElement.S_B_DEFAULT)
 				{
-					trace("Coords: ", X, " ", Y);
 					newState = ControlElement.S_B_CHOSEN;
 					prevClicked = this;
 				}
 				else
 				{
-					newState = ControlElement.S_B_DEFAULT;
-					prevClicked = linked;
-					linked.linked = null;
-					linked = null;
+					if (wire != null)
+					{
+						wire.eraseWire();
+					}
 					
-					wire.eraseWire();
+					if ((linkedElement as D31Jumper).wire != null)
+					{
+						(linkedElement as D31Jumper).wire.eraseWire();
+					}
+					
+					newState = ControlElement.S_B_DEFAULT;
+					prevClicked = linkedElement;
+					linkedElement.linkedElement = null;
+					linkedElement = null;
 				}
 			}
 			
-			trace("State: ", newState);
 			GoToState(newState, true);
 		}
 	}

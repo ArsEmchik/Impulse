@@ -56,7 +56,7 @@
 		{
 			modeInfo = ModeInfo.modeInfo;
 			main_screen=p_main_screen;
-			trace(modeInfo);	
+			//trace(modeInfo);	
 			AddMouseUp();
 			SetErrorCount();
 			exitButton.addEventListener(MouseEvent.CLICK,ExitBTNClick);
@@ -83,7 +83,6 @@
 			exitButton.visible = false;
 			var i: int;
 			var count: int=0;
-			trace(modeInfo.blockInfo);
 			for (i=0; i<blockButtons.length; i++)
 			{
 				if (modeInfo.blockInfo[i]!=null && !modeInfo.blockInfo[i].blockDone)

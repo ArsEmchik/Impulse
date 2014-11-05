@@ -31,24 +31,35 @@
 		
 		public static const S_101:int = 101;
 		
+		private var yellowFilter:GlowFilter = new GlowFilter(0xFFFF00, 1, 6, 6);
+		private var greenFilter:GlowFilter = new GlowFilter(0x00FF00, 1, 16, 16, 5);
+		
 		protected var parentUnit: ImpulsUnit;
+		
+		public var linkedElement: ControlElement = null;
+		public var shouldBeLinkedWith: ControlElement = null;
 		
 		public var StateCount:int; // сколько всего состояний
 		public var CurrentState:int; // текущее состояние
 		public var MouseEnabled:Boolean; // лампочки нельзя менять, а например тумблеры - можно
 		public var blocked:Boolean; // блокировка - например для режима обучения можно нажимать только на правильный контрол. Остальные блокированы
-		private var nesesaryState:int; // ожидаемое состояние - в основном нужно для ImpulsUnit
-		private var emiting:Boolean // подсвечивается ли контрол
-		private var MouseOver:Boolean; // мышка над этим констролом?
+		
 		public var OneState:Boolean = false; // у констрола есть только 1 состояние?(это частный случай)
+		public var isErrorChecked:Boolean = false; // была ли проверка на ошибку с этим контролом?
 		public var elementName:String;
 		
-		protected var pos: Point;
+		private var nesesaryState:int; // ожидаемое состояние - в основном нужно для ImpulsUnit
+		private var hasGlow:Boolean // подсвечивается ли контрол
+		private var MouseOver:Boolean; // мышка над этим констролом?
+		
 		public var X: int;
 		public var Y: int;
 		
 		public function ControlElement()
 		{
+			super();
+			X = this.x + width/2;
+			Y = this.y + height/2;
 		}
 		
 		protected function InitializeControlElement(p_StateCount:int, p_CurrentState:int, p_MouseEnabled:Boolean)
@@ -56,29 +67,23 @@
 			StateCount = p_StateCount; // S_BINARY
 			CurrentState = p_CurrentState; // S_B_DEFAULT
 			MouseEnabled = p_MouseEnabled;
+			
 			GoToState(CurrentState);
+			
 			if (MouseEnabled)
+			{
 				InitializeMouseOverOut();
+			}
 		}
 		
 		// меняет состояние на указанное
 		public function GoToState(newState:int, reallyPressed:Boolean = false)
 		{
-			if (!IsBlocked())
-			{
-				CurrentState = newState; // S_B_DEFAULT -> S_B_CHOSEN
-				SwitchStateCount();
-				if (reallyPressed && parentUnit != null && ((emiting && parentUnit.ImpulseMode == ModeInfo.MM_INSTRUCTION) || parentUnit.ImpulseMode == ModeInfo.MM_TRAINIGWITHHINT || parentUnit.ImpulseMode == ModeInfo.MM_TRAINIGWITHOUTHINT))
-				{
-					if (nesesaryState == CurrentState)
-						this.parentUnit.EmitNext();
-				}
-			}
-			else
+			if (IsBlocked())
 			{
 				if (reallyPressed)
 				{
-					this.parentUnit.TestTraining(this);
+					parentUnit.TestTraining(this);
 				}
 				else
 				{
@@ -86,7 +91,19 @@
 					SwitchStateCount();
 				}
 			}
-		
+			else
+			{
+				CurrentState = newState; // S_B_DEFAULT -> S_B_CHOSEN
+				SwitchStateCount();
+				if (reallyPressed && parentUnit != null 
+				&& ((hasGlow && parentUnit.ImpulseMode == ModeInfo.MM_INSTRUCTION) 
+				|| parentUnit.ImpulseMode == ModeInfo.MM_TRAINIGWITHHINT 
+				|| parentUnit.ImpulseMode == ModeInfo.MM_TRAINIGWITHOUTHINT))
+				{
+					if (nesesaryState == CurrentState)
+						parentUnit.NextStep();
+				}
+			}
 		}
 		
 		private function SwitchStateCount()
@@ -116,45 +133,64 @@
 		
 		protected function GoTo3State()
 		{
-			this.gotoAndStop(CurrentState);
+			gotoAndStop(CurrentState);
 		}
 		
 		private function InitializeMouseOverOut()
 		{
-			this.addEventListener(MouseEvent.ROLL_OVER, ControlElementMouseOver);
-			this.addEventListener(MouseEvent.ROLL_OUT, ControlElementMouseOut);
+			addEventListener(MouseEvent.ROLL_OVER, OnMouseOver);
+			addEventListener(MouseEvent.ROLL_OUT, OnMouseOut);
 		}
 		
 		protected function GoToBinaryState()
 		{
 			if (CurrentState == S_B_DEFAULT)
-				this.gotoAndStop("Default");
+				gotoAndStop("Default");
 			else
-				this.gotoAndStop("Chosen");
+				gotoAndStop("Chosen");
 		}
 		
 		private function GoTo11State()
 		{
-			this.gotoAndStop(CurrentState);
+			gotoAndStop(CurrentState);
 		}
 		
-		private function ControlElementMouseOver(e:MouseEvent)
+		private function OnMouseOver(e:MouseEvent)
 		{
-			var newFilter:GlowFilter = new GlowFilter(0xFFFF00, 1, 6, 6);
-			this.filters = [newFilter];
+			filters = [yellowFilter];
 			MouseOver = true;
 		}
 		
-		private function ControlElementMouseOut(e:MouseEvent)
+		private function OnMouseOut(e:MouseEvent)
 		{
-			if (emiting)
+			if (hasGlow)
 			{
-				var newFilter:GlowFilter = new GlowFilter(0x00FF00, 1, 16, 16, 5);
-				this.filters = [newFilter];
+				filters = [greenFilter];
 			}
 			else
-				this.filters = [];
+			{
+				filters = [];
+			}
 			MouseOver = false;
+		}
+		
+		// подствечиваться жёлтым или зелёным цветом
+		public function AddGlow()
+		{
+			hasGlow = true;
+			if (MouseOver)
+				OnMouseOver(null);
+			else
+				OnMouseOut(null);
+		}
+		
+		public function RemoveGlow()
+		{
+			hasGlow = false;
+			if (MouseOver)
+				OnMouseOver(null);
+			else
+				OnMouseOut(null);
 		}
 		
 		public function BlockElement()
@@ -175,9 +211,6 @@
 		public function SetParent(ParentUnit:ImpulsUnit)
 		{
 			parentUnit = ParentUnit;
-			pos = parentUnit.localToGlobal(new Point(this.x, this.y));
-			X = this.x + width/2;
-			Y = this.y + height/2;
 		}
 		
 		public function SetNessesaryState(pNesesaryState:int)
@@ -185,28 +218,9 @@
 			nesesaryState = pNesesaryState;
 		}
 		
-		// подствечиваться жёлтым или зелёным цветом
-		public function EmitControl()
-		{
-			this.emiting = true;
-			if (MouseOver)
-				ControlElementMouseOver(null);
-			else
-				ControlElementMouseOut(null);
-		}
-		
-		public function RemoveEmit()
-		{
-			this.emiting = false;
-			if (MouseOver)
-				ControlElementMouseOver(null);
-			else
-				ControlElementMouseOut(null);
-		}
-		
 		public override function toString():String
 		{
-			return (this.CurrentState.toString())
+			return name;
 		}
 	}
 }
