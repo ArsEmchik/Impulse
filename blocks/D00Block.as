@@ -1,13 +1,261 @@
 ﻿package blocks
 {
 	import controls.D31Jumper;
-	import flash.display.MovieClip;
-	import flash.events.MouseEvent;
-	import flash.text.TextField;
 	import fl.controls.Button;
+	import flash.text.TextField;
 	
 	public class D00Block extends ImpulsUnit
 	{
+		public var ioACh1ModeEndpoint:D31Jumper;
+		public var ioACh1ModeCenter:D31Jumper;
+		public var ioACh1ModeTransit:D31Jumper;
+		public var ioACh2ModeEndpoint:D31Jumper;
+		public var ioACh2ModeCenter:D31Jumper;
+		public var ioACh2ModeTransit:D31Jumper;
+		public var ioACh3ModeEndpoint:D31Jumper;
+		public var ioACh3ModeCenter:D31Jumper;
+		public var ioACh3ModeTransit:D31Jumper;
+		public var ioACh4ModeEndpoint:D31Jumper;
+		public var ioACh4ModeCenter:D31Jumper;
+		public var ioACh4ModeTransit:D31Jumper;
+		public var ioACh5ModeEndpoint:D31Jumper;
+		public var ioACh5ModeCenter:D31Jumper;
+		public var ioACh5ModeTransit:D31Jumper;
+		public var ioACh6ModeEndpoint:D31Jumper;
+		public var ioACh6ModeCenter:D31Jumper;
+		public var ioACh6ModeTransit:D31Jumper;
+		public var ioACh7ModeEndpoint:D31Jumper;
+		public var ioACh7ModeCenter:D31Jumper;
+		public var ioACh7ModeTransit:D31Jumper;
+		public var ioACh8ModeEndpoint:D31Jumper;
+		public var ioACh8ModeCenter:D31Jumper;
+		public var ioACh8ModeTransit:D31Jumper;
+		public var ioACh9ModeEndpoint:D31Jumper;
+		public var ioACh9ModeCenter:D31Jumper;
+		public var ioACh9ModeTransit:D31Jumper;
+		public var ioACh10ModeEndpoint:D31Jumper;
+		public var ioACh10ModeCenter:D31Jumper;
+		public var ioACh10ModeTransit:D31Jumper;
+		
+		public var ioBCh1ModeEndpoint:D31Jumper;
+		public var ioBCh1ModeCenter:D31Jumper;
+		public var ioBCh1ModeTransit:D31Jumper;
+		public var ioBCh2ModeEndpoint:D31Jumper;
+		public var ioBCh2ModeCenter:D31Jumper;
+		public var ioBCh2ModeTransit:D31Jumper;
+		public var ioBCh3ModeEndpoint:D31Jumper;
+		public var ioBCh3ModeCenter:D31Jumper;
+		public var ioBCh3ModeTransit:D31Jumper;
+		public var ioBCh4ModeEndpoint:D31Jumper;
+		public var ioBCh4ModeCenter:D31Jumper;
+		public var ioBCh4ModeTransit:D31Jumper;
+		public var ioBCh5ModeEndpoint:D31Jumper;
+		public var ioBCh5ModeCenter:D31Jumper;
+		public var ioBCh5ModeTransit:D31Jumper;
+		public var ioBCh6ModeEndpoint:D31Jumper;
+		public var ioBCh6ModeCenter:D31Jumper;
+		public var ioBCh6ModeTransit:D31Jumper;
+		public var ioBCh7ModeEndpoint:D31Jumper;
+		public var ioBCh7ModeCenter:D31Jumper;
+		public var ioBCh7ModeTransit:D31Jumper;
+		public var ioBCh8ModeEndpoint:D31Jumper;
+		public var ioBCh8ModeCenter:D31Jumper;
+		public var ioBCh8ModeTransit:D31Jumper;
+		public var ioBCh9ModeEndpoint:D31Jumper;
+		public var ioBCh9ModeCenter:D31Jumper;
+		public var ioBCh9ModeTransit:D31Jumper;
+		public var ioBCh10ModeEndpoint:D31Jumper;
+		public var ioBCh10ModeCenter:D31Jumper;
+		public var ioBCh10ModeTransit:D31Jumper;
+		
+		public var ioACh1Pair1DigitalOut:D31Jumper;
+		public var ioACh1Pair1Out3a:D31Jumper;
+		public var ioACh1Pair1Cable:D31Jumper;
+		public var ioACh1Pair1AnalogIn:D31Jumper;
+		public var ioACh1Pair2AnalogIn:D31Jumper;
+		public var ioACh1Pair2Cable:D31Jumper;
+		public var ioACh1Pair2Out3b:D31Jumper;
+		public var ioACh1Pair2DigitalOut:D31Jumper;
+		
+		public var ioACh2Pair3DigitalOut:D31Jumper;
+		public var ioACh2Pair3Out3a:D31Jumper;
+		public var ioACh2Pair3Cable:D31Jumper;
+		public var ioACh2Pair3AnalogIn:D31Jumper;
+		public var ioACh2Pair4AnalogIn:D31Jumper;
+		public var ioACh2Pair4Cable:D31Jumper;
+		public var ioACh2Pair4Out3b:D31Jumper;
+		public var ioACh2Pair4DigitalOut:D31Jumper;
+		
+		public var ioACh3Pair6DigitalOut:D31Jumper;
+		public var ioACh3Pair6Out3a:D31Jumper;
+		public var ioACh3Pair6Cable:D31Jumper;
+		public var ioACh3Pair6AnalogIn:D31Jumper;
+		public var ioACh3Pair7AnalogIn:D31Jumper;
+		public var ioACh3Pair7Cable:D31Jumper;
+		public var ioACh3Pair7Out3b:D31Jumper;
+		public var ioACh3Pair7DigitalOut:D31Jumper;
+		
+		public var ioACh4Pair8DigitalOut:D31Jumper;
+		public var ioACh4Pair8Out3a:D31Jumper;
+		public var ioACh4Pair8Cable:D31Jumper;
+		public var ioACh4Pair8AnalogIn:D31Jumper;
+		public var ioACh4Pair9AnalogIn:D31Jumper;
+		public var ioACh4Pair9Cable:D31Jumper;
+		public var ioACh4Pair9Out3b:D31Jumper;
+		public var ioACh4Pair9DigitalOut:D31Jumper;
+		
+		public var ioACh5Pair1DigitalOut:D31Jumper;
+		public var ioACh5Pair1Out3a:D31Jumper;
+		public var ioACh5Pair1Cable:D31Jumper;
+		public var ioACh5Pair1AnalogIn:D31Jumper;
+		public var ioACh5Pair2AnalogIn:D31Jumper;
+		public var ioACh5Pair2Cable:D31Jumper;
+		public var ioACh5Pair2Out3b:D31Jumper;
+		public var ioACh5Pair2DigitalOut:D31Jumper;
+		
+		public var ioACh6Pair3DigitalOut:D31Jumper;
+		public var ioACh6Pair3Out3a:D31Jumper;
+		public var ioACh6Pair3Cable:D31Jumper;
+		public var ioACh6Pair3AnalogIn:D31Jumper;
+		public var ioACh6Pair4AnalogIn:D31Jumper;
+		public var ioACh6Pair4Cable:D31Jumper;
+		public var ioACh6Pair4Out3b:D31Jumper;
+		public var ioACh6Pair4DigitalOut:D31Jumper;
+		
+		public var ioACh7Pair6DigitalOut:D31Jumper;
+		public var ioACh7Pair6Out3a:D31Jumper;
+		public var ioACh7Pair6Cable:D31Jumper;
+		public var ioACh7Pair6AnalogIn:D31Jumper;
+		public var ioACh7Pair7AnalogIn:D31Jumper;
+		public var ioACh7Pair7Cable:D31Jumper;
+		public var ioACh7Pair7Out3b:D31Jumper;
+		public var ioACh7Pair7DigitalOut:D31Jumper;
+		
+		public var ioACh8Pair8DigitalOut:D31Jumper;
+		public var ioACh8Pair8Out3a:D31Jumper;
+		public var ioACh8Pair8Cable:D31Jumper;
+		public var ioACh8Pair8AnalogIn:D31Jumper;
+		public var ioACh8Pair9AnalogIn:D31Jumper;
+		public var ioACh8Pair9Cable:D31Jumper;
+		public var ioACh8Pair9Out3b:D31Jumper;
+		public var ioACh8Pair9DigitalOut:D31Jumper;
+		
+		public var ioACh9Pair8DigitalOut:D31Jumper;
+		public var ioACh9Pair8Out3a:D31Jumper;
+		public var ioACh9Pair8Cable:D31Jumper;
+		public var ioACh9Pair8AnalogIn:D31Jumper;
+		public var ioACh9Pair9AnalogIn:D31Jumper;
+		public var ioACh9Pair9Cable:D31Jumper;
+		public var ioACh9Pair9Out3b:D31Jumper;
+		public var ioACh9Pair9DigitalOut:D31Jumper;
+		
+		public var ioACh10Pair1DigitalOut:D31Jumper;
+		public var ioACh10Pair1Out3a:D31Jumper;
+		public var ioACh10Pair1Cable:D31Jumper;
+		public var ioACh10Pair1AnalogIn:D31Jumper;
+		public var ioACh10Pair2AnalogIn:D31Jumper;
+		public var ioACh10Pair2Cable:D31Jumper;
+		public var ioACh10Pair2Out3b:D31Jumper;
+		public var ioACh10Pair2DigitalOut:D31Jumper;
+		
+		public var ioBCh1Pair1DigitalOut:D31Jumper;
+		public var ioBCh1Pair1Out3a:D31Jumper;
+		public var ioBCh1Pair1Cable:D31Jumper;
+		public var ioBCh1Pair1AnalogIn:D31Jumper;
+		public var ioBCh1Pair2AnalogIn:D31Jumper;
+		public var ioBCh1Pair2Cable:D31Jumper;
+		public var ioBCh1Pair2Out3b:D31Jumper;
+		public var ioBCh1Pair2DigitalOut:D31Jumper;
+		
+		public var ioBCh2Pair3DigitalOut:D31Jumper;
+		public var ioBCh2Pair3Out3a:D31Jumper;
+		public var ioBCh2Pair3Cable:D31Jumper;
+		public var ioBCh2Pair3AnalogIn:D31Jumper;
+		public var ioBCh2Pair4AnalogIn:D31Jumper;
+		public var ioBCh2Pair4Cable:D31Jumper;
+		public var ioBCh2Pair4Out3b:D31Jumper;
+		public var ioBCh2Pair4DigitalOut:D31Jumper;
+		
+		public var ioBCh3Pair6DigitalOut:D31Jumper;
+		public var ioBCh3Pair6Out3a:D31Jumper;
+		public var ioBCh3Pair6Cable:D31Jumper;
+		public var ioBCh3Pair6AnalogIn:D31Jumper;
+		public var ioBCh3Pair7AnalogIn:D31Jumper;
+		public var ioBCh3Pair7Cable:D31Jumper;
+		public var ioBCh3Pair7Out3b:D31Jumper;
+		public var ioBCh3Pair7DigitalOut:D31Jumper;
+		
+		public var ioBCh4Pair8DigitalOut:D31Jumper;
+		public var ioBCh4Pair8Out3a:D31Jumper;
+		public var ioBCh4Pair8Cable:D31Jumper;
+		public var ioBCh4Pair8AnalogIn:D31Jumper;
+		public var ioBCh4Pair9AnalogIn:D31Jumper;
+		public var ioBCh4Pair9Cable:D31Jumper;
+		public var ioBCh4Pair9Out3b:D31Jumper;
+		public var ioBCh4Pair9DigitalOut:D31Jumper;
+		
+		public var ioBCh5Pair1DigitalOut:D31Jumper;
+		public var ioBCh5Pair1Out3a:D31Jumper;
+		public var ioBCh5Pair1Cable:D31Jumper;
+		public var ioBCh5Pair1AnalogIn:D31Jumper;
+		public var ioBCh5Pair2AnalogIn:D31Jumper;
+		public var ioBCh5Pair2Cable:D31Jumper;
+		public var ioBCh5Pair2Out3b:D31Jumper;
+		public var ioBCh5Pair2DigitalOut:D31Jumper;
+		
+		public var ioBCh6Pair3DigitalOut:D31Jumper;
+		public var ioBCh6Pair3Out3a:D31Jumper;
+		public var ioBCh6Pair3Cable:D31Jumper;
+		public var ioBCh6Pair3AnalogIn:D31Jumper;
+		public var ioBCh6Pair4AnalogIn:D31Jumper;
+		public var ioBCh6Pair4Cable:D31Jumper;
+		public var ioBCh6Pair4Out3b:D31Jumper;
+		public var ioBCh6Pair4DigitalOut:D31Jumper;
+		
+		public var ioBCh7Pair6DigitalOut:D31Jumper;
+		public var ioBCh7Pair6Out3a:D31Jumper;
+		public var ioBCh7Pair6Cable:D31Jumper;
+		public var ioBCh7Pair6AnalogIn:D31Jumper;
+		public var ioBCh7Pair7AnalogIn:D31Jumper;
+		public var ioBCh7Pair7Cable:D31Jumper;
+		public var ioBCh7Pair7Out3b:D31Jumper;
+		public var ioBCh7Pair7DigitalOut:D31Jumper;
+		
+		public var ioBCh8Pair8DigitalOut:D31Jumper;
+		public var ioBCh8Pair8Out3a:D31Jumper;
+		public var ioBCh8Pair8Cable:D31Jumper;
+		public var ioBCh8Pair8AnalogIn:D31Jumper;
+		public var ioBCh8Pair9AnalogIn:D31Jumper;
+		public var ioBCh8Pair9Cable:D31Jumper;
+		public var ioBCh8Pair9Out3b:D31Jumper;
+		public var ioBCh8Pair9DigitalOut:D31Jumper;
+		
+		public var ioBCh9Pair8DigitalOut:D31Jumper;
+		public var ioBCh9Pair8Out3a:D31Jumper;
+		public var ioBCh9Pair8Cable:D31Jumper;
+		public var ioBCh9Pair8AnalogIn:D31Jumper;
+		public var ioBCh9Pair9AnalogIn:D31Jumper;
+		public var ioBCh9Pair9Cable:D31Jumper;
+		public var ioBCh9Pair9Out3b:D31Jumper;
+		public var ioBCh9Pair9DigitalOut:D31Jumper;
+		
+		public var ioBCh10Pair1DigitalOut:D31Jumper;
+		public var ioBCh10Pair1Out3a:D31Jumper;
+		public var ioBCh10Pair1Cable:D31Jumper;
+		public var ioBCh10Pair1AnalogIn:D31Jumper;
+		public var ioBCh10Pair2AnalogIn:D31Jumper;
+		public var ioBCh10Pair2Cable:D31Jumper;
+		public var ioBCh10Pair2Out3b:D31Jumper;
+		public var ioBCh10Pair2DigitalOut:D31Jumper;
+		
+		public var ioDiffA4WiredSend:D31Jumper;
+		public var ioDiffA4WiredReceive:D31Jumper;
+		public var ioDiffA2Wired:D31Jumper;
+		
+		public var ioDiffB4WiredSend:D31Jumper;
+		public var ioDiffB4WiredReceive:D31Jumper;
+		public var ioDiffB2Wired:D31Jumper;
+		
 		public function D00Block()
 		{
 			InitializeDictionary();

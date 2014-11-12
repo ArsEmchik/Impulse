@@ -2,83 +2,127 @@
 {
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
-
+	import flash.filters.GlowFilter;
+	
 	public class ButtonClass extends MovieClip
 	{
-		public static const OVER: int =0;
-		public static const STAND: int =1;
-		public static const DOWN: int =2;
+		public static const OVER:int = 0;
+		public static const STAND:int = 1;
+		public static const DOWN:int = 2;
 		
-		private var blocked: Boolean=false;
-		public var type: int=1;
-		private var string_message: String;
-		private var fun: Function;
+		private var hasGlow:Boolean = false;
+		
+		private var greenFilter:GlowFilter = new GlowFilter(0x00FF00, 1, 16, 16, 5);
+		
+		public var type:int = STAND;
+		private var blocked:Boolean = false;
+		private var string_message:String;
+		private var onMouseOver:Function;
+		
+		public function set HasGlow(value:Boolean)
+		{
+			hasGlow = value;
+			filters = [greenFilter];
+		}
 		
 		public function ButtonClass()
 		{
-			this.gotoAndStop("MouseOut");
-			this.addEventListener(MouseEvent.ROLL_OVER,RollOver);
-			this.addEventListener(MouseEvent.ROLL_OUT,RollOut);
-			this.addEventListener(MouseEvent.MOUSE_DOWN,MouseDown);
-			this.addEventListener(MouseEvent.MOUSE_UP,MouseUp);
+			gotoAndStop("MouseOut");
+			
+			addEventListener(MouseEvent.ROLL_OVER, RollOver);
+			addEventListener(MouseEvent.ROLL_OUT, RollOut);
+			addEventListener(MouseEvent.MOUSE_DOWN, MouseDown);
+			addEventListener(MouseEvent.MOUSE_UP, MouseUp);
 		}
-		private function RollOver(e: MouseEvent)
+		
+		private function RollOver(e:MouseEvent)
 		{
 			if (!blocked)
 			{
-				this.gotoAndStop("MouseOver");
+				filters = [];
+				gotoAndStop("MouseOver");
 			}
-			if (fun!=null)
-				fun(string_message);			
-			type=OVER;
+			
+			if (onMouseOver != null)
+			{
+				onMouseOver(string_message);
+			}
+			type = OVER;
 		}
-		private function RollOut(e: MouseEvent)
+		
+		private function RollOut(e:MouseEvent)
 		{
 			if (!blocked)
 			{
-				this.gotoAndStop("MouseOut");			
+				if (hasGlow)
+				{
+					filters = [greenFilter];
+				}
+				else
+				{
+					filters = [];
+				}
+				gotoAndStop("MouseOut");
 			}
-			if (fun!=null)
-				fun("");				
-			type=STAND;
-		}				
-		private function MouseDown(e: MouseEvent)
-		{
-			if (!blocked)
-				this.gotoAndStop("MouseDown");
-			type=DOWN;
+			
+			if (onMouseOver != null)
+			{
+				onMouseOver("");
+			}
+			type = STAND;
 		}
-		private function MouseUp(e: MouseEvent)
+		
+		private function MouseDown(e:MouseEvent)
 		{
 			if (!blocked)
-				this.gotoAndStop("MouseOver");
-			type=OVER;
-		}		
+				gotoAndStop("MouseDown");
+			type = DOWN;
+		}
+		
+		private function MouseUp(e:MouseEvent)
+		{
+			if (!blocked)
+				gotoAndStop("MouseOver");
+			type = OVER;
+		}
+		
 		public function Block()
 		{
-			blocked=true;
-			this.gotoAndStop("MouseBlock");
+			blocked = true;
+			gotoAndStop("MouseBlock");
 		}
+		
 		public function UnBlock()
 		{
-			blocked=false;
-			this.gotoAndStop("MouseOut");
+			blocked = false;
+			if (hasGlow)
+			{
+				filters = [greenFilter];
+			}
+			else
+			{
+				filters = [];
+			}
+			gotoAndStop("MouseOut");
 		}
-		public function IsBlocked(): Boolean
+		
+		public function IsBlocked():Boolean
 		{
-			return(this.blocked);
+			return blocked;
 		}
+		
 		public function ClearButton()
 		{
-			this.removeEventListener(MouseEvent.ROLL_OVER,RollOver);
-			this.removeEventListener(MouseEvent.ROLL_OUT,RollOut);
-			this.removeEventListener(MouseEvent.MOUSE_DOWN,MouseDown);
-			this.removeEventListener(MouseEvent.MOUSE_UP,MouseUp);
+			removeEventListener(MouseEvent.ROLL_OVER, RollOver);
+			removeEventListener(MouseEvent.ROLL_OUT, RollOut);
+			removeEventListener(MouseEvent.MOUSE_DOWN, MouseDown);
+			removeEventListener(MouseEvent.MOUSE_UP, MouseUp);
 		}
-		public function AddOverFun(p_fun: Function, p_string_message: String)
+		
+		public function AddOverFun(p_fun:Function, p_string_message:String)
 		{
-			fun=p_fun;
-			string_message=p_string_message;
+			onMouseOver = p_fun;
+			string_message = p_string_message;
 		}
 	}
 }

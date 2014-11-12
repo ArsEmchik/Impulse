@@ -1,28 +1,33 @@
-﻿package screens {
-	
-	import flash.display.MovieClip;
-	import fl.controls.Button;
-	import flash.events.MouseEvent;
+﻿package screens
+{
 	import blocks.D00Block;
 	import blocks.ModeInfo;
+	import fl.controls.Button;
+	import flash.events.MouseEvent;
+	import flash.text.TextField;
 	
-	public class D00Screen extends BlockScreen {
+	public class D00Screen extends BlockScreen
+	{
+		public var backButton1: Button;
+		public var outButton: Button;
 		
-		private var D00Unit: D00Block;
+		public var textBox: TextField;
+		public var textBoxNext: TextField;
 		
-		public function InitializeD00Screen(p_mainScreen: MainScreen)
+		public var taskTextBox: TextField;
+		
+		public var tD00Unit:D00Block;
+		
+		public function InitializeD00Screen(p_mainScreen:MainScreen)
 		{
-			mainScreen=p_mainScreen;
-			outButton.addEventListener(MouseEvent.CLICK,GoToNewScreen);
-			backButton1.addEventListener(MouseEvent.CLICK,backScreen);
+			mainScreen = p_mainScreen;
+			
+			outButton.addEventListener(MouseEvent.CLICK, GoToNewScreen);
+			backButton1.addEventListener(MouseEvent.CLICK, backScreen);
+			
 			taskTextBox.text = ModeInfo.modeInfo.scenarioDescription;
-			this.InitializeBlockScreen(D00Unit, textBox,outButton, textBoxNext);
-		}
-		
-		public function D00Screen() {
-			D00Unit=tD00Unit;
-			this.block = D00Unit;
+			
+			InitializeBlockScreen(tD00Unit, textBox, outButton, textBoxNext);
 		}
 	}
-	
 }

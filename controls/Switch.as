@@ -1,13 +1,10 @@
 ﻿package controls
 {
-	
-	import flash.display.MovieClip;
 	import blocks.ControlElement;
 	import flash.events.MouseEvent;
 	
 	public class Switch extends ControlElement
 	{
-		
 		public function Switch()
 		{
 			InitializeControlElement(ControlElement.S_BINARY, ControlElement.S_B_DEFAULT, true);
@@ -24,5 +21,4 @@
 			GoToState(newState, true);
 		}
 	}
-
 }

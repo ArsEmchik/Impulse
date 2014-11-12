@@ -1,11 +1,13 @@
 ﻿package controls
 {
-	import flash.display.MovieClip;
-	import flash.events.MouseEvent;
 	import blocks.ControlElement;
+	import flash.display.MovieClip;
 	
 	public class DigitPanel extends ControlElement
 	{
+		public var panel1: MovieClip;
+		public var panel2: MovieClip;
+		
 		public function DigitPanel()
 		{
 			InitializeControlElement(ControlElement.S_101, 100, false);
@@ -27,5 +29,4 @@
 			}
 		}
 	}
-
 }

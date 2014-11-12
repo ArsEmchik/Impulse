@@ -9,20 +9,22 @@
 	
 	public class BlockScreen extends MovieClip
 	{
-		public var BlockUnit:ImpulsUnit;
-		public var mainScreen:MainScreen;
-		public var block:ImpulsUnit;
+		public var mainScreen: MainScreen;
+		public var block: ImpulsUnit;
 		
 		public function InitializeBlockScreen(p_BlockUnit:ImpulsUnit, textBox:TextField, outButton:Button, txtNext:TextField)
 		{
-			BlockUnit = p_BlockUnit;
-			BlockUnit.InitializeImpulsUnit(textBox, outButton, txtNext);
+			block = p_BlockUnit;
+			block.InitializeImpulsUnit(textBox, outButton, txtNext);
 		}
 		
 		public function GoToNewScreen(e:MouseEvent)
 		{
+			ModeInfo.modeInfo.goToNextBlock();
+			
 			if (ModeInfo.modeInfo.MainMode == ModeInfo.MM_CONTROL)
 			{
+				ModeInfo.modeInfo.checkBlockSeq();
 				block.TestForErrors();
 			}
 			

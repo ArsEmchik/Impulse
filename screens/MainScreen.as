@@ -2,21 +2,21 @@
 {
 	import flash.display.MovieClip;
 	
-	public dynamic class MainScreen extends MovieClip
+	public class MainScreen extends MovieClip
 	{
-		/*private var start_screen: StartMainScreen;
-		   private var mode_screen: ModeScreen;
-		   private var global_screen: GlobalScreen;
-		   private var ip_screen: IPScreen;
-		   private var io3a_screen: IO3AScreen;
-		   private var final_screen: FinalScreen;
-		   private var ita_screen: ITAScreen;
-		   private var is_screen: ISScreen;
-		   private var io4_screen: IO4Screen;
-		   private var il34_screen: IL34Screen;
-		   private var block_input_screen: BlockInputScreen;
-		   private var d39_screen: D39Screen;
-		 private var d00_screen: D00Screen;*/
+		public var start_screen:StartMainScreen;
+		public var mode_screen:ModeScreen;
+		public var global_screen:GlobalScreen;
+		public var ip_screen:IPScreen;
+		public var io3a_screen:IO3AScreen;
+		public var final_screen:FinalScreen;
+		public var ita_screen:ITAScreen;
+		public var is_screen:ISScreen;
+		public var io4_screen:IO4Screen;
+		public var il34_screen:IL34Screen;
+		public var block_input_screen:BlockInputScreen;
+		public var d39_screen:D39Screen;
+		public var d00_screen:D00Screen;
 		
 		public function MainScreen()
 		{
@@ -87,7 +87,6 @@
 		{
 			gotoAndStop("Final");
 			final_screen.InitScreen(this);
-		
 		}
 		
 		public function InitializeInputBlock()

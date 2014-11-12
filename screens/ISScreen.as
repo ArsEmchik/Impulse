@@ -1,28 +1,28 @@
-﻿package screens {
-	
-	import flash.display.MovieClip;
+﻿package screens
+{
 	import blocks.ISBlock;
 	import fl.controls.Button;
 	import flash.events.MouseEvent;
+	import flash.text.TextField;
 	
-	public class ISScreen extends BlockScreen {
+	public class ISScreen extends BlockScreen
+	{
+		public var backButton1: Button;
+		public var outButton: Button;
 		
-		private var ISUnit: ISBlock;
+		public var textBox: TextField;
+		public var textBoxNext: TextField;
 		
-		public function InitializeISScreen(p_mainScreen: MainScreen)
+		public var tISUnit:ISBlock;
+		
+		public function InitializeISScreen(p_mainScreen:MainScreen)
 		{
-			mainScreen=p_mainScreen;
-			outButton.addEventListener(MouseEvent.CLICK,GoToNewScreen);
-			backButton1.addEventListener(MouseEvent.CLICK,backScreen);
-			this.InitializeBlockScreen(ISUnit, textBox,outButton, textBoxNext);
-		}
-	
-		public function ISScreen() 
-		{
-			ISUnit=tISUnit;
-			this.block = ISUnit;
-			// constructor code
+			mainScreen = p_mainScreen;
+			
+			outButton.addEventListener(MouseEvent.CLICK, GoToNewScreen);
+			backButton1.addEventListener(MouseEvent.CLICK, backScreen);
+			
+			InitializeBlockScreen(tISUnit, textBox, outButton, textBoxNext);
 		}
 	}
-	
 }

@@ -1,11 +1,10 @@
 ﻿package blocks
 {
-	import flash.display.MovieClip;
-	import flash.utils.Dictionary;
-	import flash.text.TextField;
 	import fl.controls.Button;
+	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
-	import flash.events.Event;
+	import flash.text.TextField;
+	import flash.utils.Dictionary;
 	
 	public class ImpulsUnit extends MovieClip
 	{
@@ -72,7 +71,7 @@
 			{
 				case ModeInfo.MM_INSTRUCTION: 
 				case ModeInfo.MM_TRAINIGWITHHINT: 
-				case ModeInfo.MM_TRAINIGWITHOUTHINT:
+				case ModeInfo.MM_TRAINIGWITHOUTHINT: 
 					DisableControls();
 					break;
 				case ModeInfo.MM_CONTROL: 
@@ -229,9 +228,7 @@
 			{
 				while (TrainingSequence[i].CurrentState != trainingState[i] && !TrainingSequence[i].OneState)
 				{
-					if (ModeInfo.modeInfo.blockName == "Блок D-39"
-						&& TrainingSequence[i].elementName != "Тумблер питания 1"
-						&& TrainingSequence[i].elementName != "Тумблер питания 2")
+					if (ModeInfo.modeInfo.blockName == "Блок D-39" && TrainingSequence[i].elementName != "Тумблер питания 1" && TrainingSequence[i].elementName != "Тумблер питания 2")
 					{
 						break;
 					}

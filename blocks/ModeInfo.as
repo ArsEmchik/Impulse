@@ -1,7 +1,5 @@
 ﻿package blocks
 {
-	import flash.sampler.Sample;
-	import flash.globalization.StringTools;
 	import flash.utils.getQualifiedClassName;
 	
 	public class ModeInfo
@@ -10,6 +8,10 @@
 		public var SeqLink:Array = new Array();
 		public var scenario:int;
 		public var scenarioDescription:String;
+		
+		public var blockTrainSeq:Vector.<int> = new Vector.<int>();
+		public var blockRealSeq:Vector.<int> = new Vector.<int>();
+		public var blockSeqIndex:int = -1;
 		
 		public static var modeInfo:ModeInfo = new ModeInfo();
 		
@@ -69,7 +71,8 @@
 		public var fio:String = "";
 		public var vzv_num:String = "";
 		public var error_count_summary:int = 0;
-				
+		public var errorBlockSeq:int = 0;
+		
 		public function toString():String
 		{
 			return getQualifiedClassName(this) + " Object {" + "\n MainMode: " + MainMode + "\n Mode:" + Mode + "\n LocalMode:" + LocalMode + "\n Speed:" + Speed + "\n ChannelCount:" + ChannelCount + "\n KtchCount:" + KtchCount + "\n Czk48Count:" + Czk48Count + "\n Czk86Channels:" + Czk86Channels + "\n KtchChannels:" + KtchChannels + "\n P296 1: " + P296n1 + "\n P296 2: " + P296n2 + "\n blockInfo: " + blockInfo + "\n}";
@@ -78,6 +81,7 @@
 		public static function InitializeModeInfo()
 		{
 			modeInfo = new ModeInfo();
+			
 			modeInfo.MainMode = MM_CONTROL;
 			modeInfo.Mode = M_WORKING;
 			modeInfo.Speed = S_480;
@@ -88,41 +92,51 @@
 			modeInfo.Czk86Channels[1] = 3;
 			modeInfo.KtchChannels[4] = 1;
 			modeInfo.P296n1 = 3;
+			
 			modeInfo.SetBlocks();
 		}
 		
 		public function SetBlocks()
 		{
-			var i:int;
 			switch (Mode)
 			{
 				case M_WORKING: 
 				case M_PREPARING: 
-					for (i = 0; i < 9; i++)
+					for (var i:int = 0; i < 9; i++)
+					{
 						blockInfo[i] = new BlockInfo();
+					}
+					
 					switch (Speed)
-				{
-					case S_48: 
-						blockInfo[BLOCK_IO3A] = null;
-						blockInfo[BLOCK_IO3A_2] = null;
-						blockInfo[BLOCK_IO4] = null;
-						blockInfo[BLOCK_IO4_2] = null;
-						blockInfo[BLOCK_IL34] = null;
-						blockInfo[BLOCK_IL34_2] = null;
-						break;
-					case S_480: 
-						blockInfo[BLOCK_IO4] = null;
-						blockInfo[BLOCK_IO4_2] = null;
-						break;
-					case S_2048: 
-						break;
-					default: 
-						throw new Error("Нет такой скорости");
-				}
+					{
+						case S_48: 
+							blockInfo[BLOCK_IO3A] = null;
+							blockInfo[BLOCK_IO3A_2] = null;
+							blockInfo[BLOCK_IO4] = null;
+							blockInfo[BLOCK_IO4_2] = null;
+							blockInfo[BLOCK_IL34] = null;
+							blockInfo[BLOCK_IL34_2] = null;
+							break;
+						case S_480: 
+							blockInfo[BLOCK_IO4] = null;
+							blockInfo[BLOCK_IO4_2] = null;
+							break;
+						case S_2048: 
+							break;
+						default: 
+							throw new Error("Нет такой скорости");
+					}
+					
 					break;
 				case M_COMMUTATION: 
-					for (i = 9; i < 12; i++)
+					for (var i:int = 9; i < 12; i++)
+					{
 						blockInfo[i] = new BlockInfo();
+					}
+					
+					blockTrainSeq.push(11, 10, 9);
+					blockSeqIndex = 0;
+					
 					break;
 				default: 
 					throw new Error("Некорректный мод");
@@ -142,7 +156,36 @@
 				case S_2048: 
 					return ("2048");
 			}
-			throw new Error("");
+			throw new Error("Нет такой скорости");
+		}
+		
+		public function goToNextBlock()
+		{
+			if (blockSeqIndex != -1)
+			{
+				blockSeqIndex++;
+				blockRealSeq.push(currentBlock);
+				if (blockSeqIndex == blockTrainSeq.length)
+				{
+					blockSeqIndex = -1;
+				}
+			}
+		}
+		
+		public function checkBlockSeq()
+		{
+			if (blockTrainSeq.length != 0)
+			{
+				for (var i:int = 0; i < blockRealSeq.length; i++)
+				{
+					if (blockTrainSeq[i] != blockRealSeq[i])
+					{
+						errorText += "Неправильный порядок настройки блоков";
+						errorBlockSeq = 1;
+						break;
+					}
+				}
+			}
 		}
 	}
 }

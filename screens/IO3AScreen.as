@@ -1,28 +1,28 @@
-﻿package screens {
-	
-	import flash.display.MovieClip;
+﻿package screens
+{
 	import blocks.IO3ABlock;
 	import fl.controls.Button;
 	import flash.events.MouseEvent;
+	import flash.text.TextField;
 	
-	public class IO3AScreen extends BlockScreen {
+	public class IO3AScreen extends BlockScreen
+	{
+		public var backButton1:Button;
+		public var outButton:Button;
 		
-		private var IO3AUnit: IO3ABlock;
+		public var textBox:TextField;
+		public var textBoxNext:TextField;
 		
-		public function InitializeIO3AScreen(p_mainScreen: MainScreen)
+		public var IO3AUnit:IO3ABlock;
+		
+		public function InitializeIO3AScreen(p_mainScreen:MainScreen)
 		{
-			mainScreen=p_mainScreen;
-			outButton.addEventListener(MouseEvent.CLICK,GoToNewScreen);
-			backButton1.addEventListener(MouseEvent.CLICK,backScreen);
-			this.InitializeBlockScreen(IO3AUnit, textBox,outButton, textBoxNext);
-		}
-	
-		public function IO3AScreen() 
-		{
-			IO3AUnit=tIO3AUnit;
-			this.block = IO3AUnit;
-			// constructor code
+			mainScreen = p_mainScreen;
+			
+			outButton.addEventListener(MouseEvent.CLICK, GoToNewScreen);
+			backButton1.addEventListener(MouseEvent.CLICK, backScreen);
+			
+			InitializeBlockScreen(IO3AUnit, textBox, outButton, textBoxNext);
 		}
 	}
-	
 }

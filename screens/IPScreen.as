@@ -1,27 +1,28 @@
-﻿package screens {
-	
-	import flash.display.MovieClip;
+﻿package screens
+{
 	import blocks.IPBlock;
+	import fl.controls.Button;
 	import flash.events.MouseEvent;
-	
+	import flash.text.TextField;
 	
 	public class IPScreen extends BlockScreen
 	{
-		private var IPUnit: IPBlock;
+		public var backButton1: Button;
+		public var outButton: Button;
 		
-		public function IPScreen() 
+		public var textBox: TextField;
+		public var textBoxNext: TextField;
+		
+		public var tIPUnit:IPBlock;
+		
+		public function InitializeIPScreen(p_mainScreen:MainScreen)
 		{
-			IPUnit=t_IPUnit;
-			this.block = IPUnit;
-			// constructor code
+			mainScreen = p_mainScreen;
+			
+			outButton.addEventListener(MouseEvent.CLICK, GoToNewScreen);
+			backButton1.addEventListener(MouseEvent.CLICK, backScreen);
+			
+			InitializeBlockScreen(tIPUnit, textBox, outButton, textBoxNext);
 		}
-		public function InitializeIPScreen(p_mainScreen: MainScreen)
-		{
-			mainScreen=p_mainScreen;
-			outButton.addEventListener(MouseEvent.CLICK,GoToNewScreen);
-			backButton1.addEventListener(MouseEvent.CLICK,backScreen);
-			this.InitializeBlockScreen(IPUnit,textBox,outButton, textBoxNext);
-		}	
 	}
-	
 }

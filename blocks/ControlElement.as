@@ -3,7 +3,6 @@
 	import flash.display.MovieClip;
 	import flash.events.MouseEvent;
 	import flash.filters.GlowFilter;
-	import flash.geom.Point;
 	
 	public class ControlElement extends MovieClip
 	{
@@ -34,10 +33,10 @@
 		private var yellowFilter:GlowFilter = new GlowFilter(0xFFFF00, 1, 6, 6);
 		private var greenFilter:GlowFilter = new GlowFilter(0x00FF00, 1, 16, 16, 5);
 		
-		protected var parentUnit: ImpulsUnit;
+		protected var parentUnit:ImpulsUnit;
 		
-		public var linkedElement: ControlElement = null;
-		public var shouldBeLinkedWith: ControlElement = null;
+		public var linkedElement:ControlElement = null;
+		public var shouldBeLinkedWith:ControlElement = null;
 		
 		public var StateCount:int; // сколько всего состояний
 		public var CurrentState:int; // текущее состояние
@@ -52,14 +51,14 @@
 		private var hasGlow:Boolean // подсвечивается ли контрол
 		private var MouseOver:Boolean; // мышка над этим констролом?
 		
-		public var X: int;
-		public var Y: int;
+		public var X:int;
+		public var Y:int;
 		
 		public function ControlElement()
 		{
 			super();
-			X = this.x + width/2;
-			Y = this.y + height/2;
+			X = this.x + width / 2;
+			Y = this.y + height / 2;
 		}
 		
 		protected function InitializeControlElement(p_StateCount:int, p_CurrentState:int, p_MouseEnabled:Boolean)
@@ -95,10 +94,7 @@
 			{
 				CurrentState = newState; // S_B_DEFAULT -> S_B_CHOSEN
 				SwitchStateCount();
-				if (reallyPressed && parentUnit != null 
-				&& ((hasGlow && parentUnit.ImpulseMode == ModeInfo.MM_INSTRUCTION) 
-				|| parentUnit.ImpulseMode == ModeInfo.MM_TRAINIGWITHHINT 
-				|| parentUnit.ImpulseMode == ModeInfo.MM_TRAINIGWITHOUTHINT))
+				if (reallyPressed && parentUnit != null && ((hasGlow && parentUnit.ImpulseMode == ModeInfo.MM_INSTRUCTION) || parentUnit.ImpulseMode == ModeInfo.MM_TRAINIGWITHHINT || parentUnit.ImpulseMode == ModeInfo.MM_TRAINIGWITHOUTHINT))
 				{
 					if (nesesaryState == CurrentState)
 						parentUnit.NextStep();

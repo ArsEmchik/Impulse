@@ -1,28 +1,28 @@
-﻿package screens {
-	
-	import flash.display.MovieClip;
-	import flash.events.MouseEvent;
-	import blocks.ModeInfo;
+﻿package screens
+{
 	import blocks.IO4Block;
+	import fl.controls.Button;
+	import flash.events.MouseEvent;
+	import flash.text.TextField;
 	
-	
-	public class IO4Screen extends BlockScreen {
+	public class IO4Screen extends BlockScreen
+	{
+		public var backButton1:Button;
+		public var outButton:Button;
 		
-		private var IO4Unit: IO4Block;
+		public var textBox:TextField;
+		public var textBoxNext:TextField;
 		
-		public function IO4Screen() {
-			IO4Unit=tIO4Unit;
-			this.block = IO4Unit;
-			// constructor code
-		}
+		public var tIO4Unit:IO4Block;
 		
-		public function InitializeIO4Screen(p_mainScreen: MainScreen)
+		public function InitializeIO4Screen(p_mainScreen:MainScreen)
 		{
-			mainScreen=p_mainScreen;
-			outButton.addEventListener(MouseEvent.CLICK,GoToNewScreen);
-			backButton1.addEventListener(MouseEvent.CLICK,backScreen);
-			this.InitializeBlockScreen(IO4Unit,textBox,outButton, textBoxNext);
+			mainScreen = p_mainScreen;
+			
+			outButton.addEventListener(MouseEvent.CLICK, GoToNewScreen);
+			backButton1.addEventListener(MouseEvent.CLICK, backScreen);
+			
+			InitializeBlockScreen(tIO4Unit, textBox, outButton, textBoxNext);
 		}
 	}
-	
 }
