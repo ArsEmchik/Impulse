@@ -624,8 +624,7 @@
 		private function CreateCommunication()
 		{
 			(ControlDictionary["А Включатель"] as ControlElement).addEventListener(MouseEvent.CLICK, SwitchMouseClick1);
-			(ControlDictionary["Б Включатель"] as ControlElement).addEventListener(MouseEvent.CLICK, SwitchMouseClick2)
-			trace((ControlDictionary["А ГКА перемычка А"] as ControlElement));
+			(ControlDictionary["Б Включатель"] as ControlElement).addEventListener(MouseEvent.CLICK, SwitchMouseClick2);
 			(ControlDictionary["А ГКА перемычка А"] as ControlElement).addEventListener(MouseEvent.CLICK, JumperClick10);
 			(ControlDictionary["А ЦА3-1 перемычка А"] as ControlElement).addEventListener(MouseEvent.CLICK, JumperClick1);
 			(ControlDictionary["А ЦА3-2 перемычка А"] as ControlElement).addEventListener(MouseEvent.CLICK, JumperClick2);

@@ -50,22 +50,20 @@
 					key += (i < 3) ? "1-" : "2-";
 					key += ((i % 3) + 1).toString();
 					
-					trace(ControlDictionary[key]);
-					
 					if (i < 3)
-						AddToTraining(ControlDictionary[key], "Подключите кабель ПТРК-10х2 к разъему «Кабель " + (i + 1).toString() + "» 1-го полуклмплекта.", ControlElement.S_B_CHOSEN);
+						AddToTraining(ControlDictionary[key], "Подключите кабель ПТРК-10х2 к полумуфте «Кабель " + (i + 1).toString() + "» полукомплекта I.", ControlElement.S_B_CHOSEN);
 					else
-						AddToTraining(ControlDictionary[key], "Подключите кабель ПТРК-10х2 к разъему «Кабель " + (i - 2).toString() + "» 2-го полуклмплекта.", ControlElement.S_B_CHOSEN);
+						AddToTraining(ControlDictionary[key], "Подключите кабель ПТРК-10х2 к полумуфте «Кабель " + (i - 2).toString() + "» полукомплекта II.", ControlElement.S_B_CHOSEN);
 				}
 			}
 			
 			if (ModeInfo.modeInfo.P296n1 != 0)
 			{
-				AddToTraining(ControlDictionary["П-296-1"], "Подключите кабель П-296 к первому полукомплекту", ControlElement.S_B_CHOSEN);
+				AddToTraining(ControlDictionary["П-296-1"], "Подключите кабель П-296 к полумуфте «ИЛ-480: 2048» полукомплекта I.", ControlElement.S_B_CHOSEN);
 			}
 			
 			if (ModeInfo.modeInfo.P296n2 != 0)
-				AddToTraining(ControlDictionary["П-296-2"], "Подключите кабель П-296 ко второму полукомплекту", ControlElement.S_B_CHOSEN);
+				AddToTraining(ControlDictionary["П-296-2"], "Подключите кабель П-296 к полумуфте «ИЛ-480: 2048» полукомплекта II.", ControlElement.S_B_CHOSEN);
 		}
 	}
 }

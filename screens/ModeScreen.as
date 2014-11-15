@@ -14,31 +14,33 @@
 	import flash.display.MovieClip;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
+	import flash.filters.GlowFilter;
 	import flash.text.TextField;
+	import flash.text.TextFormat;
 	import flash.utils.ByteArray;
 	
 	public dynamic class ModeScreen extends MovieClip
 	{
-		public var main_mode_1: RadioButton;
-		public var main_mode_2: RadioButton;
-		public var main_mode_3: RadioButton;
-		public var main_mode_4: RadioButton;
-		public var t_start_button: Button;
-		public var mode_0: RadioButton;
-		public var mode_1: RadioButton;
-		public var mode_2: RadioButton;
-		public var mode_3: RadioButton;
-		public var t_tb_num: TextInput;
-		public var t_tb_fio: TextInput;
-		public var fio_label1: Label;
-		public var fio_label2: Label;
-		public var local_mode_0: RadioButton;
-		public var t_speed_combo_box_prepare: ComboBox;
-		public var speed_label_prepare: Label;
-		public var message_box: MovieClip;
-		public var main_mode_2_l: Label;
-		public var main_mode_3_l: Label;
-		public var txt_scenario_info: TextField;
+		public var main_mode_1:RadioButton;
+		public var main_mode_2:RadioButton;
+		public var main_mode_3:RadioButton;
+		public var main_mode_4:RadioButton;
+		public var t_start_button:Button;
+		public var mode_0:RadioButton;
+		public var mode_1:RadioButton;
+		public var mode_2:RadioButton;
+		public var mode_3:RadioButton;
+		public var t_tb_num:TextInput;
+		public var t_tb_fio:TextInput;
+		public var fio_label1:Label;
+		public var fio_label2:Label;
+		public var local_mode_0:RadioButton;
+		public var t_speed_combo_box_prepare:ComboBox;
+		public var speed_label_prepare:Label;
+		public var message_box:MovieClip;
+		public var main_mode_2_l:Label;
+		public var main_mode_3_l:Label;
+		public var txt_scenario_info:TextField;
 		
 		var main_mode:int;
 		var impuls_mode:int;
@@ -77,6 +79,8 @@
 		var scenarios_brief:Array = new Array();
 		var scenarios_sequence:Array = new Array();
 		
+		private var armyFilter: GlowFilter = new GlowFilter(0xAACCAA, 1, 6, 6, 3);
+		
 		[Embed(source="../scenarios.txt",mimeType="application/octet-stream")]
 		var scenarios:Class;
 		
@@ -107,6 +111,8 @@
 		public function initializeModeScreen(p_main_screen:MainScreen)
 		{
 			main_screen = p_main_screen;
+			
+			SetStyleToRadioButtonsAndLabels();
 		}
 		
 		private function createGroups()
@@ -201,6 +207,40 @@
 			}
 		}
 		
+		private function SetStyleToRadioButtonsAndLabels()
+		{
+			var tf:TextFormat = new TextFormat();
+			tf.size = 15;
+			
+			for (var i:int = 0; i < main_mode_mas.length; i++)
+			{
+				main_mode_mas[i].setStyle("textFormat", tf);
+				main_mode_mas[i].textField.multiline = true;
+				main_mode_mas[i].label = main_mode_mas[i].label.replace(/\#/g, "\n");
+			}
+			
+			for (var i:int = 0; i < mode_mas.length; i++)
+			{
+				mode_mas[i].setStyle("textFormat", tf);
+			}
+			
+			for (var i:int = 0; i < cable_label.length; i++)
+			{
+				cable_label[i].setStyle("textFormat", tf);
+			}
+			
+			start_button.setStyle("textFormat", tf);
+			
+			speed_label_prepare.setStyle("textFormat", tf);
+			speed_combo_box_prepare.setStyle("textFormat", tf);
+			
+			tb_fio.setStyle("textFormat", tf);
+			tb_num.setStyle("textFormat", tf);
+			
+			fio_label1.setStyle("textFormat", tf);
+			fio_label2.setStyle("textFormat", tf);
+		}
+		
 		private function clearGroups(groups:Vector.<ComponentGroup>)
 		{
 			for (var i:int = 0; i < groups.length; i++)
@@ -235,7 +275,7 @@
 					mode_mas_group.SetVisible(true);
 					break;
 				default: 
-					throw new Error("Некорректна логика");
+					throw new Error("Выбран неизвестный режим");
 			}
 		}
 		
@@ -250,6 +290,7 @@
 					break;
 				}
 			}
+			
 			impuls_mode = i;
 			var clear_groups:Vector.<ComponentGroup> = new Vector.<ComponentGroup>();
 			clear_groups.push(speed_group, channel_group, cable_group, start_group, speed_preapare_group);
@@ -264,12 +305,24 @@
 			if (impuls_mode == ModeInfo.M_COMMUTATION)
 			{
 				speed_label_prepare.text = "Сценарий";
+				
+				var tf:TextFormat = new TextFormat();
+				tf.size = 15;
+				speed_label_prepare.setStyle("textFormat", tf);
+				
+				txt_scenario_info.filters = [armyFilter];
+				
 				loadScenariosInfo();
 				speed_preapare_group.SetVisible(true);
 			}
 			else
 			{
 				speed_label_prepare.text = "Скорость";
+				
+				var tf:TextFormat = new TextFormat();
+				tf.size = 15;
+				speed_label_prepare.setStyle("textFormat", tf);
+				
 				fillSpeedComboBox();
 				speed_preapare_group.SetVisible(true);
 			}
@@ -334,7 +387,7 @@
 			ModeInfo.modeInfo.SetBlocks();
 		}
 		
-		private static function trim(s: String, i: int, array: Array):String
+		private static function trim(s:String, i:int, array:Array):String
 		{
 			return s.replace(/^\s+|\s+$/g, "");
 		}
@@ -390,7 +443,10 @@
 			var i:int;
 			for (i = 7; i < parsedComplectInfo.length; i++)
 			{
-				if (parsedComplectInfo[i] == "") { break;}
+				if (parsedComplectInfo[i] == "")
+				{
+					break;
+				}
 				parsedStepsInfo = parsedComplectInfo[i].split(">", 100).map(trim);
 				ModeInfo.modeInfo.SeqCommutation.push(parsedStepsInfo);
 			}
@@ -406,7 +462,10 @@
 			
 			for (i = 7; i < parsedComplectInfo.length; i++)
 			{
-				if (parsedComplectInfo[i] == "") { break;}
+				if (parsedComplectInfo[i] == "")
+				{
+					break;
+				}
 				parsedStepsInfo = parsedComplectInfo[i].split(">", 100).map(trim);
 				ModeInfo.modeInfo.SeqCommutation.push(parsedStepsInfo);
 			}

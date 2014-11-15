@@ -202,7 +202,6 @@
 			
 			if (button.GetType() == 0)
 			{
-				trace("0", comm_stage);
 				switch (button.GetID())
 				{
 					case "Сброс": 
@@ -273,7 +272,6 @@
 			}
 			else
 			{
-				trace("1", comm_stage);
 				switch (comm_stage)
 				{
 					case 0: 
@@ -310,7 +308,6 @@
 			{
 				this.TrainingSequence[this.currentTrainingStep - 1].BlockElement();
 			}
-			trace(button);
 		}
 		
 		private function TurnOffButtons()
