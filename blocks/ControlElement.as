@@ -154,6 +154,13 @@
 		private function OnMouseOver(e:MouseEvent)
 		{
 			filters = [yellowFilter];
+			if (linkedElement != null)
+			{
+				linkedElement.filters = [yellowFilter];
+			}
+			
+			onGlowChanged(filters);
+			
 			MouseOver = true;
 		}
 		
@@ -162,12 +169,29 @@
 			if (hasGlow)
 			{
 				filters = [greenFilter];
+				if (linkedElement != null)
+				{
+					linkedElement.filters = [];
+				}
+				
+				onGlowChanged(filters);
 			}
 			else
 			{
 				filters = [];
+				if (linkedElement != null)
+				{
+					linkedElement.filters = [];
+				}
+				
+				onGlowChanged(filters);
 			}
 			MouseOver = false;
+		}
+		
+		public function onGlowChanged(filters: Array)
+		{
+			trace("lol");
 		}
 		
 		// подствечиваться жёлтым или зелёным цветом

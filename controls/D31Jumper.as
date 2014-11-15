@@ -2,6 +2,7 @@
 {
 	import blocks.ControlElement;
 	import flash.events.MouseEvent;
+	import flash.filters.GlowFilter;
 	
 	public class D31Jumper extends ControlElement
 	{
@@ -66,6 +67,14 @@
 			}
 			
 			GoToState(newState, true);
+		}
+		
+		public override function onGlowChanged(filters: Array)
+		{
+			if (wire != null)
+			{
+				wire.filters = filters;
+			}
 		}
 	}
 
