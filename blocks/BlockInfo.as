@@ -4,6 +4,7 @@
 	
 	public class BlockInfo
 	{
+		public var blockName:String = "";
 		public var blockDone:Boolean = false;
 		public var errorCount:int = 0;
 		

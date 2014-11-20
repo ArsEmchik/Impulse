@@ -121,51 +121,51 @@
 			switch (i)
 			{
 				case ModeInfo.BLOCK_D_00_01: 
-					ModeInfo.modeInfo.blockName = "Блок D-00-01";
+					ModeInfo.modeInfo.blockInfo[i].blockName = ModeInfo.modeInfo.blockName = "Блок D-00-01";
 					main_screen.InitializeD00Screen();
 					break;
 				case ModeInfo.BLOCK_D_39: 
-					ModeInfo.modeInfo.blockName = "Блок D-39";
+					ModeInfo.modeInfo.blockInfo[i].blockName = ModeInfo.modeInfo.blockName = "Блок D-39";
 					main_screen.InitializeD39Block();
 					break;
 				case ModeInfo.BLOCK_IL34: 
-					ModeInfo.modeInfo.blockName = "Блок ИЛ-3/4";
+					ModeInfo.modeInfo.blockInfo[i].blockName = ModeInfo.modeInfo.blockName = "Блок ИЛ-3/4";
 					main_screen.InitializeIL34Screen();
 					break;
 				case ModeInfo.BLOCK_IL34_2: 
-					ModeInfo.modeInfo.blockName = "Блок ИЛ-3/4(2)";
+					ModeInfo.modeInfo.blockInfo[i].blockName = ModeInfo.modeInfo.blockName = "Блок ИЛ-3/4(2)";
 					main_screen.InitializeIL34Screen();
 					break;
 				case ModeInfo.BLOCK_INPUT: 
-					ModeInfo.modeInfo.blockName = "Вводный щит";
+					ModeInfo.modeInfo.blockInfo[i].blockName = ModeInfo.modeInfo.blockName = "Вводный щит";
 					main_screen.InitializeInputBlock();
 					break;
 				case ModeInfo.BLOCK_IO3A: 
-					ModeInfo.modeInfo.blockName = "Блок ИО-3A";
+					ModeInfo.modeInfo.blockInfo[i].blockName = ModeInfo.modeInfo.blockName = "Блок ИО-3A";
 					main_screen.InitializeIO3AScreen();
 					break;
 				case ModeInfo.BLOCK_IO3A_2: 
-					ModeInfo.modeInfo.blockName = "Блок ИО-3A(2)";
+					ModeInfo.modeInfo.blockInfo[i].blockName = ModeInfo.modeInfo.blockName = "Блок ИО-3A(2)";
 					main_screen.InitializeIO3AScreen();
 					break;
 				case ModeInfo.BLOCK_IO4: 
-					ModeInfo.modeInfo.blockName = "Блок ИО-4";
+					ModeInfo.modeInfo.blockInfo[i].blockName = ModeInfo.modeInfo.blockName = "Блок ИО-4";
 					main_screen.InitializeIO4Screen();
 					break;
 				case ModeInfo.BLOCK_IO4_2: 
-					ModeInfo.modeInfo.blockName = "Блок ИО-4(2)";
+					ModeInfo.modeInfo.blockInfo[i].blockName = ModeInfo.modeInfo.blockName = "Блок ИО-4(2)";
 					main_screen.InitializeIO4Screen();
 					break;
 				case ModeInfo.BLOCK_IP: 
-					ModeInfo.modeInfo.blockName = "Блок ИП";
+					ModeInfo.modeInfo.blockInfo[i].blockName = ModeInfo.modeInfo.blockName = "Блок ИП";
 					main_screen.InitializeIPScreen();
 					break;
 				case ModeInfo.BLOCK_IS: 
-					ModeInfo.modeInfo.blockName = "Блок ИС";
+					ModeInfo.modeInfo.blockInfo[i].blockName = ModeInfo.modeInfo.blockName = "Блок ИС";
 					main_screen.InitializeISScreen();
 					break;
 				case ModeInfo.BLOCK_ITA: 
-					ModeInfo.modeInfo.blockName = "Блок ИТА";
+					ModeInfo.modeInfo.blockInfo[i].blockName = ModeInfo.modeInfo.blockName = "Блок ИТА";
 					main_screen.InitializeITAScreen();
 					break;
 				default: 

@@ -180,8 +180,25 @@
 				{
 					if (blockTrainSeq[i] != blockRealSeq[i])
 					{
-						errorText += "Неправильный порядок настройки блоков";
+						var tmpErrorText: String = "Неправильный порядок настройки блоков (текущий порядок: ";
+						for (var j:int = 0; j < blockRealSeq.length; j++)
+						{
+							tmpErrorText += (j == 0 ? "" : ", ") + blockInfo[blockRealSeq[j]].blockName;
+						}
+						
+						tmpErrorText += ")\r\n";
+						
+						if (errorText.length == 0)
+						{
+							errorText = tmpErrorText;
+						}
+						else
+						{
+							errorText = errorText.replace(/Неправильный порядок настройки блоков \(текущий порядок: .+\)\r\n/, tmpErrorText);
+						}
+						
 						errorBlockSeq = 1;
+						
 						break;
 					}
 				}

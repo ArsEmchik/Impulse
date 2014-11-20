@@ -51,5 +51,10 @@ package controls
 		{
 			wireShape.graphics.clear();
 		}
+		
+		public function setFilters(filters: Array)
+		{
+			wireShape.filters = filters;
+		}
 	}
 }

@@ -7,7 +7,7 @@
 	public class D31Jumper extends ControlElement
 	{
 		private static var prevClicked: ControlElement = null;
-		private var wire: Wire;
+		private var _wire: Wire;
 
 		public function D31Jumper()
 		{
@@ -32,12 +32,12 @@
 					linkedElement.linkedElement = this;
 					prevClicked = null;
 					
-					if (wire == null)
+					if (_wire == null)
 					{
-						wire = new Wire(parentUnit);
+						_wire = new Wire(parentUnit);
 					}
 					
-					wire.drawWire(this, linkedElement);
+					_wire.drawWire(this, linkedElement);
 				}
 			}
 			else
@@ -49,9 +49,9 @@
 				}
 				else
 				{
-					if (wire != null)
+					if (_wire != null)
 					{
-						wire.eraseWire();
+						_wire.eraseWire();
 					}
 					
 					if ((linkedElement as D31Jumper).wire != null)
@@ -67,14 +67,25 @@
 			}
 			
 			GoToState(newState, true);
+			onGlowChanged(filters);
 		}
 		
 		public override function onGlowChanged(filters: Array)
 		{
-			if (wire != null)
+			if (_wire != null)
 			{
-				wire.filters = filters;
+				_wire.setFilters(filters);
 			}
+			
+			if (linkedElement != null && (linkedElement as D31Jumper).wire != null)
+			{
+				(linkedElement as D31Jumper).wire.setFilters(filters);
+			}
+		}
+		
+		public function get wire():Wire 
+		{
+			return _wire;
 		}
 	}
 

@@ -191,7 +191,6 @@
 		
 		public function onGlowChanged(filters: Array)
 		{
-			trace("lol");
 		}
 		
 		// подствечиваться жёлтым или зелёным цветом
