@@ -588,12 +588,12 @@
 			ControlDictionary["2-х контактная перемычка на разъеме ИТ ЦСС (10-й канал, полукомплект Б, 2-я пара 3-го кабеля ПТРК-10х2)"] = ioBCh10Pair2DigitalOut;
 			
 			//диф системы          
-			ControlDictionary["2-х контактная перемычка на разъеме 4ПР ПРМ 1-ой диф системы"] = ioDiffA4WiredSend;
-			ControlDictionary["2-х контактная перемычка на разъеме 4ПР ПРД 1-ой диф системы"] = ioDiffA4WiredReceive;
+			ControlDictionary["2-х контактная перемычка на разъеме 4ПР ПРД 1-ой диф системы"] = ioDiffA4WiredSend;
+			ControlDictionary["2-х контактная перемычка на разъеме 4ПР ПРМ 1-ой диф системы"] = ioDiffA4WiredReceive;
 			ControlDictionary["2-х контактная перемычка на разъеме 2ПР 1-ой диф системы"] = ioDiffA2Wired;
 			
-			ControlDictionary["2-х контактная перемычка на разъеме 4ПР ПРМ 2-ой диф системы"] = ioDiffB4WiredSend;
-			ControlDictionary["2-х контактная перемычка на разъеме 4ПР ПРД 2-ой диф системы"] = ioDiffB4WiredReceive;
+			ControlDictionary["2-х контактная перемычка на разъеме 4ПР ПРД 2-ой диф системы"] = ioDiffB4WiredSend;
+			ControlDictionary["2-х контактная перемычка на разъеме 4ПР ПРМ 2-ой диф системы"] = ioDiffB4WiredReceive;
 			ControlDictionary["2-х контактная перемычка на разъеме 2ПР 2-ой диф системы"] = ioDiffB2Wired;
 		}
 	}
