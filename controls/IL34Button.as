@@ -9,13 +9,13 @@
 		{
 			OneState = true;
 			InitializeControlElement(ControlElement.S_BINARY, ControlElement.S_B_DEFAULT, true);
-			addEventListener(MouseEvent.CLICK, SwitchMouseDown);
+			addEventListener(MouseEvent.CLICK, onClick);
 		}
 		
-		private function SwitchMouseDown(e:MouseEvent)
+		private function onClick(e:MouseEvent)
 		{
 			GoToState(ControlElement.S_B_CHOSEN, true);
-			GoToState(ControlElement.S_B_DEFAULT, true);
+			GoToState(ControlElement.S_B_DEFAULT, false);
 		}
 	}
 }
