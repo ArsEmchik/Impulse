@@ -56,6 +56,7 @@
 		public var greenBulb8:GreenBulb;
 		public var greenBulb9:GreenBulb;
 		public var greenBulb10:GreenBulb;
+		public var greenBulb11:GreenBulb;
 		
 		public var redBulb1:RedBulb;
 		public var redBulb2:RedBulb;
@@ -94,6 +95,10 @@
 		public var button28:Switch;
 		public var button29:Switch;
 		public var button30:Switch;
+		public var button31:Switch;
+		public var button32:Switch;
+		public var button33:Switch;
+		public var button34:Switch;
 		
 		public function ISBlock()
 		{

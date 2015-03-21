@@ -13,7 +13,7 @@
 		public var textBox:TextField;
 		public var textBoxNext:TextField;
 		
-		public var IO3AUnit:IO3ABlock;
+		public var tIO3AUnit:IO3ABlock;
 		
 		public function InitializeIO3AScreen(p_mainScreen:MainScreen)
 		{
@@ -22,7 +22,7 @@
 			outButton.addEventListener(MouseEvent.CLICK, GoToNewScreen);
 			backButton1.addEventListener(MouseEvent.CLICK, backScreen);
 			
-			InitializeBlockScreen(IO3AUnit, textBox, outButton, textBoxNext);
+			InitializeBlockScreen(tIO3AUnit, textBox, outButton, textBoxNext);
 		}
 	}
 }

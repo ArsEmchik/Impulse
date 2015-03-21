@@ -1,6 +1,7 @@
 ﻿package blocks
 {
 	import controls.ComplexSwitcher;
+	import controls.IL34Button;
 	import fl.controls.Button;
 	import flash.events.MouseEvent;
 	import flash.text.TextField;
@@ -122,7 +123,7 @@
 		
 		public var turnSwitch:TurnOnOffMetal;
 		public var switcher1:ComplexSwitcher;
-		public var button:Button;
+		public var button:IL34Button;
 		
 		public function ITABlock()
 		{
