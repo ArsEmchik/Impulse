@@ -359,7 +359,8 @@
 		
 		private function startButtonClick(e:MouseEvent)
 		{
-			if ((t_tb_fio.text == "") && (this.main_mode == ModeInfo.MM_CONTROL))
+			t_tb_fio.text = trim(t_tb_fio.text);
+			if (t_tb_fio.text == "" && this.main_mode == ModeInfo.MM_CONTROL)
 			{
 				(message_box as MessageBoxClass).InitializeMessageBox(null, "Поле «ФИО» обязательно для заполнения", this);
 				return;
@@ -387,7 +388,7 @@
 			ModeInfo.modeInfo.SetBlocks();
 		}
 		
-		private static function trim(s:String, i:int, array:Array):String
+		private static function trim(s:String, i:int = 0, array:Array = null):String
 		{
 			return s.replace(/^\s+|\s+$/g, "");
 		}
